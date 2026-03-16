@@ -11,8 +11,8 @@ export const DISCORD_URL = 'https://discord.gg/cWB49jCfdP'
 export const SITE_URL = 'https://lingo.ink/'
 
 export const DOWNLOAD_URLS = {
-  macos: `${COS_PUBLIC_BASE_URL}/releases/Lingo_latest_aarch64.dmg`,
-  windows: `${COS_PUBLIC_BASE_URL}/releases/Lingo_latest_x64-setup.exe`,
+  macos: `${COS_PUBLIC_BASE_URL}/releases/v${APP_VERSION}/Lingo_${APP_VERSION}_aarch64.dmg`,
+  windows: `${COS_PUBLIC_BASE_URL}/releases/v${APP_VERSION}/Lingo_${APP_VERSION}_x64-setup.exe`,
 }
 
 export const NAV_SECTIONS = [

@@ -23,10 +23,10 @@ function normalizeVersion(value: unknown) {
   return String(value || '').replace(/^v/i, '').trim()
 }
 
-function buildMirrorDownloadUrls() {
+function buildMirrorDownloadUrls(version: string) {
   return {
-    macos: `${COS_PUBLIC_BASE_URL}/releases/Lingo_latest_aarch64.dmg`,
-    windows: `${COS_PUBLIC_BASE_URL}/releases/Lingo_latest_x64-setup.exe`,
+    macos: `${COS_PUBLIC_BASE_URL}/releases/v${version}/Lingo_${version}_aarch64.dmg`,
+    windows: `${COS_PUBLIC_BASE_URL}/releases/v${version}/Lingo_${version}_x64-setup.exe`,
   }
 }
 
@@ -81,7 +81,7 @@ function mapReleasePayload(payload: unknown): ReleaseInfo | null {
           ? payload.created_at
           : null,
     notes: typeof payload.body === 'string' ? payload.body : null,
-    downloads: buildMirrorDownloadUrls(),
+    downloads: buildMirrorDownloadUrls(version),
   }
 }
 
