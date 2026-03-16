@@ -100,7 +100,7 @@
   "download": {
     "eyebrow": "Download",
     "title": "Pick your platform and play.",
-    "subtitle": "Direct installers point to the current GitHub release assets, with a fallback link to the full releases page.",
+    "subtitle": "Direct installers use a Tencent Cloud mirror for faster regional downloads, with a fallback link to the full GitHub releases page.",
     "recommended": "Recommended for your device",
     "latestRelease": "Latest public release v{{version}}",
     "showAll": "View GitHub Releases",

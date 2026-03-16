@@ -8,8 +8,8 @@ export const DISCORD_URL = 'https://discord.gg/cWB49jCfdP'
 export const SITE_URL = 'https://lingo.ink/'
 
 export const DOWNLOAD_URLS = {
-  macos: `https://github.com/tinyhu666/Lingo/releases/download/v${APP_VERSION}/Lingo_${APP_VERSION}_aarch64.dmg`,
-  windows: `https://github.com/tinyhu666/Lingo/releases/download/v${APP_VERSION}/Lingo_${APP_VERSION}_x64-setup.exe`,
+  macos: `https://lingo-1259551686.cos.ap-shanghai.myqcloud.com/releases/v${APP_VERSION}/Lingo_${APP_VERSION}_aarch64.dmg`,
+  windows: `https://lingo-1259551686.cos.ap-shanghai.myqcloud.com/releases/v${APP_VERSION}/Lingo_${APP_VERSION}_x64-setup.exe`,
 }
 
 export const NAV_SECTIONS = [

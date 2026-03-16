@@ -100,7 +100,7 @@
   "download": {
     "eyebrow": "下载",
     "title": "选好平台，马上开打。",
-    "subtitle": "主按钮直接指向当前 GitHub Release 安装包，同时保留完整发布页作为备用入口。",
+    "subtitle": "主按钮优先使用腾讯云镜像下载，同时保留 GitHub Releases 作为备用入口。",
     "recommended": "推荐给当前设备",
     "latestRelease": "当前公开版本 v{{version}}",
     "showAll": "查看 GitHub Releases",
