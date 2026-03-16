@@ -3,7 +3,7 @@ export const APP_VERSION = '0.3.10'
 export const REPO_URL = 'https://github.com/tinyhu666/Lingo'
 export const RELEASES_URL = `${REPO_URL}/releases/latest`
 export const CHANGELOG_URL = `${REPO_URL}/blob/main/CHANGELOG.md`
-export const LICENSE_URL = REPO_URL
+export const LICENSE_URL = `${REPO_URL}/blob/main/README.en.md#license`
 export const DISCORD_URL = 'https://discord.gg/cWB49jCfdP'
 export const SITE_URL = 'https://lingo.ink/'
 

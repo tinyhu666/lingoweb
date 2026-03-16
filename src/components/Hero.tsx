@@ -95,7 +95,7 @@ function Hero({ preferredPlatform, version }: HeroProps) {
             <div className="grid gap-4 xl:grid-cols-[1.05fr_0.95fr]">
               <div className="glass-subtle rounded-[1.75rem] p-5">
                 <div className="flex items-center gap-4">
-                  <img alt="Lingo app icon" className="h-14 w-14 rounded-2xl shadow-[0_18px_36px_rgba(3,8,18,0.32)]" src={appIcon} />
+                  <img alt={t('brand.appIconAlt')} className="h-14 w-14 rounded-2xl shadow-[0_18px_36px_rgba(3,8,18,0.32)]" src={appIcon} />
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/46">{t('hero.mockup.eyebrow')}</p>
                     <p className="mt-2 text-lg font-semibold text-white">{t('hero.mockup.title')}</p>
@@ -106,7 +106,9 @@ function Hero({ preferredPlatform, version }: HeroProps) {
 
                 <div className="mt-6 space-y-3">
                   <div className="rounded-[1.5rem] border border-white/8 bg-white/5 px-4 py-3">
-                    <div className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white/38">EN</div>
+                    <div className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white/38">
+                      {t('languageSwitcher.languages.en.short')}
+                    </div>
                     <div className="mt-2 text-sm font-medium text-white/78">{t('hero.mockup.source')}</div>
                   </div>
                   <div className="flex items-center gap-3 px-1 text-white/32">
@@ -115,7 +117,9 @@ function Hero({ preferredPlatform, version }: HeroProps) {
                     <div className="h-px flex-1 bg-current" />
                   </div>
                   <div className="rounded-[1.5rem] border border-accent-300/18 bg-[linear-gradient(135deg,rgba(99,102,241,0.12),rgba(34,211,238,0.08))] px-4 py-3">
-                    <div className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-cyan-100/72">ZH</div>
+                    <div className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-cyan-100/72">
+                      {t('languageSwitcher.languages.zh.short')}
+                    </div>
                     <div className="mt-2 text-sm font-medium text-white">{t('hero.mockup.result')}</div>
                   </div>
                 </div>

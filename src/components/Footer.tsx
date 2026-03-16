@@ -17,7 +17,7 @@ function Footer({ version }: FooterProps) {
       <div className="glass-panel rounded-[2rem] px-6 py-8 sm:px-8">
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr_0.9fr_0.8fr]">
           <div>
-            <img alt="Lingo" className="h-10 w-auto" src={logoHorizontal} />
+            <img alt={t('brand.logoAlt')} className="h-10 w-auto" src={logoHorizontal} />
             <p className="mt-5 max-w-sm text-sm leading-7 text-white/64">{t('footer.tagline')}</p>
             <p className="mt-5 text-sm font-medium text-white/78">{t('footer.version', { version })}</p>
           </div>

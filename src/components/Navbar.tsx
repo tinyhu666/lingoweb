@@ -25,9 +25,9 @@ function Navbar() {
           )}>
           <div className="relative flex items-center justify-between gap-4 px-4 py-3 sm:px-5">
             <a className="flex items-center gap-3" href="#top" onClick={() => setMenuOpen(false)}>
-              <img alt="Lingo app icon" className="h-9 w-9 rounded-2xl object-cover shadow-[0_10px_24px_rgba(3,8,18,0.22)]" src={appIcon} />
-              <span className="text-sm font-semibold tracking-[-0.03em] text-white sm:hidden">Lingo</span>
-              <img alt="Lingo" className="hidden h-9 w-auto object-contain sm:block" src={logoHorizontal} />
+              <img alt={t('brand.appIconAlt')} className="h-9 w-9 rounded-2xl object-cover shadow-[0_10px_24px_rgba(3,8,18,0.22)]" src={appIcon} />
+              <span className="text-sm font-semibold tracking-[-0.03em] text-white sm:hidden">{t('brand.name')}</span>
+              <img alt={t('brand.logoAlt')} className="hidden h-9 w-auto object-contain sm:block" src={logoHorizontal} />
             </a>
 
             <nav className="hidden items-center gap-7 text-sm text-white/72 lg:flex">

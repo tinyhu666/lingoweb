@@ -3,6 +3,11 @@
     "title": "Lingo - AI In-Game Chat Translation",
     "description": "Lingo is an AI-powered in-game chat translation client for Windows and macOS, built around a low-interruption hotkey workflow."
   },
+  "brand": {
+    "name": "Lingo",
+    "appIconAlt": "Lingo app icon",
+    "logoAlt": "Lingo logo"
+  },
   "languageSwitcher": {
     "label": "Language",
     "aria": "Switch site language",

@@ -3,6 +3,11 @@
     "title": "Lingo - AI 游戏内聊天翻译客户端",
     "description": "Lingo 是一款面向 Windows 与 macOS 的 AI 游戏内聊天翻译客户端，用全局快捷键把复制、翻译、回填压缩成一次动作。"
   },
+  "brand": {
+    "name": "Lingo",
+    "appIconAlt": "Lingo 应用图标",
+    "logoAlt": "Lingo 标志"
+  },
   "languageSwitcher": {
     "label": "语言",
     "aria": "切换站点语言",

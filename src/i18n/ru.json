@@ -3,6 +3,11 @@
     "title": "Lingo - AI-перевод внутриигрового чата",
     "description": "Lingo — AI-клиент для перевода внутриигрового чата на Windows и macOS, построенный вокруг горячей клавиши и быстрого возврата перевода в поле ввода."
   },
+  "brand": {
+    "name": "Lingo",
+    "appIconAlt": "Иконка приложения Lingo",
+    "logoAlt": "Логотип Lingo"
+  },
   "languageSwitcher": {
     "label": "Язык",
     "aria": "Сменить язык сайта",
