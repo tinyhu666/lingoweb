@@ -1,0 +1,144 @@
+{
+  "meta": {
+    "title": "Lingo - AI-перевод внутриигрового чата",
+    "description": "Lingo — AI-клиент для перевода внутриигрового чата на Windows и macOS, построенный вокруг горячей клавиши и быстрого возврата перевода в поле ввода."
+  },
+  "languageSwitcher": {
+    "label": "Язык",
+    "aria": "Сменить язык сайта",
+    "languages": {
+      "zh": { "short": "中文", "name": "简体中文" },
+      "en": { "short": "EN", "name": "English" },
+      "ru": { "short": "RU", "name": "Русский" }
+    }
+  },
+  "navbar": {
+    "menu": "Меню",
+    "closeMenu": "Закрыть меню",
+    "links": {
+      "features": "Возможности",
+      "howItWorks": "Схема",
+      "download": "Скачать"
+    }
+  },
+  "hero": {
+    "badge": "Последний релиз v{{version}}",
+    "title": "Translate. Game. Together.",
+    "subtitle": "Lingo — AI-клиент для перевода игрового чата на Windows и macOS, созданный для быстрой и ненавязчивой коммуникации в матчах.",
+    "helper": "Мы определяем вашу платформу и подсвечиваем лучший установщик автоматически.",
+    "downloadMac": "Скачать для macOS",
+    "downloadWindows": "Скачать для Windows",
+    "github": "Открыть GitHub",
+    "macLabel": "Apple Silicon · DMG",
+    "windowsLabel": "Windows x64 · EXE",
+    "mockup": {
+      "liveTag": "LOW LATENCY",
+      "eyebrow": "Перевод в матче",
+      "title": "Одна горячая клавиша, одно чистое сообщение",
+      "body": "Выделите фразу, нажмите хоткей, и перевод вернется в текущий чат без выхода из игры.",
+      "source": "Hold. Fight when my BKB is ready.",
+      "result": "Подождите. Деремся, когда мой BKB будет готов.",
+      "server": "AI на сервере",
+      "hotkey": "Глобальный хоткей",
+      "phrases": "Быстрые фразы",
+      "languages": "ZH / EN / RU",
+      "sideTitle": "Готово еще до отправки",
+      "sideBody": "Короткие формулировки, стабильный тон и меньше лишних действий прямо во время матча.",
+      "statPrimaryLabel": "Исполнение",
+      "statPrimaryValue": "Одно нажатие",
+      "statSecondaryLabel": "Языки UI",
+      "statSecondaryValue": "3 языка"
+    }
+  },
+  "features": {
+    "eyebrow": "Почему Lingo",
+    "title": "Сделано под живое игровое общение.",
+    "subtitle": "Весь цикл — от триггера до вставки перевода — настроен на скорость, ясность и сохранение фокуса внутри игры.",
+    "items": {
+      "instant": {
+        "title": "Мгновенный перевод",
+        "description": "Одна горячая клавиша запускает перевод и не сбивает фокус с текущего поля чата."
+      },
+      "server": {
+        "title": "Серверный AI",
+        "description": "Модели, маршрутизация и обновления живут на сервере, поэтому клиент остается простым."
+      },
+      "phrases": {
+        "title": "Быстрые фразы",
+        "description": "Частые коллы можно подготовить заранее и вставлять без повторного набора."
+      },
+      "languages": {
+        "title": "Мультиязычный интерфейс",
+        "description": "Одна версия продукта поддерживает китайский, английский и русский без дополнительной настройки."
+      }
+    }
+  },
+  "howItWorks": {
+    "eyebrow": "Схема работы",
+    "title": "Три шага. Ничего лишнего.",
+    "subtitle": "Lingo превращает перевод в короткий, повторяемый цикл, который не ломает темп реального матча.",
+    "steps": {
+      "select": {
+        "title": "Выделите текст в чате",
+        "description": "Выделите или введите нужную строку прямо в игровом окне чата."
+      },
+      "hotkey": {
+        "title": "Нажмите хоткей",
+        "description": "Горячая клавиша копирует текст и отправляет его в сервис перевода."
+      },
+      "paste": {
+        "title": "Готовый перевод",
+        "description": "Перевод возвращается в поле ввода и сразу готов к отправке."
+      }
+    }
+  },
+  "download": {
+    "eyebrow": "Скачать",
+    "title": "Выберите платформу и запускайтесь.",
+    "subtitle": "Основные кнопки ведут прямо на актуальные установщики GitHub Releases, а полная страница релизов остается запасным вариантом.",
+    "recommended": "Рекомендуется для вашего устройства",
+    "latestRelease": "Текущий публичный релиз v{{version}}",
+    "showAll": "Открыть GitHub Releases",
+    "requirementsTitle": "Системные требования",
+    "requirements": {
+      "macos": "macOS 10.13+ • пакет Apple Silicon • установщик DMG",
+      "windows": "Windows 10+ • x64 • требуется WebView2 Runtime"
+    },
+    "cards": {
+      "macos": {
+        "title": "macOS",
+        "meta": "Apple Silicon",
+        "description": "Прямая загрузка DMG для последнего релиза.",
+        "button": "Скачать DMG"
+      },
+      "windows": {
+        "title": "Windows",
+        "meta": "x64",
+        "description": "Прямой EXE-установщик для последнего релиза.",
+        "button": "Скачать EXE"
+      }
+    }
+  },
+  "footer": {
+    "tagline": "AI-перевод внутриигрового чата для быстрой командной координации.",
+    "version": "Текущая версия v{{version}}",
+    "product": {
+      "title": "Продукт",
+      "features": "Возможности",
+      "workflow": "Схема работы",
+      "download": "Скачать клиент"
+    },
+    "community": {
+      "title": "Сообщество",
+      "github": "GitHub",
+      "discord": "Discord",
+      "releases": "Релизы"
+    },
+    "legal": {
+      "title": "Право",
+      "license": "Лицензия MIT",
+      "changelog": "Список изменений"
+    },
+    "copyright": "© {{year}} Lingo. Powered by Mengxin."
+  }
+}

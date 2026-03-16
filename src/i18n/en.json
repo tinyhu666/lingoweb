@@ -1,0 +1,144 @@
+{
+  "meta": {
+    "title": "Lingo - AI In-Game Chat Translation",
+    "description": "Lingo is an AI-powered in-game chat translation client for Windows and macOS, built around a low-interruption hotkey workflow."
+  },
+  "languageSwitcher": {
+    "label": "Language",
+    "aria": "Switch site language",
+    "languages": {
+      "zh": { "short": "中文", "name": "Chinese" },
+      "en": { "short": "EN", "name": "English" },
+      "ru": { "short": "RU", "name": "Russian" }
+    }
+  },
+  "navbar": {
+    "menu": "Menu",
+    "closeMenu": "Close menu",
+    "links": {
+      "features": "Features",
+      "howItWorks": "Workflow",
+      "download": "Download"
+    }
+  },
+  "hero": {
+    "badge": "Latest release v{{version}}",
+    "title": "Translate. Game. Together.",
+    "subtitle": "Lingo is an AI-powered in-game chat translation client for Windows and macOS, built for low-friction multiplayer communication.",
+    "helper": "We detect your platform and highlight the best installer automatically.",
+    "downloadMac": "Download for macOS",
+    "downloadWindows": "Download for Windows",
+    "github": "View on GitHub",
+    "macLabel": "Apple Silicon · DMG",
+    "windowsLabel": "Windows x64 · EXE",
+    "mockup": {
+      "liveTag": "LOW LATENCY",
+      "eyebrow": "In-game translation",
+      "title": "One shortcut, one clean message",
+      "body": "Select the line, trigger the hotkey, and send the translated result without tabbing out of the match.",
+      "source": "Hold. Fight when my BKB is ready.",
+      "result": "别着急，等我 BKB 好了再打。",
+      "server": "Server-side AI",
+      "hotkey": "Global hotkey",
+      "phrases": "Quick phrases",
+      "languages": "ZH / EN / RU",
+      "sideTitle": "Ready before you hit send",
+      "sideBody": "Short sentences, stable tone, and low-friction communication for live matches.",
+      "statPrimaryLabel": "Execution",
+      "statPrimaryValue": "One tap",
+      "statSecondaryLabel": "Supported UI",
+      "statSecondaryValue": "3 languages"
+    }
+  },
+  "features": {
+    "eyebrow": "Why Lingo",
+    "title": "Built for live match communication.",
+    "subtitle": "Every section of the workflow is tuned around speed, clarity, and keeping your focus inside the game.",
+    "items": {
+      "instant": {
+        "title": "Instant translate",
+        "description": "Trigger translation with a single shortcut and keep the current chat box focused."
+      },
+      "server": {
+        "title": "Server-side AI",
+        "description": "Translation models, routing, and updates stay on the backend so the client remains simple."
+      },
+      "phrases": {
+        "title": "Quick phrases",
+        "description": "Keep high-frequency callouts ready to fire without retyping the same instructions every match."
+      },
+      "languages": {
+        "title": "Multilingual UI",
+        "description": "Ship one product experience across Chinese, English, and Russian without extra setup."
+      }
+    }
+  },
+  "howItWorks": {
+    "eyebrow": "Workflow",
+    "title": "Three steps. No extra ceremony.",
+    "subtitle": "Lingo compresses the translation loop into a repeatable sequence that fits real matches instead of interrupting them.",
+    "steps": {
+      "select": {
+        "title": "Select the chat text",
+        "description": "Highlight or type the line you want inside the in-game chat box."
+      },
+      "hotkey": {
+        "title": "Press your hotkey",
+        "description": "A single shortcut copies the text and sends it to the translation service."
+      },
+      "paste": {
+        "title": "Paste-ready translation",
+        "description": "The translated result is written back for immediate sending."
+      }
+    }
+  },
+  "download": {
+    "eyebrow": "Download",
+    "title": "Pick your platform and play.",
+    "subtitle": "Direct installers point to the current GitHub release assets, with a fallback link to the full releases page.",
+    "recommended": "Recommended for your device",
+    "latestRelease": "Latest public release v{{version}}",
+    "showAll": "View GitHub Releases",
+    "requirementsTitle": "System requirements",
+    "requirements": {
+      "macos": "macOS 10.13+ • Apple Silicon package • DMG installer",
+      "windows": "Windows 10+ • x64 • WebView2 Runtime"
+    },
+    "cards": {
+      "macos": {
+        "title": "macOS",
+        "meta": "Apple Silicon",
+        "description": "Direct DMG download for the latest release.",
+        "button": "Download DMG"
+      },
+      "windows": {
+        "title": "Windows",
+        "meta": "x64",
+        "description": "Direct EXE installer for the latest release.",
+        "button": "Download EXE"
+      }
+    }
+  },
+  "footer": {
+    "tagline": "AI-powered in-game chat translation for fast team coordination.",
+    "version": "Current version v{{version}}",
+    "product": {
+      "title": "Product",
+      "features": "Features",
+      "workflow": "Workflow",
+      "download": "Download"
+    },
+    "community": {
+      "title": "Community",
+      "github": "GitHub",
+      "discord": "Discord",
+      "releases": "Releases"
+    },
+    "legal": {
+      "title": "Legal",
+      "license": "MIT License",
+      "changelog": "Release notes"
+    },
+    "copyright": "© {{year}} Lingo. Powered by Mengxin."
+  }
+}

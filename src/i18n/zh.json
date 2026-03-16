@@ -1,0 +1,144 @@
+{
+  "meta": {
+    "title": "Lingo - AI 游戏内聊天翻译客户端",
+    "description": "Lingo 是一款面向 Windows 与 macOS 的 AI 游戏内聊天翻译客户端，用全局快捷键把复制、翻译、回填压缩成一次动作。"
+  },
+  "languageSwitcher": {
+    "label": "语言",
+    "aria": "切换站点语言",
+    "languages": {
+      "zh": { "short": "中文", "name": "简体中文" },
+      "en": { "short": "EN", "name": "English" },
+      "ru": { "short": "RU", "name": "Русский" }
+    }
+  },
+  "navbar": {
+    "menu": "菜单",
+    "closeMenu": "关闭菜单",
+    "links": {
+      "features": "功能",
+      "howItWorks": "流程",
+      "download": "下载"
+    }
+  },
+  "hero": {
+    "badge": "最新版本 v{{version}}",
+    "title": "Translate. Game. Together.",
+    "subtitle": "Lingo 是一款 AI 驱动的游戏内聊天翻译客户端，面向 Windows 与 macOS，为多人联机场景提供低打断、低延迟的沟通体验。",
+    "helper": "我们会自动识别你的平台，并高亮推荐对应安装包。",
+    "downloadMac": "下载 macOS 版",
+    "downloadWindows": "下载 Windows 版",
+    "github": "查看 GitHub",
+    "macLabel": "Apple Silicon · DMG",
+    "windowsLabel": "Windows x64 · EXE",
+    "mockup": {
+      "liveTag": "LOW LATENCY",
+      "eyebrow": "游戏内翻译",
+      "title": "一个快捷键，直接回到聊天框",
+      "body": "选中文本，按下热键，译文自动回填到当前输入框，不必切出游戏。",
+      "source": "Hold. Fight when my BKB is ready.",
+      "result": "别着急，等我 BKB 好了再打。",
+      "server": "服务端 AI",
+      "hotkey": "全局快捷键",
+      "phrases": "快捷短语",
+      "languages": "中 / 英 / 俄",
+      "sideTitle": "发出去之前的最后一步",
+      "sideBody": "短句、稳定、可直接发送，让实战沟通更顺手。",
+      "statPrimaryLabel": "执行效率",
+      "statPrimaryValue": "一键完成",
+      "statSecondaryLabel": "界面语言",
+      "statSecondaryValue": "3 种"
+    }
+  },
+  "features": {
+    "eyebrow": "为什么是 Lingo",
+    "title": "围绕实战沟通来设计。",
+    "subtitle": "从触发方式到译文回填，整个流程都在服务同一件事：更快、更清晰，而且不打断对局节奏。",
+    "items": {
+      "instant": {
+        "title": "一键翻译",
+        "description": "用一次快捷键完成翻译流程，保持聊天框焦点不丢失。"
+      },
+      "server": {
+        "title": "服务端 AI",
+        "description": "模型、路由与更新由服务端统一维护，客户端保持轻量直接。"
+      },
+      "phrases": {
+        "title": "快捷短语",
+        "description": "高频指令提前备好，在对局里不必重复输入同一句话。"
+      },
+      "languages": {
+        "title": "多语言界面",
+        "description": "同一套产品体验覆盖中文、英文、俄文，安装后即可直接使用。"
+      }
+    }
+  },
+  "howItWorks": {
+    "eyebrow": "使用流程",
+    "title": "三步完成，不做多余动作。",
+    "subtitle": "Lingo 把翻译过程压缩成稳定可重复的顺序，让真实对局里的沟通更顺滑。",
+    "steps": {
+      "select": {
+        "title": "选中聊天文本",
+        "description": "在游戏聊天框中选中或输入你想发送的那句话。"
+      },
+      "hotkey": {
+        "title": "按下快捷键",
+        "description": "一次热键触发复制与翻译，把文本发送到服务端。"
+      },
+      "paste": {
+        "title": "自动回填译文",
+        "description": "译文写回当前输入框，确认后就能直接发送。"
+      }
+    }
+  },
+  "download": {
+    "eyebrow": "下载",
+    "title": "选好平台，马上开打。",
+    "subtitle": "主按钮直接指向当前 GitHub Release 安装包，同时保留完整发布页作为备用入口。",
+    "recommended": "推荐给当前设备",
+    "latestRelease": "当前公开版本 v{{version}}",
+    "showAll": "查看 GitHub Releases",
+    "requirementsTitle": "系统要求",
+    "requirements": {
+      "macos": "macOS 10.13+ • Apple Silicon 包 • DMG 安装器",
+      "windows": "Windows 10+ • x64 • 需要 WebView2 Runtime"
+    },
+    "cards": {
+      "macos": {
+        "title": "macOS",
+        "meta": "Apple Silicon",
+        "description": "直达最新版本 DMG 安装包。",
+        "button": "下载 DMG"
+      },
+      "windows": {
+        "title": "Windows",
+        "meta": "x64",
+        "description": "直达最新版本 EXE 安装器。",
+        "button": "下载 EXE"
+      }
+    }
+  },
+  "footer": {
+    "tagline": "为多人联机沟通而生的 AI 游戏内聊天翻译工具。",
+    "version": "当前版本 v{{version}}",
+    "product": {
+      "title": "产品",
+      "features": "功能特性",
+      "workflow": "使用流程",
+      "download": "下载客户端"
+    },
+    "community": {
+      "title": "社区",
+      "github": "GitHub",
+      "discord": "Discord",
+      "releases": "版本发布"
+    },
+    "legal": {
+      "title": "法律",
+      "license": "MIT 许可",
+      "changelog": "更新日志"
+    },
+    "copyright": "© {{year}} Lingo. Powered by Mengxin."
+  }
+}
