@@ -5,17 +5,21 @@ import { useTranslation } from 'react-i18next'
 import Button from '@/components/ui/Button'
 import GlassCard from '@/components/ui/GlassCard'
 import Badge from '@/components/ui/Badge'
-import { DOWNLOAD_URLS, REPO_URL } from '@/lib/constants'
+import { REPO_URL } from '@/lib/constants'
 import { cn } from '@/lib/cn'
 import type { PlatformId } from '@/lib/platform'
 import appIcon from '@/assets/app-icon.png'
 
 type HeroProps = {
+  downloads: {
+    macos: string
+    windows: string
+  }
   preferredPlatform: PlatformId
   version: string
 }
 
-function Hero({ preferredPlatform, version }: HeroProps) {
+function Hero({ downloads, preferredPlatform, version }: HeroProps) {
   const { t } = useTranslation()
 
   return (
@@ -43,7 +47,7 @@ function Hero({ preferredPlatform, version }: HeroProps) {
           <div className="flex flex-col gap-2">
             <Button
               className={cn(preferredPlatform === 'macos' && 'ring-2 ring-cyan-300/70 ring-offset-2 ring-offset-[#070b17]')}
-              href={DOWNLOAD_URLS.macos}
+              href={downloads.macos}
               size="lg">
               {t('hero.downloadMac')}
               <ArrowRight className="h-4 w-4" />
@@ -54,7 +58,7 @@ function Hero({ preferredPlatform, version }: HeroProps) {
           <div className="flex flex-col gap-2">
             <Button
               className={cn(preferredPlatform === 'windows' && 'ring-2 ring-fuchsia-300/70 ring-offset-2 ring-offset-[#070b17]')}
-              href={DOWNLOAD_URLS.windows}
+              href={downloads.windows}
               size="lg"
               variant="secondary">
               {t('hero.downloadWindows')}

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { startTransition, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import Download from '@/components/Download'
 import Features from '@/components/Features'
@@ -7,6 +7,7 @@ import Hero from '@/components/Hero'
 import HowItWorks from '@/components/HowItWorks'
 import Navbar from '@/components/Navbar'
 import { APP_VERSION, SITE_URL } from '@/lib/constants'
+import { FALLBACK_RELEASE_INFO, fetchLatestReleaseInfo } from '@/lib/release'
 import { detectPreferredPlatform, type PlatformId } from '@/lib/platform'
 
 function updateMeta(selector: string, value: string, attribute = 'content') {
@@ -20,6 +21,7 @@ function updateMeta(selector: string, value: string, attribute = 'content') {
 
 function App() {
   const [preferredPlatform] = useState<PlatformId>(() => detectPreferredPlatform())
+  const [release, setRelease] = useState(FALLBACK_RELEASE_INFO)
   const { i18n, t } = useTranslation()
 
   useEffect(() => {
@@ -44,6 +46,24 @@ function App() {
     }
   }, [i18n.resolvedLanguage, t])
 
+  useEffect(() => {
+    let active = true
+
+    void fetchLatestReleaseInfo().then((nextRelease) => {
+      if (!active) {
+        return
+      }
+
+      startTransition(() => {
+        setRelease(nextRelease)
+      })
+    })
+
+    return () => {
+      active = false
+    }
+  }, [])
+
   return (
     <div className="relative overflow-x-hidden">
       <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
@@ -55,13 +75,13 @@ function App() {
       <Navbar />
 
       <main className="mx-auto flex min-h-screen w-full max-w-7xl flex-col gap-24 px-5 pb-20 pt-28 sm:px-8 lg:px-10">
-        <Hero preferredPlatform={preferredPlatform} version={APP_VERSION} />
+        <Hero downloads={release.downloads} preferredPlatform={preferredPlatform} version={release.version || APP_VERSION} />
         <Features />
         <HowItWorks />
-        <Download preferredPlatform={preferredPlatform} version={APP_VERSION} />
+        <Download downloads={release.downloads} preferredPlatform={preferredPlatform} version={release.version || APP_VERSION} />
       </main>
 
-      <Footer version={APP_VERSION} />
+      <Footer version={release.version || APP_VERSION} />
     </div>
   )
 }

@@ -3,26 +3,30 @@ import { useTranslation } from 'react-i18next'
 import AnimatedSection from '@/components/ui/AnimatedSection'
 import Button from '@/components/ui/Button'
 import GlassCard from '@/components/ui/GlassCard'
-import { DOWNLOAD_URLS, RELEASES_URL } from '@/lib/constants'
+import { RELEASES_URL } from '@/lib/constants'
 import { cn } from '@/lib/cn'
 import type { PlatformId } from '@/lib/platform'
 
 type DownloadProps = {
+  downloads: {
+    macos: string
+    windows: string
+  }
   preferredPlatform: PlatformId
   version: string
 }
 
-function Download({ preferredPlatform, version }: DownloadProps) {
+function Download({ downloads, preferredPlatform, version }: DownloadProps) {
   const { t } = useTranslation()
 
   const cards = [
     {
       key: 'macos',
-      href: DOWNLOAD_URLS.macos,
+      href: downloads.macos,
     },
     {
       key: 'windows',
-      href: DOWNLOAD_URLS.windows,
+      href: downloads.windows,
     },
   ] as const
 
