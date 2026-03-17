@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Lingo - AI In-Game Chat Translation",
-    "description": "Lingo is an AI-powered in-game chat translation client for Windows and macOS, built around a low-interruption hotkey workflow."
+    "title": "Lingo - Your AI Mouthpiece In Game",
+    "description": "Lingo is your in-game AI mouthpiece: understand teammates, translate what you mean, and drop it straight back into chat."
   },
   "brand": {
     "name": "Lingo",
@@ -22,27 +22,32 @@
     "closeMenu": "Close menu",
     "links": {
       "features": "Features",
+      "supportedGames": "Games",
       "howItWorks": "Workflow",
       "download": "Download"
     }
   },
   "hero": {
     "badge": "Latest release v{{version}}",
-    "title": "Translate. Game. Together.",
-    "subtitle": "Lingo is an AI-powered in-game chat translation client for Windows and macOS, built for low-friction multiplayer communication.",
-    "helper": "We detect your platform and highlight the best installer automatically.",
+    "title": "Translate & Chat",
+    "subtitle": "Lingo is your AI mouthpiece in game. Read the callout, shape your reply, and send it back to chat without dropping the match.",
+    "helper": "The best installer is highlighted for your device.",
     "downloadMac": "Download for macOS",
     "downloadWindows": "Download for Windows",
     "github": "View on GitHub",
     "macLabel": "Apple Silicon · DMG",
     "windowsLabel": "Windows x64 · EXE",
     "mockup": {
-      "liveTag": "LOW LATENCY",
-      "eyebrow": "In-game translation",
-      "title": "One shortcut, one clean message",
-      "body": "Select the line, trigger the hotkey, and send the translated result without tabbing out of the match.",
+      "eyebrow": "AI mouthpiece",
+      "title": "Say it cleanly, send it fast",
+      "body": "From reading teammate chat to shaping a send-ready reply, Lingo compresses translate, rewrite, and paste-back into one flow.",
+      "translateChip": "Translate",
+      "chatChip": "Chat",
       "source": "Hold. Fight when my BKB is ready.",
       "result": "别着急，等我 BKB 好了再打。",
+      "chatLabel": "Chat box",
+      "chatDraft": "Wait for my BKB, then go.",
+      "chatReady": "Drafted to send",
       "server": "Server-side AI",
       "hotkey": "Global hotkey",
       "phrases": "Quick phrases",
@@ -57,49 +62,80 @@
   },
   "features": {
     "eyebrow": "Why Lingo",
-    "title": "Built for live match communication.",
-    "subtitle": "Every section of the workflow is tuned around speed, clarity, and keeping your focus inside the game.",
+    "title": "Not just translation. Your in-game AI mouthpiece.",
+    "subtitle": "It does more than swap words. Lingo keeps callouts short, readable, and ready to fire inside the same chat rhythm.",
     "items": {
       "instant": {
-        "title": "Instant translate",
-        "description": "Trigger translation with a single shortcut and keep the current chat box focused."
+        "title": "One-key reply",
+        "description": "Highlight a line or draft your own, hit the hotkey, and let the AI handle the busywork."
       },
       "server": {
-        "title": "Server-side AI",
-        "description": "Translation models, routing, and updates stay on the backend so the client remains simple."
+        "title": "Context-aware AI",
+        "description": "Models and updates stay on the backend so the output gets shorter, cleaner, and more usable in live matches."
       },
       "phrases": {
-        "title": "Quick phrases",
-        "description": "Keep high-frequency callouts ready to fire without retyping the same instructions every match."
+        "title": "Callouts on standby",
+        "description": "Keep common lines like push, back, wait, and regroup ready to send without retyping every round."
       },
       "languages": {
-        "title": "Multilingual UI",
-        "description": "Ship one product experience across Chinese, English, and Russian without extra setup."
+        "title": "Chat across languages",
+        "description": "Move between Chinese, English, and Russian servers without losing the flow of conversation."
+      }
+    }
+  },
+  "supportedGames": {
+    "eyebrow": "Supported games",
+    "title": "Best in the games where chat still wins fights.",
+    "subtitle": "Support currently focuses on Dota 2, League of Legends, World of Warcraft, Overwatch 2, and more chat-heavy games.",
+    "chatBadge": "AI mouthpiece",
+    "controls": {
+      "previous": "Previous games",
+      "next": "Next games",
+      "goTo": "Go to {{game}}"
+    },
+    "noteLabel": "BEST FIT",
+    "note": "If a game gives you an in-game chat box, Lingo usually fits right in as the AI mouthpiece between what you mean and what gets sent.",
+    "items": {
+      "dota2": {
+        "name": "Dota 2",
+        "description": "Great for smoke calls, BKB timing, retreat pings, and the short tempo lines that decide fights."
+      },
+      "lol": {
+        "name": "League of Legends",
+        "description": "Lane reminders, jungle timing, resource trades, and teamfight lines come out faster and more naturally."
+      },
+      "wow": {
+        "name": "World of Warcraft",
+        "description": "Useful for raid calls, regroup reminders, party chat, and multilingual group coordination."
+      },
+      "ow2": {
+        "name": "Overwatch 2",
+        "description": "Great for position callouts, focus targets, regroup timing, and faster squad-chat replies."
       }
     }
   },
   "howItWorks": {
     "eyebrow": "Workflow",
-    "title": "Three steps. No extra ceremony.",
-    "subtitle": "Lingo compresses the translation loop into a repeatable sequence that fits real matches instead of interrupting them.",
+    "title": "Three steps from intent to send.",
+    "subtitle": "Lingo works like an AI mouthpiece bound to a hotkey: understand, translate, then send it back to chat.",
     "steps": {
       "select": {
-        "title": "Select the chat text",
-        "description": "Highlight or type the line you want inside the in-game chat box."
+        "title": "Give it the line",
+        "description": "Select the teammate message or type what you want to say."
       },
       "hotkey": {
-        "title": "Press your hotkey",
-        "description": "A single shortcut copies the text and sends it to the translation service."
+        "title": "Hit the hotkey",
+        "description": "One shortcut triggers copy, translation, and cleanup in the background."
       },
       "paste": {
-        "title": "Paste-ready translation",
-        "description": "The translated result is written back for immediate sending."
+        "title": "Send the draft",
+        "description": "The ready-to-send result lands back in the current chat box."
       }
     }
   },
   "download": {
     "eyebrow": "Download",
-    "title": "Pick your platform and play.",
+    "title": "Install it now. Let AI speak for you next match.",
     "subtitle": "Direct installers use a Tencent Cloud mirror for faster regional downloads, with a fallback link to the full GitHub releases page.",
     "recommended": "Recommended for your device",
     "latestRelease": "Latest public release v{{version}}",
@@ -125,11 +161,12 @@
     }
   },
   "footer": {
-    "tagline": "AI-powered in-game chat translation for fast team coordination.",
+    "tagline": "Your in-game AI mouthpiece for faster team chat.",
     "version": "Current version v{{version}}",
     "product": {
       "title": "Product",
       "features": "Features",
+      "supportedGames": "Supported games",
       "workflow": "Workflow",
       "download": "Download"
     },

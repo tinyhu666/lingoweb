@@ -25,7 +25,11 @@ function Navbar() {
           )}>
           <div className="relative flex items-center justify-between gap-4 px-4 py-3 sm:px-5">
             <a className="flex items-center gap-3" href="#top" onClick={() => setMenuOpen(false)}>
-              <img alt={t('brand.appIconAlt')} className="h-9 w-9 rounded-2xl object-cover shadow-[0_10px_24px_rgba(3,8,18,0.22)]" src={appIcon} />
+              <img
+                alt={t('brand.appIconAlt')}
+                className="h-9 w-9 rounded-2xl object-cover shadow-[0_10px_24px_rgba(3,8,18,0.22)] sm:hidden"
+                src={appIcon}
+              />
               <span className="text-sm font-semibold tracking-[-0.03em] text-white sm:hidden">{t('brand.name')}</span>
               <img alt={t('brand.logoAlt')} className="hidden h-9 w-auto object-contain sm:block" src={logoHorizontal} />
             </a>
@@ -34,10 +38,13 @@ function Navbar() {
               {NAV_SECTIONS.map((item) => (
                 <a
                   key={item.key}
-                  className="transition hover:text-white"
+                  className="group relative inline-flex items-center overflow-hidden rounded-full px-3 py-2 transition hover:text-white"
                   href={item.href}
                   onClick={() => setMenuOpen(false)}>
-                  {t(`navbar.links.${item.key}`)}
+                  <span className="pointer-events-none absolute inset-0 rounded-full bg-white/6 opacity-0 transition duration-200 group-hover:opacity-100" />
+                  <span className="pointer-events-none absolute inset-x-4 top-0 h-px bg-gradient-to-r from-transparent via-cyan-200/90 to-transparent opacity-0 transition duration-200 group-hover:opacity-100" />
+                  <span className="pointer-events-none absolute inset-x-6 bottom-0 h-px bg-gradient-to-r from-transparent via-fuchsia-300/80 to-transparent opacity-0 transition duration-200 group-hover:opacity-100" />
+                  <span className="relative z-10">{t(`navbar.links.${item.key}`)}</span>
                 </a>
               ))}
             </nav>
@@ -75,10 +82,12 @@ function Navbar() {
                 {NAV_SECTIONS.map((item) => (
                   <a
                     key={item.key}
-                    className="rounded-2xl border border-white/8 bg-white/4 px-4 py-3 text-sm font-medium text-white/84"
+                    className="group relative overflow-hidden rounded-2xl border border-white/8 bg-white/4 px-4 py-3 text-sm font-medium text-white/84"
                     href={item.href}
                     onClick={() => setMenuOpen(false)}>
-                    {t(`navbar.links.${item.key}`)}
+                    <span className="pointer-events-none absolute inset-0 rounded-[inherit] bg-white/6 opacity-0 transition duration-200 group-hover:opacity-100" />
+                    <span className="pointer-events-none absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-cyan-200/90 to-transparent opacity-0 transition duration-200 group-hover:opacity-100" />
+                    <span className="relative z-10">{t(`navbar.links.${item.key}`)}</span>
                   </a>
                 ))}
               </div>

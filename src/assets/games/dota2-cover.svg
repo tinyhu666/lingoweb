@@ -1,0 +1,22 @@
+<svg width="768" height="1024" viewBox="0 0 768 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="96" y1="72" x2="692" y2="980" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#451111"/>
+      <stop offset="0.52" stop-color="#1A0F14"/>
+      <stop offset="1" stop-color="#090B12"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(596 228) rotate(131.371) scale(420.133 329.671)">
+      <stop stop-color="#FF6B4A" stop-opacity="0.88"/>
+      <stop offset="1" stop-color="#FF6B4A" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="768" height="1024" rx="56" fill="url(#bg)"/>
+  <rect x="34" y="34" width="700" height="956" rx="40" stroke="rgba(255,255,255,0.12)"/>
+  <circle cx="596" cy="228" r="268" fill="url(#glow)"/>
+  <path d="M146 202L332 128L620 214L548 770L304 882L104 706L146 202Z" fill="#130D10" fill-opacity="0.8" stroke="#F1775D" stroke-opacity="0.42" stroke-width="10"/>
+  <path d="M248 288L360 246L470 332L384 446L258 396L248 288Z" fill="#FF6944"/>
+  <path d="M306 540L492 442L542 612L410 738L254 640L306 540Z" fill="#FF6944" fill-opacity="0.84"/>
+  <path d="M390 448L414 576L360 620L326 520L390 448Z" fill="#180C10"/>
+  <text x="84" y="826" fill="#FFF6F2" font-size="108" font-family="Arial, sans-serif" font-weight="700" letter-spacing="-4">DOTA 2</text>
+  <text x="88" y="888" fill="#F8BAAB" font-size="30" font-family="Arial, sans-serif" font-weight="700" letter-spacing="8">TEAM CHAT READY</text>
+</svg>

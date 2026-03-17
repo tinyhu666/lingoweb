@@ -1,0 +1,23 @@
+<svg width="768" height="1024" viewBox="0 0 768 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="86" y1="58" x2="700" y2="986" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1B2448"/>
+      <stop offset="0.46" stop-color="#11182F"/>
+      <stop offset="1" stop-color="#060910"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(590 194) rotate(136) scale(360 340)">
+      <stop stop-color="#7DC8FF" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#7DC8FF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="768" height="1024" rx="56" fill="url(#bg)"/>
+  <rect x="34" y="34" width="700" height="956" rx="40" stroke="rgba(255,255,255,0.12)"/>
+  <circle cx="590" cy="194" r="248" fill="url(#glow)"/>
+  <circle cx="382" cy="442" r="208" fill="#0F1730" stroke="#9DD8FF" stroke-opacity="0.46" stroke-width="10"/>
+  <circle cx="382" cy="442" r="144" fill="none" stroke="#F4D68A" stroke-opacity="0.9" stroke-width="18"/>
+  <path d="M382 298L418 372L500 382L438 438L454 520L382 478L310 520L326 438L264 382L346 372L382 298Z" fill="#F4D68A"/>
+  <path d="M246 696C302 620 340 570 382 500C424 570 462 620 518 696L468 760H296L246 696Z" fill="#9DD8FF" fill-opacity="0.16" stroke="#9DD8FF" stroke-opacity="0.32" stroke-width="8"/>
+  <text x="82" y="820" fill="#FFF5D8" font-size="76" font-family="Arial, sans-serif" font-weight="700" letter-spacing="-3">WORLD OF</text>
+  <text x="82" y="912" fill="#FFF5D8" font-size="112" font-family="Arial, sans-serif" font-weight="700" letter-spacing="-5">WARCRAFT</text>
+  <text x="88" y="970" fill="#C9E9FF" font-size="28" font-family="Arial, sans-serif" font-weight="700" letter-spacing="7">PARTY CHAT FLOW</text>
+</svg>

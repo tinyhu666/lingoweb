@@ -1,0 +1,22 @@
+<svg width="768" height="1024" viewBox="0 0 768 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="58" y1="88" x2="728" y2="956" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#282119"/>
+      <stop offset="0.48" stop-color="#11141C"/>
+      <stop offset="1" stop-color="#07090E"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(596 212) rotate(134) scale(360 340)">
+      <stop stop-color="#FF9E44" stop-opacity="0.92"/>
+      <stop offset="1" stop-color="#FF9E44" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="768" height="1024" rx="56" fill="url(#bg)"/>
+  <rect x="34" y="34" width="700" height="956" rx="40" stroke="rgba(255,255,255,0.12)"/>
+  <circle cx="596" cy="212" r="248" fill="url(#glow)"/>
+  <path d="M162 748C220 566 314 396 492 200L586 252C540 464 430 644 244 836L162 748Z" fill="#12151C" stroke="#FF9E44" stroke-opacity="0.48" stroke-width="10"/>
+  <path d="M320 314L434 250L554 330L482 440L350 432L320 314Z" fill="#FF9E44"/>
+  <path d="M260 548L394 516L476 658L348 732L220 650L260 548Z" fill="#F1F4FF" fill-opacity="0.18"/>
+  <path d="M472 342L602 412L580 450L450 380L472 342Z" fill="#F7FAFF" fill-opacity="0.64"/>
+  <text x="82" y="818" fill="#FFF2E4" font-size="112" font-family="Arial, sans-serif" font-weight="700" letter-spacing="-5">CS2</text>
+  <text x="88" y="884" fill="#FFC48D" font-size="30" font-family="Arial, sans-serif" font-weight="700" letter-spacing="8">CALL OUTS IN CHAT</text>
+</svg>

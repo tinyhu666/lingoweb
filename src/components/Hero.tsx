@@ -1,6 +1,6 @@
-import type { ReactNode } from 'react'
-import { motion } from 'motion/react'
-import { ArrowRight, ArrowUpRight, Bot, Keyboard, Languages, MessageSquareQuote, Sparkles } from 'lucide-react'
+import { useState, type PointerEvent as ReactPointerEvent, type ReactNode } from 'react'
+import { motion, useMotionTemplate, useMotionValue, useSpring, useTransform } from 'motion/react'
+import { ArrowRight, ArrowUpRight, Keyboard, Languages, MessageSquare } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import Button from '@/components/ui/Button'
 import GlassCard from '@/components/ui/GlassCard'
@@ -8,7 +8,6 @@ import Badge from '@/components/ui/Badge'
 import { REPO_URL } from '@/lib/constants'
 import { cn } from '@/lib/cn'
 import type { PlatformId } from '@/lib/platform'
-import appIcon from '@/assets/app-icon.png'
 
 type HeroProps = {
   downloads: {
@@ -29,14 +28,10 @@ function Hero({ downloads, preferredPlatform, version }: HeroProps) {
           animate={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: 24 }}
           transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}>
-          <Badge className="mb-6">
-            <span className="h-2 w-2 rounded-full bg-cyan-300" />
-            {t('hero.badge', { version })}
-          </Badge>
+          <HeroReleaseBadge label={t('hero.badge', { version })} />
 
           <h1 className="section-title">{t('hero.title')}</h1>
           <p className="section-copy mt-6">{t('hero.subtitle')}</p>
-          <p className="mt-5 text-sm text-white/58">{t('hero.helper')}</p>
         </motion.div>
 
         <motion.div
@@ -44,29 +39,33 @@ function Hero({ downloads, preferredPlatform, version }: HeroProps) {
           className="mt-8 flex flex-col gap-4 sm:flex-row"
           initial={{ opacity: 0, y: 24 }}
           transition={{ duration: 0.65, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}>
-          <div className="flex flex-col gap-2">
-            <Button
-              className={cn(preferredPlatform === 'macos' && 'ring-2 ring-cyan-300/70 ring-offset-2 ring-offset-[#070b17]')}
-              href={downloads.macos}
-              size="lg">
-              {t('hero.downloadMac')}
-              <ArrowRight className="h-4 w-4" />
-            </Button>
-            <span className="px-2 text-xs text-white/56">{t('hero.macLabel')}</span>
-          </div>
+          <HeroDownloadAction
+            caption={t('hero.macLabel')}
+            glowClassName="bg-[radial-gradient(circle,rgba(103,232,249,0.42),rgba(129,140,248,0.22)_44%,transparent_76%)]"
+            href={downloads.macos}
+            icon={<ArrowRight className="h-4 w-4" />}
+            label={t('hero.downloadMac')}
+            preferred={preferredPlatform === 'macos'}
+          />
 
-          <div className="flex flex-col gap-2">
-            <Button
-              className={cn(preferredPlatform === 'windows' && 'ring-2 ring-fuchsia-300/70 ring-offset-2 ring-offset-[#070b17]')}
-              href={downloads.windows}
-              size="lg"
-              variant="secondary">
-              {t('hero.downloadWindows')}
-              <DownloadIcon />
-            </Button>
-            <span className="px-2 text-xs text-white/56">{t('hero.windowsLabel')}</span>
-          </div>
+          <HeroDownloadAction
+            caption={t('hero.windowsLabel')}
+            glowClassName="bg-[radial-gradient(circle,rgba(217,70,239,0.34),rgba(129,140,248,0.2)_46%,transparent_76%)]"
+            href={downloads.windows}
+            icon={<DownloadIcon />}
+            label={t('hero.downloadWindows')}
+            preferred={preferredPlatform === 'windows'}
+            variant="secondary"
+          />
         </motion.div>
+
+        <motion.p
+          animate={{ opacity: 1, y: 0 }}
+          className="mt-4 px-1 text-xs text-white/42"
+          initial={{ opacity: 0, y: 24 }}
+          transition={{ duration: 0.65, delay: 0.16, ease: [0.22, 1, 0.36, 1] }}>
+          {t('hero.helper')}
+        </motion.p>
 
         <motion.div
           animate={{ opacity: 1, y: 0 }}
@@ -84,91 +83,315 @@ function Hero({ downloads, preferredPlatform, version }: HeroProps) {
         animate={{ opacity: 1, y: 0, scale: 1 }}
         initial={{ opacity: 0, y: 36, scale: 0.96 }}
         transition={{ duration: 0.9, delay: 0.16, type: 'spring', stiffness: 120, damping: 22 }}>
-        <GlassCard className="relative overflow-hidden p-4 sm:p-5">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(129,140,248,0.22),transparent_38%),radial-gradient(circle_at_bottom_left,rgba(34,211,238,0.16),transparent_26%)]" />
-          <div className="relative">
-            <div className="mb-4 flex items-center justify-between gap-3">
-              <div className="flex items-center gap-2">
-                <span className="h-3 w-3 rounded-full bg-rose-400/80" />
-                <span className="h-3 w-3 rounded-full bg-amber-300/80" />
-                <span className="h-3 w-3 rounded-full bg-emerald-300/80" />
-              </div>
-              <Badge>{t('hero.mockup.liveTag')}</Badge>
-            </div>
-
-            <div className="grid gap-4 xl:grid-cols-[1.05fr_0.95fr]">
-              <div className="glass-subtle rounded-[1.75rem] p-5">
-                <div className="flex items-center gap-4">
-                  <img alt={t('brand.appIconAlt')} className="h-14 w-14 rounded-2xl shadow-[0_18px_36px_rgba(3,8,18,0.32)]" src={appIcon} />
-                  <div>
-                    <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/46">{t('hero.mockup.eyebrow')}</p>
-                    <p className="mt-2 text-lg font-semibold text-white">{t('hero.mockup.title')}</p>
-                  </div>
-                </div>
-
-                <p className="mt-5 text-sm leading-7 text-white/66">{t('hero.mockup.body')}</p>
-
-                <div className="mt-6 space-y-3">
-                  <div className="rounded-[1.5rem] border border-white/8 bg-white/5 px-4 py-3">
-                    <div className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white/38">
-                      {t('languageSwitcher.languages.en.short')}
-                    </div>
-                    <div className="mt-2 text-sm font-medium text-white/78">{t('hero.mockup.source')}</div>
-                  </div>
-                  <div className="flex items-center gap-3 px-1 text-white/32">
-                    <div className="h-px flex-1 bg-current" />
-                    <ArrowRight className="h-4 w-4" />
-                    <div className="h-px flex-1 bg-current" />
-                  </div>
-                  <div className="rounded-[1.5rem] border border-accent-300/18 bg-[linear-gradient(135deg,rgba(99,102,241,0.12),rgba(34,211,238,0.08))] px-4 py-3">
-                    <div className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-cyan-100/72">
-                      {t('languageSwitcher.languages.zh.short')}
-                    </div>
-                    <div className="mt-2 text-sm font-medium text-white">{t('hero.mockup.result')}</div>
-                  </div>
-                </div>
-
-                <div className="mt-6 grid grid-cols-2 gap-3 text-sm text-white/72">
-                  <MockupTag icon={<Bot className="h-4 w-4" />} label={t('hero.mockup.server')} />
-                  <MockupTag icon={<Keyboard className="h-4 w-4" />} label={t('hero.mockup.hotkey')} />
-                  <MockupTag icon={<MessageSquareQuote className="h-4 w-4" />} label={t('hero.mockup.phrases')} />
-                  <MockupTag icon={<Languages className="h-4 w-4" />} label={t('hero.mockup.languages')} />
-                </div>
-              </div>
-
-              <div className="flex flex-col gap-4">
-                <div className="glass-subtle rounded-[1.75rem] p-5">
-                  <div className="flex items-center gap-3 text-cyan-200">
-                    <Sparkles className="h-5 w-5" />
-                    <p className="text-sm font-semibold text-white">{t('hero.mockup.sideTitle')}</p>
-                  </div>
-                  <p className="mt-4 text-sm leading-7 text-white/66">{t('hero.mockup.sideBody')}</p>
-                </div>
-
-                <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-1">
-                  <div className="glass-subtle rounded-[1.75rem] p-5">
-                    <div className="text-xs uppercase tracking-[0.18em] text-white/38">{t('hero.mockup.statPrimaryLabel')}</div>
-                    <div className="mt-3 text-2xl font-semibold text-white">{t('hero.mockup.statPrimaryValue')}</div>
-                  </div>
-                  <div className="glass-subtle rounded-[1.75rem] p-5">
-                    <div className="text-xs uppercase tracking-[0.18em] text-white/38">{t('hero.mockup.statSecondaryLabel')}</div>
-                    <div className="mt-3 text-2xl font-semibold text-white">{t('hero.mockup.statSecondaryValue')}</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </GlassCard>
+        <HeroShowcase />
       </motion.div>
     </section>
   )
 }
 
+type HeroReleaseBadgeProps = {
+  label: string
+}
+
+function HeroReleaseBadge({ label }: HeroReleaseBadgeProps) {
+  const [isHovering, setIsHovering] = useState(false)
+
+  return (
+    <motion.div
+      className="relative mb-6 inline-flex"
+      onHoverEnd={() => setIsHovering(false)}
+      onHoverStart={() => setIsHovering(true)}>
+      <motion.div
+        aria-hidden="true"
+        animate={{ opacity: isHovering ? 0.72 : 0.34, scale: isHovering ? 1.05 : 0.9 }}
+        className="pointer-events-none absolute inset-x-5 bottom-0 h-8 rounded-full bg-[radial-gradient(circle,rgba(103,232,249,0.36),rgba(129,140,248,0.16)_46%,transparent_74%)] blur-2xl"
+        transition={{ duration: 0.24, ease: [0.22, 1, 0.36, 1] }}
+      />
+      <motion.div
+        animate={{ y: isHovering ? -2 : 0, scale: isHovering ? 1.012 : 1 }}
+        className="relative"
+        transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}>
+        <motion.div
+          aria-hidden="true"
+          animate={{ opacity: isHovering ? 0.95 : 0.62, scaleX: isHovering ? 1 : 0.82 }}
+          className="pointer-events-none absolute inset-x-5 top-0 h-px bg-gradient-to-r from-transparent via-cyan-200/90 to-transparent"
+          transition={{ duration: 0.24, ease: [0.22, 1, 0.36, 1] }}
+        />
+        <Badge className="relative z-10">
+          <span className="h-2 w-2 rounded-full bg-cyan-300" />
+          {label}
+        </Badge>
+      </motion.div>
+    </motion.div>
+  )
+}
+
+type HeroDownloadActionProps = {
+  caption: string
+  glowClassName: string
+  href: string
+  icon: ReactNode
+  label: string
+  preferred?: boolean
+  variant?: 'primary' | 'secondary'
+}
+
+function HeroDownloadAction({
+  caption,
+  glowClassName,
+  href,
+  icon,
+  label,
+  preferred = false,
+  variant = 'primary',
+}: HeroDownloadActionProps) {
+  const [isHovering, setIsHovering] = useState(false)
+  const active = isHovering || preferred
+
+  return (
+    <div className="flex flex-col gap-2">
+      <motion.div
+        className="relative w-full sm:w-fit"
+        onHoverEnd={() => setIsHovering(false)}
+        onHoverStart={() => setIsHovering(true)}>
+        <motion.div
+          aria-hidden="true"
+          animate={{
+            opacity: active ? 0.86 : 0.28,
+            scale: active ? 1.06 : 0.88,
+            y: active ? 2 : 8,
+          }}
+          className={cn('pointer-events-none absolute inset-x-5 -bottom-2 h-12 rounded-full blur-2xl', glowClassName)}
+          transition={{ duration: 0.24, ease: [0.22, 1, 0.36, 1] }}
+        />
+        <motion.div
+          animate={{ y: isHovering ? -3 : 0, scale: isHovering ? 1.012 : 1 }}
+          className="relative"
+          transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}>
+          <motion.div
+            aria-hidden="true"
+            animate={{ opacity: active ? 0.92 : 0.42, scaleX: active ? 1 : 0.8 }}
+            className="pointer-events-none absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-white/90 to-transparent"
+            transition={{ duration: 0.24, ease: [0.22, 1, 0.36, 1] }}
+          />
+          <motion.div
+            aria-hidden="true"
+            animate={{ opacity: active ? 0.82 : 0.18 }}
+            className="pointer-events-none absolute inset-0 rounded-full border border-white/16"
+            transition={{ duration: 0.24, ease: [0.22, 1, 0.36, 1] }}
+          />
+          <Button
+            className={cn(
+              'relative z-10 w-full sm:w-auto',
+              preferred &&
+                (variant === 'primary'
+                  ? 'ring-2 ring-cyan-300/70 ring-offset-2 ring-offset-[#070b17]'
+                  : 'ring-2 ring-fuchsia-300/70 ring-offset-2 ring-offset-[#070b17]'),
+            )}
+            href={href}
+            size="lg"
+            variant={variant}>
+            {label}
+            {icon}
+          </Button>
+        </motion.div>
+      </motion.div>
+      <span className="px-2 text-xs text-white/56">{caption}</span>
+    </div>
+  )
+}
+
+function HeroShowcase() {
+  const { t } = useTranslation()
+  const [isHovering, setIsHovering] = useState(false)
+
+  const rotateXRaw = useMotionValue(0)
+  const rotateYRaw = useMotionValue(0)
+  const pointerShiftXRaw = useMotionValue(0)
+  const pointerShiftYRaw = useMotionValue(0)
+  const glowXRaw = useMotionValue(50)
+  const glowYRaw = useMotionValue(50)
+
+  const rotateX = useSpring(rotateXRaw, { stiffness: 180, damping: 20, mass: 0.72 })
+  const rotateY = useSpring(rotateYRaw, { stiffness: 180, damping: 20, mass: 0.72 })
+  const pointerShiftX = useSpring(pointerShiftXRaw, { stiffness: 185, damping: 22, mass: 0.75 })
+  const pointerShiftY = useSpring(pointerShiftYRaw, { stiffness: 185, damping: 22, mass: 0.75 })
+  const glowX = useSpring(glowXRaw, { stiffness: 190, damping: 22, mass: 0.75 })
+  const glowY = useSpring(glowYRaw, { stiffness: 190, damping: 22, mass: 0.75 })
+
+  const headerX = useTransform(pointerShiftX, (value) => value * 0.16)
+  const headerY = useTransform(pointerShiftY, (value) => value * -0.14)
+  const pillsX = useTransform(pointerShiftX, (value) => value * 0.24)
+  const pillsY = useTransform(pointerShiftY, (value) => value * -0.22)
+  const bodyX = useTransform(pointerShiftX, (value) => value * 0.12)
+  const bodyY = useTransform(pointerShiftY, (value) => value * -0.08)
+  const stackX = useTransform(pointerShiftX, (value) => value * -0.18)
+  const stackY = useTransform(pointerShiftY, (value) => value * -0.12)
+  const chatX = useTransform(pointerShiftX, (value) => value * 0.34)
+  const chatY = useTransform(pointerShiftY, (value) => value * -0.26)
+  const tagsX = useTransform(pointerShiftX, (value) => value * 0.22)
+  const tagsY = useTransform(pointerShiftY, (value) => value * -0.18)
+  const pointerGlow = useMotionTemplate`radial-gradient(circle at ${glowX}% ${glowY}%, rgba(103, 232, 249, 0.2), rgba(129, 140, 248, 0.16) 22%, rgba(217, 70, 239, 0.08) 44%, transparent 70%)`
+
+  function handlePointerMove(event: ReactPointerEvent<HTMLDivElement>) {
+    if (event.pointerType === 'touch') {
+      return
+    }
+
+    const rect = event.currentTarget.getBoundingClientRect()
+    const progressX = (event.clientX - rect.left) / rect.width
+    const progressY = (event.clientY - rect.top) / rect.height
+
+    rotateXRaw.set((0.5 - progressY) * 5.5)
+    rotateYRaw.set((progressX - 0.5) * 8)
+    pointerShiftXRaw.set((progressX - 0.5) * 16)
+    pointerShiftYRaw.set((progressY - 0.5) * 14)
+    glowXRaw.set(progressX * 100)
+    glowYRaw.set(progressY * 100)
+
+    if (!isHovering) {
+      setIsHovering(true)
+    }
+  }
+
+  function resetPointerState() {
+    rotateXRaw.set(0)
+    rotateYRaw.set(0)
+    pointerShiftXRaw.set(0)
+    pointerShiftYRaw.set(0)
+    glowXRaw.set(50)
+    glowYRaw.set(50)
+    setIsHovering(false)
+  }
+
+  return (
+    <motion.div
+      animate={{ scale: isHovering ? 1.01 : 1 }}
+      className="relative will-change-transform"
+      onPointerCancel={resetPointerState}
+      onPointerLeave={resetPointerState}
+      onPointerMove={handlePointerMove}
+      style={{
+        rotateX,
+        rotateY,
+        transformPerspective: 1400,
+        transformStyle: 'preserve-3d',
+      }}
+      transition={{ duration: 0.24, ease: [0.22, 1, 0.36, 1] }}>
+      <motion.div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-12 bottom-3 h-28 rounded-full bg-[radial-gradient(circle,rgba(56,189,248,0.28),rgba(129,140,248,0.2)_42%,rgba(217,70,239,0.14)_62%,transparent_76%)] blur-3xl"
+        animate={{ opacity: isHovering ? 0.8 : 0.48, scale: isHovering ? 1.06 : 0.92 }}
+        transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+      />
+
+      <GlassCard className="relative overflow-hidden p-4 sm:p-5">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(129,140,248,0.22),transparent_38%),radial-gradient(circle_at_bottom_left,rgba(34,211,238,0.16),transparent_26%)]" />
+        <motion.div
+          aria-hidden="true"
+          animate={{ opacity: isHovering ? 0.54 : 0.18 }}
+          className="pointer-events-none absolute inset-0"
+          style={{ background: pointerGlow }}
+          transition={{ duration: 0.24, ease: [0.22, 1, 0.36, 1] }}
+        />
+        <motion.div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-cyan-200/90 to-transparent"
+          animate={{ opacity: isHovering ? 0.95 : 0.55, scaleX: isHovering ? 1.02 : 0.86 }}
+          transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+        />
+
+        <div className="relative">
+          <motion.div className="mb-4 flex items-center gap-2" style={{ x: headerX, y: headerY }}>
+            <div className="flex items-center gap-2">
+              <span className="h-3 w-3 rounded-full bg-rose-400/80" />
+              <span className="h-3 w-3 rounded-full bg-amber-300/80" />
+              <span className="h-3 w-3 rounded-full bg-emerald-300/80" />
+            </div>
+          </motion.div>
+
+          <div className="glass-subtle relative overflow-hidden rounded-[1.75rem] p-5">
+            <motion.div
+              aria-hidden="true"
+              className="pointer-events-none absolute -right-10 top-0 h-32 w-32 rounded-full bg-cyan-300/12 blur-3xl"
+              animate={{ opacity: isHovering ? 0.5 : 0.2, scale: isHovering ? 1.04 : 0.84 }}
+              transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+            />
+
+            <motion.div className="flex flex-wrap gap-2" style={{ x: pillsX, y: pillsY }}>
+              <ConceptPill icon={<Languages className="h-4 w-4" />} label={t('hero.mockup.translateChip')} />
+              <ConceptPill icon={<MessageSquare className="h-4 w-4" />} label={t('hero.mockup.chatChip')} />
+            </motion.div>
+
+            <motion.p className="mt-4 text-sm leading-7 text-white/66" style={{ x: bodyX, y: bodyY }}>
+              {t('hero.mockup.body')}
+            </motion.p>
+
+            <motion.div className="mt-6 space-y-3" style={{ x: stackX, y: stackY }}>
+              <div className="rounded-[1.5rem] border border-white/8 bg-white/5 px-4 py-3 shadow-[0_14px_36px_rgba(3,8,18,0.22)]">
+                <div className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white/38">
+                  {t('languageSwitcher.languages.en.short')}
+                </div>
+                <div className="mt-2 text-sm font-medium text-white/78">{t('hero.mockup.source')}</div>
+              </div>
+              <div className="flex items-center gap-3 px-1 text-white/32">
+                <div className="h-px flex-1 bg-current" />
+                <ArrowRight className="h-4 w-4" />
+                <div className="h-px flex-1 bg-current" />
+              </div>
+              <div className="rounded-[1.5rem] border border-accent-300/18 bg-[linear-gradient(135deg,rgba(99,102,241,0.12),rgba(34,211,238,0.08))] px-4 py-3 shadow-[0_18px_42px_rgba(3,8,18,0.26)]">
+                <div className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-cyan-100/72">
+                  {t('languageSwitcher.languages.zh.short')}
+                </div>
+                <div className="mt-2 text-sm font-medium text-white">{t('hero.mockup.result')}</div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              className="mt-6 rounded-[1.5rem] border border-cyan-200/12 bg-[linear-gradient(135deg,rgba(148,163,184,0.08),rgba(34,211,238,0.12))] px-4 py-4 shadow-[0_20px_46px_rgba(3,8,18,0.3)]"
+              style={{ x: chatX, y: chatY }}>
+              <motion.div
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-cyan-200/90 to-transparent"
+                animate={{ opacity: isHovering ? 0.95 : 0.62, scaleX: isHovering ? 1 : 0.82 }}
+                transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+              />
+              <div className="flex items-start justify-between gap-4">
+                <div className="min-w-0">
+                  <div className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-cyan-100/64">{t('hero.mockup.chatLabel')}</div>
+                  <div className="mt-2 text-sm font-medium text-white">{t('hero.mockup.chatDraft')}</div>
+                </div>
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-cyan-100/14 bg-cyan-300/14 text-cyan-100">
+                  <ArrowRight className="h-4 w-4" />
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div className="mt-6 grid gap-3 sm:grid-cols-2" style={{ x: tagsX, y: tagsY }}>
+              <MockupTag icon={<Languages className="h-4 w-4" />} label={t('hero.mockup.translateChip')} />
+              <MockupTag icon={<Keyboard className="h-4 w-4" />} label={t('hero.mockup.chatReady')} />
+            </motion.div>
+          </div>
+        </div>
+      </GlassCard>
+    </motion.div>
+  )
+}
+
+function ConceptPill({ icon, label }: { icon: ReactNode; label: string }) {
+  return (
+    <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/6 px-3 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white/72">
+      <span className="text-cyan-200">{icon}</span>
+      <span>{label}</span>
+    </div>
+  )
+}
+
 function MockupTag({ icon, label }: { icon: ReactNode; label: string }) {
   return (
-    <div className="flex items-center gap-2 rounded-[1.25rem] border border-white/8 bg-white/5 px-3 py-3">
+    <div className="flex items-center gap-2 rounded-[1.25rem] border border-white/8 bg-white/5 px-3 py-3 text-sm text-white/72">
       <span className="text-cyan-200">{icon}</span>
-      <span className="text-sm text-white/72">{label}</span>
+      <span>{label}</span>
     </div>
   )
 }

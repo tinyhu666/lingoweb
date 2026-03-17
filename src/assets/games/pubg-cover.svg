@@ -1,0 +1,22 @@
+<svg width="768" height="1024" viewBox="0 0 768 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="82" y1="70" x2="682" y2="980" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#122A31"/>
+      <stop offset="0.5" stop-color="#0C1520"/>
+      <stop offset="1" stop-color="#06090F"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(592 206) rotate(136) scale(348 330)">
+      <stop stop-color="#74E0B8" stop-opacity="0.88"/>
+      <stop offset="1" stop-color="#74E0B8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="768" height="1024" rx="56" fill="url(#bg)"/>
+  <rect x="34" y="34" width="700" height="956" rx="40" stroke="rgba(255,255,255,0.12)"/>
+  <circle cx="592" cy="206" r="246" fill="url(#glow)"/>
+  <path d="M138 754C226 604 294 420 430 246L604 338L502 826L238 886L138 754Z" fill="#11151A" stroke="#74E0B8" stroke-opacity="0.44" stroke-width="10"/>
+  <path d="M308 296H476L510 408H274L308 296Z" fill="#74E0B8"/>
+  <path d="M272 438H512L480 566H304L272 438Z" fill="#74E0B8" fill-opacity="0.82"/>
+  <path d="M232 628H536L498 760H270L232 628Z" fill="#E2FFF3" fill-opacity="0.18"/>
+  <text x="82" y="818" fill="#EEFFF8" font-size="116" font-family="Arial, sans-serif" font-weight="700" letter-spacing="-5">PUBG</text>
+  <text x="88" y="884" fill="#A9F0D4" font-size="30" font-family="Arial, sans-serif" font-weight="700" letter-spacing="8">SQUAD CHAT READY</text>
+</svg>

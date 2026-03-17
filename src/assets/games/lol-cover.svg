@@ -1,0 +1,22 @@
+<svg width="768" height="1024" viewBox="0 0 768 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="100" y1="34" x2="658" y2="972" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#14274E"/>
+      <stop offset="0.5" stop-color="#0C132A"/>
+      <stop offset="1" stop-color="#070A13"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(574 210) rotate(135) scale(352 352)">
+      <stop stop-color="#F2D178" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#F2D178" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="768" height="1024" rx="56" fill="url(#bg)"/>
+  <rect x="34" y="34" width="700" height="956" rx="40" stroke="rgba(255,255,255,0.12)"/>
+  <circle cx="574" cy="210" r="252" fill="url(#glow)"/>
+  <path d="M166 746C226 496 348 256 580 118C650 176 670 312 640 448C606 592 508 732 328 858L166 746Z" fill="#0B1223" stroke="#F1D07A" stroke-opacity="0.46" stroke-width="10"/>
+  <path d="M252 720C302 546 402 348 544 218C576 248 590 314 580 384C562 506 492 630 366 748L252 720Z" fill="#F1D07A"/>
+  <path d="M154 786L338 650L392 722L210 866L154 786Z" fill="#74C0FC" fill-opacity="0.72"/>
+  <text x="82" y="822" fill="#FFF7E1" font-size="76" font-family="Arial, sans-serif" font-weight="700" letter-spacing="-3">LEAGUE OF</text>
+  <text x="82" y="912" fill="#FFF7E1" font-size="112" font-family="Arial, sans-serif" font-weight="700" letter-spacing="-4">LEGENDS</text>
+  <text x="88" y="968" fill="#CADCFF" font-size="28" font-family="Arial, sans-serif" font-weight="700" letter-spacing="7">RIFT CHAT FLOW</text>
+</svg>

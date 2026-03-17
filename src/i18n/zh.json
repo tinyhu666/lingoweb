@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Lingo - AI 游戏内聊天翻译客户端",
-    "description": "Lingo 是一款面向 Windows 与 macOS 的 AI 游戏内聊天翻译客户端，用全局快捷键把复制、翻译、回填压缩成一次动作。"
+    "title": "Lingo - 你的游戏内 AI 嘴替",
+    "description": "Lingo 是你在游戏里的 AI 嘴替：先看懂队友，再把你想说的话翻译、整理并一键送回聊天框。"
   },
   "brand": {
     "name": "Lingo",
@@ -22,27 +22,32 @@
     "closeMenu": "关闭菜单",
     "links": {
       "features": "功能",
+      "supportedGames": "支持游戏",
       "howItWorks": "流程",
       "download": "下载"
     }
   },
   "hero": {
     "badge": "最新版本 v{{version}}",
-    "title": "Translate. Game. Together.",
-    "subtitle": "Lingo 是一款 AI 驱动的游戏内聊天翻译客户端，面向 Windows 与 macOS，为多人联机场景提供低打断、低延迟的沟通体验。",
-    "helper": "我们会自动识别你的平台，并高亮推荐对应安装包。",
+    "title": "Translate & Chat",
+    "subtitle": "Lingo 是你在游戏里的 AI 嘴替。先帮你看懂队友，再把你想说的话整理好、翻过去、送回聊天框，让你专心打完这波。",
+    "helper": "自动高亮适合当前设备的下载项。",
     "downloadMac": "下载 macOS 版",
     "downloadWindows": "下载 Windows 版",
     "github": "查看 GitHub",
     "macLabel": "Apple Silicon · DMG",
     "windowsLabel": "Windows x64 · EXE",
     "mockup": {
-      "liveTag": "LOW LATENCY",
-      "eyebrow": "游戏内翻译",
-      "title": "一个快捷键，直接回到聊天框",
-      "body": "选中文本，按下热键，译文自动回填到当前输入框，不必切出游戏。",
+      "eyebrow": "AI 嘴替",
+      "title": "你想说的，它替你发出去",
+      "body": "从看懂队友到把一句话发回聊天框，Lingo 把翻译、润色和回填压成一个动作，像在局里多了个懂语境的 AI 嘴替。",
+      "translateChip": "Translate",
+      "chatChip": "Chat",
       "source": "Hold. Fight when my BKB is ready.",
       "result": "别着急，等我 BKB 好了再打。",
+      "chatLabel": "聊天框",
+      "chatDraft": "等我 BKB 好了再接。",
+      "chatReady": "替你组织好",
       "server": "服务端 AI",
       "hotkey": "全局快捷键",
       "phrases": "快捷短语",
@@ -57,49 +62,80 @@
   },
   "features": {
     "eyebrow": "为什么是 Lingo",
-    "title": "围绕实战沟通来设计。",
-    "subtitle": "从触发方式到译文回填，整个流程都在服务同一件事：更快、更清晰，而且不打断对局节奏。",
+    "title": "不是翻译悬浮窗，是你在局里的 AI 嘴替。",
+    "subtitle": "它不只翻字面意思，还把高频 callout、短句节奏和发送动作合成一个顺手流程。",
     "items": {
       "instant": {
-        "title": "一键翻译",
-        "description": "用一次快捷键完成翻译流程，保持聊天框焦点不丢失。"
+        "title": "一键开口",
+        "description": "选中文本或写好一句话，热键一按，嘴替立刻接手。"
       },
       "server": {
-        "title": "服务端 AI",
-        "description": "模型、路由与更新由服务端统一维护，客户端保持轻量直接。"
+        "title": "懂语境的 AI",
+        "description": "模型与更新放在服务端持续维护，让你发出去的话更短、更稳、更像真玩家。"
       },
       "phrases": {
-        "title": "快捷短语",
-        "description": "高频指令提前备好，在对局里不必重复输入同一句话。"
+        "title": "常用话术随手发",
+        "description": "开团、撤退、等等我、别急这些高频短句，提前备好就能秒发。"
       },
       "languages": {
-        "title": "多语言界面",
-        "description": "同一套产品体验覆盖中文、英文、俄文，安装后即可直接使用。"
+        "title": "跨语言直接聊",
+        "description": "中文、英文、俄文一套带走，让你在不同服务器里都能自然接话。"
+      }
+    }
+  },
+  "supportedGames": {
+    "eyebrow": "支持游戏",
+    "title": "这些游戏里，它最像一个真队友。",
+    "subtitle": "当前重点支持 Dota 2、英雄联盟、魔兽世界、守望先锋 2 等热门聊天场景，其他能打字沟通的游戏也会陆续覆盖。",
+    "chatBadge": "AI 嘴替",
+    "controls": {
+      "previous": "上一组游戏",
+      "next": "下一组游戏",
+      "goTo": "切换到{{game}}"
+    },
+    "noteLabel": "适用场景",
+    "note": "只要游戏里能聊天，Lingo 通常都能成为你补一句、翻一句、发一句的 AI 嘴替。",
+    "items": {
+      "dota2": {
+        "name": "Dota 2",
+        "description": "报点、叫开雾、等 BKB、催撤退，这类节奏话都更适合交给它快速组织。"
+      },
+      "lol": {
+        "name": "英雄联盟",
+        "description": "对线提醒、打野时机、资源交换和团战短句，都能更快、更像队友口吻地发出去。"
+      },
+      "wow": {
+        "name": "魔兽世界",
+        "description": "副本指令、集合提醒、组队招呼和跨语言队伍沟通，都更省心。"
+      },
+      "ow2": {
+        "name": "守望先锋 2",
+        "description": "报点、换位、集火、拉扯和开团提醒，可以更干净利落地回到队伍聊天。"
       }
     }
   },
   "howItWorks": {
     "eyebrow": "使用流程",
-    "title": "三步完成，不做多余动作。",
-    "subtitle": "Lingo 把翻译过程压缩成稳定可重复的顺序，让真实对局里的沟通更顺滑。",
+    "title": "三步，把意思变成能发出去的话。",
+    "subtitle": "Lingo 像一个挂在热键上的 AI 嘴替：先理解，再翻译，最后把话送回聊天框。",
     "steps": {
       "select": {
-        "title": "选中聊天文本",
-        "description": "在游戏聊天框中选中或输入你想发送的那句话。"
+        "title": "给它一句话",
+        "description": "选中队友发来的内容，或者先输入你自己想说的话。"
       },
       "hotkey": {
         "title": "按下快捷键",
-        "description": "一次热键触发复制与翻译，把文本发送到服务端。"
+        "description": "热键触发复制、翻译和整理，让 AI 接手中间步骤。"
       },
       "paste": {
-        "title": "自动回填译文",
-        "description": "译文写回当前输入框，确认后就能直接发送。"
+        "title": "直接发出去",
+        "description": "处理好的结果自动回到当前聊天框，确认后就能立刻发送。"
       }
     }
   },
   "download": {
     "eyebrow": "下载",
-    "title": "选好平台，马上开打。",
+    "title": "装上它，下局就让 AI 替你开口。",
     "subtitle": "主按钮优先使用腾讯云镜像下载，同时保留 GitHub Releases 作为备用入口。",
     "recommended": "推荐给当前设备",
     "latestRelease": "当前公开版本 v{{version}}",
@@ -125,11 +161,12 @@
     }
   },
   "footer": {
-    "tagline": "为多人联机沟通而生的 AI 游戏内聊天翻译工具。",
+    "tagline": "你在游戏里的 AI 嘴替。",
     "version": "当前版本 v{{version}}",
     "product": {
       "title": "产品",
       "features": "功能特性",
+      "supportedGames": "支持游戏",
       "workflow": "使用流程",
       "download": "下载客户端"
     },

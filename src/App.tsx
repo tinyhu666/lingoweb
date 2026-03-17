@@ -6,6 +6,7 @@ import Footer from '@/components/Footer'
 import Hero from '@/components/Hero'
 import HowItWorks from '@/components/HowItWorks'
 import Navbar from '@/components/Navbar'
+import SupportedGames from '@/components/SupportedGames'
 import { APP_VERSION, SITE_URL } from '@/lib/constants'
 import { FALLBACK_RELEASE_INFO, fetchLatestReleaseInfo } from '@/lib/release'
 import { detectPreferredPlatform, type PlatformId } from '@/lib/platform'
@@ -77,6 +78,7 @@ function App() {
       <main className="mx-auto flex min-h-screen w-full max-w-7xl flex-col gap-24 px-5 pb-20 pt-28 sm:px-8 lg:px-10">
         <Hero downloads={release.downloads} preferredPlatform={preferredPlatform} version={release.version || APP_VERSION} />
         <Features />
+        <SupportedGames />
         <HowItWorks />
         <Download downloads={release.downloads} preferredPlatform={preferredPlatform} version={release.version || APP_VERSION} />
       </main>

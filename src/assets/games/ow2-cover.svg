@@ -1,0 +1,24 @@
+<svg width="768" height="1024" viewBox="0 0 768 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="86" y1="74" x2="694" y2="980" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#241A17"/>
+      <stop offset="0.5" stop-color="#101521"/>
+      <stop offset="1" stop-color="#06090F"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(588 212) rotate(136) scale(344 328)">
+      <stop stop-color="#FFAA63" stop-opacity="0.94"/>
+      <stop offset="1" stop-color="#FFAA63" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="768" height="1024" rx="56" fill="url(#bg)"/>
+  <rect x="34" y="34" width="700" height="956" rx="40" stroke="rgba(255,255,255,0.12)"/>
+  <circle cx="588" cy="212" r="242" fill="url(#glow)"/>
+  <path d="M226 278C262 238 312 210 384 210C456 210 506 238 542 278L502 320C470 288 432 270 384 270C336 270 298 288 266 320L226 278Z" fill="#FFAA63"/>
+  <path d="M178 344H248C262 488 320 588 384 654C448 588 506 488 520 344H590C574 540 490 694 384 788C278 694 194 540 178 344Z" fill="#10161E" stroke="#F3F7FF" stroke-opacity="0.42" stroke-width="10"/>
+  <path d="M304 408L384 330L464 408L434 450L384 400L334 450L304 408Z" fill="#FFAA63"/>
+  <circle cx="274" cy="506" r="34" fill="#F6FAFF" fill-opacity="0.2"/>
+  <circle cx="494" cy="506" r="34" fill="#F6FAFF" fill-opacity="0.2"/>
+  <text x="82" y="820" fill="#FFF0E2" font-size="86" font-family="Arial, sans-serif" font-weight="700" letter-spacing="-4">OVERWATCH</text>
+  <text x="82" y="910" fill="#FFF0E2" font-size="118" font-family="Arial, sans-serif" font-weight="700" letter-spacing="-5">2</text>
+  <text x="88" y="968" fill="#FFD1A9" font-size="28" font-family="Arial, sans-serif" font-weight="700" letter-spacing="7">TEAM CHAT READY</text>
+</svg>

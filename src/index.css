@@ -165,4 +165,13 @@
     line-height: 1.75;
     color: rgba(211, 218, 241, 0.78);
   }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
 }
