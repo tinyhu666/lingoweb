@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Lingo - Your AI Mouthpiece In Game",
+    "title": "Lingo - Your AI Mouthpiece in Game",
     "description": "Lingo is your in-game AI mouthpiece: understand teammates, translate what you mean, and drop it straight back into chat."
   },
   "brand": {
@@ -30,8 +30,8 @@
   "hero": {
     "badge": "Latest release v{{version}}",
     "title": "Translate & Chat",
-    "subtitle": "Lingo is your AI mouthpiece in game. Read the callout, shape your reply, and send it back to chat without dropping the match.",
-    "helper": "The best installer is highlighted for your device.",
+    "subtitle": "Lingo is your in-game AI mouthpiece. Understand the callout, shape the reply, and send it back to chat without leaving the fight.",
+    "helper": "We'll highlight the best installer for this device.",
     "downloadMac": "Download for macOS",
     "downloadWindows": "Download for Windows",
     "github": "View on GitHub",
@@ -40,7 +40,7 @@
     "mockup": {
       "eyebrow": "AI mouthpiece",
       "title": "Say it cleanly, send it fast",
-      "body": "Type your line in Chinese, hit the hotkey, and Lingo turns BKB, take the fight, and wait up into English that sounds like something a real teammate would send.",
+      "body": "Type the line in Chinese, hit the hotkey, and Lingo turns terms like BKB, take the fight, and wait up into natural English a real teammate would actually send.",
       "translateChip": "Terms right",
       "chatChip": "Sounds native",
       "sourceLabel": "ZH draft",
@@ -66,7 +66,7 @@
   "features": {
     "eyebrow": "Why Lingo",
     "title": "Not just translation. Your in-game AI mouthpiece.",
-    "subtitle": "It does more than swap words. Lingo keeps callouts short, readable, and ready to fire inside the same chat rhythm.",
+    "subtitle": "It does more than translate. Lingo keeps callouts short, readable, and ready to send in the same rhythm as the match.",
     "items": {
       "instant": {
         "title": "One-key reply",
@@ -88,8 +88,8 @@
   },
   "supportedGames": {
     "eyebrow": "Supported games",
-    "title": "Closer to a real teammate in the games where chat still matters.",
-    "subtitle": "We are starting with Dota 2, League of Legends, World of Warcraft, and Overwatch 2, then expanding to other games where quick typed chat still carries the team.",
+    "title": "Best in the games where typed chat still wins fights.",
+    "subtitle": "Starting with Dota 2, League of Legends, World of Warcraft, and Overwatch 2, then expanding to more games where fast typed chat still matters.",
     "chatBadge": "AI mouthpiece",
     "controls": {
       "previous": "Previous games",
@@ -97,7 +97,7 @@
       "goTo": "Go to {{game}}"
     },
     "noteLabel": "BEST FIT",
-    "note": "If a game gives you a chat box, Lingo can usually step in to read faster, reply cleaner, and keep the tempo moving.",
+    "note": "If a game has a chat box, Lingo can usually jump in to read faster, reply cleaner, and keep the tempo moving.",
     "items": {
       "dota2": {
         "name": "Dota 2",
@@ -120,7 +120,7 @@
   "howItWorks": {
     "eyebrow": "Workflow",
     "title": "Three steps from intent to send.",
-    "subtitle": "Lingo works like an AI mouthpiece bound to a hotkey: understand, translate, then send it back to chat.",
+    "subtitle": "Lingo works like an AI mouthpiece on a hotkey: understand, translate, and drop it back into chat.",
     "steps": {
       "select": {
         "title": "Give it the line",
@@ -132,14 +132,14 @@
       },
       "paste": {
         "title": "Send the draft",
-        "description": "The ready-to-send result lands back in the current chat box."
+        "description": "The polished line lands back in the current chat box, ready to send."
       }
     }
   },
   "download": {
     "eyebrow": "Download",
-    "title": "Install it now. Let AI speak for you next match.",
-    "subtitle": "Direct installers use a Tencent Cloud mirror for faster regional downloads, with a fallback link to the full GitHub releases page.",
+    "title": "Install it now and let AI speak for you next match.",
+    "subtitle": "Primary downloads use a Tencent Cloud mirror for faster regional delivery, with GitHub Releases as the fallback.",
     "recommended": "Recommended for your device",
     "latestRelease": "Latest public release v{{version}}",
     "showAll": "View GitHub Releases",
@@ -164,7 +164,7 @@
     }
   },
   "footer": {
-    "tagline": "Your in-game AI mouthpiece for faster team chat.",
+    "tagline": "Your in-game AI mouthpiece for faster, cleaner team chat.",
     "version": "Current version v{{version}}",
     "product": {
       "title": "Product",

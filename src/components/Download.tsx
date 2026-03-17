@@ -77,10 +77,10 @@ function Download({ downloads, preferredPlatform, version }: DownloadProps) {
           <div className="pointer-events-none absolute inset-x-10 bottom-0 h-16 rounded-full bg-[radial-gradient(circle,rgba(103,232,249,0.18),rgba(129,140,248,0.1)_46%,transparent_76%)] opacity-0 blur-2xl transition duration-300 group-hover:opacity-100" />
           <div className="relative flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/42">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/50">
                 {t('download.requirementsTitle')}
               </p>
-              <div className="mt-4 flex flex-col gap-3 text-sm leading-7 text-white/68">
+              <div className="mt-4 flex flex-col gap-3 text-sm leading-7 text-white/74">
                 <p>{t('download.requirements.macos')}</p>
                 <p>{t('download.requirements.windows')}</p>
               </div>
@@ -120,7 +120,7 @@ function DownloadReleaseBadge({ label }: DownloadReleaseBadgeProps) {
       />
       <motion.div
         animate={{ y: isHovering ? -2 : 0, scale: isHovering ? 1.012 : 1 }}
-        className="relative rounded-full border border-white/10 bg-white/6 px-4 py-2 text-sm text-white/72"
+        className="relative rounded-full border border-white/10 bg-white/6 px-4 py-2 text-sm text-white/78"
         transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}>
         <motion.div
           aria-hidden="true"
@@ -188,7 +188,7 @@ function DownloadPlatformCard({
         <div className="relative">
           <div className="flex flex-wrap items-start justify-between gap-3">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/42">{meta}</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/50">{meta}</p>
               <h3 className="mt-3 text-3xl font-semibold tracking-[-0.03em] text-white">{title}</h3>
             </div>
 
@@ -204,7 +204,7 @@ function DownloadPlatformCard({
           </div>
 
           <motion.p
-            className="mt-5 text-sm leading-7 text-white/66"
+            className="mt-5 text-sm leading-7 text-white/72"
             transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
             whileHover={{ x: 2 }}>
             {description}

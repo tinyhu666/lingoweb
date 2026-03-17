@@ -32,7 +32,7 @@ function Hero({ downloads, preferredPlatform, version }: HeroProps) {
           transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}>
           <HeroReleaseBadge label={t('hero.badge', { version })} />
 
-          <h1 className="section-title">{t('hero.title')}</h1>
+          <h1 className="section-title max-w-[11ch] text-[clamp(3rem,6vw,5rem)]">{t('hero.title')}</h1>
           <p className="section-copy mt-6">{t('hero.subtitle')}</p>
         </motion.div>
 
@@ -63,7 +63,7 @@ function Hero({ downloads, preferredPlatform, version }: HeroProps) {
 
         <motion.p
           animate={{ opacity: 1, y: 0 }}
-          className="mt-4 px-1 text-xs text-white/42"
+          className="mt-4 px-1 text-xs leading-6 text-white/52"
           initial={{ opacity: 0, y: 24 }}
           transition={{ duration: 0.65, delay: 0.16, ease: [0.22, 1, 0.36, 1] }}>
           {t('hero.helper')}
@@ -198,7 +198,7 @@ function HeroDownloadAction({
           </Button>
         </motion.div>
       </motion.div>
-      <span className="px-2 text-xs text-white/56">{caption}</span>
+      <span className="px-2 text-xs text-white/62">{caption}</span>
     </div>
   )
 }
@@ -325,13 +325,13 @@ function HeroShowcase() {
               <ConceptPill icon={<MessageSquare className="h-4 w-4" />} label={t('hero.mockup.chatChip')} />
             </motion.div>
 
-            <motion.p className="mt-4 text-sm leading-7 text-white/66" style={{ x: bodyX, y: bodyY }}>
+            <motion.p className="mt-4 text-sm leading-7 text-white/72" style={{ x: bodyX, y: bodyY }}>
               {t('hero.mockup.body')}
             </motion.p>
 
             <motion.div className="mt-6 space-y-3" style={{ x: stackX, y: stackY }}>
               <div className="rounded-[1.5rem] border border-white/8 bg-white/5 px-4 py-3 shadow-[0_14px_36px_rgba(3,8,18,0.22)]">
-                <div className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white/38">
+                <div className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white/46">
                   {t('hero.mockup.sourceLabel')}
                 </div>
                 <div className="mt-2 text-sm font-medium text-white/78">{t('hero.mockup.source')}</div>
@@ -345,7 +345,7 @@ function HeroShowcase() {
                 <div className="h-px flex-1 bg-current" />
               </div>
               <div className="rounded-[1.5rem] border border-accent-300/18 bg-[linear-gradient(135deg,rgba(99,102,241,0.12),rgba(34,211,238,0.08))] px-4 py-3 shadow-[0_18px_42px_rgba(3,8,18,0.26)]">
-                <div className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-cyan-100/72">
+                <div className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-cyan-100/78">
                   {t('hero.mockup.resultLabel')}
                 </div>
                 <div className="mt-2 text-sm font-medium text-white">{t('hero.mockup.result')}</div>
@@ -363,7 +363,7 @@ function HeroShowcase() {
               />
               <div className="flex items-start justify-between gap-4">
                 <div className="min-w-0">
-                  <div className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-cyan-100/64">{t('hero.mockup.chatLabel')}</div>
+                  <div className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-cyan-100/70">{t('hero.mockup.chatLabel')}</div>
                   <div className="mt-2 text-sm font-medium text-white">{t('hero.mockup.chatDraft')}</div>
                 </div>
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-cyan-100/14 bg-cyan-300/14 text-cyan-100">
@@ -385,7 +385,7 @@ function HeroShowcase() {
 
 function ConceptPill({ icon, label }: { icon: ReactNode; label: string }) {
   return (
-    <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/6 px-3 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white/72">
+    <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/6 px-3 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white/78">
       <span className="text-cyan-200">{icon}</span>
       <span>{label}</span>
     </div>
@@ -394,7 +394,7 @@ function ConceptPill({ icon, label }: { icon: ReactNode; label: string }) {
 
 function MockupTag({ icon, label }: { icon: ReactNode; label: string }) {
   return (
-    <div className="flex items-center gap-2 rounded-[1.25rem] border border-white/8 bg-white/5 px-3 py-3 text-sm text-white/72">
+    <div className="flex items-center gap-2 rounded-[1.25rem] border border-white/8 bg-white/5 px-3 py-3 text-sm text-white/78">
       <span className="text-cyan-200">{icon}</span>
       <span>{label}</span>
     </div>

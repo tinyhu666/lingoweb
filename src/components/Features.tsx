@@ -41,7 +41,7 @@ function Features() {
                   <h3 className="mt-6 text-2xl font-semibold tracking-[-0.03em] text-white">
                     {t(`features.items.${feature.key}.title`)}
                   </h3>
-                  <p className="mt-4 text-sm leading-7 text-white/66">
+                  <p className="mt-4 text-sm leading-7 text-white/72">
                     {t(`features.items.${feature.key}.description`)}
                   </p>
                 </GlassCard>

@@ -96,12 +96,10 @@ function SupportedGames() {
   return (
     <AnimatedSection id="supported-games">
       <section className="section-shell">
-        <div className="lg:mx-auto lg:max-w-[68rem]">
-          <span className="section-eyebrow">{t('supportedGames.eyebrow')}</span>
-          <div className="mt-5 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-            <h2 className="section-title max-w-[13ch] text-[clamp(2.35rem,4vw,3.65rem)]">{t('supportedGames.title')}</h2>
-            <p className="section-copy lg:max-w-[34rem]">{t('supportedGames.subtitle')}</p>
-          </div>
+        <span className="section-eyebrow">{t('supportedGames.eyebrow')}</span>
+        <div className="mt-5 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+          <h2 className="section-title max-w-[13ch] text-[clamp(2.2rem,4vw,3.5rem)]">{t('supportedGames.title')}</h2>
+          <p className="section-copy lg:max-w-[35rem]">{t('supportedGames.subtitle')}</p>
         </div>
 
         <div className="mt-8 flex items-center justify-end gap-3 lg:hidden">
@@ -121,7 +119,7 @@ function SupportedGames() {
           </button>
         </div>
 
-        <div className="relative mt-8 overflow-hidden lg:mx-auto lg:max-w-[68rem] lg:overflow-visible">
+        <div className="relative mt-8 overflow-hidden lg:overflow-visible">
           <div className="pointer-events-none absolute inset-y-0 left-0 z-10 hidden w-12 bg-gradient-to-r from-[#070b17] via-[#070b17]/70 to-transparent md:block lg:hidden" />
           <div className="pointer-events-none absolute inset-y-0 right-0 z-10 hidden w-12 bg-gradient-to-l from-[#070b17] via-[#070b17]/70 to-transparent md:block lg:hidden" />
 
@@ -168,11 +166,13 @@ function SupportedGames() {
           </div>
         </div>
 
-        <div className="mt-6 flex flex-col gap-3 rounded-[1.5rem] border border-white/8 bg-white/4 px-5 py-4 text-sm text-white/62 sm:flex-row sm:items-center sm:justify-between lg:mx-auto lg:max-w-[68rem]">
-          <span className="inline-flex w-fit items-center rounded-full border border-cyan-300/18 bg-cyan-300/10 px-3 py-1.5 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-cyan-100">
-            {t('supportedGames.noteLabel')}
-          </span>
-          <span>{t('supportedGames.note')}</span>
+        <div className="mt-6 rounded-[1.5rem] border border-white/8 bg-white/4 px-5 py-4">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:gap-4 lg:grid lg:grid-cols-[auto,minmax(0,1fr)] lg:items-center lg:gap-6">
+            <span className="inline-flex w-fit items-center rounded-full border border-cyan-300/18 bg-cyan-300/10 px-3 py-1.5 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-cyan-100">
+              {t('supportedGames.noteLabel')}
+            </span>
+            <p className="leading-7 text-white/68">{t('supportedGames.note')}</p>
+          </div>
         </div>
       </section>
     </AnimatedSection>
@@ -367,7 +367,7 @@ function GameShowcaseCard({ game, index, isActive }: GameShowcaseCardProps) {
                   <h3 className="max-w-[10ch] text-[1.4rem] leading-[0.95] font-semibold tracking-[-0.05em] text-white sm:text-[1.6rem] lg:text-[1.3rem] xl:text-[1.48rem]">
                     {t(`supportedGames.items.${game.key}.name`)}
                   </h3>
-                  <p className="mt-2.5 max-w-[16rem] text-[0.8rem] leading-5 text-white/72 sm:text-[0.84rem] lg:text-[0.76rem] lg:leading-[1.35rem] xl:text-[0.82rem]">
+                  <p className="mt-2.5 max-w-[16rem] text-[0.8rem] leading-5 text-white/76 sm:text-[0.84rem] lg:text-[0.76rem] lg:leading-[1.35rem] xl:text-[0.82rem]">
                     {t(`supportedGames.items.${game.key}.description`)}
                   </p>
                 </div>

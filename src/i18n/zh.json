@@ -30,8 +30,8 @@
   "hero": {
     "badge": "最新版本 v{{version}}",
     "title": "Translate & Chat",
-    "subtitle": "Lingo 是你在游戏里的 AI 嘴替。先帮你看懂队友，再把你想说的话整理好、翻过去、送回聊天框，让你专心打完这波。",
-    "helper": "自动高亮适合当前设备的下载项。",
+    "subtitle": "Lingo 是你在游戏里的 AI 嘴替。先帮你看懂队友，再把你想说的话整理好、翻过去、送回聊天框，让你继续专心打这波。",
+    "helper": "自动高亮更适合当前设备的下载项。",
     "downloadMac": "下载 macOS 版",
     "downloadWindows": "下载 Windows 版",
     "github": "查看 GitHub",
@@ -40,7 +40,7 @@
     "mockup": {
       "eyebrow": "AI 嘴替",
       "title": "你想说的，它替你发出去",
-      "body": "你先在聊天框里写中文，按下快捷键，Lingo 会把 BKB、接团、别急这种局内话翻成更像队友会说的英文，再回填到当前聊天框。",
+      "body": "你先在聊天框里写中文，按下快捷键，Lingo 会把 BKB、接团、别急这类局内话翻成更像队友会发的英文，再回填到当前聊天框。",
       "translateChip": "术语翻译",
       "chatChip": "地道表达",
       "sourceLabel": "中文输入",
@@ -66,7 +66,7 @@
   "features": {
     "eyebrow": "为什么是 Lingo",
     "title": "不是翻译悬浮窗，是你在局里的 AI 嘴替。",
-    "subtitle": "它不只翻字面意思，还把高频 callout、短句节奏和发送动作合成一个顺手流程。",
+    "subtitle": "它不只翻字面意思，还把高频 callout、短句节奏和发送动作整理成一个顺手流程。",
     "items": {
       "instant": {
         "title": "一键开口",
@@ -89,7 +89,7 @@
   "supportedGames": {
     "eyebrow": "支持游戏",
     "title": "在这些游戏里，它更像一个真队友。",
-    "subtitle": "先从 Dota 2、英雄联盟、魔兽世界、守望先锋 2 这些高频聊天场景开始，其他能打字沟通的游戏也会陆续补上。",
+    "subtitle": "先从 Dota 2、英雄联盟、魔兽世界、守望先锋 2 这些高频聊天场景开始，其他能打字沟通的游戏也会逐步补上。",
     "chatBadge": "AI 嘴替",
     "controls": {
       "previous": "上一组游戏",
@@ -97,7 +97,7 @@
       "goTo": "切换到{{game}}"
     },
     "noteLabel": "适用场景",
-    "note": "只要游戏里有聊天框，Lingo 大多都能接上，帮你更快看懂、回话、把节奏续上。",
+    "note": "只要游戏里有聊天框，Lingo 大多都能接上，帮你更快看懂、回话，把节奏续上。",
     "items": {
       "dota2": {
         "name": "Dota 2",
@@ -139,7 +139,7 @@
   "download": {
     "eyebrow": "下载",
     "title": "装上它，下局就让 AI 替你开口。",
-    "subtitle": "主按钮优先使用腾讯云镜像下载，同时保留 GitHub Releases 作为备用入口。",
+    "subtitle": "主按钮优先走腾讯云镜像下载，同时保留 GitHub Releases 作为备用入口。",
     "recommended": "推荐给当前设备",
     "latestRelease": "当前公开版本 v{{version}}",
     "showAll": "查看 GitHub Releases",
@@ -164,7 +164,7 @@
     }
   },
   "footer": {
-    "tagline": "你在游戏里的 AI 嘴替。",
+    "tagline": "你在游戏里的 AI 嘴替，让回话更快、更顺。",
     "version": "当前版本 v{{version}}",
     "product": {
       "title": "产品",

@@ -14,7 +14,7 @@ function HowItWorks() {
         <span className="section-eyebrow">{t('howItWorks.eyebrow')}</span>
         <div className="mt-5 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <h2 className="section-title max-w-2xl">{t('howItWorks.title')}</h2>
-          <p className="section-copy">{t('howItWorks.subtitle')}</p>
+          <p className="section-copy lg:max-w-[34rem]">{t('howItWorks.subtitle')}</p>
         </div>
 
         <div className="relative mt-10">
@@ -44,7 +44,7 @@ function HowItWorks() {
                   <h3 className="mt-6 text-2xl font-semibold tracking-[-0.03em] text-white">
                     {t(`howItWorks.steps.${stepKey}.title`)}
                   </h3>
-                  <p className="mt-4 text-sm leading-7 text-white/66">
+                  <p className="mt-4 text-sm leading-7 text-white/72">
                     {t(`howItWorks.steps.${stepKey}.description`)}
                   </p>
                 </GlassCard>
