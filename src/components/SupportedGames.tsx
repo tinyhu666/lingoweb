@@ -23,6 +23,7 @@ function SupportedGames() {
   const { t } = useTranslation()
   const scrollerRef = useRef<HTMLDivElement>(null)
   const [activeIndex, setActiveIndex] = useState(0)
+  const [isDesktopLayout, setIsDesktopLayout] = useState(false)
 
   function getIndexFromScroll(scroller: HTMLDivElement) {
     const firstCard = scroller.querySelector<HTMLElement>('[data-game-card]')
@@ -50,7 +51,7 @@ function SupportedGames() {
     const targetLeft = safeIndex * cardSpan
 
     setActiveIndex(safeIndex)
-    scroller.scrollLeft = targetLeft
+    scroller.scrollTo({ left: targetLeft, behavior: 'smooth' })
   }
 
   function scrollByCard(direction: 1 | -1) {
@@ -75,6 +76,21 @@ function SupportedGames() {
     }
   }, [])
 
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(min-width: 1024px)')
+
+    const syncDesktopLayout = () => {
+      setIsDesktopLayout(mediaQuery.matches)
+    }
+
+    syncDesktopLayout()
+    mediaQuery.addEventListener('change', syncDesktopLayout)
+
+    return () => {
+      mediaQuery.removeEventListener('change', syncDesktopLayout)
+    }
+  }, [])
+
   const activeGame = SUPPORTED_GAMES[activeIndex] ?? SUPPORTED_GAMES[0]
 
   return (
@@ -86,7 +102,7 @@ function SupportedGames() {
           <p className="section-copy">{t('supportedGames.subtitle')}</p>
         </div>
 
-        <div className="mt-8 flex items-center justify-end gap-3">
+        <div className="mt-8 flex items-center justify-end gap-3 lg:hidden">
           <button
             aria-label={t('supportedGames.controls.previous')}
             className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/72 transition hover:border-white/20 hover:bg-white/8 hover:text-white"
@@ -103,21 +119,26 @@ function SupportedGames() {
           </button>
         </div>
 
-        <div className="relative mt-8">
-          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 hidden w-20 bg-gradient-to-r from-[#070b17] to-transparent lg:block" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 hidden w-20 bg-gradient-to-l from-[#070b17] to-transparent lg:block" />
+        <div className="relative mt-8 overflow-hidden lg:mx-auto lg:max-w-[68rem] lg:overflow-visible">
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 hidden w-12 bg-gradient-to-r from-[#070b17] via-[#070b17]/70 to-transparent md:block lg:hidden" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 hidden w-12 bg-gradient-to-l from-[#070b17] via-[#070b17]/70 to-transparent md:block lg:hidden" />
 
           <div
             ref={scrollerRef}
-            className="no-scrollbar -mx-5 flex snap-x snap-mandatory gap-5 overflow-x-auto px-5 pb-3 sm:-mx-8 sm:px-8 lg:-mx-10 lg:px-10"
+            className="no-scrollbar flex snap-x snap-mandatory gap-4 overflow-x-auto overscroll-x-contain px-1 pb-3 pt-2 scroll-smooth touch-pan-y sm:gap-5 lg:grid lg:grid-cols-4 lg:gap-3 lg:overflow-visible lg:px-0 lg:pb-0 lg:pt-0 xl:gap-4"
             onScroll={(event) => setActiveIndex(getIndexFromScroll(event.currentTarget))}>
             {SUPPORTED_GAMES.map((game, index) => (
-              <GameShowcaseCard game={game} index={index} isActive={activeIndex === index} key={game.key} />
+              <GameShowcaseCard
+                game={game}
+                index={index}
+                isActive={isDesktopLayout || activeIndex === index}
+                key={game.key}
+              />
             ))}
           </div>
         </div>
 
-        <div className="mt-5 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-5 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between lg:hidden">
           <div className="text-sm text-white/56">
             {String(activeIndex + 1).padStart(2, '0')} / {String(SUPPORTED_GAMES.length).padStart(2, '0')} ·{' '}
             {t(`supportedGames.items.${activeGame.key}.name`)}
@@ -145,7 +166,7 @@ function SupportedGames() {
           </div>
         </div>
 
-        <div className="mt-6 flex flex-col gap-3 rounded-[1.5rem] border border-white/8 bg-white/4 px-5 py-4 text-sm text-white/62 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-6 flex flex-col gap-3 rounded-[1.5rem] border border-white/8 bg-white/4 px-5 py-4 text-sm text-white/62 sm:flex-row sm:items-center sm:justify-between lg:mx-auto lg:max-w-[68rem]">
           <span className="inline-flex w-fit items-center rounded-full border border-cyan-300/18 bg-cyan-300/10 px-3 py-1.5 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-cyan-100">
             {t('supportedGames.noteLabel')}
           </span>
@@ -228,8 +249,8 @@ function GameShowcaseCard({ game, index, isActive }: GameShowcaseCardProps) {
     <motion.div
       data-game-card
       className={cn(
-        'relative min-w-[20rem] snap-start pt-2 transition duration-300 sm:min-w-[27rem] lg:min-w-[33rem] xl:min-w-[36rem]',
-        isActive ? 'opacity-100' : 'opacity-76 hover:opacity-100',
+        'relative min-w-[14.75rem] snap-start pt-1 transition duration-300 sm:min-w-[16rem] md:min-w-[17.5rem] lg:min-w-0 lg:pt-0',
+        isActive ? 'opacity-100' : 'opacity-74 hover:opacity-100 lg:opacity-100',
       )}
       initial={{ opacity: 0, y: 24 }}
       transition={{ duration: 0.55, delay: 0.08 * index, ease: [0.22, 1, 0.36, 1] }}
@@ -237,11 +258,11 @@ function GameShowcaseCard({ game, index, isActive }: GameShowcaseCardProps) {
       whileInView={{ opacity: 1, y: 0 }}>
       <motion.div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-10 bottom-5 h-28 rounded-full bg-[radial-gradient(circle,rgba(56,189,248,0.34),rgba(129,140,248,0.24)_42%,rgba(217,70,239,0.16)_62%,transparent_78%)] blur-3xl"
+        className="pointer-events-none absolute inset-x-8 bottom-2 h-16 rounded-full bg-[radial-gradient(circle,rgba(56,189,248,0.24),rgba(129,140,248,0.2)_42%,rgba(217,70,239,0.12)_62%,transparent_78%)] blur-3xl"
         animate={{
-          opacity: isActive ? 0.82 : 0.28,
-          scale: isActive ? 1.06 : 0.88,
-          y: isActive ? 0 : 10,
+          opacity: isActive ? 0.48 : 0.14,
+          scale: isActive ? 1 : 0.8,
+          y: isActive ? 0 : 6,
         }}
         transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
       />
@@ -265,13 +286,13 @@ function GameShowcaseCard({ game, index, isActive }: GameShowcaseCardProps) {
           className={cn(
             'group relative overflow-hidden p-0 transition duration-300',
             isActive
-              ? 'ring-1 ring-cyan-200/26 shadow-[0_40px_140px_rgba(3,8,18,0.62)]'
-              : 'shadow-[0_18px_72px_rgba(3,8,18,0.42)]',
+              ? 'ring-1 ring-cyan-200/20 shadow-[0_22px_60px_rgba(3,8,18,0.46)]'
+              : 'shadow-[0_12px_34px_rgba(3,8,18,0.28)]',
           )}>
-          <div className="relative aspect-[4/5] overflow-hidden">
+          <div className="relative aspect-[4/5.1] overflow-hidden lg:aspect-[4/4.75]">
             <motion.img
               alt={t(`supportedGames.items.${game.key}.name`)}
-              animate={{ scale: isHovering ? (isActive ? 1.075 : 1.04) : isActive ? 1.03 : 1 }}
+              animate={{ scale: isHovering ? (isActive ? 1.04 : 1.02) : isActive ? 1.01 : 1 }}
               className="h-full w-full object-cover"
               src={game.cover}
               style={{ x: imageX, y: imageY }}
@@ -292,8 +313,8 @@ function GameShowcaseCard({ game, index, isActive }: GameShowcaseCardProps) {
             />
             <motion.div
               aria-hidden="true"
-              className="pointer-events-none absolute inset-x-4 top-4 h-24 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.16),rgba(255,255,255,0)_72%)] blur-2xl"
-              animate={{ opacity: isActive ? 0.6 : 0.24, scale: isActive ? 1.08 : 0.9 }}
+              className="pointer-events-none absolute inset-x-4 top-4 h-18 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.12),rgba(255,255,255,0)_72%)] blur-2xl"
+              animate={{ opacity: isActive ? 0.42 : 0.16, scale: isActive ? 1.02 : 0.9 }}
               transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
             />
             <motion.div
@@ -303,23 +324,23 @@ function GameShowcaseCard({ game, index, isActive }: GameShowcaseCardProps) {
               transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
             />
 
-            <motion.div className="absolute inset-x-0 top-0 flex items-start justify-between gap-3 p-5 sm:p-6" style={{ x: badgeX, y: badgeY }}>
-              <div className="inline-flex items-center gap-2 rounded-full border border-white/14 bg-black/28 px-3 py-1.5 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-white/84 backdrop-blur-md">
-                <MessageSquare className="h-3.5 w-3.5 text-cyan-200" />
+            <motion.div className="absolute inset-x-0 top-0 flex items-start justify-between gap-3 p-3 sm:p-4 lg:p-3.5" style={{ x: badgeX, y: badgeY }}>
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/14 bg-black/28 px-2.5 py-1.5 text-[0.58rem] font-semibold uppercase tracking-[0.16em] text-white/84 backdrop-blur-md">
+                <MessageSquare className="h-3 w-3 text-cyan-200" />
                 <span>{t('supportedGames.chatBadge')}</span>
               </div>
-              <div className="rounded-full border border-white/12 bg-black/18 px-3 py-1.5 text-[0.68rem] font-semibold tracking-[0.18em] text-white/60 backdrop-blur-md">
+              <div className="rounded-full border border-white/12 bg-black/18 px-2.5 py-1.5 text-[0.58rem] font-semibold tracking-[0.18em] text-white/60 backdrop-blur-md">
                 {String(index + 1).padStart(2, '0')}
               </div>
             </motion.div>
 
-            <motion.div className="absolute inset-x-0 bottom-0 p-5 sm:p-6 lg:p-7" style={{ x: panelX, y: panelY, scale: panelScale }}>
+            <motion.div className="absolute inset-x-0 bottom-0 p-3 sm:p-4 lg:p-3.5" style={{ x: panelX, y: panelY, scale: panelScale }}>
               <div
                 className={cn(
-                  'relative overflow-hidden rounded-[1.75rem] border px-5 py-5 backdrop-blur-xl transition duration-300 sm:px-6 sm:py-6',
+                  'relative overflow-hidden rounded-[1.2rem] border px-3.5 py-3.5 backdrop-blur-xl transition duration-300 sm:px-4 sm:py-4 lg:px-3.5 lg:py-3.5',
                   isActive
-                    ? 'border-cyan-200/22 bg-[linear-gradient(160deg,rgba(16,24,46,0.84),rgba(10,16,30,0.62))] shadow-[0_20px_48px_rgba(3,8,18,0.52)]'
-                    : 'border-white/10 bg-[linear-gradient(160deg,rgba(12,18,34,0.74),rgba(8,13,24,0.54))] shadow-[0_14px_32px_rgba(3,8,18,0.34)]',
+                    ? 'border-cyan-200/18 bg-[linear-gradient(160deg,rgba(16,24,46,0.82),rgba(10,16,30,0.62))] shadow-[0_16px_32px_rgba(3,8,18,0.44)]'
+                    : 'border-white/10 bg-[linear-gradient(160deg,rgba(12,18,34,0.74),rgba(8,13,24,0.54))] shadow-[0_12px_24px_rgba(3,8,18,0.28)]',
                 )}>
                 <motion.div
                   aria-hidden="true"
@@ -341,10 +362,10 @@ function GameShowcaseCard({ game, index, isActive }: GameShowcaseCardProps) {
                 />
 
                 <div className="relative">
-                  <h3 className="max-w-[10ch] text-[2rem] leading-[0.9] font-semibold tracking-[-0.05em] text-white sm:text-[2.8rem] lg:text-[3.35rem]">
+                  <h3 className="max-w-[10ch] text-[1.4rem] leading-[0.95] font-semibold tracking-[-0.05em] text-white sm:text-[1.6rem] lg:text-[1.3rem] xl:text-[1.48rem]">
                     {t(`supportedGames.items.${game.key}.name`)}
                   </h3>
-                  <p className="mt-4 max-w-[28rem] text-sm leading-7 text-white/76 sm:text-[0.98rem]">
+                  <p className="mt-2.5 max-w-[16rem] text-[0.8rem] leading-5 text-white/72 sm:text-[0.84rem] lg:text-[0.76rem] lg:leading-[1.35rem] xl:text-[0.82rem]">
                     {t(`supportedGames.items.${game.key}.description`)}
                   </p>
                 </div>

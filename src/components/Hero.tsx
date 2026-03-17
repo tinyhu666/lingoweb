@@ -330,7 +330,7 @@ function HeroShowcase() {
             <motion.div className="mt-6 space-y-3" style={{ x: stackX, y: stackY }}>
               <div className="rounded-[1.5rem] border border-white/8 bg-white/5 px-4 py-3 shadow-[0_14px_36px_rgba(3,8,18,0.22)]">
                 <div className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white/38">
-                  {t('languageSwitcher.languages.en.short')}
+                  {t('hero.mockup.sourceLabel')}
                 </div>
                 <div className="mt-2 text-sm font-medium text-white/78">{t('hero.mockup.source')}</div>
               </div>
@@ -341,7 +341,7 @@ function HeroShowcase() {
               </div>
               <div className="rounded-[1.5rem] border border-accent-300/18 bg-[linear-gradient(135deg,rgba(99,102,241,0.12),rgba(34,211,238,0.08))] px-4 py-3 shadow-[0_18px_42px_rgba(3,8,18,0.26)]">
                 <div className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-cyan-100/72">
-                  {t('languageSwitcher.languages.zh.short')}
+                  {t('hero.mockup.resultLabel')}
                 </div>
                 <div className="mt-2 text-sm font-medium text-white">{t('hero.mockup.result')}</div>
               </div>
@@ -368,8 +368,8 @@ function HeroShowcase() {
             </motion.div>
 
             <motion.div className="mt-6 grid gap-3 sm:grid-cols-2" style={{ x: tagsX, y: tagsY }}>
-              <MockupTag icon={<Languages className="h-4 w-4" />} label={t('hero.mockup.translateChip')} />
-              <MockupTag icon={<Keyboard className="h-4 w-4" />} label={t('hero.mockup.chatReady')} />
+              <MockupTag icon={<Keyboard className="h-4 w-4" />} label={t('hero.mockup.hotkey')} />
+              <MockupTag icon={<MessageSquare className="h-4 w-4" />} label={t('hero.mockup.chatReady')} />
             </motion.div>
           </div>
         </div>

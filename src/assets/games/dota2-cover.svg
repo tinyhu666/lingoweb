@@ -1,22 +1,55 @@
 <svg width="768" height="1024" viewBox="0 0 768 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="96" y1="72" x2="692" y2="980" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#451111"/>
-      <stop offset="0.52" stop-color="#1A0F14"/>
-      <stop offset="1" stop-color="#090B12"/>
+    <linearGradient id="bg" x1="92" y1="72" x2="684" y2="986" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3E1212"/>
+      <stop offset="0.46" stop-color="#1A0E14"/>
+      <stop offset="1" stop-color="#070A11"/>
     </linearGradient>
-    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(596 228) rotate(131.371) scale(420.133 329.671)">
-      <stop stop-color="#FF6B4A" stop-opacity="0.88"/>
-      <stop offset="1" stop-color="#FF6B4A" stop-opacity="0"/>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(586 214) rotate(132.5) scale(372 318)">
+      <stop stop-color="#FF744F" stop-opacity="0.92"/>
+      <stop offset="1" stop-color="#FF744F" stop-opacity="0"/>
     </radialGradient>
+    <linearGradient id="plate" x1="178" y1="196" x2="578" y2="678" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF704A"/>
+      <stop offset="0.56" stop-color="#D44B33"/>
+      <stop offset="1" stop-color="#9E2D20"/>
+    </linearGradient>
+    <linearGradient id="plateStroke" x1="178" y1="196" x2="578" y2="678" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFB39C"/>
+      <stop offset="1" stop-color="#7E231A"/>
+    </linearGradient>
+    <filter id="shadow" x="120" y="142" width="528" height="608" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="20"/>
+      <feGaussianBlur stdDeviation="18"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.03 0 0 0 0 0.01 0 0 0 0 0.02 0 0 0 0.42 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_1"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_1" result="shape"/>
+    </filter>
+    <mask id="dota-cutout" maskUnits="userSpaceOnUse" x="158" y="176" width="452" height="520">
+      <rect x="178" y="196" width="412" height="480" rx="26" fill="#fff"/>
+      <path d="M188 256L252 220L584 558L520 594L188 256Z" fill="#000"/>
+      <path d="M232 256L326 230L376 306L290 360L218 316L232 256Z" fill="#000"/>
+      <path d="M402 518L488 470L554 548L496 624L410 592L402 518Z" fill="#000"/>
+      <path d="M320 406L364 382L414 430L384 470L328 446L320 406Z" fill="#000" fill-opacity="0.8"/>
+    </mask>
   </defs>
+
   <rect width="768" height="1024" rx="56" fill="url(#bg)"/>
   <rect x="34" y="34" width="700" height="956" rx="40" stroke="rgba(255,255,255,0.12)"/>
-  <circle cx="596" cy="228" r="268" fill="url(#glow)"/>
-  <path d="M146 202L332 128L620 214L548 770L304 882L104 706L146 202Z" fill="#130D10" fill-opacity="0.8" stroke="#F1775D" stroke-opacity="0.42" stroke-width="10"/>
-  <path d="M248 288L360 246L470 332L384 446L258 396L248 288Z" fill="#FF6944"/>
-  <path d="M306 540L492 442L542 612L410 738L254 640L306 540Z" fill="#FF6944" fill-opacity="0.84"/>
-  <path d="M390 448L414 576L360 620L326 520L390 448Z" fill="#180C10"/>
-  <text x="84" y="826" fill="#FFF6F2" font-size="108" font-family="Arial, sans-serif" font-weight="700" letter-spacing="-4">DOTA 2</text>
+  <circle cx="586" cy="214" r="248" fill="url(#glow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="146" y="162" width="448" height="548" rx="36" fill="#120B0E" fill-opacity="0.9" stroke="#F17A60" stroke-opacity="0.26" stroke-width="8"/>
+    <g mask="url(#dota-cutout)">
+      <rect x="178" y="196" width="412" height="480" rx="26" fill="url(#plate)"/>
+      <rect x="178" y="196" width="412" height="480" rx="26" stroke="url(#plateStroke)" stroke-width="10"/>
+      <path d="M202 220L566 220L566 654L202 654Z" fill="url(#glow)" opacity="0.22"/>
+    </g>
+    <rect x="178" y="196" width="412" height="480" rx="26" stroke="#FFD1C5" stroke-opacity="0.14" stroke-width="3"/>
+  </g>
+
+  <text x="84" y="826" fill="#FFF6F2" font-size="108" font-family="Arial, sans-serif" font-weight="700" letter-spacing="-4">Dota 2</text>
   <text x="88" y="888" fill="#F8BAAB" font-size="30" font-family="Arial, sans-serif" font-weight="700" letter-spacing="8">TEAM CHAT READY</text>
 </svg>

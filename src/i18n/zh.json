@@ -40,14 +40,16 @@
     "mockup": {
       "eyebrow": "AI 嘴替",
       "title": "你想说的，它替你发出去",
-      "body": "从看懂队友到把一句话发回聊天框，Lingo 把翻译、润色和回填压成一个动作，像在局里多了个懂语境的 AI 嘴替。",
-      "translateChip": "Translate",
-      "chatChip": "Chat",
-      "source": "Hold. Fight when my BKB is ready.",
-      "result": "别着急，等我 BKB 好了再打。",
+      "body": "你先在聊天框里写中文，按下快捷键，Lingo 会把 BKB、接团、别急这种局内话翻成更像队友会说的英文，再回填到当前聊天框。",
+      "translateChip": "术语翻译",
+      "chatChip": "地道表达",
+      "sourceLabel": "中文输入",
+      "source": "先别接，等我 BKB 好了我们再打。",
+      "resultLabel": "EN 结果",
+      "result": "Don't force yet. Wait for my BKB, then we take the fight.",
       "chatLabel": "聊天框",
-      "chatDraft": "等我 BKB 好了再接。",
-      "chatReady": "替你组织好",
+      "chatDraft": "Don't force yet. Wait for my BKB, then we take the fight.",
+      "chatReady": "一键回填",
       "server": "服务端 AI",
       "hotkey": "全局快捷键",
       "phrases": "快捷短语",
@@ -85,8 +87,8 @@
   },
   "supportedGames": {
     "eyebrow": "支持游戏",
-    "title": "这些游戏里，它最像一个真队友。",
-    "subtitle": "当前重点支持 Dota 2、英雄联盟、魔兽世界、守望先锋 2 等热门聊天场景，其他能打字沟通的游戏也会陆续覆盖。",
+    "title": "在这些游戏里，它更像一个真队友。",
+    "subtitle": "先从 Dota 2、英雄联盟、魔兽世界、守望先锋 2 这些高频聊天场景开始，其他能打字沟通的游戏也会陆续补上。",
     "chatBadge": "AI 嘴替",
     "controls": {
       "previous": "上一组游戏",
@@ -94,23 +96,23 @@
       "goTo": "切换到{{game}}"
     },
     "noteLabel": "适用场景",
-    "note": "只要游戏里能聊天，Lingo 通常都能成为你补一句、翻一句、发一句的 AI 嘴替。",
+    "note": "只要游戏里有聊天框，Lingo 大多都能接上，帮你更快看懂、回话、把节奏续上。",
     "items": {
       "dota2": {
         "name": "Dota 2",
-        "description": "报点、叫开雾、等 BKB、催撤退，这类节奏话都更适合交给它快速组织。"
+        "description": "报点、叫开雾、等 BKB、催撤退，这类决定节奏的短句更适合交给它来整理。"
       },
       "lol": {
         "name": "英雄联盟",
-        "description": "对线提醒、打野时机、资源交换和团战短句，都能更快、更像队友口吻地发出去。"
+        "description": "对线提醒、打野时机、资源交换和团战 callout，都能更快、更像队友口吻地发出去。"
       },
       "wow": {
         "name": "魔兽世界",
-        "description": "副本指令、集合提醒、组队招呼和跨语言队伍沟通，都更省心。"
+        "description": "副本指令、集合提醒、组队招呼和跨语言队伍沟通，打一套会顺很多。"
       },
       "ow2": {
         "name": "守望先锋 2",
-        "description": "报点、换位、集火、拉扯和开团提醒，可以更干净利落地回到队伍聊天。"
+        "description": "报点、换位、集火、拉扯和开团提醒，可以更短、更干净地回到队伍聊天。"
       }
     }
   },

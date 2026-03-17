@@ -7,7 +7,6 @@ import { NAV_SECTIONS } from '@/lib/constants'
 import { cn } from '@/lib/cn'
 import { useScrollProgress } from '@/hooks/useScrollProgress'
 import appIcon from '@/assets/app-icon.png'
-import logoHorizontal from '@/assets/lingo-logo-horizontal.svg'
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -24,32 +23,33 @@ function Navbar() {
             scrolled ? 'glass-panel bg-black/45' : 'bg-transparent',
           )}>
           <div className="relative flex items-center justify-between gap-4 px-4 py-3 sm:px-5">
-            <a className="flex items-center gap-3" href="#top" onClick={() => setMenuOpen(false)}>
+            <a className="group flex items-center gap-3 pr-4" href="#top" onClick={() => setMenuOpen(false)}>
               <img
                 alt={t('brand.appIconAlt')}
-                className="h-9 w-9 rounded-2xl object-cover shadow-[0_10px_24px_rgba(3,8,18,0.22)] sm:hidden"
+                className="h-9 w-9 rounded-2xl object-cover shadow-[0_10px_24px_rgba(3,8,18,0.22)] sm:h-10 sm:w-10"
                 src={appIcon}
               />
-              <span className="text-sm font-semibold tracking-[-0.03em] text-white sm:hidden">{t('brand.name')}</span>
-              <img alt={t('brand.logoAlt')} className="hidden h-9 w-auto object-contain sm:block" src={logoHorizontal} />
+              <span className="text-base font-semibold tracking-[-0.04em] text-white/92 drop-shadow-[0_4px_18px_rgba(3,8,18,0.35)] transition duration-200 group-hover:text-white sm:text-[1.05rem]">
+                {t('brand.name')}
+              </span>
             </a>
 
-            <nav className="hidden items-center gap-7 text-sm text-white/72 lg:flex">
-              {NAV_SECTIONS.map((item) => (
-                <a
-                  key={item.key}
-                  className="group relative inline-flex items-center overflow-hidden rounded-full px-3 py-2 transition hover:text-white"
-                  href={item.href}
-                  onClick={() => setMenuOpen(false)}>
-                  <span className="pointer-events-none absolute inset-0 rounded-full bg-white/6 opacity-0 transition duration-200 group-hover:opacity-100" />
-                  <span className="pointer-events-none absolute inset-x-4 top-0 h-px bg-gradient-to-r from-transparent via-cyan-200/90 to-transparent opacity-0 transition duration-200 group-hover:opacity-100" />
-                  <span className="pointer-events-none absolute inset-x-6 bottom-0 h-px bg-gradient-to-r from-transparent via-fuchsia-300/80 to-transparent opacity-0 transition duration-200 group-hover:opacity-100" />
-                  <span className="relative z-10">{t(`navbar.links.${item.key}`)}</span>
-                </a>
-              ))}
-            </nav>
+            <div className="hidden lg:ml-auto lg:flex lg:items-center lg:gap-4">
+              <nav className="flex items-center justify-end gap-1 text-sm text-white/72">
+                {NAV_SECTIONS.map((item) => (
+                  <a
+                    key={item.key}
+                    className="group relative inline-flex items-center overflow-hidden rounded-full px-4 py-2 transition hover:text-white"
+                    href={item.href}
+                    onClick={() => setMenuOpen(false)}>
+                    <span className="pointer-events-none absolute inset-0 rounded-full bg-white/6 opacity-0 transition duration-200 group-hover:opacity-100" />
+                    <span className="pointer-events-none absolute inset-x-4 top-0 h-px bg-gradient-to-r from-transparent via-cyan-200/90 to-transparent opacity-0 transition duration-200 group-hover:opacity-100" />
+                    <span className="pointer-events-none absolute inset-x-6 bottom-0 h-px bg-gradient-to-r from-transparent via-fuchsia-300/80 to-transparent opacity-0 transition duration-200 group-hover:opacity-100" />
+                    <span className="relative z-10">{t(`navbar.links.${item.key}`)}</span>
+                  </a>
+                ))}
+              </nav>
 
-            <div className="hidden items-center gap-3 lg:flex">
               <LanguageSwitcher />
             </div>
 

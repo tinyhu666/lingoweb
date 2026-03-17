@@ -40,14 +40,16 @@
     "mockup": {
       "eyebrow": "AI-голос в игре",
       "title": "Сформулирует и сразу отправит",
-      "body": "От чтения сообщений тиммейта до готовой реплики в чате Lingo сжимает перевод, переформулировку и возврат в одно действие.",
-      "translateChip": "Translate",
-      "chatChip": "Chat",
-      "source": "Hold. Fight when my BKB is ready.",
-      "result": "Подождите. Деремся, когда мой BKB будет готов.",
-      "chatLabel": "Чат",
-      "chatDraft": "Ждите мой BKB, потом входим.",
-      "chatReady": "Готово к отправке",
+      "body": "Сначала вы пишете фразу по-китайски в чат, нажимаете хоткей, а Lingo переводит BKB, врыв и тайминг драки в более естественный английский и возвращает его обратно в поле ввода.",
+      "translateChip": "Термины верно",
+      "chatChip": "Звучит по-игровому",
+      "sourceLabel": "ZH черновик",
+      "source": "先别接，等我 BKB 好了我们再打。",
+      "resultLabel": "EN готово",
+      "result": "Don't force yet. Wait for my BKB, then we take the fight.",
+      "chatLabel": "Снова в чат",
+      "chatDraft": "Don't force yet. Wait for my BKB, then we take the fight.",
+      "chatReady": "Вставка одной клавишей",
       "server": "AI на сервере",
       "hotkey": "Глобальный хоткей",
       "phrases": "Быстрые фразы",
@@ -85,8 +87,8 @@
   },
   "supportedGames": {
     "eyebrow": "Поддерживаемые игры",
-    "title": "Лучше всего раскрывается там, где чат решает исход драки.",
-    "subtitle": "Сейчас основной акцент на Dota 2, League of Legends, World of Warcraft, Overwatch 2 и других играх, где внутриигровой чат реально используется.",
+    "title": "Ближе всего к настоящему тиммейту там, где игровой чат все еще важен.",
+    "subtitle": "Сначала делаем упор на Dota 2, League of Legends, World of Warcraft и Overwatch 2, а затем расширяемся на другие игры, где быстрый текстовый чат реально влияет на матч.",
     "chatBadge": "AI-голос",
     "controls": {
       "previous": "Предыдущие игры",
@@ -94,23 +96,23 @@
       "goTo": "Перейти к {{game}}"
     },
     "noteLabel": "Лучше всего подходит",
-    "note": "Если в игре есть внутриигровой чат, Lingo обычно хорошо встраивается как AI-голос между вашей мыслью и сообщением в чате.",
+    "note": "Если в игре есть чат, Lingo обычно хорошо встраивается: быстрее понять, чище ответить и не терять темп матча.",
     "items": {
       "dota2": {
         "name": "Dota 2",
-        "description": "Удобно для smoke call, BKB timing, retreat и других темповых реплик во время драки."
+        "description": "Удобно для smoke call, BKB timing, retreat и других коротких темповых реплик во время драки."
       },
       "lol": {
         "name": "League of Legends",
-        "description": "Проще отправлять короткие сигналы по линии, тайминги леса, обмен ресурсами и teamfight callout."
+        "description": "Проще отправлять сигналы по линии, тайминги леса, размен ресурсов и короткие teamfight callout."
       },
       "wow": {
         "name": "World of Warcraft",
-        "description": "Полезно для сбора группы, рейдовых команд, напоминаний и общения в многоязычной пати."
+        "description": "Полезно для сбора группы, рейдовых команд, напоминаний и общения в многоязычной пати без лишней суеты."
       },
       "ow2": {
         "name": "Overwatch 2",
-        "description": "Помогает быстрее вернуть в чат callout по позициям, focus target, regroup и timing атаки."
+        "description": "Помогает быстрее вернуть в чат callout по позициям, focus target, regroup и тайминг атаки."
       }
     }
   },

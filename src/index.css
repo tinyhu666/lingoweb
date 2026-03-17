@@ -50,6 +50,7 @@
   html {
     scroll-behavior: smooth;
     background: #070b17;
+    overflow-x: clip;
   }
 
   body {
@@ -57,6 +58,7 @@
     min-height: 100vh;
     font-family: var(--font-sans);
     color: white;
+    overflow-x: clip;
     background:
       radial-gradient(circle at top, rgba(99, 102, 241, 0.22), rgba(99, 102, 241, 0) 32%),
       radial-gradient(circle at 18% 28%, rgba(34, 211, 238, 0.12), rgba(34, 211, 238, 0) 26%),
