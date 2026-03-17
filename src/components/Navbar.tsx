@@ -29,7 +29,7 @@ function Navbar() {
                 className="h-9 w-9 rounded-2xl object-cover shadow-[0_10px_24px_rgba(3,8,18,0.22)] sm:h-10 sm:w-10"
                 src={appIcon}
               />
-              <span className="text-base font-semibold tracking-[-0.04em] text-white/92 drop-shadow-[0_4px_18px_rgba(3,8,18,0.35)] transition duration-200 group-hover:text-white sm:text-[1.05rem]">
+              <span className="text-base font-semibold tracking-[-0.04em] text-white drop-shadow-[0_8px_24px_rgba(3,8,18,0.38)] transition duration-200 group-hover:text-cyan-50 sm:text-[1.05rem]">
                 {t('brand.name')}
               </span>
             </a>

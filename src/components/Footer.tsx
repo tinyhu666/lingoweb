@@ -3,7 +3,7 @@ import type { ReactNode } from 'react'
 import { FileText, Github, MessageCircle } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { CHANGELOG_URL, DISCORD_URL, LICENSE_URL, NAV_SECTIONS, RELEASES_URL, REPO_URL } from '@/lib/constants'
-import logoHorizontal from '@/assets/lingo-logo-horizontal.svg'
+import appIcon from '@/assets/app-icon.png'
 
 type FooterProps = {
   version: string
@@ -28,7 +28,16 @@ function Footer({ version }: FooterProps) {
 
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr_0.9fr_0.8fr]">
           <div>
-            <img alt={t('brand.logoAlt')} className="h-10 w-auto" src={logoHorizontal} />
+            <div className="flex items-center gap-3">
+              <img
+                alt={t('brand.appIconAlt')}
+                className="h-10 w-10 rounded-2xl object-cover shadow-[0_10px_24px_rgba(3,8,18,0.22)]"
+                src={appIcon}
+              />
+              <span className="text-[1.35rem] font-semibold tracking-[-0.04em] text-white drop-shadow-[0_8px_26px_rgba(3,8,18,0.38)]">
+                {t('brand.name')}
+              </span>
+            </div>
             <p className="mt-5 max-w-sm text-sm leading-7 text-white/64">{t('footer.tagline')}</p>
             <p className="mt-5 text-sm font-medium text-white/78">{t('footer.version', { version })}</p>
           </div>
