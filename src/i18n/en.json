@@ -45,6 +45,7 @@
       "chatChip": "Sounds native",
       "sourceLabel": "ZH draft",
       "source": "先别接，等我 BKB 好了我们再打。",
+      "hotkeyAction": "Hit hotkey",
       "resultLabel": "EN output",
       "result": "Don't force yet. Wait for my BKB, then we take the fight.",
       "chatLabel": "Back in chat",

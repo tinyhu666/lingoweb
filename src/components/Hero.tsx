@@ -22,7 +22,9 @@ function Hero({ downloads, preferredPlatform, version }: HeroProps) {
   const { t } = useTranslation()
 
   return (
-    <section className="section-shell grid min-h-[calc(100vh-9rem)] items-center gap-12 pt-6 lg:grid-cols-[1.05fr_0.95fr]" id="top">
+    <section
+      className="section-shell grid min-h-[calc(100vh-9rem)] items-center gap-10 pt-4 md:pt-6 lg:min-h-[calc(100vh-8rem)] lg:grid-cols-[1.05fr_0.95fr] lg:items-start lg:gap-14 lg:pt-10"
+      id="top">
       <div className="max-w-2xl">
         <motion.div
           animate={{ opacity: 1, y: 0 }}
@@ -336,7 +338,10 @@ function HeroShowcase() {
               </div>
               <div className="flex items-center gap-3 px-1 text-white/32">
                 <div className="h-px flex-1 bg-current" />
-                <ArrowRight className="h-4 w-4" />
+                <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/6 px-3 py-1.5 text-[0.62rem] font-semibold uppercase tracking-[0.16em] text-white/54">
+                  <Keyboard className="h-3.5 w-3.5 text-cyan-200/78" />
+                  <span>{t('hero.mockup.hotkeyAction')}</span>
+                </div>
                 <div className="h-px flex-1 bg-current" />
               </div>
               <div className="rounded-[1.5rem] border border-accent-300/18 bg-[linear-gradient(135deg,rgba(99,102,241,0.12),rgba(34,211,238,0.08))] px-4 py-3 shadow-[0_18px_42px_rgba(3,8,18,0.26)]">

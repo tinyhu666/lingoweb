@@ -45,6 +45,7 @@
       "chatChip": "地道表达",
       "sourceLabel": "中文输入",
       "source": "先别接，等我 BKB 好了我们再打。",
+      "hotkeyAction": "按下热键",
       "resultLabel": "EN 结果",
       "result": "Don't force yet. Wait for my BKB, then we take the fight.",
       "chatLabel": "聊天框",

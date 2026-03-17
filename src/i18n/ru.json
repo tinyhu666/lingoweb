@@ -45,6 +45,7 @@
       "chatChip": "Звучит по-игровому",
       "sourceLabel": "ZH черновик",
       "source": "先别接，等我 BKB 好了我们再打。",
+      "hotkeyAction": "Нажмите хоткей",
       "resultLabel": "EN готово",
       "result": "Don't force yet. Wait for my BKB, then we take the fight.",
       "chatLabel": "Снова в чат",

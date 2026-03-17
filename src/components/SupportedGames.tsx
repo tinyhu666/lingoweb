@@ -4,10 +4,10 @@ import { ChevronLeft, ChevronRight, MessageSquare } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import AnimatedSection from '@/components/ui/AnimatedSection'
 import GlassCard from '@/components/ui/GlassCard'
-import dota2Cover from '@/assets/games/dota2-cover.svg'
-import lolCover from '@/assets/games/lol-cover.svg'
-import ow2Cover from '@/assets/games/ow2-cover.svg'
-import wowCover from '@/assets/games/wow-cover.svg'
+import dota2Cover from '@/assets/games/dota2-cover.jpg'
+import lolCover from '@/assets/games/lol-cover.jpg'
+import ow2Cover from '@/assets/games/ow2-cover.jpg'
+import wowCover from '@/assets/games/wow-cover.jpg'
 import { cn } from '@/lib/cn'
 
 const SUPPORTED_GAMES = [
@@ -96,10 +96,12 @@ function SupportedGames() {
   return (
     <AnimatedSection id="supported-games">
       <section className="section-shell">
-        <span className="section-eyebrow">{t('supportedGames.eyebrow')}</span>
-        <div className="mt-5 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-          <h2 className="section-title max-w-2xl">{t('supportedGames.title')}</h2>
-          <p className="section-copy">{t('supportedGames.subtitle')}</p>
+        <div className="lg:mx-auto lg:max-w-[68rem]">
+          <span className="section-eyebrow">{t('supportedGames.eyebrow')}</span>
+          <div className="mt-5 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+            <h2 className="section-title max-w-[13ch] text-[clamp(2.35rem,4vw,3.65rem)]">{t('supportedGames.title')}</h2>
+            <p className="section-copy lg:max-w-[34rem]">{t('supportedGames.subtitle')}</p>
+          </div>
         </div>
 
         <div className="mt-8 flex items-center justify-end gap-3 lg:hidden">
