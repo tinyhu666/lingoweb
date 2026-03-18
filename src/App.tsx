@@ -75,7 +75,7 @@ function App() {
 
       <Navbar />
 
-      <main className="mx-auto flex min-h-screen w-full max-w-7xl flex-col gap-24 px-5 pb-20 pt-28 sm:px-8 lg:px-10">
+      <main className="page-shell flex min-h-screen flex-col gap-24 pb-20 pt-28">
         <Hero downloads={release.downloads} preferredPlatform={preferredPlatform} version={release.version || APP_VERSION} />
         <Features />
         <SupportedGames />

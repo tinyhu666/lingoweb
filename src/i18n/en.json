@@ -31,7 +31,6 @@
     "badge": "Latest release v{{version}}",
     "title": "Translate & Chat",
     "subtitle": "Lingo is your in-game AI mouthpiece. Understand the callout, shape the reply, and send it back to chat without leaving the fight.",
-    "helper": "We'll highlight the best installer for this device.",
     "downloadMac": "Download for macOS",
     "downloadWindows": "Download for Windows",
     "github": "View on GitHub",

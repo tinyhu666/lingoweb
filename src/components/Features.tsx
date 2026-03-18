@@ -18,9 +18,9 @@ function Features() {
     <AnimatedSection id="features">
       <section className="section-shell">
         <span className="section-eyebrow">{t('features.eyebrow')}</span>
-        <div className="mt-5 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-          <h2 className="section-title max-w-2xl">{t('features.title')}</h2>
-          <p className="section-copy">{t('features.subtitle')}</p>
+        <div className="section-header">
+          <h2 className="section-title section-header__title">{t('features.title')}</h2>
+          <p className="section-copy section-header__copy">{t('features.subtitle')}</p>
         </div>
 
         <div className="mt-10 grid gap-5 md:grid-cols-2">

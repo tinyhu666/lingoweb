@@ -40,10 +40,10 @@ function Download({ downloads, preferredPlatform, version }: DownloadProps) {
     <AnimatedSection>
       <section className="section-shell" id="download">
         <span className="section-eyebrow">{t('download.eyebrow')}</span>
-        <div className="mt-5 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-          <div>
-            <h2 className="section-title max-w-2xl">{t('download.title')}</h2>
-            <p className="mt-6 section-copy">{t('download.subtitle')}</p>
+        <div className="section-header">
+          <div className="w-full">
+            <h2 className="section-title section-header__title">{t('download.title')}</h2>
+            <p className="mt-6 section-copy section-header__copy">{t('download.subtitle')}</p>
           </div>
           <DownloadReleaseBadge label={t('download.latestRelease', { version })} />
         </div>

@@ -12,9 +12,9 @@ function HowItWorks() {
     <AnimatedSection>
       <section className="section-shell" id="how-it-works">
         <span className="section-eyebrow">{t('howItWorks.eyebrow')}</span>
-        <div className="mt-5 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-          <h2 className="section-title max-w-2xl">{t('howItWorks.title')}</h2>
-          <p className="section-copy lg:max-w-[34rem]">{t('howItWorks.subtitle')}</p>
+        <div className="section-header">
+          <h2 className="section-title section-header__title">{t('howItWorks.title')}</h2>
+          <p className="section-copy section-header__copy">{t('howItWorks.subtitle')}</p>
         </div>
 
         <div className="relative mt-10">

@@ -61,14 +61,6 @@ function Hero({ downloads, preferredPlatform, version }: HeroProps) {
           />
         </motion.div>
 
-        <motion.p
-          animate={{ opacity: 1, y: 0 }}
-          className="mt-4 px-1 text-xs leading-6 text-white/52"
-          initial={{ opacity: 0, y: 24 }}
-          transition={{ duration: 0.65, delay: 0.16, ease: [0.22, 1, 0.36, 1] }}>
-          {t('hero.helper')}
-        </motion.p>
-
         <motion.div
           animate={{ opacity: 1, y: 0 }}
           className="mt-5"

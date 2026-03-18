@@ -1,6 +1,4 @@
 import { motion } from 'motion/react'
-import type { ReactNode } from 'react'
-import { FileText, Github, MessageCircle } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { CHANGELOG_URL, DISCORD_URL, LICENSE_URL, NAV_SECTIONS, RELEASES_URL, REPO_URL } from '@/lib/constants'
 import appIcon from '@/assets/app-icon.png'
@@ -18,7 +16,7 @@ function Footer({ version }: FooterProps) {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="mx-auto mt-10 w-full max-w-7xl px-5 pb-12 sm:px-8 lg:px-10">
+    <footer className="page-shell mt-10 pb-12">
       <motion.div
         className="glass-panel relative overflow-hidden rounded-[2rem] px-6 py-8 sm:px-8"
         transition={{ duration: 0.24, ease: [0.22, 1, 0.36, 1] }}
@@ -53,11 +51,11 @@ function Footer({ version }: FooterProps) {
           </div>
 
           <div>
-            <p className="pl-[1.625rem] text-sm font-semibold text-white/94">{t('footer.community.title')}</p>
+            <p className="text-sm font-semibold text-white/94">{t('footer.community.title')}</p>
             <div className="mt-4 flex flex-col gap-1 text-sm text-white/72">
-              <FooterLink href={REPO_URL} icon={<Github className="h-4 w-4" />} label={t('footer.community.github')} />
-              <FooterLink href={DISCORD_URL} icon={<MessageCircle className="h-4 w-4" />} label={t('footer.community.discord')} />
-              <FooterLink href={RELEASES_URL} icon={<FileText className="h-4 w-4" />} label={t('footer.community.releases')} />
+              <FooterNavLink external href={REPO_URL} label={t('footer.community.github')} />
+              <FooterNavLink external href={DISCORD_URL} label={t('footer.community.discord')} />
+              <FooterNavLink external href={RELEASES_URL} label={t('footer.community.releases')} />
             </div>
           </div>
 
@@ -87,21 +85,6 @@ function FooterNavLink({ external = false, href, label }: { external?: boolean; 
       target={external ? '_blank' : undefined}>
       <span className="pointer-events-none absolute -inset-y-0 -inset-x-2 rounded-full bg-white/6 opacity-0 transition duration-200 group-hover:opacity-100" />
       <span className="pointer-events-none absolute -inset-x-1 top-0 h-px bg-gradient-to-r from-transparent via-cyan-200/90 to-transparent opacity-0 transition duration-200 group-hover:opacity-100" />
-      <span className="relative z-10">{label}</span>
-    </a>
-  )
-}
-
-function FooterLink({ href, icon, label }: { href: string; icon: ReactNode; label: string }) {
-  return (
-    <a
-      className="group relative inline-flex w-fit items-center gap-2.5 overflow-hidden rounded-full py-1.5 transition hover:text-white"
-      href={href}
-      rel="noreferrer"
-      target="_blank">
-      <span className="pointer-events-none absolute -inset-y-0 -inset-x-2 rounded-full bg-white/6 opacity-0 transition duration-200 group-hover:opacity-100" />
-      <span className="pointer-events-none absolute -inset-x-1 top-0 h-px bg-gradient-to-r from-transparent via-cyan-200/90 to-transparent opacity-0 transition duration-200 group-hover:opacity-100" />
-      <span className="relative z-10 flex h-4 w-4 items-center justify-center text-white/56">{icon}</span>
       <span className="relative z-10">{label}</span>
     </a>
   )

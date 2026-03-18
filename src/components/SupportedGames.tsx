@@ -97,9 +97,9 @@ function SupportedGames() {
     <AnimatedSection id="supported-games">
       <section className="section-shell">
         <span className="section-eyebrow">{t('supportedGames.eyebrow')}</span>
-        <div className="mt-5 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-          <h2 className="section-title max-w-[13ch] text-[clamp(2.2rem,4vw,3.5rem)]">{t('supportedGames.title')}</h2>
-          <p className="section-copy lg:max-w-[35rem]">{t('supportedGames.subtitle')}</p>
+        <div className="section-header">
+          <h2 className="section-title section-header__title text-[clamp(2.2rem,4vw,3.5rem)]">{t('supportedGames.title')}</h2>
+          <p className="section-copy section-header__copy">{t('supportedGames.subtitle')}</p>
         </div>
 
         <div className="mt-8 flex items-center justify-end gap-3 lg:hidden">
