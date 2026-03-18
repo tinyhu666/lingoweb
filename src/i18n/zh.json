@@ -88,7 +88,7 @@
   "supportedGames": {
     "eyebrow": "支持游戏",
     "title": "在这些游戏里，它更像一个真队友。",
-    "subtitle": "先从 Dota 2、英雄联盟、魔兽世界、守望先锋 2 这些高频聊天场景开始，其他能打字沟通的游戏也会逐步补上。",
+    "subtitle": "针对 Dota2、英雄联盟、魔兽世界、守望先锋等游戏进行了优化，支持大部分游戏内可聊天的游戏。",
     "chatBadge": "AI 嘴替",
     "controls": {
       "previous": "上一组游戏",
