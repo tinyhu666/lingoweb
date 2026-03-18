@@ -363,7 +363,7 @@ function GameShowcaseCard({ game, index, isActive }: GameShowcaseCardProps) {
                   transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
                 />
 
-                <div className="relative">
+                <div className="relative min-h-[6.625rem]">
                   <h3 className="max-w-[10ch] text-[1.4rem] leading-[0.95] font-semibold tracking-[-0.05em] text-white sm:text-[1.6rem] lg:text-[1.3rem] xl:text-[1.48rem]">
                     {t(`supportedGames.items.${game.key}.name`)}
                   </h3>
