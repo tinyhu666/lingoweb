@@ -1,4 +1,4 @@
-export const APP_VERSION = '0.3.10'
+export const APP_VERSION = '0.3.12'
 export const RELEASE_REPO = 'tinyhu666/Lingo'
 export const COS_PUBLIC_BASE_URL = 'https://lingo-1259551686.cos.ap-shanghai.myqcloud.com'
 export const RELEASE_MANIFEST_URL = `${COS_PUBLIC_BASE_URL}/releases/latest-web.json`
