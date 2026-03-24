@@ -25,11 +25,14 @@ function Navbar() {
             )}>
             <div className="relative flex items-center justify-between gap-4 px-4 py-3 sm:px-5">
               <a className="group flex items-center gap-3 pr-4" href="#top" onClick={() => setMenuOpen(false)}>
-                <img
-                  alt={t('brand.appIconAlt')}
-                  className="h-9 w-9 rounded-2xl object-cover shadow-[0_10px_24px_rgba(3,8,18,0.22)] sm:h-10 sm:w-10"
-                  src={appIcon}
-                />
+                <span className="relative flex h-12 w-12 items-center justify-center rounded-[1.35rem] border border-white/14 bg-white/[0.05] p-1 shadow-[0_16px_36px_rgba(3,8,18,0.24)] ring-1 ring-inset ring-cyan-100/10 sm:h-14 sm:w-14">
+                  <span className="pointer-events-none absolute inset-0 rounded-[inherit] bg-[radial-gradient(circle_at_30%_22%,rgba(125,211,252,0.2),transparent_58%),radial-gradient(circle_at_75%_78%,rgba(217,70,239,0.16),transparent_55%)]" />
+                  <img
+                    alt={t('brand.appIconAlt')}
+                    className="relative h-full w-full rounded-[1rem] object-cover shadow-[0_12px_28px_rgba(3,8,18,0.18)]"
+                    src={appIcon}
+                  />
+                </span>
                 <span className="text-base font-semibold tracking-[-0.04em] text-white drop-shadow-[0_8px_24px_rgba(3,8,18,0.38)] transition duration-200 group-hover:text-cyan-50 sm:text-[1.05rem]">
                   {t('brand.name')}
                 </span>
