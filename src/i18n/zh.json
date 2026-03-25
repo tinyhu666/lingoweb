@@ -29,7 +29,7 @@
   },
   "hero": {
     "badge": "最新版本 v{{version}}",
-    "title": "Translate & Chat",
+    "title": "母语开口 外服畅聊",
     "subtitle": "Lingo 是你在游戏里的 AI 嘴替。先帮你看懂队友，再把你想说的话整理好、翻过去、送回聊天框，让你继续专心打这波。",
     "downloadMac": "下载 macOS 版",
     "downloadWindows": "下载 Windows 版",
@@ -64,7 +64,7 @@
   },
   "features": {
     "eyebrow": "为什么是 Lingo",
-    "title": "不是翻译悬浮窗，是你在局里的 AI 嘴替。",
+    "title": "是游戏聊天翻译工具，更是你的游戏嘴替。",
     "subtitle": "它不只翻字面意思，还把高频 callout、短句节奏和发送动作整理成一个顺手流程。",
     "items": {
       "instant": {
@@ -87,7 +87,7 @@
   },
   "supportedGames": {
     "eyebrow": "支持游戏",
-    "title": "在这些游戏里，它更像一个真队友。",
+    "title": "针对大量热门游戏进行专项优化。",
     "subtitle": "针对 Dota2、英雄联盟、魔兽世界、守望先锋等游戏进行了优化，支持大部分游戏内可聊天的游戏。",
     "chatBadge": "AI 嘴替",
     "controls": {
@@ -118,12 +118,12 @@
   },
   "howItWorks": {
     "eyebrow": "使用流程",
-    "title": "三步，把意思变成能发出去的话。",
-    "subtitle": "Lingo 像一个挂在热键上的 AI 嘴替：先理解，再翻译，最后把话送回聊天框。",
+    "title": "简单三步，就能解决外服聊天问题。",
+    "subtitle": "先理解，再翻译成地道的游戏语言，最后再送回聊天框。",
     "steps": {
       "select": {
         "title": "给它一句话",
-        "description": "选中队友发来的内容，或者先输入你自己想说的话。"
+        "description": "先输入你自己想说的话。"
       },
       "hotkey": {
         "title": "按下快捷键",
@@ -183,6 +183,6 @@
       "license": "MIT 许可",
       "changelog": "更新日志"
     },
-    "copyright": "© {{year}} Lingo. Powered by Mengxin."
+    "copyright": "© {{year}} Lingo."
   }
 }

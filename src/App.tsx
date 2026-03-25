@@ -1,6 +1,5 @@
 import { startTransition, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import Download from '@/components/Download'
 import Features from '@/components/Features'
 import Footer from '@/components/Footer'
 import Hero from '@/components/Hero'
@@ -80,7 +79,6 @@ function App() {
         <Features />
         <SupportedGames />
         <HowItWorks />
-        <Download downloads={release.downloads} preferredPlatform={preferredPlatform} version={release.version || APP_VERSION} />
       </main>
 
       <Footer version={release.version || APP_VERSION} />

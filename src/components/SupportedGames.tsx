@@ -95,7 +95,7 @@ function SupportedGames() {
 
   return (
     <AnimatedSection id="supported-games">
-      <section className="section-shell">
+      <section>
         <span className="section-eyebrow">{t('supportedGames.eyebrow')}</span>
         <div className="section-header">
           <h2 className="section-title section-header__title text-[clamp(2.2rem,4vw,3.5rem)]">{t('supportedGames.title')}</h2>
