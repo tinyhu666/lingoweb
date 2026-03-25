@@ -166,14 +166,7 @@ function SupportedGames() {
           </div>
         </div>
 
-        <div className="mt-6 rounded-[1.5rem] border border-white/8 bg-white/4 px-5 py-4">
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:gap-4 lg:grid lg:grid-cols-[auto,minmax(0,1fr)] lg:items-center lg:gap-6">
-            <span className="inline-flex w-fit items-center rounded-full border border-cyan-300/18 bg-cyan-300/10 px-3 py-1.5 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-cyan-100">
-              {t('supportedGames.noteLabel')}
-            </span>
-            <p className="leading-7 text-white/68">{t('supportedGames.note')}</p>
-          </div>
-        </div>
+
       </section>
     </AnimatedSection>
   )
