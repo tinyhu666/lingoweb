@@ -32,7 +32,7 @@ function Hero({ downloads, preferredPlatform, version }: HeroProps) {
           transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}>
           <HeroReleaseBadge label={t('hero.badge', { version })} />
 
-          <h1 className="section-title max-w-[11ch] text-[clamp(3rem,6vw,5rem)]">{t('hero.title')}</h1>
+          <h1 className="section-title max-w-[14ch] text-[clamp(3rem,6vw,5rem)] leading-[1.15]">{t('hero.title')}</h1>
           <p className="section-copy mt-6">{t('hero.subtitle')}</p>
         </motion.div>
 
