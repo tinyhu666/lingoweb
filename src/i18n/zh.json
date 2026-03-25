@@ -29,8 +29,8 @@
   },
   "hero": {
     "badge": "最新版本 v{{version}}",
-    "title": "你说中文，它替你说英文",
-    "subtitle": "Lingo 是你在游戏里的 AI 嘴替。先帮你看懂队友，再把你想说的话整理好、翻过去、送回聊天框，让你继续专心打这波。",
+    "title": "AI游戏嘴替",
+    "subtitle": "Lingo 是你在游戏里的专属 AI 嘴替。把你想说的话整理、翻译，让你畅游外服。",
     "downloadMac": "下载 macOS 版",
     "downloadWindows": "下载 Windows 版",
     "github": "查看 GitHub",
