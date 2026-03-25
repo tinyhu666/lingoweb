@@ -198,8 +198,7 @@
     text-wrap: pretty;
   }
 
-  .section-header .section-header__title,
-  .section-header .section-header__copy {
+  .section-header .section-header__title {
     width: 100%;
     max-width: none;
   }

@@ -16,14 +16,14 @@ function Features() {
 
   return (
     <AnimatedSection id="features">
-      <section className="section-shell">
+      <section>
         <span className="section-eyebrow">{t('features.eyebrow')}</span>
         <div className="section-header">
           <h2 className="section-title section-header__title">{t('features.title')}</h2>
           <p className="section-copy section-header__copy">{t('features.subtitle')}</p>
         </div>
 
-        <div className="mt-10 grid gap-5 md:grid-cols-2">
+        <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {FEATURE_KEYS.map((feature, index) => {
             const Icon = feature.icon
 

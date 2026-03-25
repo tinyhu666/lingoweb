@@ -23,7 +23,7 @@ function Hero({ downloads, preferredPlatform, version }: HeroProps) {
 
   return (
     <section
-      className="section-shell grid min-h-[calc(100vh-9rem)] items-center gap-10 pt-4 md:pt-6 lg:min-h-[calc(100vh-8rem)] lg:grid-cols-[1.05fr_0.95fr] lg:items-start lg:gap-14 lg:pt-10"
+      className="section-shell grid min-h-[calc(100vh-9rem)] items-center gap-10 pt-4 md:pt-6 lg:min-h-[calc(100vh-8rem)] lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-14 lg:pt-10"
       id="top">
       <div className="max-w-2xl">
         <motion.div
@@ -312,7 +312,7 @@ function HeroShowcase() {
               transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
             />
 
-            <motion.div className="flex flex-wrap gap-2" style={{ x: pillsX, y: pillsY }}>
+            <motion.div className="grid grid-cols-2 gap-3" style={{ x: pillsX, y: pillsY }}>
               <ConceptPill icon={<Languages className="h-4 w-4" />} label={t('hero.mockup.translateChip')} />
               <ConceptPill icon={<MessageSquare className="h-4 w-4" />} label={t('hero.mockup.chatChip')} />
             </motion.div>
@@ -364,7 +364,7 @@ function HeroShowcase() {
               </div>
             </motion.div>
 
-            <motion.div className="mt-6 grid gap-3 sm:grid-cols-2" style={{ x: tagsX, y: tagsY }}>
+            <motion.div className="mt-6 grid grid-cols-2 gap-3" style={{ x: tagsX, y: tagsY }}>
               <MockupTag icon={<Keyboard className="h-4 w-4" />} label={t('hero.mockup.hotkey')} />
               <MockupTag icon={<MessageSquare className="h-4 w-4" />} label={t('hero.mockup.chatReady')} />
             </motion.div>
@@ -377,7 +377,7 @@ function HeroShowcase() {
 
 function ConceptPill({ icon, label }: { icon: ReactNode; label: string }) {
   return (
-    <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/6 px-3 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white/78">
+    <div className="flex items-center gap-2 rounded-[1.25rem] border border-white/8 bg-white/5 px-3 py-3 text-sm text-white/78">
       <span className="text-cyan-200">{icon}</span>
       <span>{label}</span>
     </div>

@@ -29,7 +29,7 @@
   },
   "hero": {
     "badge": "Последний релиз v{{version}}",
-    "title": "Translate & Chat",
+    "title": "Перевод и чат",
     "subtitle": "Lingo — ваш AI-голос в матче: помогает понять тиммейта, сформулировать ответ и вернуть его прямо в чат, не выбивая вас из игры.",
     "downloadMac": "Скачать для macOS",
     "downloadWindows": "Скачать для Windows",
@@ -183,6 +183,6 @@
       "license": "Лицензия MIT",
       "changelog": "Список изменений"
     },
-    "copyright": "© {{year}} Lingo. Powered by Mengxin."
+    "copyright": "© {{year}} Lingo."
   }
 }

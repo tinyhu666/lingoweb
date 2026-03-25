@@ -9,8 +9,8 @@ function HowItWorks() {
   const { t } = useTranslation()
 
   return (
-    <AnimatedSection>
-      <section className="section-shell" id="how-it-works">
+    <AnimatedSection id="how-it-works">
+      <section>
         <span className="section-eyebrow">{t('howItWorks.eyebrow')}</span>
         <div className="section-header">
           <h2 className="section-title section-header__title">{t('howItWorks.title')}</h2>

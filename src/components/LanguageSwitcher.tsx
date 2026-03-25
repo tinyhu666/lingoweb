@@ -23,7 +23,7 @@ function LanguageSwitcher() {
             {active ? (
               <motion.span
                 aria-hidden="true"
-                className="absolute inset-0 rounded-full bg-white shadow-[0_12px_30px_rgba(255,255,255,0.22)]"
+                className="absolute inset-0 rounded-full bg-white/90 shadow-[0_8px_20px_rgba(129,140,248,0.22)]"
                 layoutId="language-switcher-pill"
                 transition={{ type: 'spring', stiffness: 360, damping: 28 }}
               />

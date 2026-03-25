@@ -37,8 +37,8 @@ function Download({ downloads, preferredPlatform, version }: DownloadProps) {
   ] as const
 
   return (
-    <AnimatedSection>
-      <section className="section-shell" id="download">
+    <AnimatedSection id="download">
+      <section>
         <span className="section-eyebrow">{t('download.eyebrow')}</span>
         <div className="section-header">
           <div className="w-full">
@@ -203,12 +203,9 @@ function DownloadPlatformCard({
             ) : null}
           </div>
 
-          <motion.p
-            className="mt-5 text-sm leading-7 text-white/72"
-            transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
-            whileHover={{ x: 2 }}>
+          <p className="mt-5 text-sm leading-7 text-white/72">
             {description}
-          </motion.p>
+          </p>
 
           <div className="mt-8">
             <div className="relative w-full sm:w-auto">

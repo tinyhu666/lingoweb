@@ -19,5 +19,4 @@ export const NAV_SECTIONS = [
   { key: 'features', href: '#features' },
   { key: 'supportedGames', href: '#supported-games' },
   { key: 'howItWorks', href: '#how-it-works' },
-  { key: 'download', href: '#download' },
 ] as const
