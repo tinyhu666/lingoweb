@@ -1,11 +1,10 @@
 import { useState, type PointerEvent as ReactPointerEvent, type ReactNode } from 'react'
 import { motion, useMotionTemplate, useMotionValue, useSpring, useTransform } from 'motion/react'
-import { ArrowRight, ArrowUpRight, Keyboard, Languages, MessageSquare } from 'lucide-react'
+import { ArrowRight, Keyboard, Languages, MessageSquare } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import Button from '@/components/ui/Button'
 import GlassCard from '@/components/ui/GlassCard'
 import Badge from '@/components/ui/Badge'
-import { REPO_URL } from '@/lib/constants'
 import { cn } from '@/lib/cn'
 import type { PlatformId } from '@/lib/platform'
 
@@ -73,17 +72,6 @@ function Hero({ downloads, preferredPlatform, version }: HeroProps) {
             preferred={preferredPlatform === 'windows'}
             variant="secondary"
           />
-        </motion.div>
-
-        <motion.div
-          animate={{ opacity: 1, y: 0 }}
-          className="mt-5"
-          initial={{ opacity: 0, y: 24 }}
-          transition={{ duration: 0.65, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}>
-          <Button href={REPO_URL} variant="ghost">
-            {t('hero.github')}
-            <ArrowUpRight className="h-4 w-4" />
-          </Button>
         </motion.div>
       </div>
 
