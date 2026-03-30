@@ -19,26 +19,40 @@ type HeroProps = {
 }
 
 function Hero({ downloads, preferredPlatform, version }: HeroProps) {
-  const { t } = useTranslation()
+  const { i18n, t } = useTranslation()
+  const title = t('hero.title')
+  const titleLines = getHeroTitleLines(title, i18n.resolvedLanguage)
 
   return (
     <section
       className="section-shell grid min-h-[calc(100vh-9rem)] items-center gap-10 pt-4 md:pt-6 lg:min-h-[calc(100vh-8rem)] lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-14 lg:pt-10"
       id="top">
-      <div className="max-w-2xl">
+      <div className="max-w-[38rem]">
         <motion.div
           animate={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: 24 }}
           transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}>
           <HeroReleaseBadge label={t('hero.badge', { version })} />
 
-          <h1 className="section-title max-w-[14ch] text-[clamp(3rem,6vw,5rem)] leading-[1.15]">{t('hero.title')}</h1>
-          <p className="section-copy mt-6">{t('hero.subtitle')}</p>
+          <h1
+            className={cn(
+              'section-title text-[clamp(3.25rem,6vw,5.15rem)] tracking-[-0.07em] lg:text-[clamp(3rem,3.7vw,4.25rem)]',
+              titleLines.length > 1
+                ? 'max-w-[7.4em] leading-[1.08] lg:max-w-none lg:leading-[1.02] lg:whitespace-nowrap'
+                : 'max-w-[12ch] leading-[1.02]',
+            )}>
+            {titleLines.map((line) => (
+              <span className="block whitespace-nowrap lg:inline" key={line}>
+                {line}
+              </span>
+            ))}
+          </h1>
+          <p className="section-copy mt-6 max-w-[36rem] text-[clamp(1rem,1.35vw,1.12rem)]">{t('hero.subtitle')}</p>
         </motion.div>
 
         <motion.div
           animate={{ opacity: 1, y: 0 }}
-          className="mt-8 flex flex-col gap-4 sm:flex-row"
+          className="mt-8 grid max-w-[32rem] gap-4 sm:grid-cols-2"
           initial={{ opacity: 0, y: 24 }}
           transition={{ duration: 0.65, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}>
           <HeroDownloadAction
@@ -145,7 +159,7 @@ function HeroDownloadAction({
   return (
     <div className="flex flex-col gap-2">
       <motion.div
-        className="relative w-full sm:w-fit"
+        className="relative w-full"
         onHoverEnd={() => setIsHovering(false)}
         onHoverStart={() => setIsHovering(true)}>
         <motion.div
@@ -176,7 +190,7 @@ function HeroDownloadAction({
           />
           <Button
             className={cn(
-              'relative z-10 w-full sm:w-auto',
+              'relative z-10 w-full justify-center',
               preferred &&
                 (variant === 'primary'
                   ? 'ring-2 ring-cyan-300/70 ring-offset-2 ring-offset-[#070b17]'
@@ -382,6 +396,18 @@ function ConceptPill({ icon, label }: { icon: ReactNode; label: string }) {
       <span>{label}</span>
     </div>
   )
+}
+
+function getHeroTitleLines(title: string, language?: string) {
+  if (!language?.startsWith('zh')) {
+    return [title]
+  }
+
+  if (title.endsWith('翻译助手') && title.length > 4) {
+    return [title.slice(0, -4), '翻译助手']
+  }
+
+  return [title]
 }
 
 function MockupTag({ icon, label }: { icon: ReactNode; label: string }) {
