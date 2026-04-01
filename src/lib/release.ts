@@ -18,9 +18,35 @@ export const FALLBACK_RELEASE_INFO: ReleaseInfo = {
 }
 
 const RELEASE_API_URL = `https://api.github.com/repos/${RELEASE_REPO}/releases/latest`
+const RELEASE_REQUEST_TIMEOUT_MS = 4000
 
 function normalizeVersion(value: unknown) {
   return String(value || '').replace(/^v/i, '').trim()
+}
+
+function compareVersions(left: string, right: string) {
+  const leftParts = normalizeVersion(left)
+    .split('.')
+    .map((part) => Number.parseInt(part, 10) || 0)
+  const rightParts = normalizeVersion(right)
+    .split('.')
+    .map((part) => Number.parseInt(part, 10) || 0)
+  const length = Math.max(leftParts.length, rightParts.length)
+
+  for (let index = 0; index < length; index += 1) {
+    const leftValue = leftParts[index] || 0
+    const rightValue = rightParts[index] || 0
+
+    if (leftValue > rightValue) {
+      return 1
+    }
+
+    if (leftValue < rightValue) {
+      return -1
+    }
+  }
+
+  return 0
 }
 
 function buildMirrorDownloadUrls(version: string) {
@@ -86,36 +112,48 @@ function mapReleasePayload(payload: unknown): ReleaseInfo | null {
 }
 
 async function fetchJson(url: string, headers: HeadersInit) {
-  const response = await fetch(url, {
-    cache: 'no-store',
-    headers,
-  })
+  const controller = new AbortController()
+  const timeoutId = window.setTimeout(() => controller.abort(), RELEASE_REQUEST_TIMEOUT_MS)
 
-  if (!response.ok) {
-    throw new Error(`Request failed: ${response.status}`)
+  try {
+    const response = await fetch(url, {
+      cache: 'no-store',
+      headers,
+      signal: controller.signal,
+    })
+
+    if (!response.ok) {
+      throw new Error(`Request failed: ${response.status}`)
+    }
+
+    return response.json()
+  } finally {
+    window.clearTimeout(timeoutId)
   }
-
-  return response.json()
 }
 
 export async function fetchLatestReleaseInfo(): Promise<ReleaseInfo> {
-  try {
-    const payload = await fetchJson(RELEASE_API_URL, {
-      Accept: 'application/vnd.github+json',
-    })
-    const release = mapReleasePayload(payload)
-    if (release) {
-      return release
-    }
-  } catch {
-    // Fall back to COS manifest when GitHub release metadata is not reachable.
-  }
-
   try {
     const payload = await fetchJson(RELEASE_MANIFEST_URL, {
       Accept: 'application/json',
     })
     const release = mapManifestPayload(payload)
+    if (release && compareVersions(release.version, APP_VERSION) >= 0) {
+      return release
+    }
+
+    if (release && compareVersions(release.version, APP_VERSION) < 0) {
+      return FALLBACK_RELEASE_INFO
+    }
+  } catch {
+    // Fall back to GitHub metadata only when COS manifest is not reachable.
+  }
+
+  try {
+    const payload = await fetchJson(RELEASE_API_URL, {
+      Accept: 'application/vnd.github+json',
+    })
+    const release = mapReleasePayload(payload)
     if (release) {
       return release
     }

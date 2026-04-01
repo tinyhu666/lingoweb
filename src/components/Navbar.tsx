@@ -27,7 +27,7 @@ function Navbar() {
               <a className="group flex items-center gap-3 pr-4" href="#top" onClick={() => setMenuOpen(false)}>
                 <img
                   alt={t('brand.appIconAlt')}
-                  className="h-9 w-9 rounded-2xl object-cover shadow-[0_10px_24px_rgba(3,8,18,0.22)] sm:h-10 sm:w-10"
+                  className="h-10 w-10 rounded-xl object-cover sm:h-11 sm:w-11"
                   src={appIcon}
                 />
                 <span className="text-base font-semibold tracking-[-0.04em] text-white drop-shadow-[0_8px_24px_rgba(3,8,18,0.38)] transition duration-200 group-hover:text-cyan-50 sm:text-[1.05rem]">
@@ -65,7 +65,7 @@ function Navbar() {
 
             <div
               className="h-px rounded-full bg-[linear-gradient(90deg,rgba(99,102,241,0.5),rgba(34,211,238,0.35),rgba(217,70,239,0.45))] transition-[width]"
-              style={{ width: `${Math.max(progress * 100, 6)}%` }}
+              style={{ width: `${progress * 100}%` }}
             />
           </div>
         </div>

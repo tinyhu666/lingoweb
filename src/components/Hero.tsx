@@ -1,11 +1,10 @@
 import { useState, type PointerEvent as ReactPointerEvent, type ReactNode } from 'react'
 import { motion, useMotionTemplate, useMotionValue, useSpring, useTransform } from 'motion/react'
-import { ArrowRight, ArrowUpRight, Keyboard, Languages, MessageSquare } from 'lucide-react'
+import { ArrowRight, Keyboard, Languages, MessageSquare } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import Button from '@/components/ui/Button'
 import GlassCard from '@/components/ui/GlassCard'
 import Badge from '@/components/ui/Badge'
-import { REPO_URL } from '@/lib/constants'
 import { cn } from '@/lib/cn'
 import type { PlatformId } from '@/lib/platform'
 
@@ -19,26 +18,40 @@ type HeroProps = {
 }
 
 function Hero({ downloads, preferredPlatform, version }: HeroProps) {
-  const { t } = useTranslation()
+  const { i18n, t } = useTranslation()
+  const title = t('hero.title')
+  const titleLines = getHeroTitleLines(title, i18n.resolvedLanguage)
 
   return (
     <section
-      className="section-shell grid min-h-[calc(100vh-9rem)] items-center gap-10 pt-4 md:pt-6 lg:min-h-[calc(100vh-8rem)] lg:grid-cols-[1.05fr_0.95fr] lg:items-start lg:gap-14 lg:pt-10"
+      className="section-shell grid min-h-[calc(100vh-9rem)] items-center gap-10 pt-4 md:pt-6 lg:min-h-[calc(100vh-8rem)] lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-14 lg:pt-10"
       id="top">
-      <div className="max-w-2xl">
+      <div className="max-w-[38rem]">
         <motion.div
           animate={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: 24 }}
           transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}>
           <HeroReleaseBadge label={t('hero.badge', { version })} />
 
-          <h1 className="section-title max-w-[11ch] text-[clamp(3rem,6vw,5rem)]">{t('hero.title')}</h1>
-          <p className="section-copy mt-6">{t('hero.subtitle')}</p>
+          <h1
+            className={cn(
+              'section-title text-[clamp(3.25rem,6vw,5.15rem)] tracking-[-0.07em] lg:text-[clamp(3rem,3.7vw,4.25rem)]',
+              titleLines.length > 1
+                ? 'max-w-[7.4em] leading-[1.08] lg:max-w-none lg:leading-[1.02] lg:whitespace-nowrap'
+                : 'max-w-[12ch] leading-[1.02]',
+            )}>
+            {titleLines.map((line) => (
+              <span className="block whitespace-nowrap lg:inline" key={line}>
+                {line}
+              </span>
+            ))}
+          </h1>
+          <p className="section-copy mt-6 max-w-[36rem] text-[clamp(1rem,1.35vw,1.12rem)]">{t('hero.subtitle')}</p>
         </motion.div>
 
         <motion.div
           animate={{ opacity: 1, y: 0 }}
-          className="mt-8 flex flex-col gap-4 sm:flex-row"
+          className="mt-8 grid max-w-[32rem] gap-4 sm:grid-cols-2"
           initial={{ opacity: 0, y: 24 }}
           transition={{ duration: 0.65, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}>
           <HeroDownloadAction
@@ -59,17 +72,6 @@ function Hero({ downloads, preferredPlatform, version }: HeroProps) {
             preferred={preferredPlatform === 'windows'}
             variant="secondary"
           />
-        </motion.div>
-
-        <motion.div
-          animate={{ opacity: 1, y: 0 }}
-          className="mt-5"
-          initial={{ opacity: 0, y: 24 }}
-          transition={{ duration: 0.65, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}>
-          <Button href={REPO_URL} variant="ghost">
-            {t('hero.github')}
-            <ArrowUpRight className="h-4 w-4" />
-          </Button>
         </motion.div>
       </div>
 
@@ -145,7 +147,7 @@ function HeroDownloadAction({
   return (
     <div className="flex flex-col gap-2">
       <motion.div
-        className="relative w-full sm:w-fit"
+        className="relative w-full"
         onHoverEnd={() => setIsHovering(false)}
         onHoverStart={() => setIsHovering(true)}>
         <motion.div
@@ -176,7 +178,7 @@ function HeroDownloadAction({
           />
           <Button
             className={cn(
-              'relative z-10 w-full sm:w-auto',
+              'relative z-10 w-full justify-center',
               preferred &&
                 (variant === 'primary'
                   ? 'ring-2 ring-cyan-300/70 ring-offset-2 ring-offset-[#070b17]'
@@ -312,7 +314,7 @@ function HeroShowcase() {
               transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
             />
 
-            <motion.div className="flex flex-wrap gap-2" style={{ x: pillsX, y: pillsY }}>
+            <motion.div className="grid grid-cols-2 gap-3" style={{ x: pillsX, y: pillsY }}>
               <ConceptPill icon={<Languages className="h-4 w-4" />} label={t('hero.mockup.translateChip')} />
               <ConceptPill icon={<MessageSquare className="h-4 w-4" />} label={t('hero.mockup.chatChip')} />
             </motion.div>
@@ -364,7 +366,7 @@ function HeroShowcase() {
               </div>
             </motion.div>
 
-            <motion.div className="mt-6 grid gap-3 sm:grid-cols-2" style={{ x: tagsX, y: tagsY }}>
+            <motion.div className="mt-6 grid grid-cols-2 gap-3" style={{ x: tagsX, y: tagsY }}>
               <MockupTag icon={<Keyboard className="h-4 w-4" />} label={t('hero.mockup.hotkey')} />
               <MockupTag icon={<MessageSquare className="h-4 w-4" />} label={t('hero.mockup.chatReady')} />
             </motion.div>
@@ -377,11 +379,23 @@ function HeroShowcase() {
 
 function ConceptPill({ icon, label }: { icon: ReactNode; label: string }) {
   return (
-    <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/6 px-3 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white/78">
+    <div className="flex items-center gap-2 rounded-[1.25rem] border border-white/8 bg-white/5 px-3 py-3 text-sm text-white/78">
       <span className="text-cyan-200">{icon}</span>
       <span>{label}</span>
     </div>
   )
+}
+
+function getHeroTitleLines(title: string, language?: string) {
+  if (!language?.startsWith('zh')) {
+    return [title]
+  }
+
+  if (title.endsWith('翻译助手') && title.length > 4) {
+    return [title.slice(0, -4), '翻译助手']
+  }
+
+  return [title]
 }
 
 function MockupTag({ icon, label }: { icon: ReactNode; label: string }) {

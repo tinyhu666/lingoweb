@@ -1,4 +1,3 @@
-import { motion } from 'motion/react'
 import { useTranslation } from 'react-i18next'
 import { CHANGELOG_URL, DISCORD_URL, LICENSE_URL, NAV_SECTIONS, RELEASES_URL, REPO_URL } from '@/lib/constants'
 import appIcon from '@/assets/app-icon.png'
@@ -17,10 +16,8 @@ function Footer({ version }: FooterProps) {
 
   return (
     <footer className="page-shell mt-10 pb-12">
-      <motion.div
-        className="glass-panel relative overflow-hidden rounded-[2rem] px-6 py-8 sm:px-8"
-        transition={{ duration: 0.24, ease: [0.22, 1, 0.36, 1] }}
-        whileHover={{ y: -2 }}>
+      <div
+        className="glass-panel relative overflow-hidden rounded-[2rem] px-6 py-8 sm:px-8">
         <div className="pointer-events-none absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-cyan-200/90 to-transparent opacity-80" />
         <div className="pointer-events-none absolute inset-x-12 bottom-0 h-20 rounded-full bg-[radial-gradient(circle,rgba(103,232,249,0.16),rgba(129,140,248,0.1)_46%,transparent_76%)] opacity-70 blur-3xl" />
 
@@ -29,7 +26,7 @@ function Footer({ version }: FooterProps) {
             <div className="flex items-center gap-3">
               <img
                 alt={t('brand.appIconAlt')}
-                className="h-10 w-10 rounded-2xl object-cover shadow-[0_10px_24px_rgba(3,8,18,0.22)]"
+                className="h-10 w-10 rounded-xl object-cover sm:h-11 sm:w-11"
                 src={appIcon}
               />
               <span className="text-[1.35rem] font-semibold tracking-[-0.04em] text-white drop-shadow-[0_8px_26px_rgba(3,8,18,0.38)]">
@@ -46,7 +43,6 @@ function Footer({ version }: FooterProps) {
               <FooterNavLink href={getSectionHref('features')} label={t('footer.product.features')} />
               <FooterNavLink href={getSectionHref('supportedGames')} label={t('footer.product.supportedGames')} />
               <FooterNavLink href={getSectionHref('howItWorks')} label={t('footer.product.workflow')} />
-              <FooterNavLink href={getSectionHref('download')} label={t('footer.product.download')} />
             </div>
           </div>
 
@@ -71,7 +67,7 @@ function Footer({ version }: FooterProps) {
         <div className="mt-8 border-t border-white/8 pt-6 text-sm text-white/54">
           {t('footer.copyright', { year })}
         </div>
-      </motion.div>
+      </div>
     </footer>
   )
 }
