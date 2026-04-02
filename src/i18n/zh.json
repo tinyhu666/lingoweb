@@ -29,13 +29,14 @@
     }
   },
   "hero": {
-    "badge": "最新版本 v{{version}}",
-    "title": "AI 游戏聊天翻译助手",
-    "subtitle": "Lingo 是你在游戏中的专属 AI 翻译助手。理解队友消息，精准翻译你的想法，一键送回聊天框，畅游全球服务器。",
-    "downloadMac": "下载 macOS 版",
-    "downloadWindows": "下载 Windows 版",
-    "macLabel": "Apple Silicon · DMG",
-    "windowsLabel": "Windows x64 · EXE",
+    "badge": "现已可用 · v{{version}}",
+    "title": "游戏聊天实时翻译",
+    "subtitle": "Lingo 让你在跨区、跨服和国际队友开黑时，快速看懂消息、自然回复，并一键回填聊天框。",
+    "downloadMac": "获取 macOS 版",
+    "downloadWindows": "获取 Windows 版",
+    "macLabel": "Apple Silicon · DMG 安装包",
+    "windowsLabel": "Windows x64 · EXE 安装器",
+    "supportLine": "适用于 Dota 2、英雄联盟、魔兽世界、守望先锋 2，以及任何带聊天框的游戏。",
     "mockup": {
       "eyebrow": "AI 翻译助手",
       "title": "精准翻译，一键发送",
@@ -138,9 +139,9 @@
   "download": {
     "eyebrow": "下载",
     "title": "立即安装，下一局就用 AI 助你沟通。",
-    "subtitle": "主下载通道使用腾讯云镜像加速，便于更快完成下载安装。",
-    "recommended": "推荐给当前设备",
-    "latestRelease": "当前公开版本 v{{version}}",
+    "subtitle": "官方安装包通过腾讯云镜像分发，下载更稳定、速度更快。",
+    "recommended": "为当前设备推荐",
+    "latestRelease": "当前版本 v{{version}}",
     "showAll": "查看全部下载",
     "requirementsTitle": "系统要求",
     "requirements": {

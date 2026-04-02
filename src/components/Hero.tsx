@@ -73,6 +73,14 @@ function Hero({ downloads, preferredPlatform, version }: HeroProps) {
             variant="secondary"
           />
         </motion.div>
+
+        <motion.p
+          animate={{ opacity: 1, y: 0 }}
+          className="mt-4 max-w-[34rem] text-sm leading-6 text-white/58"
+          initial={{ opacity: 0, y: 18 }}
+          transition={{ duration: 0.6, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}>
+          {t('hero.supportLine')}
+        </motion.p>
       </div>
 
       <motion.div

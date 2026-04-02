@@ -29,13 +29,14 @@
     }
   },
   "hero": {
-    "badge": "Latest release v{{version}}",
-    "title": "Translate & Chat",
-    "subtitle": "Lingo is your in-game AI chat translator. Understand teammates, translate your intent into natural game language, and send it back to chat — all with one hotkey.",
-    "downloadMac": "Download for macOS",
-    "downloadWindows": "Download for Windows",
-    "macLabel": "Apple Silicon · DMG",
-    "windowsLabel": "Windows x64 · EXE",
+    "badge": "Available now · v{{version}}",
+    "title": "Instant Team Chat Translation",
+    "subtitle": "Translate live game chat, reply naturally, and keep your squad aligned across Chinese, English, and Russian with one hotkey.",
+    "downloadMac": "Get Lingo for macOS",
+    "downloadWindows": "Get Lingo for Windows",
+    "macLabel": "Apple Silicon · DMG installer",
+    "windowsLabel": "Windows x64 · EXE installer",
+    "supportLine": "Built for Dota 2, LoL, WoW, Overwatch 2, and any game with text chat.",
     "mockup": {
       "eyebrow": "AI Translator",
       "title": "Translate precisely, send instantly",
@@ -138,9 +139,9 @@
   "download": {
     "eyebrow": "Download",
     "title": "Install now and start communicating with AI in your next match.",
-    "subtitle": "Primary downloads use a Tencent Cloud mirror for faster regional delivery.",
-    "recommended": "Recommended for your device",
-    "latestRelease": "Latest public release v{{version}}",
+    "subtitle": "Direct official downloads are delivered through our Tencent Cloud mirror for faster regional access.",
+    "recommended": "Best match for your device",
+    "latestRelease": "Current release v{{version}}",
     "showAll": "View all downloads",
     "requirementsTitle": "System requirements",
     "requirements": {
