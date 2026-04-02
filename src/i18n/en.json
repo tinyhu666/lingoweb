@@ -22,9 +22,9 @@
     "menu": "Menu",
     "closeMenu": "Close menu",
     "links": {
-      "features": "Features",
-      "supportedGames": "Games",
-      "howItWorks": "Workflow",
+      "features": "Capabilities",
+      "supportedGames": "Supported Games",
+      "howItWorks": "How It Works",
       "download": "Download"
     }
   },
@@ -164,14 +164,14 @@
     }
   },
   "footer": {
-    "tagline": "Your in-game AI chat translator for faster, smoother team communication.",
+    "tagline": "Real-time team chat translation for multiplayer games.",
     "version": "Current version v{{version}}",
     "product": {
-      "title": "Product",
-      "features": "Features",
+      "title": "Explore",
+      "features": "Capabilities",
       "supportedGames": "Supported games",
-      "workflow": "Workflow",
-      "download": "Download"
+      "workflow": "How It Works",
+      "download": "Get Lingo"
     },
     "community": {
       "title": "Community",

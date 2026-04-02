@@ -23,8 +23,8 @@
     "closeMenu": "Закрыть меню",
     "links": {
       "features": "Возможности",
-      "supportedGames": "Игры",
-      "howItWorks": "Схема",
+      "supportedGames": "Поддерживаемые игры",
+      "howItWorks": "Как это работает",
       "download": "Скачать"
     }
   },
@@ -164,14 +164,14 @@
     }
   },
   "footer": {
-    "tagline": "Ваш AI-переводчик в игре для быстрой и точной командной коммуникации.",
+    "tagline": "Перевод игрового чата в реальном времени для командной игры.",
     "version": "Текущая версия v{{version}}",
     "product": {
-      "title": "Продукт",
+      "title": "Навигация",
       "features": "Возможности",
       "supportedGames": "Поддерживаемые игры",
-      "workflow": "Схема работы",
-      "download": "Скачать клиент"
+      "workflow": "Как это работает",
+      "download": "Получить Lingo"
     },
     "community": {
       "title": "Сообщество",
