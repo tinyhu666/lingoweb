@@ -81,6 +81,16 @@ function Hero({ downloads, preferredPlatform, version }: HeroProps) {
           transition={{ duration: 0.6, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}>
           {t('hero.supportLine')}
         </motion.p>
+
+        <motion.div
+          animate={{ opacity: 1, y: 0 }}
+          className="mt-6 grid max-w-[36rem] gap-3 sm:grid-cols-3"
+          initial={{ opacity: 0, y: 18 }}
+          transition={{ duration: 0.6, delay: 0.22, ease: [0.22, 1, 0.36, 1] }}>
+          <HeroQuickFact label={t('hero.quickFacts.release')} value={t('hero.quickFacts.releaseValue', { version })} />
+          <HeroQuickFact label={t('hero.quickFacts.delivery')} value={t('hero.quickFacts.deliveryValue')} />
+          <HeroQuickFact label={t('hero.quickFacts.requirements')} value={t('hero.quickFacts.requirementsValue')} />
+        </motion.div>
       </div>
 
       <motion.div
@@ -390,6 +400,15 @@ function ConceptPill({ icon, label }: { icon: ReactNode; label: string }) {
     <div className="flex items-center gap-2 rounded-[1.25rem] border border-white/8 bg-white/5 px-3 py-3 text-sm text-white/78">
       <span className="text-cyan-200">{icon}</span>
       <span>{label}</span>
+    </div>
+  )
+}
+
+function HeroQuickFact({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="rounded-[1.25rem] border border-white/8 bg-white/[0.035] px-4 py-3">
+      <div className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-white/42">{label}</div>
+      <div className="mt-2 text-sm font-medium text-white/82">{value}</div>
     </div>
   )
 }

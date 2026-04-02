@@ -37,6 +37,14 @@
     "macLabel": "Apple Silicon · DMG установщик",
     "windowsLabel": "Windows x64 · EXE установщик",
     "supportLine": "Подходит для Dota 2, LoL, WoW, Overwatch 2 и любой игры с текстовым чатом.",
+    "quickFacts": {
+      "release": "Текущая версия",
+      "releaseValue": "v{{version}}",
+      "delivery": "Источник установки",
+      "deliveryValue": "Официальное зеркало Tencent Cloud",
+      "requirements": "Поддержка систем",
+      "requirementsValue": "Windows 10+ / macOS 10.13+"
+    },
     "mockup": {
       "eyebrow": "AI-переводчик",
       "title": "Точный перевод, мгновенная отправка",

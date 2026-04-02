@@ -37,6 +37,14 @@
     "macLabel": "Apple Silicon · DMG 安装包",
     "windowsLabel": "Windows x64 · EXE 安装器",
     "supportLine": "适用于 Dota 2、英雄联盟、魔兽世界、守望先锋 2，以及任何带聊天框的游戏。",
+    "quickFacts": {
+      "release": "当前版本",
+      "releaseValue": "v{{version}}",
+      "delivery": "安装来源",
+      "deliveryValue": "腾讯云官方镜像分发",
+      "requirements": "系统支持",
+      "requirementsValue": "Windows 10+ / macOS 10.13+"
+    },
     "mockup": {
       "eyebrow": "AI 翻译助手",
       "title": "精准翻译，一键发送",

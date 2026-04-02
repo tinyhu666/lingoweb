@@ -37,6 +37,14 @@
     "macLabel": "Apple Silicon · DMG installer",
     "windowsLabel": "Windows x64 · EXE installer",
     "supportLine": "Built for Dota 2, LoL, WoW, Overwatch 2, and any game with text chat.",
+    "quickFacts": {
+      "release": "Current release",
+      "releaseValue": "v{{version}}",
+      "delivery": "Installer source",
+      "deliveryValue": "Official Tencent Cloud mirror",
+      "requirements": "System support",
+      "requirementsValue": "Windows 10+ / macOS 10.13+"
+    },
     "mockup": {
       "eyebrow": "AI Translator",
       "title": "Translate precisely, send instantly",
