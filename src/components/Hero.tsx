@@ -1,6 +1,6 @@
 import { useState, type PointerEvent as ReactPointerEvent, type ReactNode } from 'react'
 import { motion, useMotionTemplate, useMotionValue, useSpring, useTransform } from 'motion/react'
-import { ArrowRight, Keyboard, Languages, MessageSquare } from 'lucide-react'
+import { ArrowRight, CheckCircle2, Keyboard, Languages, MessageSquare } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import Button from '@/components/ui/Button'
 import GlassCard from '@/components/ui/GlassCard'
@@ -56,20 +56,24 @@ function Hero({ downloads, preferredPlatform, version }: HeroProps) {
           transition={{ duration: 0.65, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}>
           <HeroDownloadAction
             caption={t('hero.macLabel')}
+            detail={t('hero.macDetail')}
             glowClassName="bg-[radial-gradient(circle,rgba(103,232,249,0.42),rgba(129,140,248,0.22)_44%,transparent_76%)]"
             href={downloads.macos}
             icon={<ArrowRight className="h-4 w-4" />}
             label={t('hero.downloadMac')}
             preferred={preferredPlatform === 'macos'}
+            recommendedLabel={t('hero.recommended')}
           />
 
           <HeroDownloadAction
             caption={t('hero.windowsLabel')}
+            detail={t('hero.windowsDetail')}
             glowClassName="bg-[radial-gradient(circle,rgba(217,70,239,0.34),rgba(129,140,248,0.2)_46%,transparent_76%)]"
             href={downloads.windows}
             icon={<DownloadIcon />}
             label={t('hero.downloadWindows')}
             preferred={preferredPlatform === 'windows'}
+            recommendedLabel={t('hero.recommended')}
             variant="secondary"
           />
         </motion.div>
@@ -142,21 +146,25 @@ function HeroReleaseBadge({ label }: HeroReleaseBadgeProps) {
 
 type HeroDownloadActionProps = {
   caption: string
+  detail: string
   glowClassName: string
   href: string
   icon: ReactNode
   label: string
   preferred?: boolean
+  recommendedLabel: string
   variant?: 'primary' | 'secondary'
 }
 
 function HeroDownloadAction({
   caption,
+  detail,
   glowClassName,
   href,
   icon,
   label,
   preferred = false,
+  recommendedLabel,
   variant = 'primary',
 }: HeroDownloadActionProps) {
   const [isHovering, setIsHovering] = useState(false)
@@ -164,6 +172,15 @@ function HeroDownloadAction({
 
   return (
     <div className="flex flex-col gap-2">
+      <div className="flex items-center justify-between gap-3 px-2">
+        <span className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-white/42">{caption}</span>
+        {preferred ? (
+          <span className="inline-flex items-center gap-1 rounded-full border border-cyan-200/18 bg-cyan-300/10 px-2.5 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-cyan-100">
+            <CheckCircle2 className="h-3.5 w-3.5" />
+            {recommendedLabel}
+          </span>
+        ) : null}
+      </div>
       <motion.div
         className="relative w-full"
         onHoverEnd={() => setIsHovering(false)}
@@ -210,7 +227,7 @@ function HeroDownloadAction({
           </Button>
         </motion.div>
       </motion.div>
-      <span className="px-2 text-xs text-white/62">{caption}</span>
+      <span className="px-2 text-xs leading-5 text-white/62">{detail}</span>
     </div>
   )
 }

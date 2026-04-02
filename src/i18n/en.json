@@ -36,6 +36,9 @@
     "downloadWindows": "Get Lingo for Windows",
     "macLabel": "Apple Silicon · DMG installer",
     "windowsLabel": "Windows x64 · EXE installer",
+    "recommended": "Recommended",
+    "macDetail": "Open the DMG, drag Lingo into Applications, and start playing.",
+    "windowsDetail": "Run the EXE installer and finish setup in a few clicks.",
     "supportLine": "Built for Dota 2, LoL, WoW, Overwatch 2, and any game with text chat.",
     "quickFacts": {
       "release": "Current release",

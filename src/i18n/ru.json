@@ -36,6 +36,9 @@
     "downloadWindows": "Получить для Windows",
     "macLabel": "Apple Silicon · DMG установщик",
     "windowsLabel": "Windows x64 · EXE установщик",
+    "recommended": "Рекомендуем",
+    "macDetail": "Откройте DMG, перетащите Lingo в Applications и запускайте.",
+    "windowsDetail": "Запустите EXE-установщик и завершите установку за пару шагов.",
     "supportLine": "Подходит для Dota 2, LoL, WoW, Overwatch 2 и любой игры с текстовым чатом.",
     "quickFacts": {
       "release": "Текущая версия",
