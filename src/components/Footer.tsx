@@ -50,6 +50,7 @@ function Footer({ version }: FooterProps) {
             <p className="text-sm font-semibold text-white/94">{t('footer.community.title')}</p>
             <div className="mt-4 flex flex-col gap-1 text-sm text-white/72">
               <FooterNavLink external href={DISCORD_URL} label={t('footer.community.discord')} />
+              <FooterInfoItem label={t('footer.community.qqGroup')} />
             </div>
           </div>
         </div>
@@ -74,6 +75,10 @@ function FooterNavLink({ external = false, href, label }: { external?: boolean; 
       <span className="relative z-10">{label}</span>
     </a>
   )
+}
+
+function FooterInfoItem({ label }: { label: string }) {
+  return <div className="inline-flex w-fit rounded-full py-1.5 text-white/72">{label}</div>
 }
 
 export default Footer

@@ -174,7 +174,8 @@
     },
     "community": {
       "title": "Сообщество",
-      "discord": "Discord"
+      "discord": "Discord",
+      "qqGroup": "Группа QQ: 1095706752"
     },
     "copyright": "© {{year}} Lingo."
   }

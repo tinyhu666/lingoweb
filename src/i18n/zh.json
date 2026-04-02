@@ -174,7 +174,8 @@
     },
     "community": {
       "title": "社区",
-      "discord": "Discord"
+      "discord": "Discord",
+      "qqGroup": "QQ群：1095706752"
     },
     "copyright": "© {{year}} Lingo."
   }
