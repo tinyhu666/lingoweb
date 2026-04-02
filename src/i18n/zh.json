@@ -1,7 +1,8 @@
 {
   "meta": {
-    "title": "Lingo - 你的游戏内 AI 翻译助手",
-    "description": "Lingo 是你在游戏中的 AI 翻译助手：理解队友消息，翻译你的想法，一键送回聊天框。"
+    "title": "Lingo - AI 游戏聊天翻译助手",
+    "description": "Lingo 是面向 Windows 和 macOS 的 AI 游戏聊天翻译工具，支持 Dota 2、英雄联盟、魔兽世界、守望先锋 2 等游戏，一键翻译并回填聊天框。",
+    "keywords": "AI 游戏翻译, 游戏聊天翻译, 游戏内翻译, 游戏聊天翻译器, Dota 2 翻译, 英雄联盟翻译, 魔兽世界翻译, 守望先锋 2 翻译, Windows 游戏翻译, macOS 游戏翻译"
   },
   "brand": {
     "name": "Lingo",

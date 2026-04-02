@@ -27,11 +27,13 @@ function App() {
   useEffect(() => {
     const title = t('meta.title')
     const description = t('meta.description')
+    const keywords = t('meta.keywords')
 
     document.title = title
     document.documentElement.lang = i18n.resolvedLanguage || 'en'
 
     updateMeta('meta[name="description"]', description)
+    updateMeta('meta[name="keywords"]', keywords)
     updateMeta('meta[property="og:title"]', title)
     updateMeta('meta[property="og:description"]', description)
     updateMeta('meta[name="twitter:title"]', title)

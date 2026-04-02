@@ -1,7 +1,8 @@
 {
   "meta": {
-    "title": "Lingo - AI Chat Translator for Games",
-    "description": "Lingo is your in-game AI chat translator: understand teammates, translate your intent, and send it back to chat in one tap."
+    "title": "Lingo - AI In-Game Chat Translator for Multiplayer Games",
+    "description": "Lingo is an AI-powered in-game chat translator for Windows and macOS. Translate team chat in Dota 2, LoL, WoW, Overwatch 2, and more with one hotkey.",
+    "keywords": "AI game translator, in-game chat translator, game chat translation, Dota 2 chat translator, League of Legends translator, World of Warcraft translator, Overwatch 2 translator, multilingual gaming chat, Windows game translator, macOS game translator"
   },
   "brand": {
     "name": "Lingo",
