@@ -175,7 +175,12 @@
     "community": {
       "title": "社区",
       "discord": "Discord",
-      "qqGroup": "QQ群：1095706752"
+      "discordDescription": "加入产品动态、公告通知与抢先交流。",
+      "discordAction": "加入 Discord",
+      "qqGroup": "QQ群：1095706752",
+      "qqDescription": "适合中文用户交流、反馈问题与获取更快支持。",
+      "copy": "复制群号",
+      "copied": "已复制"
     },
     "copyright": "© {{year}} Lingo."
   }

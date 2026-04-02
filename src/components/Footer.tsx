@@ -1,5 +1,8 @@
+import { useState } from 'react'
+import { Check, Copy, MessageCircle, Users } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
-import { DISCORD_URL, NAV_SECTIONS } from '@/lib/constants'
+import Button from '@/components/ui/Button'
+import { DISCORD_URL, NAV_SECTIONS, QQ_GROUP_ID } from '@/lib/constants'
 import appIcon from '@/assets/app-icon.png'
 
 type FooterProps = {
@@ -13,6 +16,17 @@ function getSectionHref(key: (typeof NAV_SECTIONS)[number]['key']) {
 function Footer({ version }: FooterProps) {
   const { t } = useTranslation()
   const year = new Date().getFullYear()
+  const [copied, setCopied] = useState(false)
+
+  async function handleCopyQQGroup() {
+    try {
+      await navigator.clipboard.writeText(QQ_GROUP_ID)
+      setCopied(true)
+      window.setTimeout(() => setCopied(false), 1800)
+    } catch {
+      setCopied(false)
+    }
+  }
 
   return (
     <footer className="page-shell mt-10 pb-12">
@@ -48,9 +62,28 @@ function Footer({ version }: FooterProps) {
 
           <div>
             <p className="text-sm font-semibold text-white/94">{t('footer.community.title')}</p>
-            <div className="mt-4 flex flex-col gap-1 text-sm text-white/72">
-              <FooterNavLink external href={DISCORD_URL} label={t('footer.community.discord')} />
-              <FooterInfoItem label={t('footer.community.qqGroup')} />
+            <div className="mt-4 grid gap-3">
+              <CommunityCard
+                action={
+                  <Button href={DISCORD_URL} size="md" variant="secondary">
+                    {t('footer.community.discordAction')}
+                  </Button>
+                }
+                description={t('footer.community.discordDescription')}
+                icon={<MessageCircle className="h-4 w-4" />}
+                title={t('footer.community.discord')}
+              />
+              <CommunityCard
+                action={
+                  <Button onClick={() => void handleCopyQQGroup()} size="md" variant="secondary">
+                    {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+                    {copied ? t('footer.community.copied') : t('footer.community.copy')}
+                  </Button>
+                }
+                description={t('footer.community.qqDescription')}
+                icon={<Users className="h-4 w-4" />}
+                title={t('footer.community.qqGroup')}
+              />
             </div>
           </div>
         </div>
@@ -77,8 +110,33 @@ function FooterNavLink({ external = false, href, label }: { external?: boolean; 
   )
 }
 
-function FooterInfoItem({ label }: { label: string }) {
-  return <div className="inline-flex w-fit rounded-full py-1.5 text-white/72">{label}</div>
+function CommunityCard({
+  action,
+  description,
+  icon,
+  title,
+}: {
+  action: React.ReactNode
+  description: string
+  icon: React.ReactNode
+  title: string
+}) {
+  return (
+    <div className="rounded-[1.4rem] border border-white/10 bg-white/[0.045] px-4 py-4 shadow-[0_20px_40px_rgba(3,8,18,0.18)]">
+      <div className="flex items-start justify-between gap-3">
+        <div className="min-w-0">
+          <div className="flex items-center gap-2 text-sm font-semibold text-white">
+            <span className="flex h-8 w-8 items-center justify-center rounded-full border border-cyan-200/14 bg-cyan-300/10 text-cyan-100">
+              {icon}
+            </span>
+            <span>{title}</span>
+          </div>
+          <p className="mt-3 text-sm leading-6 text-white/64">{description}</p>
+        </div>
+      </div>
+      <div className="mt-4">{action}</div>
+    </div>
+  )
 }
 
 export default Footer

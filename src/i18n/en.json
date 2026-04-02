@@ -175,7 +175,12 @@
     "community": {
       "title": "Community",
       "discord": "Discord",
-      "qqGroup": "QQ Group: 1095706752"
+      "discordDescription": "Join product updates, announcements, and early discussions.",
+      "discordAction": "Join Discord",
+      "qqGroup": "QQ Group: 1095706752",
+      "qqDescription": "For Chinese-speaking users who want faster support and community chat.",
+      "copy": "Copy number",
+      "copied": "Copied"
     },
     "copyright": "© {{year}} Lingo."
   }
