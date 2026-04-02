@@ -34,7 +34,6 @@
     "subtitle": "Lingo 是你在游戏中的专属 AI 翻译助手。理解队友消息，精准翻译你的想法，一键送回聊天框，畅游全球服务器。",
     "downloadMac": "下载 macOS 版",
     "downloadWindows": "下载 Windows 版",
-    "github": "查看 GitHub",
     "macLabel": "Apple Silicon · DMG",
     "windowsLabel": "Windows x64 · EXE",
     "mockup": {
@@ -139,10 +138,10 @@
   "download": {
     "eyebrow": "下载",
     "title": "立即安装，下一局就用 AI 助你沟通。",
-    "subtitle": "主下载通道使用腾讯云镜像加速，同时提供 GitHub Releases 备用入口。",
+    "subtitle": "主下载通道使用腾讯云镜像加速，便于更快完成下载安装。",
     "recommended": "推荐给当前设备",
     "latestRelease": "当前公开版本 v{{version}}",
-    "showAll": "查看 GitHub Releases",
+    "showAll": "查看全部下载",
     "requirementsTitle": "系统要求",
     "requirements": {
       "macos": "macOS 10.13+ • Apple Silicon 包 • DMG 安装器",
@@ -175,14 +174,7 @@
     },
     "community": {
       "title": "社区",
-      "github": "GitHub",
-      "discord": "Discord",
-      "releases": "版本发布"
-    },
-    "legal": {
-      "title": "法律",
-      "license": "MIT 许可",
-      "changelog": "更新日志"
+      "discord": "Discord"
     },
     "copyright": "© {{year}} Lingo."
   }

@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { CHANGELOG_URL, DISCORD_URL, LICENSE_URL, NAV_SECTIONS, RELEASES_URL, REPO_URL } from '@/lib/constants'
+import { DISCORD_URL, NAV_SECTIONS } from '@/lib/constants'
 import appIcon from '@/assets/app-icon.png'
 
 type FooterProps = {
@@ -21,7 +21,7 @@ function Footer({ version }: FooterProps) {
         <div className="pointer-events-none absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-cyan-200/90 to-transparent opacity-80" />
         <div className="pointer-events-none absolute inset-x-12 bottom-0 h-20 rounded-full bg-[radial-gradient(circle,rgba(103,232,249,0.16),rgba(129,140,248,0.1)_46%,transparent_76%)] opacity-70 blur-3xl" />
 
-        <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr_0.9fr_0.8fr]">
+        <div className="grid gap-10 lg:grid-cols-[1.15fr_0.95fr_0.8fr]">
           <div>
             <div className="flex items-center gap-3">
               <img
@@ -49,17 +49,7 @@ function Footer({ version }: FooterProps) {
           <div>
             <p className="text-sm font-semibold text-white/94">{t('footer.community.title')}</p>
             <div className="mt-4 flex flex-col gap-1 text-sm text-white/72">
-              <FooterNavLink external href={REPO_URL} label={t('footer.community.github')} />
               <FooterNavLink external href={DISCORD_URL} label={t('footer.community.discord')} />
-              <FooterNavLink external href={RELEASES_URL} label={t('footer.community.releases')} />
-            </div>
-          </div>
-
-          <div>
-            <p className="text-sm font-semibold text-white/94">{t('footer.legal.title')}</p>
-            <div className="mt-4 flex flex-col gap-1 text-sm text-white/72">
-              <FooterNavLink external href={LICENSE_URL} label={t('footer.legal.license')} />
-              <FooterNavLink external href={CHANGELOG_URL} label={t('footer.legal.changelog')} />
             </div>
           </div>
         </div>

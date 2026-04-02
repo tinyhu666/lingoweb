@@ -34,7 +34,6 @@
     "subtitle": "Lingo — ваш AI-переводчик в игре: понимает тиммейтов, переводит вашу мысль на язык игры и отправляет результат прямо в чат одним нажатием.",
     "downloadMac": "Скачать для macOS",
     "downloadWindows": "Скачать для Windows",
-    "github": "Открыть GitHub",
     "macLabel": "Apple Silicon · DMG",
     "windowsLabel": "Windows x64 · EXE",
     "mockup": {
@@ -139,10 +138,10 @@
   "download": {
     "eyebrow": "Скачать",
     "title": "Установите сейчас и начните общаться с помощью AI уже в следующем матче.",
-    "subtitle": "Основные кнопки используют зеркало Tencent Cloud для более быстрой загрузки, а GitHub Releases остаётся запасным вариантом.",
+    "subtitle": "Основные загрузки идут через зеркало Tencent Cloud для более быстрой доставки.",
     "recommended": "Рекомендуется для вашего устройства",
     "latestRelease": "Текущий публичный релиз v{{version}}",
-    "showAll": "Открыть GitHub Releases",
+    "showAll": "Посмотреть все загрузки",
     "requirementsTitle": "Системные требования",
     "requirements": {
       "macos": "macOS 10.13+ • пакет Apple Silicon • установщик DMG",
@@ -175,14 +174,7 @@
     },
     "community": {
       "title": "Сообщество",
-      "github": "GitHub",
-      "discord": "Discord",
-      "releases": "Релизы"
-    },
-    "legal": {
-      "title": "Документы",
-      "license": "Лицензия MIT",
-      "changelog": "Список изменений"
+      "discord": "Discord"
     },
     "copyright": "© {{year}} Lingo."
   }
