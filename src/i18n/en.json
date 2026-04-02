@@ -76,31 +76,31 @@
   },
   "features": {
     "eyebrow": "Why Lingo",
-    "title": "More than translation. Your in-game communication assistant.",
-    "subtitle": "Lingo doesn't just translate words — it turns callouts and game terms into natural, send-ready messages with a single hotkey.",
+    "title": "Built for fast, readable team chat.",
+    "subtitle": "Translate, rewrite, and send in-game callouts without slowing the match down.",
     "items": {
       "instant": {
         "title": "One-key translate",
-        "description": "Select text or type your message, press the hotkey, and let AI handle the translation and formatting."
+        "description": "Select text or type your message, hit the hotkey, and send the result."
       },
       "server": {
         "title": "Context-aware AI",
-        "description": "Translation models run server-side with continuous updates, producing shorter, cleaner, and more game-appropriate output."
+        "description": "Server-side models keep the output short, natural, and ready for live matches."
       },
       "phrases": {
         "title": "Quick-send phrases",
-        "description": "Common callouts like push, back, wait, and regroup are pre-loaded and ready to send instantly."
+        "description": "Use ready-made callouts like push, back, wait, and regroup in one tap."
       },
       "languages": {
         "title": "Cross-language communication",
-        "description": "Translate seamlessly between Chinese, English, and Russian to communicate naturally across any server."
+        "description": "Switch between Chinese, English, and Russian across mixed-language lobbies."
       }
     }
   },
   "supportedGames": {
     "eyebrow": "Supported games",
-    "title": "Deeply optimized for popular multiplayer games.",
-    "subtitle": "Starting with Dota 2, League of Legends, World of Warcraft, and Overwatch 2 — with support for any game that has a text chat.",
+    "title": "Optimized for the games people actually play.",
+    "subtitle": "Starting with Dota 2, LoL, WoW, and Overwatch 2. If your game has text chat, Lingo fits.",
     "chatBadge": "AI Translator",
     "controls": {
       "previous": "Previous games",
@@ -112,38 +112,38 @@
     "items": {
       "dota2": {
         "name": "Dota 2",
-        "description": "Optimized for smoke calls, BKB timing, retreat pings, and the short tactical lines that decide team fights."
+        "description": "Handles smoke calls, BKB timing, retreat pings, and short fight-winning instructions."
       },
       "lol": {
         "name": "League of Legends",
-        "description": "Lane calls, jungle timing, resource trades, and teamfight coordination — translated naturally like a real teammate."
+        "description": "Covers lane calls, jungle timing, objectives, and teamfight coordination."
       },
       "wow": {
         "name": "World of Warcraft",
-        "description": "Raid commands, regroup reminders, party chat, and multilingual group coordination made seamless."
+        "description": "Supports raid commands, regroup reminders, party chat, and multilingual group play."
       },
       "ow2": {
         "name": "Overwatch 2",
-        "description": "Position callouts, focus targets, regroup timing, and push commands — translated concisely and accurately."
+        "description": "Translates position calls, focus targets, regroup timing, and push commands cleanly."
       }
     }
   },
   "howItWorks": {
     "eyebrow": "Workflow",
-    "title": "Three steps from thought to team chat.",
-    "subtitle": "Type your intent, let AI translate it into natural game language, and send it straight to chat.",
+    "title": "From thought to chat in three steps.",
+    "subtitle": "Type or select text, hit the hotkey, and send.",
     "steps": {
       "select": {
         "title": "Type your message",
-        "description": "Enter what you want to say, or select a teammate's message to translate."
+        "description": "Write what you want to say, or select a teammate message."
       },
       "hotkey": {
         "title": "Press the hotkey",
-        "description": "One shortcut triggers translation and optimization — AI handles everything in between."
+        "description": "One shortcut triggers translation, cleanup, and formatting."
       },
       "paste": {
         "title": "Confirm and send",
-        "description": "The translated result auto-fills the chat box, ready to send with a single click."
+        "description": "The result fills the chat box and is ready to send immediately."
       }
     }
   },
