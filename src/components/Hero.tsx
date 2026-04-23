@@ -24,13 +24,13 @@ function Hero({ downloads, preferredPlatform, version }: HeroProps) {
 
   return (
     <section
-      className="section-shell grid min-h-[calc(100vh-9rem)] items-center gap-10 pt-4 md:pt-6 lg:min-h-[calc(100vh-8rem)] lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-14 lg:pt-10"
+      className="section-shell grid gap-8 pt-4 md:gap-10 md:pt-6 lg:grid-cols-[minmax(0,0.94fr)_minmax(0,1.06fr)] lg:items-start lg:gap-x-14 lg:gap-y-8 lg:pt-10"
       id="top">
       <div className="max-w-[38rem]">
         <motion.div
           animate={{ opacity: 1, y: 0 }}
-          initial={{ opacity: 0, y: 24 }}
-          transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}>
+          initial={{ opacity: 0.24, y: 18 }}
+          transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}>
           <HeroReleaseBadge label={t('hero.badge', { version })} />
 
           <h1
@@ -52,8 +52,8 @@ function Hero({ downloads, preferredPlatform, version }: HeroProps) {
         <motion.div
           animate={{ opacity: 1, y: 0 }}
           className="mt-8 grid max-w-[32rem] gap-4 sm:grid-cols-2"
-          initial={{ opacity: 0, y: 24 }}
-          transition={{ duration: 0.65, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}>
+          initial={{ opacity: 0.18, y: 16 }}
+          transition={{ duration: 0.55, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}>
           <HeroDownloadAction
             caption={t('hero.macLabel')}
             detail={t('hero.macDetail')}
@@ -77,31 +77,28 @@ function Hero({ downloads, preferredPlatform, version }: HeroProps) {
             variant="secondary"
           />
         </motion.div>
-
-        <motion.p
-          animate={{ opacity: 1, y: 0 }}
-          className="mt-4 max-w-[34rem] text-sm leading-6 text-white/58"
-          initial={{ opacity: 0, y: 18 }}
-          transition={{ duration: 0.6, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}>
-          {t('hero.supportLine')}
-        </motion.p>
-
-        <motion.div
-          animate={{ opacity: 1, y: 0 }}
-          className="mt-6 grid max-w-[36rem] gap-3 sm:grid-cols-3"
-          initial={{ opacity: 0, y: 18 }}
-          transition={{ duration: 0.6, delay: 0.22, ease: [0.22, 1, 0.36, 1] }}>
-          <HeroQuickFact label={t('hero.quickFacts.release')} value={t('hero.quickFacts.releaseValue', { version })} />
-          <HeroQuickFact label={t('hero.quickFacts.delivery')} value={t('hero.quickFacts.deliveryValue')} />
-          <HeroQuickFact label={t('hero.quickFacts.requirements')} value={t('hero.quickFacts.requirementsValue')} />
-        </motion.div>
       </div>
 
       <motion.div
         animate={{ opacity: 1, y: 0, scale: 1 }}
-        initial={{ opacity: 0, y: 36, scale: 0.96 }}
-        transition={{ duration: 0.9, delay: 0.16, type: 'spring', stiffness: 120, damping: 22 }}>
+        className="lg:pt-2"
+        initial={{ opacity: 0.28, y: 24, scale: 0.985 }}
+        transition={{ duration: 0.75, delay: 0.12, type: 'spring', stiffness: 140, damping: 24 }}>
         <HeroShowcase />
+      </motion.div>
+
+      <motion.div
+        animate={{ opacity: 1, y: 0 }}
+        className="max-w-[38rem] lg:col-start-1 lg:row-start-2"
+        initial={{ opacity: 0.18, y: 14 }}
+        transition={{ duration: 0.55, delay: 0.14, ease: [0.22, 1, 0.36, 1] }}>
+        <p className="max-w-[34rem] text-sm leading-6 text-white/60 md:text-[0.95rem]">{t('hero.supportLine')}</p>
+
+        <div className="mt-5 grid gap-3 sm:grid-cols-3">
+          <HeroQuickFact label={t('hero.quickFacts.release')} value={t('hero.quickFacts.releaseValue', { version })} />
+          <HeroQuickFact label={t('hero.quickFacts.delivery')} value={t('hero.quickFacts.deliveryValue')} />
+          <HeroQuickFact label={t('hero.quickFacts.requirements')} value={t('hero.quickFacts.requirementsValue')} />
+        </div>
       </motion.div>
     </section>
   )
@@ -172,10 +169,12 @@ function HeroDownloadAction({
 
   return (
     <div className="flex flex-col gap-2">
-      <div className="flex items-center justify-between gap-3 px-2">
-        <span className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-white/42">{caption}</span>
+      <div className="flex flex-wrap items-center gap-x-3 gap-y-2 px-2">
+        <span className="min-w-0 flex-1 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-white/42 max-sm:basis-full max-sm:flex-none">
+          {caption}
+        </span>
         {preferred ? (
-          <span className="inline-flex items-center gap-1 rounded-full border border-cyan-200/18 bg-cyan-300/10 px-2.5 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-cyan-100">
+          <span className="inline-flex shrink-0 items-center gap-1 rounded-full border border-cyan-200/18 bg-cyan-300/10 px-2.5 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-cyan-100 max-sm:px-2 max-sm:text-[0.58rem]">
             <CheckCircle2 className="h-3.5 w-3.5" />
             {recommendedLabel}
           </span>

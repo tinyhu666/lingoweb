@@ -98,11 +98,11 @@ function SupportedGames() {
       <section>
         <span className="section-eyebrow">{t('supportedGames.eyebrow')}</span>
         <div className="section-header">
-          <h2 className="section-title section-header__title text-[clamp(2.2rem,4vw,3.5rem)]">{t('supportedGames.title')}</h2>
+          <h2 className="section-title section-module-title section-header__title">{t('supportedGames.title')}</h2>
           <p className="section-copy section-header__copy">{t('supportedGames.subtitle')}</p>
         </div>
 
-        <div className="mt-8 flex items-center justify-end gap-3 lg:hidden">
+        <div className="section-body flex items-center justify-end gap-3 lg:hidden">
           <button
             aria-label={t('supportedGames.controls.previous')}
             className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/72 transition hover:border-white/20 hover:bg-white/8 hover:text-white"
@@ -119,7 +119,7 @@ function SupportedGames() {
           </button>
         </div>
 
-        <div className="relative mt-8 overflow-hidden lg:overflow-visible">
+        <div className="relative mt-6 overflow-hidden lg:mt-[clamp(2.25rem,3vw,2.75rem)] lg:overflow-visible">
           <div className="pointer-events-none absolute inset-y-0 left-0 z-10 hidden w-12 bg-gradient-to-r from-[#070b17] via-[#070b17]/70 to-transparent md:block lg:hidden" />
           <div className="pointer-events-none absolute inset-y-0 right-0 z-10 hidden w-12 bg-gradient-to-l from-[#070b17] via-[#070b17]/70 to-transparent md:block lg:hidden" />
 

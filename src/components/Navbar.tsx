@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { AnimatePresence, motion } from 'motion/react'
 import { Menu, X } from 'lucide-react'
@@ -13,6 +13,42 @@ function Navbar() {
   const { progress, scrollY } = useScrollProgress()
   const { t } = useTranslation()
   const scrolled = scrollY > 100
+
+  useEffect(() => {
+    if (!menuOpen) {
+      return
+    }
+
+    const previousOverflow = document.body.style.overflow
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setMenuOpen(false)
+      }
+    }
+
+    document.body.style.overflow = 'hidden'
+    window.addEventListener('keydown', handleKeyDown)
+
+    return () => {
+      document.body.style.overflow = previousOverflow
+      window.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [menuOpen])
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(min-width: 1024px)')
+    const closeMenuOnDesktop = (event: MediaQueryListEvent) => {
+      if (event.matches) {
+        setMenuOpen(false)
+      }
+    }
+
+    mediaQuery.addEventListener('change', closeMenuOnDesktop)
+
+    return () => {
+      mediaQuery.removeEventListener('change', closeMenuOnDesktop)
+    }
+  }, [])
 
   return (
     <>
@@ -73,6 +109,21 @@ function Navbar() {
 
       <AnimatePresence>
         {menuOpen ? (
+          <motion.button
+            aria-label={t('navbar.closeMenu')}
+            className="fixed inset-0 z-30 bg-[rgba(4,7,17,0.62)] backdrop-blur-sm lg:hidden"
+            exit={{ opacity: 0 }}
+            initial={{ opacity: 0 }}
+            onClick={() => setMenuOpen(false)}
+            transition={{ duration: 0.2 }}
+            type="button"
+            animate={{ opacity: 1 }}
+          />
+        ) : null}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {menuOpen ? (
           <motion.div
             animate={{ opacity: 1, y: 0 }}
             className="fixed inset-x-0 top-24 z-40 lg:hidden"
@@ -80,12 +131,12 @@ function Navbar() {
             initial={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.2 }}>
             <div className="page-shell">
-              <div className="glass-panel rounded-[2rem] p-4">
+              <div className="glass-panel rounded-[2rem] p-4 shadow-[0_24px_80px_rgba(2,6,18,0.46)]">
                 <div className="flex flex-col gap-3">
                   {NAV_SECTIONS.map((item) => (
                     <a
                       key={item.key}
-                      className="group relative overflow-hidden rounded-2xl border border-white/8 bg-white/4 px-4 py-3 text-sm font-medium text-white/84"
+                      className="group relative overflow-hidden rounded-2xl border border-white/8 bg-white/4 px-4 py-3.5 text-sm font-medium text-white/84"
                       href={item.href}
                       onClick={() => setMenuOpen(false)}>
                       <span className="pointer-events-none absolute inset-0 rounded-[inherit] bg-white/6 opacity-0 transition duration-200 group-hover:opacity-100" />

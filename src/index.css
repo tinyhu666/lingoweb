@@ -183,9 +183,26 @@
 
   .section-title {
     font-family: var(--font-display);
-    font-size: clamp(2.35rem, 4.6vw, 4.1rem);
-    line-height: 0.98;
-    letter-spacing: -0.05em;
+    font-size: clamp(2rem, 3.8vw, 3.35rem);
+    line-height: 1.04;
+    letter-spacing: -0.045em;
+    color: white;
+    text-wrap: balance;
+  }
+
+  .section-module-title {
+    max-width: 17ch;
+    font-size: clamp(1.95rem, 3.4vw, 3rem);
+    line-height: 1.06;
+    letter-spacing: -0.04em;
+  }
+
+  .section-card-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.4rem, 1.1rem + 0.9vw, 1.8rem);
+    line-height: 1.1;
+    font-weight: 600;
+    letter-spacing: -0.035em;
     color: white;
     text-wrap: balance;
   }
@@ -201,6 +218,36 @@
   .section-header .section-header__title {
     width: 100%;
     max-width: none;
+  }
+
+  .section-header__copy {
+    width: 100%;
+  }
+
+  .section-header__stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .section-body {
+    margin-top: clamp(2.25rem, 3vw, 2.75rem);
+  }
+
+  @media (min-width: 64rem) {
+    .section-header {
+      display: grid;
+      grid-template-columns: minmax(0, 0.94fr) minmax(0, 0.78fr);
+      align-items: end;
+      column-gap: 2.5rem;
+      row-gap: 1rem;
+    }
+
+    .section-header__copy {
+      justify-self: end;
+      max-width: 30rem;
+    }
   }
 
   .no-scrollbar {

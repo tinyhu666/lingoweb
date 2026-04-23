@@ -14,8 +14,8 @@ function AnimatedSection({ children, className, delay = 0, id }: AnimatedSection
     <motion.div
       className={cn('section-shell', className)}
       id={id}
-      initial={{ opacity: 0, y: 36 }}
-      transition={{ duration: 0.65, delay, ease: [0.22, 1, 0.36, 1] }}
+      initial={{ opacity: 0.18, y: 24 }}
+      transition={{ duration: 0.55, delay, ease: [0.22, 1, 0.36, 1] }}
       viewport={{ once: true, amount: 0.2 }}
       whileInView={{ opacity: 1, y: 0 }}>
       {children}
