@@ -26,6 +26,7 @@ const CHAT_ROWS = [
 function Hero({ downloads, preferredPlatform, version }: HeroProps) {
   const { i18n, t } = useTranslation()
   const titleLines = useMemo(() => getHeroTitleLines(t('hero.title'), i18n.resolvedLanguage), [i18n.resolvedLanguage, t])
+  const primaryPlatform: Exclude<PlatformId, 'unknown'> = preferredPlatform === 'macos' ? 'macos' : 'windows'
 
   return (
     <section className="relative isolate min-h-[100svh] overflow-hidden pt-24 sm:pt-28" id="top">
@@ -58,7 +59,7 @@ function Hero({ downloads, preferredPlatform, version }: HeroProps) {
             </span>
           </div>
 
-          <h1 className="text-glow font-display text-[clamp(4rem,10vw,8.75rem)] font-black uppercase leading-[0.82] tracking-[0.02em] text-white">
+          <h1 className="text-glow font-display text-[clamp(3.6rem,7vw,6.8rem)] font-black uppercase leading-[0.98] tracking-[0] text-white sm:text-[clamp(4rem,6.4vw,7rem)]">
             {titleLines.map((line) => (
               <span className="block" key={line}>
                 {line}
@@ -73,16 +74,17 @@ function Hero({ downloads, preferredPlatform, version }: HeroProps) {
               href={downloads.macos}
               icon={<ArrowRight className="h-4 w-4" />}
               label={t('hero.downloadMac')}
-              preferred={preferredPlatform === 'macos'}
+              preferred={primaryPlatform === 'macos'}
               recommendedLabel={t('hero.recommended')}
+              variant={primaryPlatform === 'macos' ? 'primary' : 'secondary'}
             />
             <HeroDownloadAction
               href={downloads.windows}
               icon={<Download className="h-4 w-4" />}
               label={t('hero.downloadWindows')}
-              preferred={preferredPlatform === 'windows'}
+              preferred={primaryPlatform === 'windows'}
               recommendedLabel={t('hero.recommended')}
-              variant="secondary"
+              variant={primaryPlatform === 'windows' ? 'primary' : 'secondary'}
             />
           </div>
 

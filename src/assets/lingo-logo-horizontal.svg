@@ -2,9 +2,9 @@
 <svg width="1200" height="320" viewBox="0 0 1200 320" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="lingoWordmark" x1="340" y1="86" x2="760" y2="232" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#0F172A" />
-      <stop offset="0.58" stop-color="#2563EB" />
-      <stop offset="1" stop-color="#60A5FA" />
+      <stop offset="0" stop-color="#E8FBFF" />
+      <stop offset="0.58" stop-color="#60A5FA" />
+      <stop offset="1" stop-color="#24D9FF" />
     </linearGradient>
   </defs>
 

@@ -9,7 +9,13 @@ type BrandLogoProps = {
 function BrandLogo({ className }: BrandLogoProps) {
   const { t } = useTranslation()
 
-  return <img alt={t('brand.appIconAlt')} className={cn('h-12 w-auto object-contain', className)} src={lingoLogoHorizontal} />
+  return (
+    <img
+      alt={t('brand.appIconAlt')}
+      className={cn('h-12 w-auto object-contain drop-shadow-[0_0_18px_rgba(96,165,250,0.28)]', className)}
+      src={lingoLogoHorizontal}
+    />
+  )
 }
 
 export default BrandLogo
