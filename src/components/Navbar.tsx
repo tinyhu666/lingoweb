@@ -56,7 +56,7 @@ function Navbar() {
         <div className="page-shell">
           <div
             className={cn(
-              'neon-border w-full rounded-[8px] border border-white/10 bg-[#050b16]/52 transition duration-300 backdrop-blur-2xl',
+              'w-full rounded-full bg-[#050b16]/50 transition duration-300 backdrop-blur-2xl',
               scrolled ? 'shadow-[0_18px_56px_rgba(0,0,0,0.34)]' : 'shadow-[0_12px_34px_rgba(0,0,0,0.18)]',
             )}>
             <div className="relative flex items-center justify-between gap-4 px-4 py-3 sm:px-5">
@@ -73,7 +73,6 @@ function Navbar() {
                       href={item.href}
                       onClick={() => setMenuOpen(false)}>
                       <span className="pointer-events-none absolute inset-0 rounded-[8px] bg-white/8 opacity-0 transition duration-200 group-hover:opacity-100" />
-                      <span className="pointer-events-none absolute inset-x-4 top-0 h-px bg-gradient-to-r from-transparent via-cyan-300/90 to-transparent opacity-0 transition duration-200 group-hover:opacity-100" />
                       <span className="relative z-10">{t(`navbar.links.${item.key}`)}</span>
                     </a>
                   ))}
@@ -84,17 +83,19 @@ function Navbar() {
 
               <button
                 aria-label={menuOpen ? t('navbar.closeMenu') : t('navbar.menu')}
-                className="absolute right-4 top-1/2 inline-flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-[8px] border border-white/12 bg-white/8 text-cyan-50 shadow-[0_12px_24px_rgba(0,0,0,0.2)] backdrop-blur-xl sm:right-5 lg:hidden"
+                className="absolute right-4 top-1/2 inline-flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/8 text-cyan-50 shadow-[0_12px_24px_rgba(0,0,0,0.2)] backdrop-blur-xl sm:right-5 lg:hidden"
                 onClick={() => setMenuOpen((open) => !open)}
                 type="button">
                 {menuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
               </button>
             </div>
 
-            <div
-              className="h-px rounded-full bg-[linear-gradient(90deg,rgba(36,217,255,0.2),rgba(183,66,255,0.76),rgba(255,188,92,0.52))] transition-[width]"
-              style={{ width: `${progress * 100}%` }}
-            />
+            <div className="px-6 pb-1.5">
+              <div
+                className="h-0.5 rounded-full bg-[linear-gradient(90deg,rgba(36,217,255,0.04),rgba(183,66,255,0.48),rgba(255,188,92,0.22))] transition-[width]"
+                style={{ width: `${progress * 100}%` }}
+              />
+            </div>
           </div>
         </div>
       </header>
@@ -128,11 +129,10 @@ function Navbar() {
                   {NAV_SECTIONS.map((item) => (
                     <a
                       key={item.key}
-                      className="group relative overflow-hidden rounded-[8px] border border-white/10 bg-white/[0.06] px-4 py-3.5 text-sm font-medium text-cyan-50/78"
+                      className="group relative overflow-hidden rounded-[18px] bg-white/[0.06] px-4 py-3.5 text-sm font-medium text-cyan-50/78"
                       href={item.href}
                       onClick={() => setMenuOpen(false)}>
                       <span className="pointer-events-none absolute inset-0 rounded-[inherit] bg-white/8 opacity-0 transition duration-200 group-hover:opacity-100" />
-                      <span className="pointer-events-none absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-cyan-300/70 to-transparent opacity-0 transition duration-200 group-hover:opacity-100" />
                       <span className="relative z-10">{t(`navbar.links.${item.key}`)}</span>
                     </a>
                   ))}

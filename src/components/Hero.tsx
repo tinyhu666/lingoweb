@@ -53,7 +53,7 @@ function Hero({ downloads, preferredPlatform, version }: HeroProps) {
               <Sparkles className="h-3.5 w-3.5" />
               {t('hero.badge', { version })}
             </span>
-            <span className="hidden rounded-[8px] border border-white/12 bg-white/6 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.12em] text-white/70 backdrop-blur-md sm:inline-flex">
+            <span className="hidden rounded-full bg-white/8 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.12em] text-white/70 backdrop-blur-md sm:inline-flex">
               Ctrl + Shift + L
             </span>
           </div>
@@ -124,7 +124,7 @@ function HeroDownloadAction({
         )}
       />
       {preferred ? (
-        <span className="absolute -top-3 right-3 z-20 inline-flex items-center gap-1 rounded-[8px] border border-emerald-300/28 bg-emerald-400/12 px-2 py-1 text-[0.62rem] font-black uppercase tracking-[0.1em] text-emerald-100 backdrop-blur-md">
+        <span className="absolute -top-3 right-3 z-20 inline-flex items-center gap-1 rounded-full bg-emerald-400/16 px-2 py-1 text-[0.62rem] font-black uppercase tracking-[0.1em] text-emerald-100 backdrop-blur-md">
           <CheckCircle2 className="h-3 w-3" />
           {recommendedLabel}
         </span>
@@ -139,8 +139,8 @@ function HeroDownloadAction({
 
 function HeroSignal({ icon, label }: { icon: ReactNode; label: string }) {
   return (
-    <div className="neon-border rounded-[8px] bg-black/24 p-3 text-white/82 backdrop-blur-md">
-      <div className="mb-3 text-cyan-200">{icon}</div>
+    <div className="rounded-full bg-white/[0.065] px-4 py-3 text-white/82 shadow-[0_12px_28px_rgba(0,0,0,0.18)] backdrop-blur-md">
+      <div className="mb-2 text-cyan-200">{icon}</div>
       <div className="truncate text-xs font-black uppercase tracking-[0.08em]">{label}</div>
     </div>
   )
@@ -170,14 +170,14 @@ function HeroCockpit() {
       }}
       transition={{ duration: 0.75, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}>
       <motion.div
-        className="neon-border relative w-[27rem] overflow-hidden rounded-[8px] bg-[#050b16]/70 p-4 shadow-[0_34px_90px_rgba(0,0,0,0.42)] backdrop-blur-2xl"
+        className="relative w-[27rem] overflow-hidden rounded-[18px] bg-[#050b16]/60 p-4 shadow-[0_34px_90px_rgba(0,0,0,0.42),0_0_80px_rgba(36,217,255,0.14)] backdrop-blur-2xl"
         style={{ rotateX, rotateY, transformPerspective: 1200, transformStyle: 'preserve-3d' }}>
         <div className="absolute inset-0 scanline opacity-25" />
         <div className="absolute -right-20 -top-20 h-56 w-56 rounded-full bg-cyan-400/18 blur-3xl" />
         <div className="relative">
           <div className="flex items-center justify-between">
             <BrandLogo className="h-11 brightness-125 drop-shadow-[0_0_24px_rgba(36,217,255,0.18)]" />
-            <span className="rounded-[8px] border border-cyan-200/18 bg-cyan-300/10 px-3 py-1.5 text-[0.65rem] font-black uppercase tracking-[0.12em] text-cyan-100">
+            <span className="rounded-full bg-cyan-300/12 px-3 py-1.5 text-[0.65rem] font-black uppercase tracking-[0.12em] text-cyan-100">
               Live
             </span>
           </div>
@@ -186,7 +186,7 @@ function HeroCockpit() {
             {CHAT_ROWS.map((row, index) => (
               <motion.div
                 animate={{ opacity: [0.72, 1, 0.72], x: [0, index % 2 ? -4 : 4, 0] }}
-                className="rounded-[8px] border border-white/10 bg-white/[0.055] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]"
+                className="rounded-[16px] bg-white/[0.06] p-4 shadow-[0_18px_44px_rgba(0,0,0,0.16)]"
                 key={`${row.from}-${row.to}`}
                 transition={{ duration: 3.8, delay: index * 0.45, repeat: Infinity, ease: 'easeInOut' }}>
                 <div className="flex items-center justify-between text-[0.62rem] font-black uppercase tracking-[0.16em] text-cyan-100/72">
@@ -195,7 +195,7 @@ function HeroCockpit() {
                   <span>{row.to}</span>
                 </div>
                 <div className="mt-3 text-sm font-bold text-white/78">{row.source}</div>
-                <div className="mt-2 rounded-[8px] border border-cyan-200/14 bg-cyan-300/10 px-3 py-2 text-sm font-black text-cyan-50">
+                <div className="mt-2 rounded-[12px] bg-cyan-300/12 px-3 py-2 text-sm font-black text-cyan-50">
                   {row.result}
                 </div>
               </motion.div>
@@ -204,7 +204,7 @@ function HeroCockpit() {
 
           <motion.div
             animate={{ y: [0, -5, 0], boxShadow: ['0 0 24px rgba(36,217,255,0.2)', '0 0 44px rgba(255,188,92,0.38)', '0 0 24px rgba(36,217,255,0.2)'] }}
-            className="arcade-key mt-5 flex items-center justify-between rounded-[8px] px-4 py-3"
+            className="mt-5 flex items-center justify-between rounded-full bg-white/[0.075] px-4 py-3 shadow-[0_16px_38px_rgba(0,0,0,0.22)] backdrop-blur-md"
             transition={{ duration: 2.8, repeat: Infinity, ease: 'easeInOut' }}>
             <span className="flex items-center gap-2 text-xs font-black uppercase tracking-[0.14em] text-white/82">
               <MousePointer2 className="h-4 w-4 text-amber-200" />

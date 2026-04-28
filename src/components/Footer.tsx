@@ -31,9 +31,8 @@ function Footer({ version }: FooterProps) {
   return (
     <footer className="page-shell mt-10 pb-12">
       <div
-        className="neon-border relative overflow-hidden rounded-[8px] bg-[#050b16]/76 px-6 py-8 shadow-[0_28px_80px_rgba(0,0,0,0.34)] sm:px-8">
-        <div className="pointer-events-none absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-cyan-300/70 to-transparent opacity-80" />
-        <div className="pointer-events-none absolute inset-x-12 bottom-0 h-20 rounded-[8px] bg-cyan-300/16 opacity-70 blur-3xl" />
+        className="relative overflow-hidden rounded-[32px] bg-[#050b16]/62 px-6 py-8 shadow-[0_28px_80px_rgba(0,0,0,0.28)] sm:px-8">
+        <div className="pointer-events-none absolute inset-x-12 bottom-0 h-24 rounded-full bg-cyan-300/12 opacity-70 blur-3xl" />
 
         <div className="grid gap-10 lg:grid-cols-[1.15fr_0.95fr_0.8fr]">
           <div>
@@ -79,7 +78,7 @@ function Footer({ version }: FooterProps) {
           </div>
         </div>
 
-        <div className="mt-8 border-t border-white/10 pt-6 text-sm text-cyan-50/46">
+        <div className="mt-8 pt-2 text-sm text-cyan-50/46">
           {t('footer.copyright', { year })}
         </div>
       </div>
@@ -95,7 +94,6 @@ function FooterNavLink({ external = false, href, label }: { external?: boolean; 
       rel={external ? 'noreferrer' : undefined}
       target={external ? '_blank' : undefined}>
       <span className="pointer-events-none absolute -inset-y-0 -inset-x-2 rounded-[8px] bg-white/8 opacity-0 transition duration-200 group-hover:opacity-100" />
-      <span className="pointer-events-none absolute -inset-x-1 top-0 h-px bg-gradient-to-r from-transparent via-cyan-300/70 to-transparent opacity-0 transition duration-200 group-hover:opacity-100" />
       <span className="relative z-10">{label}</span>
     </a>
   )
@@ -113,11 +111,11 @@ function CommunityCard({
   title: string
 }) {
   return (
-    <div className="rounded-[8px] border border-white/10 bg-white/[0.055] px-4 py-4 shadow-[0_14px_32px_rgba(0,0,0,0.18)]">
+    <div className="rounded-[22px] bg-white/[0.045] px-4 py-4 shadow-[0_14px_32px_rgba(0,0,0,0.14)] backdrop-blur-md">
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
           <div className="flex items-center gap-2 text-sm font-extrabold text-white">
-            <span className="flex h-8 w-8 items-center justify-center rounded-[8px] border border-cyan-200/16 bg-cyan-300/10 text-cyan-100">
+            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-cyan-300/10 text-cyan-100">
               {icon}
             </span>
             <span>{title}</span>

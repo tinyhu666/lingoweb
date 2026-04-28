@@ -12,11 +12,11 @@ type ButtonProps = {
 
 const variantClasses = {
   primary:
-    'border border-cyan-200/40 bg-[linear-gradient(135deg,#24d9ff_0%,#5d5cff_58%,#b742ff_100%)] text-white shadow-[0_18px_42px_rgba(36,217,255,0.24)] hover:border-cyan-100 hover:brightness-110',
+    'bg-[linear-gradient(135deg,#24d9ff_0%,#5d5cff_58%,#b742ff_100%)] text-white shadow-[0_18px_42px_rgba(36,217,255,0.24)] hover:brightness-110',
   secondary:
-    'border border-white/16 bg-white/8 text-cyan-50 shadow-[0_14px_34px_rgba(0,0,0,0.22)] backdrop-blur-xl hover:border-cyan-200/36 hover:bg-white/12',
+    'bg-white/8 text-cyan-50 shadow-[0_14px_34px_rgba(0,0,0,0.22)] backdrop-blur-xl hover:bg-white/12',
   ghost:
-    'border border-transparent bg-transparent text-cyan-50/70 hover:bg-white/8 hover:text-white',
+    'bg-transparent text-cyan-50/70 hover:bg-white/8 hover:text-white',
 } as const
 
 const sizeClasses = {

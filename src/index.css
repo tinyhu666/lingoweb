@@ -73,11 +73,11 @@
     inset: 0;
     z-index: -1;
     pointer-events: none;
-    opacity: 0.42;
+    opacity: 0.18;
     background-image:
-      linear-gradient(rgba(36, 217, 255, 0.055) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(93, 92, 255, 0.05) 1px, transparent 1px);
-    background-size: 96px 96px;
+      linear-gradient(rgba(36, 217, 255, 0.026) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(93, 92, 255, 0.024) 1px, transparent 1px);
+    background-size: 148px 148px;
     mask-image: radial-gradient(circle at 50% 20%, black 0%, transparent 72%);
   }
 
@@ -87,7 +87,7 @@
     inset: 0;
     z-index: -1;
     pointer-events: none;
-    opacity: 0.12;
+    opacity: 0.07;
     background-image:
       repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.18) 0 1px, transparent 1px 3px);
     mix-blend-mode: soft-light;
@@ -126,7 +126,6 @@
 
 @layer components {
   .glass-panel {
-    border: 1px solid rgba(130, 225, 255, 0.18);
     background:
       linear-gradient(180deg, rgba(13, 26, 48, 0.78), rgba(5, 10, 22, 0.58)),
       rgba(4, 10, 24, 0.68);
@@ -134,17 +133,6 @@
       inset 0 1px 0 rgba(255, 255, 255, 0.12),
       0 24px 70px rgba(0, 0, 0, 0.34);
     backdrop-filter: blur(22px);
-  }
-
-  .glass-subtle {
-    border: 1px solid rgba(130, 225, 255, 0.16);
-    background:
-      linear-gradient(180deg, rgba(13, 26, 48, 0.72), rgba(5, 10, 22, 0.48)),
-      rgba(4, 10, 24, 0.58);
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.11),
-      0 12px 28px rgba(0, 0, 0, 0.22);
-    backdrop-filter: blur(18px);
   }
 
   .page-shell {
@@ -183,8 +171,9 @@
     align-items: center;
     gap: 0.5rem;
     border-radius: 9999px;
-    border: 1px solid rgba(36, 217, 255, 0.26);
-    background: rgba(7, 20, 38, 0.62);
+    background:
+      radial-gradient(circle at 16% 50%, rgba(36, 217, 255, 0.24), transparent 42%),
+      rgba(7, 20, 38, 0.34);
     padding: 0.42rem 0.78rem;
     color: #79f3ff;
     font-size: 0.72rem;
@@ -273,28 +262,9 @@
 
   .client-grid-surface {
     background:
-      linear-gradient(180deg, rgba(8, 20, 38, 0.86), rgba(5, 10, 24, 0.76)),
-      linear-gradient(rgba(36, 217, 255, 0.08) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(36, 217, 255, 0.06) 1px, transparent 1px);
-    background-size: auto, 24px 24px, 24px 24px;
-  }
-
-  .neon-border {
-    position: relative;
-  }
-
-  .neon-border::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    padding: 1px;
-    pointer-events: none;
-    background: linear-gradient(135deg, rgba(36, 217, 255, 0.62), rgba(174, 72, 255, 0.18), rgba(255, 188, 92, 0.32));
-    mask:
-      linear-gradient(#000 0 0) content-box,
-      linear-gradient(#000 0 0);
-    mask-composite: exclude;
+      radial-gradient(circle at 16% 12%, rgba(36, 217, 255, 0.16), transparent 26rem),
+      radial-gradient(circle at 82% 80%, rgba(183, 66, 255, 0.16), transparent 28rem),
+      linear-gradient(180deg, rgba(8, 20, 38, 0.7), rgba(5, 10, 24, 0.72));
   }
 
   .scanline {
@@ -306,17 +276,6 @@
     text-shadow:
       0 0 26px rgba(36, 217, 255, 0.36),
       0 0 54px rgba(174, 72, 255, 0.2);
-  }
-
-  .arcade-key {
-    border: 1px solid rgba(126, 234, 255, 0.22);
-    background:
-      linear-gradient(180deg, rgba(20, 43, 70, 0.96), rgba(6, 12, 26, 0.96)),
-      radial-gradient(circle at 50% 0%, rgba(36, 217, 255, 0.28), transparent 70%);
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.18),
-      inset 0 -10px 20px rgba(0, 0, 0, 0.28),
-      0 18px 38px rgba(0, 0, 0, 0.32);
   }
 
   .media-vignette {

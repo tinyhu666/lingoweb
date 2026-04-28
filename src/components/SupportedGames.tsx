@@ -37,14 +37,14 @@ function SupportedGames() {
           <div className="flex items-center gap-3">
             <button
               aria-label={t('supportedGames.controls.previous')}
-              className="arcade-key inline-flex h-11 w-11 items-center justify-center rounded-[8px] text-cyan-50 transition hover:-translate-y-0.5"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/8 text-cyan-50 shadow-[0_14px_34px_rgba(0,0,0,0.22)] backdrop-blur-xl transition hover:-translate-y-0.5 hover:bg-white/12"
               onClick={() => move(-1)}
               type="button">
               <ChevronLeft className="h-5 w-5" />
             </button>
             <button
               aria-label={t('supportedGames.controls.next')}
-              className="arcade-key inline-flex h-11 w-11 items-center justify-center rounded-[8px] text-cyan-50 transition hover:-translate-y-0.5"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/8 text-cyan-50 shadow-[0_14px_34px_rgba(0,0,0,0.22)] backdrop-blur-xl transition hover:-translate-y-0.5 hover:bg-white/12"
               onClick={() => move(1)}
               type="button">
               <ChevronRight className="h-5 w-5" />
@@ -55,7 +55,7 @@ function SupportedGames() {
         <div className="mt-8 grid gap-4 lg:grid-cols-[minmax(0,1fr)_18rem]">
           <motion.div
             animate={{ opacity: 1, scale: 1 }}
-            className="neon-border relative min-h-[32rem] overflow-hidden rounded-[8px] bg-black shadow-[0_34px_90px_rgba(0,0,0,0.38)]"
+            className="relative min-h-[32rem] overflow-hidden rounded-[30px] bg-black shadow-[0_34px_90px_rgba(0,0,0,0.38),0_0_96px_rgba(36,217,255,0.1)]"
             initial={false}
             key={activeGame.key}
             transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}>
@@ -68,11 +68,11 @@ function SupportedGames() {
               transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
             />
             <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(3,7,17,0.95),rgba(3,7,17,0.24)_54%,rgba(3,7,17,0.8)),linear-gradient(180deg,rgba(3,7,17,0.02),rgba(3,7,17,0.88))]" />
-            <div className="absolute inset-0 scanline opacity-25" />
+            <div className="absolute inset-0 scanline opacity-12" />
 
             <div className="relative flex h-full min-h-[32rem] flex-col justify-end p-5 sm:p-8">
               <div className="max-w-[34rem]">
-                <div className="mb-4 inline-flex rounded-[8px] border border-cyan-200/18 bg-cyan-300/10 px-3 py-1.5 text-xs font-black uppercase tracking-[0.16em] text-cyan-100">
+                <div className="mb-4 inline-flex rounded-full bg-cyan-300/10 px-3 py-1.5 text-xs font-black uppercase tracking-[0.16em] text-cyan-100 backdrop-blur-md">
                   {t('supportedGames.chatBadge')}
                 </div>
                 <h3 className="font-display text-[clamp(3rem,8vw,7rem)] font-black uppercase leading-[0.86] text-white text-glow">
@@ -96,8 +96,8 @@ function SupportedGames() {
                   })}
                   aria-pressed={active}
                   className={cn(
-                    'group neon-border relative min-h-28 overflow-hidden rounded-[8px] p-0 text-left transition duration-300',
-                    active ? 'opacity-100 shadow-[0_18px_48px_rgba(36,217,255,0.16)]' : 'opacity-62 hover:opacity-100',
+                    'group relative min-h-28 overflow-hidden rounded-[22px] p-0 text-left transition duration-300',
+                    active ? 'opacity-100 shadow-[0_18px_48px_rgba(36,217,255,0.14)]' : 'opacity-58 hover:opacity-100',
                   )}
                   key={game.key}
                   onClick={() => setActiveIndex(index)}
@@ -113,12 +113,7 @@ function SupportedGames() {
                         {t(`supportedGames.items.${game.key}.name`)}
                       </div>
                     </div>
-                    <span
-                      className={cn(
-                        'h-2 w-10 rounded-full transition duration-300',
-                        active ? 'bg-cyan-200 shadow-[0_0_16px_rgba(36,217,255,0.8)]' : 'bg-white/24',
-                      )}
-                    />
+                    <span className={cn('h-2 w-10 rounded-full transition duration-300', active ? 'bg-cyan-200 shadow-[0_0_16px_rgba(36,217,255,0.8)]' : 'bg-white/18')} />
                   </div>
                 </button>
               )
