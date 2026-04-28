@@ -134,27 +134,23 @@ async function fetchJson(url: string, headers: HeadersInit) {
 
 export async function fetchLatestReleaseInfo(): Promise<ReleaseInfo> {
   try {
-    const payload = await fetchJson(RELEASE_MANIFEST_URL, {
-      Accept: 'application/json',
-    })
-    const release = mapManifestPayload(payload)
-    if (release && compareVersions(release.version, APP_VERSION) >= 0) {
-      return release
-    }
-
-    if (release && compareVersions(release.version, APP_VERSION) < 0) {
-      return FALLBACK_RELEASE_INFO
-    }
-  } catch {
-    // Fall back to GitHub metadata only when COS manifest is not reachable.
-  }
-
-  try {
     const payload = await fetchJson(RELEASE_API_URL, {
       Accept: 'application/vnd.github+json',
     })
     const release = mapReleasePayload(payload)
     if (release) {
+      return release
+    }
+  } catch {
+    // Fall back to the COS manifest only when GitHub release metadata is not reachable.
+  }
+
+  try {
+    const payload = await fetchJson(RELEASE_MANIFEST_URL, {
+      Accept: 'application/json',
+    })
+    const release = mapManifestPayload(payload)
+    if (release && compareVersions(release.version, APP_VERSION) >= 0) {
       return release
     }
   } catch {
