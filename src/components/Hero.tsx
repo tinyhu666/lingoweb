@@ -18,9 +18,9 @@ type HeroProps = {
 }
 
 const CHAT_ROWS = [
-  { from: 'CN', to: 'EN', source: '先别冲，等我大招', result: 'Hold. Wait for my ult.' },
-  { from: 'EN', to: 'ZH', source: 'Group for smoke', result: '集合开雾' },
-  { from: 'RU', to: 'EN', source: 'Идем вместе', result: 'Move together.' },
+  { key: 'hold', from: 'CN', to: 'EN' },
+  { key: 'smoke', from: 'EN', to: 'ZH' },
+  { key: 'together', from: 'RU', to: 'EN' },
 ] as const
 
 function Hero({ downloads, preferredPlatform, version }: HeroProps) {
@@ -147,6 +147,7 @@ function HeroSignal({ icon, label }: { icon: ReactNode; label: string }) {
 }
 
 function HeroCockpit() {
+  const { t } = useTranslation()
   const pointerX = useMotionValue(0)
   const pointerY = useMotionValue(0)
   const springX = useSpring(pointerX, { stiffness: 90, damping: 20, mass: 0.7 })
@@ -178,7 +179,7 @@ function HeroCockpit() {
           <div className="flex items-center justify-between">
             <BrandLogo className="h-11 brightness-125 drop-shadow-[0_0_24px_rgba(36,217,255,0.18)]" />
             <span className="rounded-full bg-cyan-300/12 px-3 py-1.5 text-[0.65rem] font-black uppercase tracking-[0.12em] text-cyan-100">
-              Live
+              {t('hero.cockpit.live')}
             </span>
           </div>
 
@@ -187,16 +188,16 @@ function HeroCockpit() {
               <motion.div
                 animate={{ opacity: [0.72, 1, 0.72], x: [0, index % 2 ? -4 : 4, 0] }}
                 className="rounded-[16px] bg-white/[0.06] p-4 shadow-[0_18px_44px_rgba(0,0,0,0.16)]"
-                key={`${row.from}-${row.to}`}
+                key={row.key}
                 transition={{ duration: 3.8, delay: index * 0.45, repeat: Infinity, ease: 'easeInOut' }}>
                 <div className="flex items-center justify-between text-[0.62rem] font-black uppercase tracking-[0.16em] text-cyan-100/72">
                   <span>{row.from}</span>
                   <ArrowRight className="h-3.5 w-3.5 text-fuchsia-200" />
                   <span>{row.to}</span>
                 </div>
-                <div className="mt-3 text-sm font-bold text-white/78">{row.source}</div>
+                <div className="mt-3 text-sm font-bold text-white/78">{t(`hero.cockpit.rows.${row.key}.source`)}</div>
                 <div className="mt-2 rounded-[12px] bg-cyan-300/12 px-3 py-2 text-sm font-black text-cyan-50">
-                  {row.result}
+                  {t(`hero.cockpit.rows.${row.key}.result`)}
                 </div>
               </motion.div>
             ))}
@@ -208,7 +209,7 @@ function HeroCockpit() {
             transition={{ duration: 2.8, repeat: Infinity, ease: 'easeInOut' }}>
             <span className="flex items-center gap-2 text-xs font-black uppercase tracking-[0.14em] text-white/82">
               <MousePointer2 className="h-4 w-4 text-amber-200" />
-              Hotkey armed
+              {t('hero.cockpit.hotkeyReady')}
             </span>
             <span className="text-sm font-black text-cyan-100">Ctrl Shift L</span>
           </motion.div>

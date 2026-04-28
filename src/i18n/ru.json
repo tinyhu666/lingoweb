@@ -1,8 +1,8 @@
 {
   "meta": {
-    "title": "Lingo - AI переводчик игрового чата",
-    "description": "Lingo переводит игровые сообщения по горячей клавише для Windows и macOS.",
-    "keywords": "AI game translator, игровой переводчик, перевод игрового чата, Dota 2, League of Legends, World of Warcraft, Overwatch 2"
+    "title": "Lingo - бесплатный AI-переводчик игрового чата",
+    "description": "Lingo помогает перевести сообщение, которое вы собираетесь отправить в игровом чате. Горячая клавиша на Windows и macOS делает короткие команды понятнее на китайском, английском или русском.",
+    "keywords": "бесплатный переводчик игрового чата, AI переводчик для игр, перевод игрового чата, горячая клавиша перевод, Dota 2 переводчик, League of Legends переводчик, World of Warcraft переводчик, Overwatch 2 переводчик"
   },
   "brand": {
     "name": "Lingo",
@@ -13,7 +13,7 @@
     "label": "Язык",
     "aria": "Сменить язык сайта",
     "languages": {
-      "zh": { "short": "中文", "name": "简体中文" },
+      "zh": { "short": "中文", "name": "Китайский" },
       "en": { "short": "EN", "name": "English" },
       "ru": { "short": "RU", "name": "Русский" }
     }
@@ -22,16 +22,16 @@
     "menu": "Меню",
     "closeMenu": "Закрыть меню",
     "links": {
-      "features": "Боевой HUD",
+      "features": "Возможности",
       "supportedGames": "Игры",
-      "howItWorks": "Hotkey flow",
+      "howItWorks": "Как работает",
       "download": "Скачать"
     }
   },
   "hero": {
-    "badge": "Готово к матчу · v{{version}}",
-    "title": "Перевод в бою",
-    "subtitle": "Одна горячая клавиша превращает игровые реплики в готовый чат.",
+    "badge": "Бесплатно · v{{version}}",
+    "title": "Перевод игрового чата",
+    "subtitle": "Напишите команду, нажмите горячую клавишу и получите более понятное сообщение на китайском, английском или русском, не выходя из матча.",
     "downloadMac": "Скачать для macOS",
     "downloadWindows": "Скачать для Windows",
     "macLabel": "macOS",
@@ -39,124 +39,155 @@
     "recommended": "Рекомендуется",
     "macDetail": "DMG установщик",
     "windowsDetail": "EXE установщик",
-    "supportLine": "Для игр, где чат решает исход матча.",
+    "supportLine": "Для многопользовательских игр, где важен текстовый чат.",
     "quickFacts": {
       "release": "Версия",
       "releaseValue": "v{{version}}",
-      "delivery": "Зеркало",
-      "deliveryValue": "Официальная загрузка",
+      "delivery": "Загрузка",
+      "deliveryValue": "Официальное зеркало",
       "requirements": "Системы",
       "requirementsValue": "Win / macOS"
     },
     "mockup": {
-      "eyebrow": "AI Translator HUD",
-      "title": "Перевел, вставил, играешь",
-      "body": "BKB, engage, regroup и back становятся короткими готовыми фразами.",
-      "translateChip": "Игровые термины",
+      "eyebrow": "Перевод чата",
+      "title": "Переведи, вставь, играй дальше",
+      "body": "Команды вроде отступить, собраться, smoke и ждать ульт становятся короткими сообщениями для чата.",
+      "translateChip": "Игровой контекст",
       "chatChip": "Живой тон",
       "sourceLabel": "Ввод",
       "source": "Не врываемся, ждем BKB.",
-      "hotkeyAction": "Hotkey",
+      "hotkeyAction": "Горячая клавиша",
       "resultLabel": "Результат",
       "result": "Hold. Wait for my BKB, then we fight.",
       "chatLabel": "Чат",
       "chatDraft": "Hold. Wait for my BKB, then we fight.",
-      "chatReady": "Вставка",
+      "chatReady": "Готово к отправке",
       "server": "AI",
-      "hotkey": "Горячая клавиша",
+      "hotkey": "Отправка по хоткею",
       "phrases": "Быстрые фразы",
       "languages": "ZH / EN / RU",
-      "sideTitle": "Перед отправкой",
-      "sideBody": "Коротко, четко, готово.",
+      "sideTitle": "Проверка перед отправкой",
+      "sideBody": "Коротко, ясно, готово для чата.",
       "statPrimaryLabel": "Действие",
-      "statPrimaryValue": "1 клик",
+      "statPrimaryValue": "1 клавиша",
       "statSecondaryLabel": "Языки",
       "statSecondaryValue": "3"
+    },
+    "cockpit": {
+      "live": "Демо",
+      "hotkeyReady": "Хоткей готов",
+      "rows": {
+        "hold": {
+          "source": "先别冲，等我大招",
+          "result": "Hold. Wait for my ult."
+        },
+        "smoke": {
+          "source": "Group for smoke",
+          "result": "Собираемся на smoke."
+        },
+        "together": {
+          "source": "Идем вместе",
+          "result": "Идем вместе."
+        }
+      }
     }
   },
   "features": {
-    "eyebrow": "Боевой HUD",
-    "title": "Быстрый отклик. Игровой стиль.",
-    "subtitle": "Перевод, AI-правка и вставка работают как легкий оверлей.",
+    "eyebrow": "Главное",
+    "title": "Меньше пауз перед отправкой.",
+    "subtitle": "Lingo работает с сообщением, которое вы собираетесь отправить: переводит, аккуратно правит текст и оставляет отправку за вами.",
+    "stageLabel": "Пример сообщения",
+    "stageSteps": {
+      "input": "Ввод",
+      "translate": "Перевод",
+      "send": "Отправка"
+    },
     "items": {
       "instant": {
-        "title": "Hotkey перевод",
-        "description": "Один клик дает готовую фразу."
+        "metric": "Ctrl",
+        "title": "Запуск хоткеем",
+        "description": "Нажмите одну клавишу, когда нужна готовая фраза без лишних переключений окон."
       },
       "server": {
-        "title": "AI контекст",
-        "description": "Понимает игровые термины."
+        "metric": "AI",
+        "title": "Игровой контекст",
+        "description": "Сохраняет смысл команд вроде BKB, smoke, focus и regroup."
       },
       "phrases": {
-        "title": "Быстрые фразы",
-        "description": "Push, back, wait и regroup рядом."
+        "metric": "GG",
+        "title": "Короткие фразы",
+        "description": "Отступить, собраться, подождать и начать бой проще отправлять быстро."
       },
       "languages": {
-        "title": "3 языка",
-        "description": "Китайский, английский и русский."
+        "metric": "3x",
+        "title": "Китайский, английский, русский",
+        "description": "Полезно для смешанных команд, когда нужно яснее отправить свое сообщение."
       }
     }
   },
   "supportedGames": {
     "eyebrow": "Игры",
-    "title": "Для матчей, в которые ты уже играешь.",
-    "subtitle": "Если есть чат, Lingo впишется.",
-    "chatBadge": "AI чат",
+    "title": "Для многопользовательских игр с текстовым чатом.",
+    "subtitle": "Lingo не привязан к одной игре. Используйте его, когда нужно отправить свое сообщение тиммейтам на другом языке.",
+    "chatBadge": "Перед отправкой",
     "controls": {
       "previous": "Назад",
       "next": "Вперед",
       "goTo": "Перейти к {{game}}"
     },
-    "noteLabel": "Сценарий",
-    "note": "Работает там, где есть текстовый чат.",
+    "noteLabel": "Подходит",
+    "note": "Используйте Lingo как помощник для перевода перед отправкой текста в игровом чате.",
     "items": {
       "dota2": {
         "name": "Dota 2",
-        "description": "Smoke, BKB, retreat и fight calls звучат точнее."
+        "description": "Smoke, BKB, retreat и fight calls проще отправлять короткими командными сообщениями."
       },
       "lol": {
         "name": "League of Legends",
-        "description": "Линия, лес, объекты и тимфайт."
+        "description": "Линия, лес, объекты и фокус цели звучат естественнее перед отправкой."
       },
       "wow": {
         "name": "World of Warcraft",
-        "description": "Рейды, группы и чат на разных языках."
+        "description": "Рейд, группа и regroup-сообщения можно очистить перед отправкой."
       },
       "ow2": {
         "name": "Overwatch 2",
-        "description": "Позиции, фокус, regroup и push."
+        "description": "Позиции, фокус, regroup и push остаются короткими для быстрого чата."
       }
     }
   },
   "howItWorks": {
-    "eyebrow": "Поток",
-    "title": "Три шага и обратно в матч.",
-    "subtitle": "Напиши, нажми, отправь.",
+    "eyebrow": "Процесс",
+    "title": "Три шага перед отправкой.",
+    "subtitle": "Напишите исходную фразу, запустите перевод и отправьте результат в чат.",
     "steps": {
       "select": {
-        "title": "Ввод",
-        "description": "Напиши реплику."
+        "keycap": "Ввод",
+        "title": "Напишите фразу",
+        "description": "Введите сообщение, которое хотите отправить тиммейтам, на китайском, английском или русском."
       },
       "hotkey": {
-        "title": "Hotkey",
-        "description": "Запускает перевод и правку."
+        "keycap": "Ctrl",
+        "title": "Нажмите хоткей",
+        "description": "Lingo переводит и аккуратно правит текст, чтобы он звучал естественно в игровом чате."
       },
       "paste": {
-        "title": "Отправка",
-        "description": "Результат попадает в чат."
+        "keycap": "Чат",
+        "title": "Проверьте и отправьте",
+        "description": "Вставьте результат в чат, проверьте его и отправьте самостоятельно."
       }
     }
   },
   "download": {
     "eyebrow": "Скачать",
-    "title": "Установи и используй AI уже в следующем матче.",
-    "subtitle": "Официальные установщики доступны через зеркало Tencent Cloud.",
-    "recommended": "Лучше для устройства",
+    "title": "Бесплатная загрузка для следующего матча.",
+    "subtitle": "Официальные установщики доступны через зеркало Tencent Cloud для более стабильной загрузки.",
+    "recommended": "Лучше для вашего устройства",
     "latestRelease": "Текущая версия v{{version}}",
     "showAll": "Все загрузки",
     "requirementsTitle": "Системные требования",
     "requirements": {
-      "macos": "macOS 10.13+ · Apple Silicon · DMG",
+      "macos": "macOS 10.13+ · Apple Silicon · DMG установщик",
       "windows": "Windows 10+ · x64 · WebView2 Runtime"
     },
     "cards": {
@@ -175,13 +206,13 @@
     }
   },
   "footer": {
-    "tagline": "Перевод командного чата для multiplayer игр.",
+    "tagline": "Переведите сообщение, которое собираетесь отправить в игровой чат, в более понятную командную фразу.",
     "version": "Текущая версия v{{version}}",
     "product": {
       "title": "Навигация",
-      "features": "Боевой HUD",
+      "features": "Возможности",
       "supportedGames": "Игры",
-      "workflow": "Hotkey flow",
+      "workflow": "Как работает",
       "download": "Скачать Lingo"
     },
     "community": {
@@ -191,7 +222,7 @@
       "discordAction": "В Discord",
       "qqGroup": "QQ: 1095706752",
       "qqDescription": "Китайское сообщество и обратная связь.",
-      "copy": "Копировать",
+      "copy": "Скопировать",
       "copied": "Скопировано"
     },
     "copyright": "© {{year}} Lingo."

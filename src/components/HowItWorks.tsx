@@ -4,9 +4,9 @@ import { useTranslation } from 'react-i18next'
 import AnimatedSection from '@/components/ui/AnimatedSection'
 
 const STEP_KEYS = [
-  { key: 'select', icon: MessageSquareText, keycap: 'TYPE' },
-  { key: 'hotkey', icon: Keyboard, keycap: 'CTRL' },
-  { key: 'paste', icon: Send, keycap: 'SEND' },
+  { key: 'select', icon: MessageSquareText },
+  { key: 'hotkey', icon: Keyboard },
+  { key: 'paste', icon: Send },
 ] as const
 
 function HowItWorks() {
@@ -46,7 +46,9 @@ function HowItWorks() {
                         animate={{ y: [0, -6, 0] }}
                         className="mx-auto flex h-24 w-full max-w-[12rem] items-center justify-center rounded-[24px] bg-[linear-gradient(180deg,rgba(36,217,255,0.2),rgba(93,92,255,0.08))] text-center shadow-[0_24px_54px_rgba(0,0,0,0.28),0_0_34px_rgba(36,217,255,0.12)]"
                         transition={{ duration: 2.8, delay: index * 0.22, repeat: Infinity, ease: 'easeInOut' }}>
-                        <span className="font-display text-2xl font-black tracking-[0.08em] text-white">{step.keycap}</span>
+                        <span className="font-display text-2xl font-black tracking-[0.08em] text-white">
+                          {t(`howItWorks.steps.${step.key}.keycap`)}
+                        </span>
                       </motion.div>
 
                       <div className="mt-6 flex items-center gap-3">

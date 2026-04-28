@@ -8,11 +8,13 @@ import ow2Cover from '@/assets/games/ow2-cover.jpg'
 import { cn } from '@/lib/cn'
 
 const FEATURE_KEYS = [
-  { key: 'instant', icon: Zap, metric: '0.4s', tone: 'from-cyan-300/28 to-blue-500/10' },
-  { key: 'server', icon: Bot, metric: 'AI', tone: 'from-fuchsia-300/24 to-cyan-400/8' },
-  { key: 'phrases', icon: Crosshair, metric: 'GG', tone: 'from-amber-300/24 to-fuchsia-400/8' },
-  { key: 'languages', icon: Languages, metric: '3x', tone: 'from-emerald-300/22 to-cyan-400/8' },
+  { key: 'instant', icon: Zap, tone: 'from-cyan-300/28 to-blue-500/10' },
+  { key: 'server', icon: Bot, tone: 'from-fuchsia-300/24 to-cyan-400/8' },
+  { key: 'phrases', icon: Crosshair, tone: 'from-amber-300/24 to-fuchsia-400/8' },
+  { key: 'languages', icon: Languages, tone: 'from-emerald-300/22 to-cyan-400/8' },
 ] as const
+
+const FEATURE_STAGE_STEPS = ['input', 'translate', 'send'] as const
 
 function Features() {
   const { t } = useTranslation()
@@ -53,7 +55,9 @@ function Features() {
                         {t(`features.items.${feature.key}.title`)}
                       </span>
                     </div>
-                    <span className="font-display text-2xl font-black text-cyan-100/80">{feature.metric}</span>
+                    <span className="font-display text-2xl font-black text-cyan-100/80">
+                      {t(`features.items.${feature.key}.metric`)}
+                    </span>
                   </div>
                 </button>
               )
@@ -68,6 +72,8 @@ function Features() {
 }
 
 function FeatureStage({ activeFeature }: { activeFeature: (typeof FEATURE_KEYS)[number] }) {
+  const { t } = useTranslation()
+
   return (
     <div className="relative min-h-[34rem] overflow-hidden rounded-[28px] bg-[#050b16]/70 p-4 shadow-[0_34px_90px_rgba(0,0,0,0.34),0_0_90px_rgba(36,217,255,0.1)]">
       <img alt="" className="absolute inset-0 h-full w-full object-cover opacity-[0.38] mix-blend-screen" src={activeFeature.key === 'phrases' ? ow2Cover : dota2Cover} />
@@ -77,7 +83,7 @@ function FeatureStage({ activeFeature }: { activeFeature: (typeof FEATURE_KEYS)[
       <div className="relative flex h-full min-h-[32rem] flex-col justify-between">
         <div className="flex items-center justify-between">
           <div className="rounded-full bg-white/[0.06] px-3 py-2 text-xs font-black uppercase tracking-[0.16em] text-cyan-100/72 backdrop-blur-md">
-            Tactical overlay
+            {t('features.stageLabel')}
           </div>
           <motion.div
             animate={{ opacity: [0.35, 1, 0.35] }}
@@ -103,7 +109,7 @@ function FeatureStage({ activeFeature }: { activeFeature: (typeof FEATURE_KEYS)[
             <div className="mb-3 flex items-center justify-between">
               <span className="h-2 w-20 rounded-full bg-fuchsia-200/72" />
               <span className="rounded-full bg-cyan-300/18 px-2 py-1 text-[0.62rem] font-black uppercase tracking-[0.12em] text-cyan-100">
-                {activeFeature.metric}
+                {t(`features.items.${activeFeature.key}.metric`)}
               </span>
             </div>
             <div className="h-2 w-56 rounded-full bg-white/30" />
@@ -112,13 +118,15 @@ function FeatureStage({ activeFeature }: { activeFeature: (typeof FEATURE_KEYS)[
         </div>
 
         <div className="grid grid-cols-3 gap-2">
-          {['Input', 'AI', 'Send'].map((label, index) => (
+          {FEATURE_STAGE_STEPS.map((step, index) => (
             <motion.div
               animate={{ y: [0, index === 1 ? -5 : -2, 0] }}
               className="rounded-full bg-white/[0.065] px-3 py-4 text-center shadow-[0_16px_34px_rgba(0,0,0,0.22)] backdrop-blur-md"
-              key={label}
+              key={step}
               transition={{ duration: 2.4, delay: index * 0.18, repeat: Infinity, ease: 'easeInOut' }}>
-              <div className="text-[0.62rem] font-black uppercase tracking-[0.16em] text-cyan-100/62">{label}</div>
+              <div className="text-[0.62rem] font-black uppercase tracking-[0.16em] text-cyan-100/62">
+                {t(`features.stageSteps.${step}`)}
+              </div>
               <div className="mt-2 font-display text-lg font-black text-white">{String(index + 1).padStart(2, '0')}</div>
             </motion.div>
           ))}

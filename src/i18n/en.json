@@ -1,8 +1,8 @@
 {
   "meta": {
-    "title": "Lingo - Cinematic AI Game Chat Translator",
-    "description": "Lingo is a hotkey-first AI game chat translator for Windows and macOS. Turn callouts into natural multiplayer replies without leaving the match.",
-    "keywords": "AI game translator, game chat translator, in-game chat translation, gaming hotkey translator, Dota 2 translator, League of Legends translator, World of Warcraft translator, Overwatch 2 translator"
+    "title": "Lingo - Free AI Game Chat Translator",
+    "description": "Lingo helps you translate the message you are about to send in game chat. Use a hotkey on Windows or macOS to turn short callouts into clear Chinese, English, or Russian.",
+    "keywords": "free game chat translator, AI game translator, game chat translation, gaming hotkey translator, multiplayer chat translator, Dota 2 translator, League of Legends translator, World of Warcraft translator, Overwatch 2 translator"
   },
   "brand": {
     "name": "Lingo",
@@ -22,135 +22,166 @@
     "menu": "Menu",
     "closeMenu": "Close menu",
     "links": {
-      "features": "Combat HUD",
-      "supportedGames": "Game Scenes",
-      "howItWorks": "Hotkey Flow",
+      "features": "Features",
+      "supportedGames": "Games",
+      "howItWorks": "How it works",
       "download": "Download"
     }
   },
   "hero": {
-    "badge": "Combat ready · v{{version}}",
-    "title": "Translate Mid-Fight",
-    "subtitle": "One hotkey turns raw callouts into clean team chat. Less typing. More playing.",
-    "downloadMac": "Get macOS",
-    "downloadWindows": "Get Windows",
+    "badge": "Free to use · v{{version}}",
+    "title": "Game Chat Translator",
+    "subtitle": "Type the callout you want to send, hit the hotkey, and get a clearer Chinese, English, or Russian message without leaving the match.",
+    "downloadMac": "Download for macOS",
+    "downloadWindows": "Download for Windows",
     "macLabel": "macOS",
     "windowsLabel": "Windows",
     "recommended": "Recommended",
     "macDetail": "DMG installer",
     "windowsDetail": "EXE installer",
-    "supportLine": "Built for chat-heavy multiplayer games.",
+    "supportLine": "Built for multiplayer games where text chat matters.",
     "quickFacts": {
       "release": "Version",
       "releaseValue": "v{{version}}",
-      "delivery": "Mirror",
-      "deliveryValue": "Official download",
+      "delivery": "Download",
+      "deliveryValue": "Official mirror",
       "requirements": "Systems",
       "requirementsValue": "Win / macOS"
     },
     "mockup": {
-      "eyebrow": "AI Translator HUD",
+      "eyebrow": "Chat translation",
       "title": "Translate, paste, keep playing",
-      "body": "Turns terms like BKB, engage, regroup, and back into natural chat-ready replies.",
+      "body": "Turns retreat, group, smoke, and cooldown calls into natural chat-ready messages.",
       "translateChip": "Term-aware",
       "chatChip": "Natural tone",
       "sourceLabel": "Input",
-      "source": "Don't force yet. Wait for BKB.",
+      "source": "Don't force yet. Wait for my BKB.",
       "hotkeyAction": "Hit hotkey",
       "resultLabel": "Output",
       "result": "Hold. Wait for my BKB, then we fight.",
       "chatLabel": "Chat box",
       "chatDraft": "Hold. Wait for my BKB, then we fight.",
-      "chatReady": "Paste-back",
+      "chatReady": "Ready to send",
       "server": "AI",
-      "hotkey": "Global hotkey",
+      "hotkey": "Hotkey send",
       "phrases": "Quick phrases",
       "languages": "ZH / EN / RU",
-      "sideTitle": "One beat before send",
-      "sideBody": "Short, sharp, and ready.",
+      "sideTitle": "One check before send",
+      "sideBody": "Short, clear, and chat-ready.",
       "statPrimaryLabel": "Action",
-      "statPrimaryValue": "One tap",
+      "statPrimaryValue": "One key",
       "statSecondaryLabel": "Languages",
       "statSecondaryValue": "3"
+    },
+    "cockpit": {
+      "live": "Demo",
+      "hotkeyReady": "Hotkey ready",
+      "rows": {
+        "hold": {
+          "source": "先别冲，等我大招",
+          "result": "Hold. Wait for my ult."
+        },
+        "smoke": {
+          "source": "Group for smoke",
+          "result": "Group up for smoke."
+        },
+        "together": {
+          "source": "Идем вместе",
+          "result": "Move together."
+        }
+      }
     }
   },
   "features": {
-    "eyebrow": "Combat HUD",
-    "title": "Fast feedback, game-first feel.",
-    "subtitle": "Hotkey, AI rewrite, paste-back, and quick phrases behave like a lightweight overlay.",
+    "eyebrow": "Core experience",
+    "title": "Less friction before you send.",
+    "subtitle": "Lingo focuses on the message you are about to send: translate it, clean up the phrasing, then leave final send control to you.",
+    "stageLabel": "Message preview",
+    "stageSteps": {
+      "input": "Input",
+      "translate": "Translate",
+      "send": "Send"
+    },
     "items": {
       "instant": {
-        "title": "Hotkey translate",
-        "description": "One press gets a send-ready result."
+        "metric": "Ctrl",
+        "title": "Hotkey trigger",
+        "description": "Press once when you need a send-ready line, with less window switching and rewriting."
       },
       "server": {
-        "title": "Context AI",
-        "description": "Understands game terms instead of translating them stiffly."
+        "metric": "AI",
+        "title": "Game context",
+        "description": "Keeps the intent of calls like BKB, smoke, focus, and regroup."
       },
       "phrases": {
-        "title": "Quick calls",
-        "description": "Push, back, wait, regroup, and other common calls stay close."
+        "metric": "GG",
+        "title": "Sharper short lines",
+        "description": "Retreat, group, wait, and engage calls become easier to send in a hurry."
       },
       "languages": {
-        "title": "3 languages",
-        "description": "Chinese, English, and Russian for mixed-language squads."
+        "metric": "3x",
+        "title": "Chinese, English, Russian",
+        "description": "Useful for mixed-language squads when you want your own message to land clearly."
       }
     }
   },
   "supportedGames": {
-    "eyebrow": "Game scenes",
-    "title": "Drop into the games you already play.",
-    "subtitle": "Where there is a chat box, Lingo can fit.",
-    "chatBadge": "AI Chat",
+    "eyebrow": "Game fit",
+    "title": "Built for multiplayer games with text chat.",
+    "subtitle": "It is not locked to one title. Use it when you need to send your own chat message to teammates who speak another language.",
+    "chatBadge": "Before send",
     "controls": {
       "previous": "Previous",
       "next": "Next",
       "goTo": "Switch to {{game}}"
     },
     "noteLabel": "Best fit",
-    "note": "Works wherever text chat exists.",
+    "note": "Use it as a translation helper before you send text chat in multiplayer games.",
     "items": {
       "dota2": {
         "name": "Dota 2",
-        "description": "Smoke, BKB, retreat, and fight calls stay sharp."
+        "description": "Smoke, BKB, retreat, and fight calls become easier to send as short team messages."
       },
       "lol": {
         "name": "League of Legends",
-        "description": "Lane, jungle, objective, and teamfight calls feel natural."
+        "description": "Lane, jungle, objective, and focus calls can be phrased more naturally."
       },
       "wow": {
         "name": "World of Warcraft",
-        "description": "Raid, regroup, and party chat across languages."
+        "description": "Clean up raid, party, and regroup messages before sending them to the group."
       },
       "ow2": {
         "name": "Overwatch 2",
-        "description": "Positions, focus targets, regroup timing, and push calls."
+        "description": "Position, focus, regroup, and push calls stay short enough for quick chat."
       }
     }
   },
   "howItWorks": {
     "eyebrow": "Flow",
-    "title": "Three beats. Back to the match.",
-    "subtitle": "Type, trigger, send.",
+    "title": "Three steps before you send.",
+    "subtitle": "Type the original line, trigger translation, then send the result in chat.",
     "steps": {
       "select": {
-        "title": "Type",
-        "description": "Write the callout."
+        "keycap": "TYPE",
+        "title": "Type your line",
+        "description": "Write the message you want to send to teammates in Chinese, English, or Russian."
       },
       "hotkey": {
-        "title": "Trigger",
-        "description": "The hotkey runs translation and cleanup."
+        "keycap": "CTRL",
+        "title": "Hit the hotkey",
+        "description": "Lingo translates and cleans up the phrasing so it feels natural in game chat."
       },
       "paste": {
-        "title": "Send",
-        "description": "The result lands in chat."
+        "keycap": "SEND",
+        "title": "Review and send",
+        "description": "Put the result into the chat box, review it, and send it yourself."
       }
     }
   },
   "download": {
     "eyebrow": "Download",
-    "title": "Install now and use AI in your next match.",
-    "subtitle": "Official installers are delivered through our Tencent Cloud mirror.",
+    "title": "Free to download, ready for your next match.",
+    "subtitle": "Official installers are delivered through our Tencent Cloud mirror for a steadier download.",
     "recommended": "Best match for your device",
     "latestRelease": "Current release v{{version}}",
     "showAll": "View all downloads",
@@ -175,19 +206,19 @@
     }
   },
   "footer": {
-    "tagline": "Real-time team chat translation for multiplayer games.",
+    "tagline": "Translate the game chat message you are about to send into clearer team communication.",
     "version": "Current version v{{version}}",
     "product": {
       "title": "Explore",
-      "features": "Combat HUD",
-      "supportedGames": "Game scenes",
-      "workflow": "Hotkey flow",
+      "features": "Features",
+      "supportedGames": "Games",
+      "workflow": "How it works",
       "download": "Get Lingo"
     },
     "community": {
       "title": "Community",
       "discord": "Discord",
-      "discordDescription": "Updates, announcements, and early discussions.",
+      "discordDescription": "Get updates, announcements, and early discussions.",
       "discordAction": "Join Discord",
       "qqGroup": "QQ Group: 1095706752",
       "qqDescription": "Chinese community chat and feedback.",
