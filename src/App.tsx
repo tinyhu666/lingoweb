@@ -68,15 +68,9 @@ function App() {
 
   return (
     <div className="relative overflow-x-hidden">
-      <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
-        <div className="absolute left-1/2 top-[-12rem] h-[28rem] w-[28rem] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,_rgba(129,140,248,0.36)_0%,_rgba(129,140,248,0)_72%)] blur-3xl" />
-        <div className="absolute left-[-8rem] top-[20rem] h-[24rem] w-[24rem] rounded-full bg-[radial-gradient(circle,_rgba(6,182,212,0.18)_0%,_rgba(6,182,212,0)_72%)] blur-3xl" />
-        <div className="absolute bottom-[-10rem] right-[-8rem] h-[26rem] w-[26rem] rounded-full bg-[radial-gradient(circle,_rgba(217,70,239,0.2)_0%,_rgba(217,70,239,0)_70%)] blur-3xl" />
-      </div>
-
       <Navbar />
 
-      <main className="page-shell flex min-h-screen flex-col gap-24 pb-20 pt-28">
+      <main className="page-shell flex min-h-screen flex-col gap-20 pb-20 pt-28 sm:gap-24">
         <Hero downloads={release.downloads} preferredPlatform={preferredPlatform} version={release.version || APP_VERSION} />
         <Features />
         <SupportedGames />

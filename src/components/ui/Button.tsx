@@ -12,11 +12,11 @@ type ButtonProps = {
 
 const variantClasses = {
   primary:
-    'border border-indigo-300/35 bg-[linear-gradient(135deg,rgba(99,102,241,0.95),rgba(217,70,239,0.85))] text-white shadow-[0_18px_50px_rgba(99,102,241,0.36)] hover:border-indigo-200/50 hover:brightness-105',
+    'border border-blue-600 bg-[linear-gradient(180deg,#3b82f6_0%,#2563eb_54%,#1d4ed8_100%)] text-white shadow-[0_18px_34px_rgba(37,99,235,0.2)] hover:border-blue-500 hover:brightness-105',
   secondary:
-    'border border-white/12 bg-white/8 text-white/90 hover:border-white/18 hover:bg-white/12',
+    'border border-slate-200 bg-white/86 text-slate-800 shadow-[0_10px_22px_rgba(15,23,42,0.06)] hover:border-blue-200 hover:bg-white',
   ghost:
-    'border border-transparent bg-transparent text-white/70 hover:bg-white/8 hover:text-white',
+    'border border-transparent bg-transparent text-slate-600 hover:bg-blue-50 hover:text-slate-950',
 } as const
 
 const sizeClasses = {
@@ -36,7 +36,7 @@ function Button({
   variant = 'primary',
 }: ButtonProps) {
   const classes = cn(
-    'inline-flex items-center justify-center gap-2 rounded-full font-semibold tracking-[0.02em] transition duration-200 ease-out hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-[#070b17]',
+    'inline-flex items-center justify-center gap-2 rounded-[8px] font-semibold transition duration-200 ease-out hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-[#eef4fb] whitespace-nowrap',
     sizeClasses[size],
     variantClasses[variant],
     className,

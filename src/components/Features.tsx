@@ -55,11 +55,11 @@ function FeatureCard({ feature, index }: { feature: (typeof FEATURE_KEYS)[number
         <motion.div
           aria-hidden="true"
           animate={{
-            opacity: isHovering ? 0.7 : 0.16,
+            opacity: isHovering ? 0.52 : 0.12,
             scale: isHovering ? 1.04 : 0.88,
             y: isHovering ? 2 : 8,
           }}
-          className="pointer-events-none absolute inset-x-8 bottom-2 h-14 rounded-full bg-[radial-gradient(circle,rgba(56,189,248,0.22),rgba(129,140,248,0.18)_42%,rgba(217,70,239,0.1)_62%,transparent_78%)] blur-2xl"
+          className="pointer-events-none absolute inset-x-8 bottom-2 h-14 rounded-[8px] bg-cyan-300/24 blur-2xl"
           transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
         />
         <GlassCard
@@ -69,27 +69,27 @@ function FeatureCard({ feature, index }: { feature: (typeof FEATURE_KEYS)[number
           )}>
           <motion.div
             aria-hidden="true"
-            className="pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-cyan-200/90 to-transparent"
+            className="pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-cyan-400/70 to-transparent"
             animate={{ opacity: isHovering ? 0.95 : 0.4, scaleX: isHovering ? 1 : 0.7 }}
             transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
           />
           <motion.div
             aria-hidden="true"
-            animate={{ opacity: isHovering ? 0.42 : 0 }}
-            className="pointer-events-none absolute -right-8 -top-8 h-24 w-24 rounded-full bg-cyan-300/16 blur-3xl"
+            animate={{ opacity: isHovering ? 0.34 : 0 }}
+            className="pointer-events-none absolute -right-8 -top-8 h-24 w-24 rounded-[8px] bg-cyan-200/36 blur-3xl"
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
           />
           <div className="relative">
             <motion.div
               animate={{ scale: isHovering ? 1.08 : 1 }}
-              className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/8 text-cyan-200"
+              className="flex h-12 w-12 items-center justify-center rounded-[8px] border border-cyan-200 bg-[#effcfc] text-[#007f91]"
               transition={{ duration: 0.24, ease: [0.22, 1, 0.36, 1] }}>
               <Icon className="h-5 w-5" />
             </motion.div>
-            <h3 className="mt-6 text-2xl font-semibold tracking-[-0.03em] text-white">
+            <h3 className="mt-6 font-display text-2xl font-extrabold text-slate-950">
               {t(`features.items.${feature.key}.title`)}
             </h3>
-            <p className="mt-4 text-sm leading-7 text-white/72">
+            <p className="mt-4 text-sm leading-7 text-slate-600">
               {t(`features.items.${feature.key}.description`)}
             </p>
           </div>

@@ -7,7 +7,7 @@ type GlassCardProps = HTMLAttributes<HTMLDivElement> & {
 
 function GlassCard({ children, className, ...props }: GlassCardProps) {
   return (
-    <div className={cn('glass-panel rounded-[2rem]', className)} {...props}>
+    <div className={cn('glass-panel rounded-[8px]', className)} {...props}>
       {children}
     </div>
   )

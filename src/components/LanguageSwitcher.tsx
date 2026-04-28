@@ -11,10 +11,10 @@ function LanguageSwitcher() {
   return (
     <motion.div
       aria-label={t('languageSwitcher.aria')}
-      className="glass-subtle relative inline-flex items-center gap-1 overflow-hidden rounded-full p-1"
+      className="glass-subtle relative inline-flex items-center gap-1 overflow-hidden rounded-[8px] p-1"
       whileHover={{ y: -1 }}
       transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}>
-      <div className="pointer-events-none absolute inset-x-5 top-0 h-px bg-gradient-to-r from-transparent via-cyan-200/90 to-transparent opacity-80" />
+      <div className="pointer-events-none absolute inset-x-5 top-0 h-px bg-gradient-to-r from-transparent via-cyan-400/70 to-transparent opacity-80" />
       {LANGUAGES.map((language) => {
         const active = i18n.resolvedLanguage === language
 
@@ -23,16 +23,16 @@ function LanguageSwitcher() {
             {active ? (
               <motion.span
                 aria-hidden="true"
-                className="absolute inset-0 rounded-full bg-white/90 shadow-[0_8px_20px_rgba(129,140,248,0.22)]"
+                className="absolute inset-0 rounded-[6px] bg-blue-600 shadow-[0_8px_20px_rgba(37,99,235,0.18)]"
                 layoutId="language-switcher-pill"
                 transition={{ type: 'spring', stiffness: 360, damping: 28 }}
               />
             ) : null}
-            <span className="pointer-events-none absolute inset-0 rounded-full bg-white/6 opacity-0 transition duration-200 group-hover:opacity-100" />
+            <span className="pointer-events-none absolute inset-0 rounded-[6px] bg-blue-50 opacity-0 transition duration-200 group-hover:opacity-100" />
             <motion.button
               className={cn(
-                'relative rounded-full px-3 py-2 text-xs font-semibold tracking-[0.12em] uppercase transition hover:text-white',
-                active ? 'text-slate-950' : 'text-white/62',
+                'relative rounded-[6px] px-3 py-2 text-xs font-semibold tracking-[0.08em] uppercase transition hover:text-slate-950',
+                active ? 'text-white' : 'text-slate-600',
               )}
               onClick={() => {
                 startTransition(() => {

@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Lingo - AI In-Game Chat Translator for Multiplayer Games",
-    "description": "Lingo is an AI-powered in-game chat translator for Windows and macOS. Translate team chat in Dota 2, LoL, WoW, Overwatch 2, and more with one hotkey.",
+    "title": "Lingo - AI In-Game Chat Reply Translator for Multiplayer Games",
+    "description": "Lingo is an AI-powered in-game chat reply translator for Windows and macOS. Translate your callouts for Dota 2, LoL, WoW, Overwatch 2, and more with one hotkey.",
     "keywords": "AI game translator, in-game chat translator, game chat translation, Dota 2 chat translator, League of Legends translator, World of Warcraft translator, Overwatch 2 translator, multilingual gaming chat, Windows game translator, macOS game translator"
   },
   "brand": {
@@ -30,8 +30,8 @@
   },
   "hero": {
     "badge": "Available now · v{{version}}",
-    "title": "Instant Team Chat Translation",
-    "subtitle": "Translate live game chat, reply naturally, and keep your squad aligned across Chinese, English, and Russian with one hotkey.",
+    "title": "Instant Chat Reply Translation",
+    "subtitle": "Compose natural in-game replies across Chinese, English, and Russian, then paste them back into chat with one hotkey.",
     "downloadMac": "Get Lingo for macOS",
     "downloadWindows": "Get Lingo for Windows",
     "macLabel": "Apple Silicon · DMG installer",
@@ -108,7 +108,7 @@
       "goTo": "Go to {{game}}"
     },
     "noteLabel": "BEST FIT",
-    "note": "If a game has a chat box, Lingo can connect to it — helping you understand faster and reply more effectively.",
+    "note": "If a game has a chat box, Lingo can help you turn short callouts into clearer multilingual replies.",
     "items": {
       "dota2": {
         "name": "Dota 2",
@@ -135,7 +135,7 @@
     "steps": {
       "select": {
         "title": "Type your message",
-        "description": "Write what you want to say, or select a teammate message."
+        "description": "Write the callout you want to send in chat."
       },
       "hotkey": {
         "title": "Press the hotkey",

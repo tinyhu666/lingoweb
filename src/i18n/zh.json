@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Lingo - AI 游戏聊天翻译助手",
-    "description": "Lingo 是面向 Windows 和 macOS 的 AI 游戏聊天翻译工具，支持 Dota 2、英雄联盟、魔兽世界、守望先锋 2 等游戏，一键翻译并回填聊天框。",
+    "title": "Lingo - AI 游戏聊天回复翻译助手",
+    "description": "Lingo 是面向 Windows 和 macOS 的 AI 游戏聊天回复翻译工具，支持 Dota 2、英雄联盟、魔兽世界、守望先锋 2 等游戏，一键翻译你要发送的内容并回填聊天框。",
     "keywords": "AI 游戏翻译, 游戏聊天翻译, 游戏内翻译, 游戏聊天翻译器, Dota 2 翻译, 英雄联盟翻译, 魔兽世界翻译, 守望先锋 2 翻译, Windows 游戏翻译, macOS 游戏翻译"
   },
   "brand": {
@@ -30,8 +30,8 @@
   },
   "hero": {
     "badge": "现已可用 · v{{version}}",
-    "title": "游戏聊天实时翻译",
-    "subtitle": "Lingo 让你在跨区、跨服和国际队友开黑时，快速看懂消息、自然回复，并一键回填聊天框。",
+    "title": "游戏聊天回复翻译",
+    "subtitle": "Lingo 让你在跨区、跨服和国际队友开黑时，把想说的话翻译成自然表达，并一键回填聊天框。",
     "downloadMac": "获取 macOS 版",
     "downloadWindows": "获取 Windows 版",
     "macLabel": "Apple Silicon · DMG 安装包",
@@ -108,7 +108,7 @@
       "goTo": "切换到{{game}}"
     },
     "noteLabel": "适用场景",
-    "note": "只要游戏内有聊天功能，Lingo 均可接入，帮助你更快理解队友、更高效地回复。",
+    "note": "只要游戏内有聊天框，Lingo 就能帮你把短指令整理成更清晰的多语言回复。",
     "items": {
       "dota2": {
         "name": "Dota 2",
@@ -135,7 +135,7 @@
     "steps": {
       "select": {
         "title": "输入内容",
-        "description": "输入你想说的话，或选中队友消息。"
+        "description": "输入你想发到聊天框里的指令或回复。"
       },
       "hotkey": {
         "title": "按下快捷键",
