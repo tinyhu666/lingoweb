@@ -31,7 +31,7 @@ function SupportedGames() {
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <span className="section-eyebrow">{t('supportedGames.eyebrow')}</span>
-            <h2 className="section-title mt-5 max-w-[12ch]">{t('supportedGames.title')}</h2>
+            <h2 className="section-title mt-5 max-w-[14ch] whitespace-pre-line [word-break:keep-all]">{t('supportedGames.title')}</h2>
           </div>
 
           <div className="flex items-center gap-3">

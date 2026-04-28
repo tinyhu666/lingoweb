@@ -22,7 +22,7 @@ function HowItWorks() {
         <div className="relative">
           <span className="section-eyebrow">{t('howItWorks.eyebrow')}</span>
           <div className="mt-5 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-            <h2 className="section-title max-w-[12ch]">{t('howItWorks.title')}</h2>
+            <h2 className="section-title max-w-[12ch] whitespace-pre-line [word-break:keep-all]">{t('howItWorks.title')}</h2>
             <p className="max-w-[24rem] text-sm leading-7 text-cyan-50/62">{t('howItWorks.subtitle')}</p>
           </div>
 

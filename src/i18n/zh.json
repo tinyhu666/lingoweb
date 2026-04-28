@@ -94,7 +94,7 @@
   },
   "features": {
     "eyebrow": "核心体验",
-    "title": "让开黑沟通少一点卡壳。",
+    "title": "让开黑沟通\n少一点卡壳。",
     "subtitle": "Lingo 专注处理你准备发送的话：翻译、整理措辞，再交给你确认发送。",
     "stageLabel": "消息预览",
     "stageSteps": {
@@ -127,7 +127,7 @@
   },
   "supportedGames": {
     "eyebrow": "适用游戏",
-    "title": "适合需要打字沟通的多人游戏。",
+    "title": "适合需要打字沟通的\n多人游戏。",
     "subtitle": "不是绑定某一款游戏。只要你需要把自己的消息发给不同语言的队友，Lingo 就能派上用场。",
     "chatBadge": "发送前",
     "controls": {
@@ -158,7 +158,7 @@
   },
   "howItWorks": {
     "eyebrow": "使用流程",
-    "title": "三步完成一次发送。",
+    "title": "三步完成\n一次发送。",
     "subtitle": "输入原句，触发翻译，再把结果发到聊天框。",
     "steps": {
       "select": {
