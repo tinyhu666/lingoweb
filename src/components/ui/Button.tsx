@@ -12,11 +12,11 @@ type ButtonProps = {
 
 const variantClasses = {
   primary:
-    'border border-blue-600 bg-[linear-gradient(180deg,#3b82f6_0%,#2563eb_54%,#1d4ed8_100%)] text-white shadow-[0_18px_34px_rgba(37,99,235,0.2)] hover:border-blue-500 hover:brightness-105',
+    'border border-cyan-200/40 bg-[linear-gradient(135deg,#24d9ff_0%,#5d5cff_58%,#b742ff_100%)] text-white shadow-[0_18px_42px_rgba(36,217,255,0.24)] hover:border-cyan-100 hover:brightness-110',
   secondary:
-    'border border-slate-200 bg-white/86 text-slate-800 shadow-[0_10px_22px_rgba(15,23,42,0.06)] hover:border-blue-200 hover:bg-white',
+    'border border-white/16 bg-white/8 text-cyan-50 shadow-[0_14px_34px_rgba(0,0,0,0.22)] backdrop-blur-xl hover:border-cyan-200/36 hover:bg-white/12',
   ghost:
-    'border border-transparent bg-transparent text-slate-600 hover:bg-blue-50 hover:text-slate-950',
+    'border border-transparent bg-transparent text-cyan-50/70 hover:bg-white/8 hover:text-white',
 } as const
 
 const sizeClasses = {
@@ -36,7 +36,7 @@ function Button({
   variant = 'primary',
 }: ButtonProps) {
   const classes = cn(
-    'inline-flex items-center justify-center gap-2 rounded-[8px] font-semibold transition duration-200 ease-out hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-[#eef4fb] whitespace-nowrap',
+    'inline-flex items-center justify-center gap-2 rounded-[8px] font-semibold transition duration-200 ease-out hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-[#030711] whitespace-nowrap',
     sizeClasses[size],
     variantClasses[variant],
     className,

@@ -67,14 +67,16 @@ function App() {
   }, [])
 
   return (
-    <div className="relative overflow-x-hidden">
+    <div className="relative min-h-screen overflow-x-hidden">
       <Navbar />
 
-      <main className="page-shell flex min-h-screen flex-col gap-20 pb-20 pt-28 sm:gap-24">
+      <main className="flex min-h-screen flex-col gap-24 pb-20 sm:gap-28">
         <Hero downloads={release.downloads} preferredPlatform={preferredPlatform} version={release.version || APP_VERSION} />
-        <Features />
-        <SupportedGames />
-        <HowItWorks />
+        <div className="page-shell flex flex-col gap-24 sm:gap-28">
+          <Features />
+          <SupportedGames />
+          <HowItWorks />
+        </div>
       </main>
 
       <Footer version={release.version || APP_VERSION} />

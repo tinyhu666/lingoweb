@@ -1,8 +1,8 @@
 {
   "meta": {
-    "title": "Lingo - AI In-Game Chat Reply Translator for Multiplayer Games",
-    "description": "Lingo is an AI-powered in-game chat reply translator for Windows and macOS. Translate your callouts for Dota 2, LoL, WoW, Overwatch 2, and more with one hotkey.",
-    "keywords": "AI game translator, in-game chat translator, game chat translation, Dota 2 chat translator, League of Legends translator, World of Warcraft translator, Overwatch 2 translator, multilingual gaming chat, Windows game translator, macOS game translator"
+    "title": "Lingo - Cinematic AI Game Chat Translator",
+    "description": "Lingo is a hotkey-first AI game chat translator for Windows and macOS. Turn callouts into natural multiplayer replies without leaving the match.",
+    "keywords": "AI game translator, game chat translator, in-game chat translation, gaming hotkey translator, Dota 2 translator, League of Legends translator, World of Warcraft translator, Overwatch 2 translator"
   },
   "brand": {
     "name": "Lingo",
@@ -22,154 +22,154 @@
     "menu": "Menu",
     "closeMenu": "Close menu",
     "links": {
-      "features": "Capabilities",
-      "supportedGames": "Supported Games",
-      "howItWorks": "How It Works",
+      "features": "Combat HUD",
+      "supportedGames": "Game Scenes",
+      "howItWorks": "Hotkey Flow",
       "download": "Download"
     }
   },
   "hero": {
-    "badge": "Available now · v{{version}}",
-    "title": "Instant Chat Reply Translation",
-    "subtitle": "Compose natural in-game replies across Chinese, English, and Russian, then paste them back into chat with one hotkey.",
-    "downloadMac": "Get Lingo for macOS",
-    "downloadWindows": "Get Lingo for Windows",
-    "macLabel": "Apple Silicon · DMG installer",
-    "windowsLabel": "Windows x64 · EXE installer",
+    "badge": "Combat ready · v{{version}}",
+    "title": "Translate Mid-Fight",
+    "subtitle": "One hotkey turns raw callouts into clean team chat. Less typing. More playing.",
+    "downloadMac": "Get macOS",
+    "downloadWindows": "Get Windows",
+    "macLabel": "macOS",
+    "windowsLabel": "Windows",
     "recommended": "Recommended",
-    "macDetail": "Open the DMG, drag Lingo into Applications, and start playing.",
-    "windowsDetail": "Run the EXE installer and finish setup in a few clicks.",
-    "supportLine": "Built for Dota 2, LoL, WoW, Overwatch 2, and any game with text chat.",
+    "macDetail": "DMG installer",
+    "windowsDetail": "EXE installer",
+    "supportLine": "Built for chat-heavy multiplayer games.",
     "quickFacts": {
-      "release": "Current release",
+      "release": "Version",
       "releaseValue": "v{{version}}",
-      "delivery": "Installer source",
-      "deliveryValue": "Official Tencent Cloud mirror",
-      "requirements": "System support",
-      "requirementsValue": "Windows 10+ / macOS 10.13+"
+      "delivery": "Mirror",
+      "deliveryValue": "Official download",
+      "requirements": "Systems",
+      "requirementsValue": "Win / macOS"
     },
     "mockup": {
-      "eyebrow": "AI Translator",
-      "title": "Translate precisely, send instantly",
-      "body": "Type your message in Chinese, press the hotkey, and Lingo translates gaming terms like BKB, engage, and hold into natural English — then pastes it right back into chat.",
-      "translateChip": "Accurate terms",
+      "eyebrow": "AI Translator HUD",
+      "title": "Translate, paste, keep playing",
+      "body": "Turns terms like BKB, engage, regroup, and back into natural chat-ready replies.",
+      "translateChip": "Term-aware",
       "chatChip": "Natural tone",
-      "sourceLabel": "ZH draft",
-      "source": "先别接，等我 BKB 好了我们再打。",
+      "sourceLabel": "Input",
+      "source": "Don't force yet. Wait for BKB.",
       "hotkeyAction": "Hit hotkey",
-      "resultLabel": "EN output",
-      "result": "Don't force yet. Wait for my BKB, then we take the fight.",
-      "chatLabel": "Back in chat",
-      "chatDraft": "Don't force yet. Wait for my BKB, then we take the fight.",
-      "chatReady": "One-key paste-back",
-      "server": "Server-side AI",
+      "resultLabel": "Output",
+      "result": "Hold. Wait for my BKB, then we fight.",
+      "chatLabel": "Chat box",
+      "chatDraft": "Hold. Wait for my BKB, then we fight.",
+      "chatReady": "Paste-back",
+      "server": "AI",
       "hotkey": "Global hotkey",
       "phrases": "Quick phrases",
       "languages": "ZH / EN / RU",
-      "sideTitle": "Ready before you hit send",
-      "sideBody": "Concise sentences, consistent tone, and low-friction communication for live matches.",
-      "statPrimaryLabel": "Execution",
+      "sideTitle": "One beat before send",
+      "sideBody": "Short, sharp, and ready.",
+      "statPrimaryLabel": "Action",
       "statPrimaryValue": "One tap",
-      "statSecondaryLabel": "Supported UI",
-      "statSecondaryValue": "3 languages"
+      "statSecondaryLabel": "Languages",
+      "statSecondaryValue": "3"
     }
   },
   "features": {
-    "eyebrow": "Why Lingo",
-    "title": "Built for fast, readable team chat.",
-    "subtitle": "Translate, rewrite, and send in-game callouts without slowing the match down.",
+    "eyebrow": "Combat HUD",
+    "title": "Fast feedback, game-first feel.",
+    "subtitle": "Hotkey, AI rewrite, paste-back, and quick phrases behave like a lightweight overlay.",
     "items": {
       "instant": {
-        "title": "One-key translate",
-        "description": "Select text or type your message, hit the hotkey, and send the result."
+        "title": "Hotkey translate",
+        "description": "One press gets a send-ready result."
       },
       "server": {
-        "title": "Context-aware AI",
-        "description": "Server-side models keep the output short, natural, and ready for live matches."
+        "title": "Context AI",
+        "description": "Understands game terms instead of translating them stiffly."
       },
       "phrases": {
-        "title": "Quick-send phrases",
-        "description": "Use ready-made callouts like push, back, wait, and regroup in one tap."
+        "title": "Quick calls",
+        "description": "Push, back, wait, regroup, and other common calls stay close."
       },
       "languages": {
-        "title": "Cross-language communication",
-        "description": "Switch between Chinese, English, and Russian across mixed-language lobbies."
+        "title": "3 languages",
+        "description": "Chinese, English, and Russian for mixed-language squads."
       }
     }
   },
   "supportedGames": {
-    "eyebrow": "Supported games",
-    "title": "Optimized for the games people actually play.",
-    "subtitle": "Starting with Dota 2, LoL, WoW, and Overwatch 2. If your game has text chat, Lingo fits.",
-    "chatBadge": "AI Translator",
+    "eyebrow": "Game scenes",
+    "title": "Drop into the games you already play.",
+    "subtitle": "Where there is a chat box, Lingo can fit.",
+    "chatBadge": "AI Chat",
     "controls": {
-      "previous": "Previous games",
-      "next": "Next games",
-      "goTo": "Go to {{game}}"
+      "previous": "Previous",
+      "next": "Next",
+      "goTo": "Switch to {{game}}"
     },
-    "noteLabel": "BEST FIT",
-    "note": "If a game has a chat box, Lingo can help you turn short callouts into clearer multilingual replies.",
+    "noteLabel": "Best fit",
+    "note": "Works wherever text chat exists.",
     "items": {
       "dota2": {
         "name": "Dota 2",
-        "description": "Handles smoke calls, BKB timing, retreat pings, and short fight-winning instructions."
+        "description": "Smoke, BKB, retreat, and fight calls stay sharp."
       },
       "lol": {
         "name": "League of Legends",
-        "description": "Covers lane calls, jungle timing, objectives, and teamfight coordination."
+        "description": "Lane, jungle, objective, and teamfight calls feel natural."
       },
       "wow": {
         "name": "World of Warcraft",
-        "description": "Supports raid commands, regroup reminders, party chat, and multilingual group play."
+        "description": "Raid, regroup, and party chat across languages."
       },
       "ow2": {
         "name": "Overwatch 2",
-        "description": "Translates position calls, focus targets, regroup timing, and push commands cleanly."
+        "description": "Positions, focus targets, regroup timing, and push calls."
       }
     }
   },
   "howItWorks": {
-    "eyebrow": "Workflow",
-    "title": "From thought to chat in three steps.",
-    "subtitle": "Type or select text, hit the hotkey, and send.",
+    "eyebrow": "Flow",
+    "title": "Three beats. Back to the match.",
+    "subtitle": "Type, trigger, send.",
     "steps": {
       "select": {
-        "title": "Type your message",
-        "description": "Write the callout you want to send in chat."
+        "title": "Type",
+        "description": "Write the callout."
       },
       "hotkey": {
-        "title": "Press the hotkey",
-        "description": "One shortcut triggers translation, cleanup, and formatting."
+        "title": "Trigger",
+        "description": "The hotkey runs translation and cleanup."
       },
       "paste": {
-        "title": "Confirm and send",
-        "description": "The result fills the chat box and is ready to send immediately."
+        "title": "Send",
+        "description": "The result lands in chat."
       }
     }
   },
   "download": {
     "eyebrow": "Download",
-    "title": "Install now and start communicating with AI in your next match.",
-    "subtitle": "Direct official downloads are delivered through our Tencent Cloud mirror for faster regional access.",
+    "title": "Install now and use AI in your next match.",
+    "subtitle": "Official installers are delivered through our Tencent Cloud mirror.",
     "recommended": "Best match for your device",
     "latestRelease": "Current release v{{version}}",
     "showAll": "View all downloads",
     "requirementsTitle": "System requirements",
     "requirements": {
-      "macos": "macOS 10.13+ • Apple Silicon package • DMG installer",
-      "windows": "Windows 10+ • x64 • WebView2 Runtime"
+      "macos": "macOS 10.13+ · Apple Silicon · DMG installer",
+      "windows": "Windows 10+ · x64 · WebView2 Runtime"
     },
     "cards": {
       "macos": {
         "title": "macOS",
         "meta": "Apple Silicon",
-        "description": "Direct DMG download for the latest release.",
+        "description": "Latest DMG installer.",
         "button": "Download DMG"
       },
       "windows": {
         "title": "Windows",
         "meta": "x64",
-        "description": "Direct EXE installer for the latest release.",
+        "description": "Latest EXE installer.",
         "button": "Download EXE"
       }
     }
@@ -179,18 +179,18 @@
     "version": "Current version v{{version}}",
     "product": {
       "title": "Explore",
-      "features": "Capabilities",
-      "supportedGames": "Supported games",
-      "workflow": "How It Works",
+      "features": "Combat HUD",
+      "supportedGames": "Game scenes",
+      "workflow": "Hotkey flow",
       "download": "Get Lingo"
     },
     "community": {
       "title": "Community",
       "discord": "Discord",
-      "discordDescription": "Join product updates, announcements, and early discussions.",
+      "discordDescription": "Updates, announcements, and early discussions.",
       "discordAction": "Join Discord",
       "qqGroup": "QQ Group: 1095706752",
-      "qqDescription": "For Chinese-speaking users who want faster support and community chat.",
+      "qqDescription": "Chinese community chat and feedback.",
       "copy": "Copy number",
       "copied": "Copied"
     },

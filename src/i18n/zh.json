@@ -1,8 +1,8 @@
 {
   "meta": {
-    "title": "Lingo - AI 游戏聊天回复翻译助手",
-    "description": "Lingo 是面向 Windows 和 macOS 的 AI 游戏聊天回复翻译工具，支持 Dota 2、英雄联盟、魔兽世界、守望先锋 2 等游戏，一键翻译你要发送的内容并回填聊天框。",
-    "keywords": "AI 游戏翻译, 游戏聊天翻译, 游戏内翻译, 游戏聊天翻译器, Dota 2 翻译, 英雄联盟翻译, 魔兽世界翻译, 守望先锋 2 翻译, Windows 游戏翻译, macOS 游戏翻译"
+    "title": "Lingo - 酷炫游戏聊天 AI 翻译工具",
+    "description": "Lingo 是面向 Windows 和 macOS 的游戏聊天 AI 翻译工具。按下热键，把开黑指令变成自然队伍回复。",
+    "keywords": "AI 游戏翻译, 游戏聊天翻译, 开黑翻译, 游戏热键翻译, Dota 2 翻译, 英雄联盟翻译, 魔兽世界翻译, 守望先锋 2 翻译"
   },
   "brand": {
     "name": "Lingo",
@@ -22,175 +22,175 @@
     "menu": "菜单",
     "closeMenu": "关闭菜单",
     "links": {
-      "features": "功能亮点",
-      "supportedGames": "支持游戏",
-      "howItWorks": "使用方式",
+      "features": "战斗 HUD",
+      "supportedGames": "游戏场景",
+      "howItWorks": "热键流程",
       "download": "下载"
     }
   },
   "hero": {
-    "badge": "现已可用 · v{{version}}",
-    "title": "游戏聊天回复翻译",
-    "subtitle": "Lingo 让你在跨区、跨服和国际队友开黑时，把想说的话翻译成自然表达，并一键回填聊天框。",
+    "badge": "实战热键 · v{{version}}",
+    "title": "开黑翻译",
+    "subtitle": "按一次热键，把队伍指令翻成能直接发送的表达。少打字，继续操作。",
     "downloadMac": "获取 macOS 版",
     "downloadWindows": "获取 Windows 版",
-    "macLabel": "Apple Silicon · DMG 安装包",
-    "windowsLabel": "Windows x64 · EXE 安装器",
+    "macLabel": "macOS",
+    "windowsLabel": "Windows",
     "recommended": "推荐",
-    "macDetail": "打开 DMG，拖入应用程序，即可开始使用。",
-    "windowsDetail": "运行 EXE 安装器，几步即可完成安装。",
-    "supportLine": "适用于 Dota 2、英雄联盟、魔兽世界、守望先锋 2，以及任何带聊天框的游戏。",
+    "macDetail": "DMG 安装包",
+    "windowsDetail": "EXE 安装器",
+    "supportLine": "为高频聊天的多人游戏准备。",
     "quickFacts": {
-      "release": "当前版本",
+      "release": "版本",
       "releaseValue": "v{{version}}",
-      "delivery": "安装来源",
-      "deliveryValue": "腾讯云官方镜像分发",
-      "requirements": "系统支持",
-      "requirementsValue": "Windows 10+ / macOS 10.13+"
+      "delivery": "镜像",
+      "deliveryValue": "官方下载",
+      "requirements": "系统",
+      "requirementsValue": "Win / macOS"
     },
     "mockup": {
-      "eyebrow": "AI 翻译助手",
-      "title": "精准翻译，一键发送",
-      "body": "在聊天框输入中文，按下快捷键，Lingo 会将 BKB、接团、别急等游戏术语翻译为地道的英文表达，并自动回填到聊天框。",
-      "translateChip": "术语精准",
-      "chatChip": "地道表达",
-      "sourceLabel": "中文输入",
-      "source": "先别接，等我 BKB 好了我们再打。",
+      "eyebrow": "AI 翻译 HUD",
+      "title": "翻译，回填，继续打",
+      "body": "把 BKB、开团、撤退、集合这类游戏语境整理成自然表达。",
+      "translateChip": "术语识别",
+      "chatChip": "自然表达",
+      "sourceLabel": "输入",
+      "source": "先别冲，等我 BKB 好了再打。",
       "hotkeyAction": "按下热键",
-      "resultLabel": "EN 结果",
-      "result": "Don't force yet. Wait for my BKB, then we take the fight.",
+      "resultLabel": "结果",
+      "result": "Don't force yet. Wait for my BKB, then we fight.",
       "chatLabel": "聊天框",
-      "chatDraft": "Don't force yet. Wait for my BKB, then we take the fight.",
+      "chatDraft": "Don't force yet. Wait for my BKB, then we fight.",
       "chatReady": "一键回填",
-      "server": "服务端 AI",
-      "hotkey": "全局快捷键",
+      "server": "AI",
+      "hotkey": "全局热键",
       "phrases": "快捷短语",
       "languages": "中 / 英 / 俄",
-      "sideTitle": "发送前的最后一步",
-      "sideBody": "短句、稳定、可直接发送，让实战沟通更高效。",
-      "statPrimaryLabel": "操作效率",
-      "statPrimaryValue": "一键完成",
-      "statSecondaryLabel": "界面语言",
+      "sideTitle": "发送前最后一拍",
+      "sideBody": "短、准、能直接发。",
+      "statPrimaryLabel": "操作",
+      "statPrimaryValue": "一键",
+      "statSecondaryLabel": "语言",
       "statSecondaryValue": "3 种"
     }
   },
   "features": {
-    "eyebrow": "为什么选择 Lingo",
-    "title": "为高频开黑沟通而生。",
-    "subtitle": "翻译、润色、发送一气呵成，不打断对局节奏。",
+    "eyebrow": "战斗 HUD",
+    "title": "反馈要快，界面要酷。",
+    "subtitle": "热键、AI 改写、回填和短语像游戏覆盖层一样轻。",
     "items": {
       "instant": {
-        "title": "一键翻译",
-        "description": "选中文本或输入内容，按下快捷键即可得到可直接发送的结果。"
+        "title": "热键翻译",
+        "description": "按一下，马上得到能发送的结果。"
       },
       "server": {
-        "title": "智能语境理解",
-        "description": "服务端模型持续优化，让表达更短、更自然、更符合对局语境。"
+        "title": "语境 AI",
+        "description": "识别游戏术语，不把指令翻得生硬。"
       },
       "phrases": {
-        "title": "常用短语速发",
-        "description": "开团、撤退、等等、集合等高频指令随时一键发送。"
+        "title": "快捷指令",
+        "description": "开团、撤退、集合，常用话术快速处理。"
       },
       "languages": {
-        "title": "跨语言沟通",
-        "description": "支持中英俄互译，适合跨服、跨区和混合语种队伍。"
+        "title": "三语沟通",
+        "description": "中英俄混合队伍也能顺畅交流。"
       }
     }
   },
   "supportedGames": {
-    "eyebrow": "支持游戏",
-    "title": "优先适配玩家最常玩的多人游戏。",
-    "subtitle": "从 Dota 2、英雄联盟、魔兽世界、守望先锋 2 开始。只要游戏里有聊天框，Lingo 基本都能用。",
-    "chatBadge": "AI 翻译",
+    "eyebrow": "游戏场景",
+    "title": "接入你常玩的多人局。",
+    "subtitle": "聊天框在哪，Lingo 就在哪。",
+    "chatBadge": "AI 聊天",
     "controls": {
-      "previous": "上一组游戏",
-      "next": "下一组游戏",
-      "goTo": "切换到{{game}}"
+      "previous": "上一组",
+      "next": "下一组",
+      "goTo": "切换到 {{game}}"
     },
     "noteLabel": "适用场景",
-    "note": "只要游戏内有聊天框，Lingo 就能帮你把短指令整理成更清晰的多语言回复。",
+    "note": "有聊天框的游戏都能用。",
     "items": {
       "dota2": {
         "name": "Dota 2",
-        "description": "开雾、BKB 时机、撤退提醒这类短指令翻得更准、更快。"
+        "description": "开雾、BKB、撤退、接团，短指令更干净。"
       },
       "lol": {
         "name": "英雄联盟",
-        "description": "对线、打野、资源争夺和团战指挥都能自然表达。"
+        "description": "对线、打野、资源团，指挥更自然。"
       },
       "wow": {
         "name": "魔兽世界",
-        "description": "副本指令、集合提醒、组队沟通和跨语言协作都更顺畅。"
+        "description": "副本、集合、组队沟通，跨语种更顺。"
       },
       "ow2": {
         "name": "守望先锋 2",
-        "description": "位置报点、集火目标、重组时机和进攻提醒都能简洁到位。"
+        "description": "报点、集火、重组、进攻，表达更快。"
       }
     }
   },
   "howItWorks": {
-    "eyebrow": "使用流程",
-    "title": "三步完成一次游戏沟通。",
-    "subtitle": "输入或选中文本，按下热键，然后发送。",
+    "eyebrow": "热键流程",
+    "title": "三拍完成一次沟通。",
+    "subtitle": "输入，触发，发送。",
     "steps": {
       "select": {
-        "title": "输入内容",
-        "description": "输入你想发到聊天框里的指令或回复。"
+        "title": "输入",
+        "description": "写下你想发的指令。"
       },
       "hotkey": {
-        "title": "按下快捷键",
-        "description": "快捷键会触发翻译、润色和整理。"
+        "title": "触发",
+        "description": "热键启动翻译和整理。"
       },
       "paste": {
-        "title": "确认发送",
-        "description": "结果自动回填到聊天框，确认后即可发出。"
+        "title": "发送",
+        "description": "结果回填到聊天框。"
       }
     }
   },
   "download": {
     "eyebrow": "下载",
-    "title": "立即安装，下一局就用 AI 助你沟通。",
-    "subtitle": "官方安装包通过腾讯云镜像分发，下载更稳定、速度更快。",
-    "recommended": "为当前设备推荐",
+    "title": "立刻安装，下一局就用 AI 沟通。",
+    "subtitle": "官方安装包通过腾讯云镜像分发，下载更稳定。",
+    "recommended": "当前设备推荐",
     "latestRelease": "当前版本 v{{version}}",
     "showAll": "查看全部下载",
     "requirementsTitle": "系统要求",
     "requirements": {
-      "macos": "macOS 10.13+ • Apple Silicon 包 • DMG 安装器",
-      "windows": "Windows 10+ • x64 • 需要 WebView2 Runtime"
+      "macos": "macOS 10.13+ · Apple Silicon · DMG 安装包",
+      "windows": "Windows 10+ · x64 · WebView2 Runtime"
     },
     "cards": {
       "macos": {
         "title": "macOS",
         "meta": "Apple Silicon",
-        "description": "直达最新版本 DMG 安装包。",
+        "description": "最新版本 DMG 安装包。",
         "button": "下载 DMG"
       },
       "windows": {
         "title": "Windows",
         "meta": "x64",
-        "description": "直达最新版本 EXE 安装器。",
+        "description": "最新版本 EXE 安装器。",
         "button": "下载 EXE"
       }
     }
   },
   "footer": {
-    "tagline": "面向全球多人游戏的实时聊天翻译与团队沟通工具。",
+    "tagline": "面向多人游戏的实时聊天翻译工具。",
     "version": "当前版本 v{{version}}",
     "product": {
       "title": "浏览",
-      "features": "功能亮点",
-      "supportedGames": "支持游戏",
-      "workflow": "使用方式",
+      "features": "战斗 HUD",
+      "supportedGames": "游戏场景",
+      "workflow": "热键流程",
       "download": "获取 Lingo"
     },
     "community": {
       "title": "社区",
       "discord": "Discord",
-      "discordDescription": "加入产品动态、公告通知与抢先交流。",
+      "discordDescription": "更新、公告和抢先交流。",
       "discordAction": "加入 Discord",
       "qqGroup": "QQ群：1095706752",
-      "qqDescription": "适合中文用户交流、反馈问题与获取更快支持。",
+      "qqDescription": "中文用户交流与反馈。",
       "copy": "复制群号",
       "copied": "已复制"
     },

@@ -23,16 +23,16 @@ function LanguageSwitcher() {
             {active ? (
               <motion.span
                 aria-hidden="true"
-                className="absolute inset-0 rounded-[6px] bg-blue-600 shadow-[0_8px_20px_rgba(37,99,235,0.18)]"
+                className="absolute inset-0 rounded-[6px] bg-cyan-300/22 shadow-[0_0_20px_rgba(36,217,255,0.28)]"
                 layoutId="language-switcher-pill"
                 transition={{ type: 'spring', stiffness: 360, damping: 28 }}
               />
             ) : null}
-            <span className="pointer-events-none absolute inset-0 rounded-[6px] bg-blue-50 opacity-0 transition duration-200 group-hover:opacity-100" />
+            <span className="pointer-events-none absolute inset-0 rounded-[6px] bg-white/8 opacity-0 transition duration-200 group-hover:opacity-100" />
             <motion.button
               className={cn(
-                'relative rounded-[6px] px-3 py-2 text-xs font-semibold tracking-[0.08em] uppercase transition hover:text-slate-950',
-                active ? 'text-white' : 'text-slate-600',
+                'relative rounded-[6px] px-3 py-2 text-xs font-semibold tracking-[0.08em] uppercase transition hover:text-white',
+                active ? 'text-cyan-50' : 'text-cyan-50/62',
               )}
               onClick={() => {
                 startTransition(() => {

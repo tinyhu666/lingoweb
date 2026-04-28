@@ -1,12 +1,12 @@
 {
   "meta": {
-    "title": "Lingo - AI-переводчик ответов для игрового чата",
-    "description": "Lingo — AI-переводчик ответов для игрового чата на Windows и macOS. Переводите свои реплики для Dota 2, League of Legends, World of Warcraft, Overwatch 2 и других игр одной горячей клавишей.",
-    "keywords": "AI переводчик игр, переводчик игрового чата, перевод чата в игре, переводчик Dota 2, переводчик League of Legends, переводчик World of Warcraft, переводчик Overwatch 2, игровой переводчик для Windows, игровой переводчик для macOS"
+    "title": "Lingo - AI переводчик игрового чата",
+    "description": "Lingo переводит игровые сообщения по горячей клавише для Windows и macOS.",
+    "keywords": "AI game translator, игровой переводчик, перевод игрового чата, Dota 2, League of Legends, World of Warcraft, Overwatch 2"
   },
   "brand": {
     "name": "Lingo",
-    "appIconAlt": "Иконка приложения Lingo",
+    "appIconAlt": "Иконка Lingo",
     "logoAlt": "Логотип Lingo"
   },
   "languageSwitcher": {
@@ -22,176 +22,176 @@
     "menu": "Меню",
     "closeMenu": "Закрыть меню",
     "links": {
-      "features": "Возможности",
-      "supportedGames": "Поддерживаемые игры",
-      "howItWorks": "Как это работает",
+      "features": "Боевой HUD",
+      "supportedGames": "Игры",
+      "howItWorks": "Hotkey flow",
       "download": "Скачать"
     }
   },
   "hero": {
-    "badge": "Уже доступно · v{{version}}",
-    "title": "Мгновенный перевод ответов в чат",
-    "subtitle": "Формулируйте естественные ответы для игрового чата на китайском, английском и русском, а затем вставляйте их обратно одним хоткеем.",
-    "downloadMac": "Получить для macOS",
-    "downloadWindows": "Получить для Windows",
-    "macLabel": "Apple Silicon · DMG установщик",
-    "windowsLabel": "Windows x64 · EXE установщик",
-    "recommended": "Рекомендуем",
-    "macDetail": "Откройте DMG, перетащите Lingo в Applications и запускайте.",
-    "windowsDetail": "Запустите EXE-установщик и завершите установку за пару шагов.",
-    "supportLine": "Подходит для Dota 2, LoL, WoW, Overwatch 2 и любой игры с текстовым чатом.",
+    "badge": "Готово к матчу · v{{version}}",
+    "title": "Перевод в бою",
+    "subtitle": "Одна горячая клавиша превращает игровые реплики в готовый чат.",
+    "downloadMac": "Скачать для macOS",
+    "downloadWindows": "Скачать для Windows",
+    "macLabel": "macOS",
+    "windowsLabel": "Windows",
+    "recommended": "Рекомендуется",
+    "macDetail": "DMG установщик",
+    "windowsDetail": "EXE установщик",
+    "supportLine": "Для игр, где чат решает исход матча.",
     "quickFacts": {
-      "release": "Текущая версия",
+      "release": "Версия",
       "releaseValue": "v{{version}}",
-      "delivery": "Источник установки",
-      "deliveryValue": "Официальное зеркало Tencent Cloud",
-      "requirements": "Поддержка систем",
-      "requirementsValue": "Windows 10+ / macOS 10.13+"
+      "delivery": "Зеркало",
+      "deliveryValue": "Официальная загрузка",
+      "requirements": "Системы",
+      "requirementsValue": "Win / macOS"
     },
     "mockup": {
-      "eyebrow": "AI-переводчик",
-      "title": "Точный перевод, мгновенная отправка",
-      "body": "Пишите фразу по-китайски, нажимаете хоткей, а Lingo переводит BKB, врыв и тайминг драки в естественный английский и возвращает готовую реплику в поле чата.",
-      "translateChip": "Точные термины",
-      "chatChip": "Естественный тон",
-      "sourceLabel": "ZH черновик",
-      "source": "先别接，等我 BKB 好了我们再打。",
-      "hotkeyAction": "Нажмите хоткей",
-      "resultLabel": "EN готово",
-      "result": "Don't force yet. Wait for my BKB, then we take the fight.",
-      "chatLabel": "Снова в чат",
-      "chatDraft": "Don't force yet. Wait for my BKB, then we take the fight.",
-      "chatReady": "Вставка одной клавишей",
-      "server": "AI на сервере",
-      "hotkey": "Глобальный хоткей",
+      "eyebrow": "AI Translator HUD",
+      "title": "Перевел, вставил, играешь",
+      "body": "BKB, engage, regroup и back становятся короткими готовыми фразами.",
+      "translateChip": "Игровые термины",
+      "chatChip": "Живой тон",
+      "sourceLabel": "Ввод",
+      "source": "Не врываемся, ждем BKB.",
+      "hotkeyAction": "Hotkey",
+      "resultLabel": "Результат",
+      "result": "Hold. Wait for my BKB, then we fight.",
+      "chatLabel": "Чат",
+      "chatDraft": "Hold. Wait for my BKB, then we fight.",
+      "chatReady": "Вставка",
+      "server": "AI",
+      "hotkey": "Горячая клавиша",
       "phrases": "Быстрые фразы",
       "languages": "ZH / EN / RU",
-      "sideTitle": "Готово ещё до отправки",
-      "sideBody": "Короткие формулировки, стабильный тон и минимум лишних действий прямо во время матча.",
-      "statPrimaryLabel": "Исполнение",
-      "statPrimaryValue": "Одно нажатие",
-      "statSecondaryLabel": "Языки UI",
-      "statSecondaryValue": "3 языка"
+      "sideTitle": "Перед отправкой",
+      "sideBody": "Коротко, четко, готово.",
+      "statPrimaryLabel": "Действие",
+      "statPrimaryValue": "1 клик",
+      "statSecondaryLabel": "Языки",
+      "statSecondaryValue": "3"
     }
   },
   "features": {
-    "eyebrow": "Почему Lingo",
-    "title": "Создан для быстрых игровых коммуникаций.",
-    "subtitle": "Переводите, упрощайте и отправляйте игровые реплики без паузы в матче.",
+    "eyebrow": "Боевой HUD",
+    "title": "Быстрый отклик. Игровой стиль.",
+    "subtitle": "Перевод, AI-правка и вставка работают как легкий оверлей.",
     "items": {
       "instant": {
-        "title": "Перевод одной клавишей",
-        "description": "Выделите текст или введите сообщение, нажмите хоткей и сразу получите готовый вариант."
+        "title": "Hotkey перевод",
+        "description": "Один клик дает готовую фразу."
       },
       "server": {
-        "title": "AI с пониманием контекста",
-        "description": "Серверные модели делают реплики короче, точнее и естественнее для живой игры."
+        "title": "AI контекст",
+        "description": "Понимает игровые термины."
       },
       "phrases": {
-        "title": "Быстрые игровые фразы",
-        "description": "Push, back, wait, regroup и другие частые команды уже готовы к отправке."
+        "title": "Быстрые фразы",
+        "description": "Push, back, wait и regroup рядом."
       },
       "languages": {
-        "title": "Общение без языкового барьера",
-        "description": "Переключайтесь между китайским, английским и русским в смешанных лобби."
+        "title": "3 языка",
+        "description": "Китайский, английский и русский."
       }
     }
   },
   "supportedGames": {
-    "eyebrow": "Поддерживаемые игры",
-    "title": "Оптимизировано для самых популярных командных игр.",
-    "subtitle": "Начинаем с Dota 2, LoL, WoW и Overwatch 2. Если в игре есть текстовый чат, Lingo обычно подходит.",
-    "chatBadge": "AI-перевод",
+    "eyebrow": "Игры",
+    "title": "Для матчей, в которые ты уже играешь.",
+    "subtitle": "Если есть чат, Lingo впишется.",
+    "chatBadge": "AI чат",
     "controls": {
-      "previous": "Предыдущие игры",
-      "next": "Следующие игры",
+      "previous": "Назад",
+      "next": "Вперед",
       "goTo": "Перейти к {{game}}"
     },
-    "noteLabel": "Лучше всего подходит",
-    "note": "Если в игре есть поле чата, Lingo помогает превратить короткие команды в понятные многоязычные ответы.",
+    "noteLabel": "Сценарий",
+    "note": "Работает там, где есть текстовый чат.",
     "items": {
       "dota2": {
         "name": "Dota 2",
-        "description": "Уверенно переводит smoke call, BKB timing, retreat и другие короткие тактические команды."
+        "description": "Smoke, BKB, retreat и fight calls звучат точнее."
       },
       "lol": {
         "name": "League of Legends",
-        "description": "Подходит для линии, леса, объектов и координации teamfight."
+        "description": "Линия, лес, объекты и тимфайт."
       },
       "wow": {
         "name": "World of Warcraft",
-        "description": "Рейдовые команды, сбор группы, чат пати и многоязычная координация проходят проще."
+        "description": "Рейды, группы и чат на разных языках."
       },
       "ow2": {
         "name": "Overwatch 2",
-        "description": "Чётко переводит callout позиций, focus target, regroup и тайминг атаки."
+        "description": "Позиции, фокус, regroup и push."
       }
     }
   },
   "howItWorks": {
-    "eyebrow": "Схема работы",
-    "title": "Три шага от мысли до чата.",
-    "subtitle": "Введите текст, нажмите хоткей и отправьте.",
+    "eyebrow": "Поток",
+    "title": "Три шага и обратно в матч.",
+    "subtitle": "Напиши, нажми, отправь.",
     "steps": {
       "select": {
-        "title": "Введите сообщение",
-        "description": "Напишите реплику или команду, которую хотите отправить в чат."
+        "title": "Ввод",
+        "description": "Напиши реплику."
       },
       "hotkey": {
-        "title": "Нажмите хоткей",
-        "description": "Хоткей запускает перевод, очистку формулировки и подготовку к отправке."
+        "title": "Hotkey",
+        "description": "Запускает перевод и правку."
       },
       "paste": {
-        "title": "Подтвердите и отправьте",
-        "description": "Готовый перевод появляется в поле чата и сразу готов к отправке."
+        "title": "Отправка",
+        "description": "Результат попадает в чат."
       }
     }
   },
   "download": {
     "eyebrow": "Скачать",
-    "title": "Установите сейчас и начните общаться с помощью AI уже в следующем матче.",
-    "subtitle": "Официальные загрузки распространяются через зеркало Tencent Cloud для более быстрой и стабильной доставки.",
-    "recommended": "Лучший вариант для вашего устройства",
+    "title": "Установи и используй AI уже в следующем матче.",
+    "subtitle": "Официальные установщики доступны через зеркало Tencent Cloud.",
+    "recommended": "Лучше для устройства",
     "latestRelease": "Текущая версия v{{version}}",
-    "showAll": "Посмотреть все загрузки",
+    "showAll": "Все загрузки",
     "requirementsTitle": "Системные требования",
     "requirements": {
-      "macos": "macOS 10.13+ • пакет Apple Silicon • установщик DMG",
-      "windows": "Windows 10+ • x64 • требуется WebView2 Runtime"
+      "macos": "macOS 10.13+ · Apple Silicon · DMG",
+      "windows": "Windows 10+ · x64 · WebView2 Runtime"
     },
     "cards": {
       "macos": {
         "title": "macOS",
         "meta": "Apple Silicon",
-        "description": "Прямая загрузка DMG для последнего релиза.",
+        "description": "Последний DMG установщик.",
         "button": "Скачать DMG"
       },
       "windows": {
         "title": "Windows",
         "meta": "x64",
-        "description": "Прямой EXE-установщик для последнего релиза.",
+        "description": "Последний EXE установщик.",
         "button": "Скачать EXE"
       }
     }
   },
   "footer": {
-    "tagline": "Перевод игрового чата в реальном времени для командной игры.",
+    "tagline": "Перевод командного чата для multiplayer игр.",
     "version": "Текущая версия v{{version}}",
     "product": {
       "title": "Навигация",
-      "features": "Возможности",
-      "supportedGames": "Поддерживаемые игры",
-      "workflow": "Как это работает",
-      "download": "Получить Lingo"
+      "features": "Боевой HUD",
+      "supportedGames": "Игры",
+      "workflow": "Hotkey flow",
+      "download": "Скачать Lingo"
     },
     "community": {
       "title": "Сообщество",
       "discord": "Discord",
-      "discordDescription": "Получайте новости продукта, анонсы и ранние обсуждения.",
-      "discordAction": "Перейти в Discord",
-      "qqGroup": "Группа QQ: 1095706752",
-      "qqDescription": "Для китайскоязычных пользователей: общение, обратная связь и быстрый контакт.",
-      "copy": "Скопировать номер",
+      "discordDescription": "Обновления, анонсы и ранние обсуждения.",
+      "discordAction": "В Discord",
+      "qqGroup": "QQ: 1095706752",
+      "qqDescription": "Китайское сообщество и обратная связь.",
+      "copy": "Копировать",
       "copied": "Скопировано"
     },
     "copyright": "© {{year}} Lingo."

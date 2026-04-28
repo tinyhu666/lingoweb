@@ -1,15 +1,12 @@
-import { useState } from 'react'
 import { motion } from 'motion/react'
 import { Keyboard, MessageSquareText, Send } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import AnimatedSection from '@/components/ui/AnimatedSection'
-import GlassCard from '@/components/ui/GlassCard'
-import { cn } from '@/lib/cn'
 
 const STEP_KEYS = [
-  { key: 'select', icon: MessageSquareText },
-  { key: 'hotkey', icon: Keyboard },
-  { key: 'paste', icon: Send },
+  { key: 'select', icon: MessageSquareText, keycap: 'TYPE' },
+  { key: 'hotkey', icon: Keyboard, keycap: 'CTRL' },
+  { key: 'paste', icon: Send, keycap: 'SEND' },
 ] as const
 
 function HowItWorks() {
@@ -17,97 +14,72 @@ function HowItWorks() {
 
   return (
     <AnimatedSection id="how-it-works">
-      <section>
-        <span className="section-eyebrow">{t('howItWorks.eyebrow')}</span>
-        <div className="section-header">
-          <h2 className="section-title section-header__title">{t('howItWorks.title')}</h2>
-          <p className="section-copy section-header__copy">{t('howItWorks.subtitle')}</p>
-        </div>
+      <section className="neon-border relative overflow-hidden rounded-[8px] bg-[#050b16]/72 p-5 shadow-[0_34px_90px_rgba(0,0,0,0.32)] sm:p-8">
+        <div className="absolute inset-0 client-grid-surface opacity-40" />
+        <div className="absolute -left-28 top-0 h-72 w-72 rounded-full bg-cyan-400/16 blur-3xl" />
+        <div className="absolute -bottom-32 right-0 h-80 w-80 rounded-full bg-fuchsia-400/16 blur-3xl" />
 
-        <div className="relative mt-10">
-          <motion.div
-            className="absolute left-[12%] right-[12%] top-8 hidden h-px origin-left bg-[linear-gradient(90deg,rgba(37,99,235,0),rgba(37,99,235,0.42),rgba(25,196,207,0.62),rgba(16,185,129,0.42),rgba(16,185,129,0))] lg:block"
-            initial={{ scaleX: 0 }}
-            transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-            viewport={{ once: true }}
-            whileInView={{ scaleX: 1 }}
-          />
+        <div className="relative">
+          <span className="section-eyebrow">{t('howItWorks.eyebrow')}</span>
+          <div className="mt-5 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+            <h2 className="section-title max-w-[12ch]">{t('howItWorks.title')}</h2>
+            <p className="max-w-[24rem] text-sm leading-7 text-cyan-50/62">{t('howItWorks.subtitle')}</p>
+          </div>
 
-          <div className="grid gap-5 lg:grid-cols-3">
-            {STEP_KEYS.map((step, index) => (
-              <StepCard index={index} key={step.key} step={step} />
-            ))}
+          <div className="relative mt-10 grid gap-4 lg:grid-cols-3">
+            <motion.div
+              aria-hidden="true"
+              className="absolute left-[10%] right-[10%] top-14 hidden h-px origin-left bg-[linear-gradient(90deg,rgba(36,217,255,0),rgba(36,217,255,0.7),rgba(183,66,255,0.7),rgba(255,188,92,0))] lg:block"
+              initial={{ scaleX: 0 }}
+              transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+              viewport={{ once: true }}
+              whileInView={{ scaleX: 1 }}
+            />
+
+            {STEP_KEYS.map((step, index) => {
+              const Icon = step.icon
+
+              return (
+                <motion.div
+                  className="relative"
+                  initial={{ opacity: 0, y: 24 }}
+                  key={step.key}
+                  transition={{ duration: 0.55, delay: 0.1 * index, ease: [0.22, 1, 0.36, 1] }}
+                  viewport={{ once: true, amount: 0.4 }}
+                  whileInView={{ opacity: 1, y: 0 }}>
+                  <motion.div
+                    className="neon-border relative h-full overflow-hidden rounded-[8px] bg-black/26 p-5 backdrop-blur-xl"
+                    whileHover={{ y: -6, scale: 1.01 }}
+                    transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}>
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(36,217,255,0.14),transparent_62%)] opacity-80" />
+                    <div className="relative">
+                      <motion.div
+                        animate={{ y: [0, -6, 0] }}
+                        className="arcade-key mx-auto flex h-24 w-full max-w-[12rem] items-center justify-center rounded-[8px] text-center"
+                        transition={{ duration: 2.8, delay: index * 0.22, repeat: Infinity, ease: 'easeInOut' }}>
+                        <span className="font-display text-2xl font-black tracking-[0.08em] text-white">{step.keycap}</span>
+                      </motion.div>
+
+                      <div className="mt-6 flex items-center gap-3">
+                        <span className="flex h-11 w-11 items-center justify-center rounded-[8px] border border-cyan-200/16 bg-cyan-300/10 text-cyan-100">
+                          <Icon className="h-5 w-5" />
+                        </span>
+                        <div>
+                          <div className="text-[0.62rem] font-black uppercase tracking-[0.16em] text-cyan-100/58">
+                            {String(index + 1).padStart(2, '0')}
+                          </div>
+                          <h3 className="font-display text-xl font-black text-white">{t(`howItWorks.steps.${step.key}.title`)}</h3>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                </motion.div>
+              )
+            })}
           </div>
         </div>
       </section>
     </AnimatedSection>
-  )
-}
-
-function StepCard({ index, step }: { index: number; step: (typeof STEP_KEYS)[number] }) {
-  const { t } = useTranslation()
-  const [isHovering, setIsHovering] = useState(false)
-  const Icon = step.icon
-
-  return (
-    <motion.div
-      className="relative z-10"
-      initial={{ opacity: 0, y: 24 }}
-      transition={{ duration: 0.55, delay: 0.08 * index, ease: [0.22, 1, 0.36, 1] }}
-      viewport={{ once: true, amount: 0.2 }}
-      whileInView={{ opacity: 1, y: 0 }}>
-      <motion.div
-        className="relative h-full"
-        onHoverEnd={() => setIsHovering(false)}
-        onHoverStart={() => setIsHovering(true)}
-        transition={{ duration: 0.24, ease: [0.22, 1, 0.36, 1] }}
-        whileHover={{ y: -4 }}>
-        <motion.div
-          aria-hidden="true"
-          animate={{
-            opacity: isHovering ? 0.5 : 0.12,
-            scale: isHovering ? 1.04 : 0.88,
-            y: isHovering ? 2 : 8,
-          }}
-          className="pointer-events-none absolute inset-x-8 bottom-2 h-14 rounded-[8px] bg-blue-300/22 blur-2xl"
-          transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
-        />
-        <GlassCard
-          className={cn(
-            'relative h-full overflow-hidden p-6 sm:p-7 transition duration-300',
-            isHovering && 'shadow-[0_24px_64px_rgba(3,8,18,0.42)]',
-          )}>
-          <motion.div
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-blue-300/80 to-transparent"
-            animate={{ opacity: isHovering ? 0.95 : 0.36, scaleX: isHovering ? 1 : 0.7 }}
-            transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
-          />
-          <div className="relative">
-            <div className="flex items-center gap-4">
-              <motion.div
-                animate={{ scale: isHovering ? 1.06 : 1 }}
-                className="flex h-16 w-16 items-center justify-center rounded-[8px] border border-blue-200 bg-[linear-gradient(180deg,#3b82f6_0%,#2563eb_54%,#1d4ed8_100%)] text-xl font-extrabold text-white"
-                transition={{ duration: 0.24, ease: [0.22, 1, 0.36, 1] }}>
-                {String(index + 1).padStart(2, '0')}
-              </motion.div>
-              <motion.div
-                animate={{ scale: isHovering ? 1.08 : 1, opacity: isHovering ? 1 : 0.7 }}
-                className="flex h-10 w-10 items-center justify-center rounded-[8px] border border-cyan-200 bg-[#effcfc] text-[#007f91]"
-                transition={{ duration: 0.24, ease: [0.22, 1, 0.36, 1] }}>
-                <Icon className="h-5 w-5" />
-              </motion.div>
-            </div>
-            <h3 className="mt-6 font-display text-2xl font-extrabold text-slate-950">
-              {t(`howItWorks.steps.${step.key}.title`)}
-            </h3>
-            <p className="mt-4 text-sm leading-7 text-slate-600">
-              {t(`howItWorks.steps.${step.key}.description`)}
-            </p>
-          </div>
-        </GlassCard>
-      </motion.div>
-    </motion.div>
   )
 }
 
