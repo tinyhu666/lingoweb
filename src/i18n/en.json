@@ -1,8 +1,8 @@
 {
   "meta": {
-    "title": "Lingo - In-Game Chat Translation Assistant",
-    "description": "Lingo helps translate the message you are about to send in game chat into clearer Chinese, English, or Russian while keeping game context intact.",
-    "keywords": "in-game chat translation assistant, game chat translator, multiplayer chat translation, game communication assistant, team message translator, Dota 2 translator, League of Legends translator, World of Warcraft translator, Overwatch 2 translator"
+    "title": "Lingo - Game Chat Translation Assistant",
+    "description": "Lingo is an AI-powered desktop client that translates the message you are about to send in game chat into clearer Chinese, English, or Russian while keeping game context intact.",
+    "keywords": "game chat translation assistant, AI game translator, game chat translator, multiplayer chat translation, game communication assistant, team message translator, Dota 2 translator, League of Legends translator, World of Warcraft translator, Overwatch 2 translator"
   },
   "brand": {
     "name": "Lingo",
@@ -29,9 +29,9 @@
     }
   },
   "hero": {
-    "badge": "Lingo game chat translation assistant",
-    "title": "In-Game Chat\nTranslation Assistant",
-    "subtitle": "Translate the message you are about to send in game chat into natural Chinese, English, or Russian, keeping common game terms and tone ready for your review.",
+    "badge": "AI-powered game chat translation assistant",
+    "title": "Game Chat\nTranslation Assistant",
+    "subtitle": "The desktop client uses AI to understand game context and translate the message you are about to send into natural Chinese, English, or Russian.",
     "downloadMac": "Download for macOS",
     "downloadWindows": "Download for Windows",
     "macLabel": "macOS",
@@ -42,7 +42,7 @@
     "supportLine": "Built for multiplayer games where text chat matters.",
     "quickFacts": {
       "release": "Focus",
-      "releaseValue": "Translation helper",
+      "releaseValue": "AI translation helper",
       "delivery": "Download",
       "deliveryValue": "Official mirror",
       "requirements": "Systems",
@@ -50,12 +50,12 @@
     },
     "signals": {
       "beforeSend": "Before-send translation",
-      "gameContext": "Game context",
+      "gameContext": "AI context",
       "languages": "ZH / EN / RU"
     },
     "mockup": {
       "eyebrow": "In-game chat",
-      "title": "Translate, review, then send",
+      "title": "AI translates, you review",
       "body": "Turns retreat, group, smoke, and cooldown calls into natural lines that fit the chat box.",
       "translateChip": "Term-aware",
       "chatChip": "Natural tone",
@@ -99,7 +99,7 @@
   "features": {
     "eyebrow": "Core experience",
     "title": "Make your chat line clear before it leaves.",
-    "subtitle": "Lingo works on the message you are preparing to send: understand the game context, translate the line, then leave final review to you.",
+    "subtitle": "Lingo uses AI in the desktop client to work on the message you are preparing to send: understand the game context, translate the line, then leave final review to you.",
     "stageLabel": "Message preview",
     "stageSteps": {
       "input": "Input",
@@ -114,8 +114,8 @@
       },
       "server": {
         "metric": "AI",
-        "title": "Game-aware context",
-        "description": "Keeps the intent of common calls like BKB, smoke, focus, retreat, and regroup."
+        "title": "AI game context",
+        "description": "AI helps keep the intent of common calls like BKB, smoke, focus, retreat, and regroup."
       },
       "phrases": {
         "metric": "Short",
@@ -140,7 +140,7 @@
       "goTo": "Switch to {{game}}"
     },
     "noteLabel": "Best fit",
-    "note": "Use it as a before-send translation assistant for multiplayer text chat.",
+    "note": "Use it as an AI translation assistant before you send text chat in multiplayer games.",
     "items": {
       "dota2": {
         "name": "Dota 2",
@@ -173,7 +173,7 @@
       "translate": {
         "keycap": "AI",
         "title": "Generate the translation",
-        "description": "Lingo translates and cleans up the phrasing so it feels natural in game chat."
+        "description": "Lingo uses AI to translate and clean up the phrasing so it feels natural in game chat."
       },
       "paste": {
         "keycap": "SEND",
@@ -210,7 +210,7 @@
     }
   },
   "footer": {
-    "tagline": "Translate the game chat message you are about to send into clearer team communication.",
+    "tagline": "Use AI to translate the game chat message you are about to send into clearer team communication.",
     "version": "Official installer",
     "product": {
       "title": "Explore",
