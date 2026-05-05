@@ -1,8 +1,8 @@
 {
   "meta": {
-    "title": "Lingo - 免费游戏聊天 AI 翻译工具",
-    "description": "Lingo 是面向 Windows 和 macOS 的免费游戏聊天翻译工具。输入你想发送的队伍指令，按下热键，把中文、英文、俄文沟通整理得更自然。",
-    "keywords": "免费游戏聊天翻译, AI 游戏翻译, 游戏聊天翻译, 开黑翻译, 游戏热键翻译, Dota 2 翻译, 英雄联盟翻译, 魔兽世界翻译, 守望先锋 2 翻译"
+    "title": "Lingo - 游戏内聊天 AI 翻译工具",
+    "description": "Lingo 是面向 Windows 和 macOS 的游戏内聊天 AI 翻译工具。把你准备发送到聊天框的队伍消息，整理成更自然的中文、英文或俄文表达。",
+    "keywords": "游戏内聊天 AI 翻译, AI 游戏翻译, 游戏聊天翻译, 游戏沟通翻译, 多人游戏聊天翻译, Dota 2 翻译, 英雄联盟翻译, 魔兽世界翻译, 守望先锋 2 翻译"
   },
   "brand": {
     "name": "Lingo",
@@ -29,11 +29,11 @@
     }
   },
   "hero": {
-    "badge": "免费使用 · v{{version}}",
-    "title": "开黑翻译工具",
-    "subtitle": "把你要发的队伍指令，快速翻成更自然的英文、中文或俄文。少切窗口，少纠结用词，把注意力留在游戏里。",
-    "downloadMac": "下载 macOS 版",
-    "downloadWindows": "下载 Windows 版",
+    "badge": "Lingo 游戏沟通助手",
+    "title": "游戏内聊天\nAI 翻译",
+    "subtitle": "把准备发送到聊天框的队伍消息，翻译成更自然的中文、英文或俄文；术语、语气和节奏都贴合游戏场景，确认后再由你发送。",
+    "downloadMac": "获取 macOS 版",
+    "downloadWindows": "获取 Windows 版",
     "macLabel": "macOS",
     "windowsLabel": "Windows",
     "recommended": "推荐",
@@ -41,29 +41,32 @@
     "windowsDetail": "EXE 安装器",
     "supportLine": "为需要频繁打字沟通的多人游戏准备。",
     "quickFacts": {
-      "release": "版本",
-      "releaseValue": "v{{version}}",
+      "release": "定位",
+      "releaseValue": "聊天翻译",
       "delivery": "下载",
       "deliveryValue": "官方镜像",
       "requirements": "系统",
       "requirementsValue": "Win / macOS"
     },
+    "signals": {
+      "beforeSend": "发送前翻译",
+      "gameContext": "游戏语境",
+      "languages": "中英俄互译"
+    },
     "mockup": {
-      "eyebrow": "聊天翻译",
-      "title": "翻译，回填，继续打",
+      "eyebrow": "游戏内聊天",
+      "title": "先翻译，再确认发送",
       "body": "把撤退、集合、开雾、等技能这类游戏语境，整理成可以直接发送的自然表达。",
       "translateChip": "术语友好",
       "chatChip": "表达自然",
       "sourceLabel": "输入",
       "source": "先别冲，等我 BKB 好了再打。",
-      "hotkeyAction": "按下热键",
       "resultLabel": "结果",
       "result": "Don't force yet. Wait for my BKB, then we fight.",
       "chatLabel": "聊天框",
       "chatDraft": "Don't force yet. Wait for my BKB, then we fight.",
       "chatReady": "可发送",
       "server": "AI",
-      "hotkey": "热键发送",
       "phrases": "快捷短语",
       "languages": "中 / 英 / 俄",
       "sideTitle": "发送前最后整理",
@@ -74,8 +77,9 @@
       "statSecondaryValue": "3 种"
     },
     "cockpit": {
-      "live": "演示",
-      "hotkeyReady": "热键已就绪",
+      "live": "实时预览",
+      "reviewReady": "结果待确认",
+      "sendControl": "由你发送",
       "rows": {
         "hold": {
           "source": "先别冲，等我大招",
@@ -94,8 +98,8 @@
   },
   "features": {
     "eyebrow": "核心体验",
-    "title": "让开黑沟通\n少一点卡壳。",
-    "subtitle": "Lingo 专注处理你准备发送的话：翻译、整理措辞，再交给你确认发送。",
+    "title": "发送前，把队伍消息说清楚。",
+    "subtitle": "Lingo 专注处理你准备发送的游戏聊天：理解语境、翻译表达，再交给你确认发送。",
     "stageLabel": "消息预览",
     "stageSteps": {
       "input": "输入",
@@ -104,9 +108,9 @@
     },
     "items": {
       "instant": {
-        "metric": "Ctrl",
-        "title": "热键触发",
-        "description": "需要发送时按一下，减少切窗口和反复改词。"
+        "metric": "快",
+        "title": "即时翻译",
+        "description": "输入想表达的意思，快速得到适合聊天框的译文。"
       },
       "server": {
         "metric": "AI",
@@ -114,21 +118,21 @@
         "description": "尽量保留 BKB、开雾、集火这类队伍指令的意思。"
       },
       "phrases": {
-        "metric": "GG",
-        "title": "短句更顺",
-        "description": "撤退、集合、等技能、准备开团，常用沟通更适合聊天框。"
+        "metric": "短",
+        "title": "短句优化",
+        "description": "撤退、集合、等技能、准备开团，常用沟通会被压缩得更清楚。"
       },
       "languages": {
-        "metric": "3x",
-        "title": "中英俄沟通",
+        "metric": "3语",
+        "title": "中英俄互译",
         "description": "适合混合语言队伍，把自己的消息说得更清楚。"
       }
     }
   },
   "supportedGames": {
     "eyebrow": "适用游戏",
-    "title": "适合需要打字沟通的\n多人游戏。",
-    "subtitle": "不是绑定某一款游戏。只要你需要把自己的消息发给不同语言的队友，Lingo 就能派上用场。",
+    "title": "适合需要文字沟通的\n多人游戏。",
+    "subtitle": "不是绑定某一款游戏。只要你需要把自己的消息发给不同语言的队友，Lingo 就能成为发送前的 AI 翻译助手。",
     "chatBadge": "发送前",
     "controls": {
       "previous": "上一组",
@@ -136,7 +140,7 @@
       "goTo": "切换到 {{game}}"
     },
     "noteLabel": "适用场景",
-    "note": "有文字聊天的多人游戏，都可以把 Lingo 当作发送前的翻译助手。",
+    "note": "有文字聊天的多人游戏，都可以把 Lingo 当作发送前的 AI 翻译助手。",
     "items": {
       "dota2": {
         "name": "Dota 2",
@@ -159,16 +163,16 @@
   "howItWorks": {
     "eyebrow": "使用流程",
     "title": "三步完成\n一次发送。",
-    "subtitle": "输入原句，触发翻译，再把结果发到聊天框。",
+    "subtitle": "输入原句，生成译文，再把结果发到聊天框。",
     "steps": {
       "select": {
         "keycap": "输入",
         "title": "写下原句",
         "description": "先输入你准备发给队友的内容，可以是中文、英文或俄文。"
       },
-      "hotkey": {
-        "keycap": "热键",
-        "title": "按下热键",
+      "translate": {
+        "keycap": "翻译",
+        "title": "生成译文",
         "description": "Lingo 会翻译并整理措辞，让结果更像游戏聊天里的表达。"
       },
       "paste": {
@@ -180,10 +184,10 @@
   },
   "download": {
     "eyebrow": "下载",
-    "title": "免费下载，下一局就能用。",
-    "subtitle": "官方安装包通过腾讯云镜像分发，下载更稳定。",
+    "title": "下载 Lingo，下一局开始使用。",
+    "subtitle": "官方安装包通过腾讯云镜像分发，Windows 与 macOS 均可获取。",
     "recommended": "当前设备推荐",
-    "latestRelease": "当前版本 v{{version}}",
+    "latestRelease": "最新安装包",
     "showAll": "查看全部下载",
     "requirementsTitle": "系统要求",
     "requirements": {
@@ -206,8 +210,8 @@
     }
   },
   "footer": {
-    "tagline": "把你准备发送的游戏聊天内容，快速翻成更自然的队伍沟通。",
-    "version": "当前版本 v{{version}}",
+    "tagline": "把准备发送的游戏聊天内容，翻译成更自然的队伍沟通。",
+    "version": "官方安装包",
     "product": {
       "title": "浏览",
       "features": "核心体验",

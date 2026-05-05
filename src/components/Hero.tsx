@@ -1,6 +1,6 @@
 import { useMemo, type ReactNode } from 'react'
 import { motion, useMotionValue, useSpring, useTransform } from 'motion/react'
-import { ArrowRight, CheckCircle2, Download, Gamepad2, Keyboard, Languages, MousePointer2, Sparkles } from 'lucide-react'
+import { ArrowRight, CheckCircle2, Download, Gamepad2, Languages, MessageSquareText, MousePointer2 } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import Button from '@/components/ui/Button'
 import BrandLogo from '@/components/ui/BrandLogo'
@@ -14,7 +14,6 @@ type HeroProps = {
     windows: string
   }
   preferredPlatform: PlatformId
-  version: string
 }
 
 const CHAT_ROWS = [
@@ -23,7 +22,7 @@ const CHAT_ROWS = [
   { key: 'together', from: 'RU', to: 'EN' },
 ] as const
 
-function Hero({ downloads, preferredPlatform, version }: HeroProps) {
+function Hero({ downloads, preferredPlatform }: HeroProps) {
   const { i18n, t } = useTranslation()
   const titleLines = useMemo(() => getHeroTitleLines(t('hero.title'), i18n.resolvedLanguage), [i18n.resolvedLanguage, t])
   const primaryPlatform: Exclude<PlatformId, 'unknown'> = preferredPlatform === 'macos' ? 'macos' : 'windows'
@@ -51,11 +50,8 @@ function Hero({ downloads, preferredPlatform, version }: HeroProps) {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}>
           <div className="mb-6 flex flex-wrap items-center gap-3">
             <span className="section-eyebrow shadow-[0_0_34px_rgba(36,217,255,0.16)]">
-              <Sparkles className="h-3.5 w-3.5" />
-              {t('hero.badge', { version })}
-            </span>
-            <span className="hidden rounded-full bg-white/8 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.12em] text-white/70 backdrop-blur-md sm:inline-flex">
-              Ctrl + Shift + L
+              <MessageSquareText className="h-3.5 w-3.5" />
+              {t('hero.badge')}
             </span>
           </div>
 
@@ -71,14 +67,6 @@ function Hero({ downloads, preferredPlatform, version }: HeroProps) {
 
           <div className="mt-9 grid max-w-[35rem] gap-3 sm:grid-cols-2">
             <HeroDownloadAction
-              href={downloads.macos}
-              icon={<ArrowRight className="h-4 w-4" />}
-              label={t('hero.downloadMac')}
-              preferred={primaryPlatform === 'macos'}
-              recommendedLabel={t('hero.recommended')}
-              variant={primaryPlatform === 'macos' ? 'primary' : 'secondary'}
-            />
-            <HeroDownloadAction
               href={downloads.windows}
               icon={<Download className="h-4 w-4" />}
               label={t('hero.downloadWindows')}
@@ -86,12 +74,20 @@ function Hero({ downloads, preferredPlatform, version }: HeroProps) {
               recommendedLabel={t('hero.recommended')}
               variant={primaryPlatform === 'windows' ? 'primary' : 'secondary'}
             />
+            <HeroDownloadAction
+              href={downloads.macos}
+              icon={<ArrowRight className="h-4 w-4" />}
+              label={t('hero.downloadMac')}
+              preferred={primaryPlatform === 'macos'}
+              recommendedLabel={t('hero.recommended')}
+              variant={primaryPlatform === 'macos' ? 'primary' : 'secondary'}
+            />
           </div>
 
           <div className="mt-8 grid max-w-[34rem] grid-cols-3 gap-2">
-            <HeroSignal icon={<Languages className="h-4 w-4" />} label={t('hero.quickFacts.releaseValue', { version })} />
-            <HeroSignal icon={<Keyboard className="h-4 w-4" />} label={t('hero.mockup.hotkey')} />
-            <HeroSignal icon={<Gamepad2 className="h-4 w-4" />} label={t('hero.mockup.languages')} />
+            <HeroSignal icon={<MessageSquareText className="h-4 w-4" />} label={t('hero.signals.beforeSend')} />
+            <HeroSignal icon={<Gamepad2 className="h-4 w-4" />} label={t('hero.signals.gameContext')} />
+            <HeroSignal icon={<Languages className="h-4 w-4" />} label={t('hero.signals.languages')} />
           </div>
         </motion.div>
 
@@ -211,9 +207,9 @@ function HeroCockpit() {
             transition={{ duration: 2.8, repeat: Infinity, ease: 'easeInOut' }}>
             <span className="flex items-center gap-2 text-xs font-black uppercase tracking-[0.14em] text-white/82">
               <MousePointer2 className="h-4 w-4 text-amber-200" />
-              {t('hero.cockpit.hotkeyReady')}
+              {t('hero.cockpit.reviewReady')}
             </span>
-            <span className="text-sm font-black text-cyan-100">Ctrl Shift L</span>
+            <span className="text-sm font-black text-cyan-100">{t('hero.cockpit.sendControl')}</span>
           </motion.div>
         </div>
       </motion.div>
@@ -222,6 +218,10 @@ function HeroCockpit() {
 }
 
 function getHeroTitleLines(title: string, language?: string) {
+  if (title.includes('\n')) {
+    return title.split('\n').filter(Boolean)
+  }
+
   if (language?.startsWith('zh') && title.length > 4) {
     return [title.slice(0, 4), title.slice(4)]
   }

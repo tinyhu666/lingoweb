@@ -5,15 +5,11 @@ import Button from '@/components/ui/Button'
 import BrandLogo from '@/components/ui/BrandLogo'
 import { DISCORD_URL, NAV_SECTIONS, QQ_GROUP_ID } from '@/lib/constants'
 
-type FooterProps = {
-  version: string
-}
-
 function getSectionHref(key: (typeof NAV_SECTIONS)[number]['key']) {
   return NAV_SECTIONS.find((section) => section.key === key)?.href ?? '#'
 }
 
-function Footer({ version }: FooterProps) {
+function Footer() {
   const { t } = useTranslation()
   const year = new Date().getFullYear()
   const [copied, setCopied] = useState(false)
@@ -38,7 +34,6 @@ function Footer({ version }: FooterProps) {
           <div>
             <BrandLogo className="h-[3.25rem] brightness-125 drop-shadow-[0_0_22px_rgba(36,217,255,0.18)]" />
             <p className="mt-5 max-w-sm text-sm leading-7 text-cyan-50/62">{t('footer.tagline')}</p>
-            <p className="mt-5 text-sm font-bold text-cyan-50/86">{t('footer.version', { version })}</p>
           </div>
 
           <div>

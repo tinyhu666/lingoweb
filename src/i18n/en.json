@@ -1,8 +1,8 @@
 {
   "meta": {
-    "title": "Lingo - Free AI Game Chat Translator",
-    "description": "Lingo helps you translate the message you are about to send in game chat. Use a hotkey on Windows or macOS to turn short callouts into clear Chinese, English, or Russian.",
-    "keywords": "free game chat translator, AI game translator, game chat translation, gaming hotkey translator, multiplayer chat translator, Dota 2 translator, League of Legends translator, World of Warcraft translator, Overwatch 2 translator"
+    "title": "Lingo - In-Game Chat AI Translator",
+    "description": "Lingo helps translate the message you are about to send in game chat into clearer Chinese, English, or Russian while keeping game context intact.",
+    "keywords": "in-game chat AI translator, AI game translator, game chat translation, multiplayer chat translator, team message translator, Dota 2 translator, League of Legends translator, World of Warcraft translator, Overwatch 2 translator"
   },
   "brand": {
     "name": "Lingo",
@@ -29,11 +29,11 @@
     }
   },
   "hero": {
-    "badge": "Free to use · v{{version}}",
-    "title": "Game Chat Translator",
-    "subtitle": "Type the callout you want to send, hit the hotkey, and get a clearer Chinese, English, or Russian message without leaving the match.",
-    "downloadMac": "Download for macOS",
-    "downloadWindows": "Download for Windows",
+    "badge": "Lingo for game chat",
+    "title": "In-Game Chat\nAI Translator",
+    "subtitle": "Translate the team message you are about to send into natural Chinese, English, or Russian, with game terms and chat tone kept ready for your final review.",
+    "downloadMac": "Get macOS version",
+    "downloadWindows": "Get Windows version",
     "macLabel": "macOS",
     "windowsLabel": "Windows",
     "recommended": "Recommended",
@@ -41,29 +41,32 @@
     "windowsDetail": "EXE installer",
     "supportLine": "Built for multiplayer games where text chat matters.",
     "quickFacts": {
-      "release": "Version",
-      "releaseValue": "v{{version}}",
+      "release": "Focus",
+      "releaseValue": "Chat translation",
       "delivery": "Download",
       "deliveryValue": "Official mirror",
       "requirements": "Systems",
       "requirementsValue": "Win / macOS"
     },
+    "signals": {
+      "beforeSend": "Before-send translation",
+      "gameContext": "Game context",
+      "languages": "ZH / EN / RU"
+    },
     "mockup": {
-      "eyebrow": "Chat translation",
-      "title": "Translate, paste, keep playing",
+      "eyebrow": "In-game chat",
+      "title": "Translate, review, send",
       "body": "Turns retreat, group, smoke, and cooldown calls into natural chat-ready messages.",
       "translateChip": "Term-aware",
       "chatChip": "Natural tone",
       "sourceLabel": "Input",
       "source": "Don't force yet. Wait for my BKB.",
-      "hotkeyAction": "Hit hotkey",
       "resultLabel": "Output",
       "result": "Hold. Wait for my BKB, then we fight.",
       "chatLabel": "Chat box",
       "chatDraft": "Hold. Wait for my BKB, then we fight.",
       "chatReady": "Ready to send",
       "server": "AI",
-      "hotkey": "Hotkey send",
       "phrases": "Quick phrases",
       "languages": "ZH / EN / RU",
       "sideTitle": "One check before send",
@@ -74,8 +77,9 @@
       "statSecondaryValue": "3"
     },
     "cockpit": {
-      "live": "Demo",
-      "hotkeyReady": "Hotkey ready",
+      "live": "Live preview",
+      "reviewReady": "Ready to review",
+      "sendControl": "You send",
       "rows": {
         "hold": {
           "source": "先别冲，等我大招",
@@ -94,8 +98,8 @@
   },
   "features": {
     "eyebrow": "Core experience",
-    "title": "Less friction before you send.",
-    "subtitle": "Lingo focuses on the message you are about to send: translate it, clean up the phrasing, then leave final send control to you.",
+    "title": "Make the message clear before it leaves.",
+    "subtitle": "Lingo focuses on your outgoing game chat: understand the context, translate the line, and leave final send control to you.",
     "stageLabel": "Message preview",
     "stageSteps": {
       "input": "Input",
@@ -104,9 +108,9 @@
     },
     "items": {
       "instant": {
-        "metric": "Ctrl",
-        "title": "Hotkey trigger",
-        "description": "Press once when you need a send-ready line, with less window switching and rewriting."
+        "metric": "Fast",
+        "title": "Instant translation",
+        "description": "Type what you mean and get a chat-ready line without rewriting it again and again."
       },
       "server": {
         "metric": "AI",
@@ -114,12 +118,12 @@
         "description": "Keeps the intent of calls like BKB, smoke, focus, and regroup."
       },
       "phrases": {
-        "metric": "GG",
+        "metric": "Short",
         "title": "Sharper short lines",
-        "description": "Retreat, group, wait, and engage calls become easier to send in a hurry."
+        "description": "Retreat, group, wait, and engage calls become cleaner for fast team chat."
       },
       "languages": {
-        "metric": "3x",
+        "metric": "3L",
         "title": "Chinese, English, Russian",
         "description": "Useful for mixed-language squads when you want your own message to land clearly."
       }
@@ -159,16 +163,16 @@
   "howItWorks": {
     "eyebrow": "Flow",
     "title": "Three steps before you send.",
-    "subtitle": "Type the original line, trigger translation, then send the result in chat.",
+    "subtitle": "Type the original line, generate the translation, then send the result in chat.",
     "steps": {
       "select": {
         "keycap": "TYPE",
         "title": "Type your line",
         "description": "Write the message you want to send to teammates in Chinese, English, or Russian."
       },
-      "hotkey": {
-        "keycap": "CTRL",
-        "title": "Hit the hotkey",
+      "translate": {
+        "keycap": "AI",
+        "title": "Generate the translation",
         "description": "Lingo translates and cleans up the phrasing so it feels natural in game chat."
       },
       "paste": {
@@ -180,10 +184,10 @@
   },
   "download": {
     "eyebrow": "Download",
-    "title": "Free to download, ready for your next match.",
-    "subtitle": "Official installers are delivered through our Tencent Cloud mirror for a steadier download.",
+    "title": "Download Lingo for your next match.",
+    "subtitle": "Official installers are delivered through our Tencent Cloud mirror for Windows and macOS.",
     "recommended": "Best match for your device",
-    "latestRelease": "Current release v{{version}}",
+    "latestRelease": "Latest installer",
     "showAll": "View all downloads",
     "requirementsTitle": "System requirements",
     "requirements": {
@@ -207,7 +211,7 @@
   },
   "footer": {
     "tagline": "Translate the game chat message you are about to send into clearer team communication.",
-    "version": "Current version v{{version}}",
+    "version": "Official installer",
     "product": {
       "title": "Explore",
       "features": "Features",

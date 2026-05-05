@@ -1,11 +1,11 @@
 import { motion } from 'motion/react'
-import { Keyboard, MessageSquareText, Send } from 'lucide-react'
+import { Languages, MessageSquareText, Send } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import AnimatedSection from '@/components/ui/AnimatedSection'
 
 const STEP_KEYS = [
   { key: 'select', icon: MessageSquareText },
-  { key: 'hotkey', icon: Keyboard },
+  { key: 'translate', icon: Languages },
   { key: 'paste', icon: Send },
 ] as const
 
