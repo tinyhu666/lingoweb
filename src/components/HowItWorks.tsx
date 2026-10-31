@@ -1,76 +1,203 @@
-import { motion } from 'motion/react'
-import { Languages, MessageSquareText, Send } from 'lucide-react'
+import { useCallback, useEffect, useRef, useState } from 'react'
+import { Play, ShieldCheck } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import AnimatedSection from '@/components/ui/AnimatedSection'
+import Button from '@/components/ui/Button'
+import Kbd from '@/components/ui/Kbd'
+import SectionHeading from '@/components/ui/SectionHeading'
+import panoramaImage from '@/assets/backdrops/tutorial-panorama.jpg'
+import { getTranslationHotkey, type PlatformId } from '@/lib/platform'
+import { cn } from '@/lib/cn'
 
-const STEP_KEYS = [
-  { key: 'select', icon: MessageSquareText },
-  { key: 'translate', icon: Languages },
-  { key: 'paste', icon: Send },
-] as const
+type Step = { title: string; desc: string }
+type LogLine = { who: string; text: string; tone: 'ally' | 'enemy' }
 
-function HowItWorks() {
+const prefersReducedMotion = () =>
+  typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches
+
+/** The client's tutorial page: three steps on the left, a replayable stage on the right. */
+function HowItWorks({ preferredPlatform }: { preferredPlatform: PlatformId }) {
   const { t } = useTranslation()
+  const hotkeyKeys = getTranslationHotkey(preferredPlatform)
+  const steps = t('howItWorks.steps', { returnObjects: true }) as unknown as Step[]
+  const log = t('howItWorks.log', { returnObjects: true }) as unknown as LogLine[]
+
+  const [activeStep, setActiveStep] = useState(-1)
+  const [doneSteps, setDoneSteps] = useState(0)
+  const [playing, setPlaying] = useState(false)
+  const [typed, setTyped] = useState('')
+  const [boxState, setBoxState] = useState('')
+  const [keysVisible, setKeysVisible] = useState(false)
+  const [keyMessage, setKeyMessage] = useState('')
+  const [pressed, setPressed] = useState<number[]>([])
+  const runRef = useRef(0)
+  const playingRef = useRef(false)
+  const stageRef = useRef<HTMLDivElement>(null)
+
+  const play = useCallback(async () => {
+    if (playingRef.current) {
+      return
+    }
+    const token = runRef.current + 1
+    runRef.current = token
+    const alive = () => runRef.current === token
+    const reduce = prefersReducedMotion()
+    const wait = (ms: number) => new Promise<void>((resolve) => window.setTimeout(resolve, reduce ? 0 : ms))
+    const typeText = async (text: string, ms: number) => {
+      if (reduce) {
+        setTyped(text)
+        return
+      }
+      setTyped('')
+      for (let index = 1; index <= text.length; index += 1) {
+        if (!alive()) {
+          return
+        }
+        setTyped(text.slice(0, index))
+        await wait(ms)
+      }
+    }
+
+    playingRef.current = true
+    setPlaying(true)
+    setDoneSteps(0)
+    setBoxState('')
+    setKeysVisible(false)
+    setPressed([])
+
+    try {
+      setActiveStep(0)
+      await wait(400)
+      await typeText(t('howItWorks.mockText'), 80)
+      if (!alive()) return
+      await wait(700)
+
+      setActiveStep(1)
+      setDoneSteps(1)
+      setKeyMessage(t('howItWorks.pressingKeys'))
+      setKeysVisible(true)
+      await wait(400)
+      setPressed([0])
+      await wait(120)
+      setPressed([0, hotkeyKeys.length - 1])
+      await wait(260)
+      setPressed([])
+      setKeyMessage(t('howItWorks.translating'))
+      setBoxState('rec shimmer')
+      await wait(1400)
+      if (!alive()) return
+
+      setActiveStep(2)
+      setDoneSteps(2)
+      setBoxState('rec flash')
+      setKeyMessage(t('howItWorks.doneSend'))
+      await typeText(t('howItWorks.resultText'), 20)
+      if (!alive()) return
+      await wait(600)
+      setBoxState('')
+      await wait(1400)
+      setKeysVisible(false)
+      setDoneSteps(3)
+      setActiveStep(-1)
+    } finally {
+      if (alive()) {
+        playingRef.current = false
+        setPlaying(false)
+      }
+    }
+  }, [hotkeyKeys.length, t])
+
+  // Autoplay once when the stage scrolls into view.
+  useEffect(() => {
+    const node = stageRef.current
+    if (!node || typeof IntersectionObserver === 'undefined') {
+      return
+    }
+    let fired = false
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !fired) {
+          fired = true
+          observer.disconnect()
+          void play()
+        }
+      },
+      { threshold: 0.45 },
+    )
+    observer.observe(node)
+
+    return () => {
+      observer.disconnect()
+      runRef.current += 1
+      playingRef.current = false
+    }
+  }, [play])
+
+  const boxClass = cn('tutorial__box', ...boxState.split(' ').filter(Boolean).map((state) => `tutorial__box--${state}`))
 
   return (
     <AnimatedSection id="how-it-works">
-      <section className="relative overflow-hidden rounded-[32px] bg-[#050b16]/56 p-5 shadow-[0_34px_90px_rgba(0,0,0,0.28),0_0_90px_rgba(183,66,255,0.08)] sm:p-8">
-        <div className="absolute inset-0 client-grid-surface opacity-75" />
-        <div className="absolute -left-28 top-0 h-72 w-72 rounded-full bg-cyan-400/14 blur-3xl" />
-        <div className="absolute -bottom-32 right-0 h-80 w-80 rounded-full bg-fuchsia-400/14 blur-3xl" />
+      <div className="page-shell">
+        <SectionHeading
+          aside={
+            <Button disabled={playing} onClick={() => void play()} variant="secondary">
+              <Play />
+              {t('howItWorks.play')}
+            </Button>
+          }
+          eyebrow={t('howItWorks.eyebrow')}
+          subtitle={t('howItWorks.subtitle')}
+          title={t('howItWorks.title')}
+        />
 
-        <div className="relative">
-          <span className="section-eyebrow">{t('howItWorks.eyebrow')}</span>
-          <div className="mt-5 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-            <h2 className="section-title max-w-[12ch] whitespace-pre-line [word-break:keep-all]">{t('howItWorks.title')}</h2>
-            <p className="max-w-[24rem] text-sm leading-7 text-cyan-50/62">{t('howItWorks.subtitle')}</p>
+        <div className="mt-10 grid gap-4 lg:grid-cols-[21rem_minmax(0,1fr)]">
+          <div className="flex flex-col gap-3">
+            {steps.map((step, index) => (
+              <div className={cn('tutorial__step', activeStep === index && 'tutorial__step--on', doneSteps > index && activeStep !== index && 'tutorial__step--done')} key={step.title}>
+                <span className="tutorial__num">{index + 1}</span>
+                <div>
+                  <h4>{step.title}</h4>
+                  <p>{step.desc}</p>
+                </div>
+              </div>
+            ))}
+            <div className="tutorial__step mt-1">
+              <span className="icon-tile bg-ok/14 text-ok">
+                <ShieldCheck />
+              </span>
+              <div>
+                <h4>{t('howItWorks.safety.title')}</h4>
+                <p>{t('howItWorks.safety.desc')}</p>
+              </div>
+            </div>
           </div>
 
-          <div className="relative mt-10 grid gap-5 lg:grid-cols-3">
-            {STEP_KEYS.map((step, index) => {
-              const Icon = step.icon
-
-              return (
-                <motion.div
-                  className="relative min-h-[16rem]"
-                  initial={{ opacity: 1, y: 0 }}
-                  key={step.key}
-                  transition={{ duration: 0.55, delay: 0.1 * index, ease: [0.22, 1, 0.36, 1] }}>
-                  <motion.div
-                    className="relative h-full overflow-hidden rounded-[26px] bg-white/[0.035] p-5 backdrop-blur-xl"
-                    whileHover={{ y: -6, scale: 1.01 }}
-                    transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}>
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_8%,rgba(36,217,255,0.14),transparent_58%)] opacity-80" />
-                    <div className="relative">
-                      <motion.div
-                        animate={{ y: [0, -6, 0] }}
-                        className="mx-auto flex h-24 w-full max-w-[12rem] items-center justify-center rounded-[24px] bg-[linear-gradient(180deg,rgba(36,217,255,0.2),rgba(93,92,255,0.08))] text-center shadow-[0_24px_54px_rgba(0,0,0,0.28),0_0_34px_rgba(36,217,255,0.12)]"
-                        transition={{ duration: 2.8, delay: index * 0.22, repeat: Infinity, ease: 'easeInOut' }}>
-                        <span className="font-display text-2xl font-black tracking-[0.08em] text-white">
-                          {t(`howItWorks.steps.${step.key}.keycap`)}
-                        </span>
-                      </motion.div>
-
-                      <div className="mt-6 flex items-center gap-3">
-                        <span className="flex h-11 w-11 items-center justify-center rounded-full bg-cyan-300/10 text-cyan-100">
-                          <Icon className="h-5 w-5" />
-                        </span>
-                        <div>
-                          <div className="text-[0.62rem] font-black uppercase tracking-[0.16em] text-cyan-100/58">
-                            {String(index + 1).padStart(2, '0')}
-                          </div>
-                          <h3 className="font-display text-xl font-black text-white">{t(`howItWorks.steps.${step.key}.title`)}</h3>
-                        </div>
-                      </div>
-                      <p className="mt-4 text-sm leading-6 text-cyan-50/58">{t(`howItWorks.steps.${step.key}.description`)}</p>
-                    </div>
-                  </motion.div>
-                </motion.div>
-              )
-            })}
+          <div aria-hidden="true" className="tutorial__stage" ref={stageRef} style={{ backgroundImage: `url(${panoramaImage})` }}>
+            <div className="tutorial__hud">
+              <span>{t('howItWorks.hud.score')}</span>
+              <span>
+                {t('howItWorks.hud.clock')} · <b>{t('howItWorks.hud.roshan')}</b>
+              </span>
+            </div>
+            <div className="tutorial__log">
+              {log.map((line) => (
+                <div key={`${line.who}${line.text}`}>
+                  <span className={line.tone}>{line.who}</span> {line.text}
+                </div>
+              ))}
+            </div>
+            <div className={boxClass}>
+              <span className="ch">{t('howItWorks.channel')}</span>
+              <span className="whitespace-pre">{typed}</span>
+              <span className="stage__caret" />
+            </div>
+            <div className={cn('tutorial__keys', keysVisible && 'tutorial__keys--on')}>
+              <Kbd keys={hotkeyKeys} pressed={pressed} size="sm" />
+              <span>{keyMessage}</span>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
     </AnimatedSection>
   )
 }

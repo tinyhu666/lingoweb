@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { motion } from 'motion/react'
+import { motion, useReducedMotion } from 'motion/react'
 import { cn } from '@/lib/cn'
 
 type AnimatedSectionProps = {
@@ -10,16 +10,18 @@ type AnimatedSectionProps = {
 }
 
 function AnimatedSection({ children, className, delay = 0, id }: AnimatedSectionProps) {
+  const reduceMotion = useReducedMotion()
+
   return (
-    <motion.div
+    <motion.section
       className={cn('section-shell', className)}
       id={id}
-      initial={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.55, delay, ease: [0.22, 1, 0.36, 1] }}
-      viewport={{ once: true, amount: 0.2 }}
+      initial={reduceMotion ? false : { opacity: 0, y: 18 }}
+      transition={{ duration: 0.55, delay, ease: [0.2, 0.8, 0.2, 1] }}
+      viewport={{ once: true, amount: 0.15 }}
       whileInView={{ opacity: 1, y: 0 }}>
       {children}
-    </motion.div>
+    </motion.section>
   )
 }
 

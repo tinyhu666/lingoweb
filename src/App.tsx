@@ -1,10 +1,13 @@
 import { startTransition, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import Download from '@/components/Download'
 import Features from '@/components/Features'
 import Footer from '@/components/Footer'
 import Hero from '@/components/Hero'
+import Highlights from '@/components/Highlights'
 import HowItWorks from '@/components/HowItWorks'
 import Navbar from '@/components/Navbar'
+import Styles from '@/components/Styles'
 import SupportedGames from '@/components/SupportedGames'
 import { SITE_URL } from '@/lib/constants'
 import { FALLBACK_RELEASE_INFO, fetchLatestReleaseInfo } from '@/lib/release'
@@ -28,14 +31,16 @@ function App() {
     const title = t('meta.title')
     const description = t('meta.description')
     const keywords = t('meta.keywords')
+    const language = i18n.resolvedLanguage || 'en'
 
     document.title = title
-    document.documentElement.lang = i18n.resolvedLanguage || 'en'
+    document.documentElement.lang = language === 'zh' ? 'zh-CN' : language
 
     updateMeta('meta[name="description"]', description)
     updateMeta('meta[name="keywords"]', keywords)
     updateMeta('meta[property="og:title"]', title)
     updateMeta('meta[property="og:description"]', description)
+    updateMeta('meta[property="og:locale"]', language === 'zh' ? 'zh_CN' : language === 'ru' ? 'ru_RU' : 'en_US')
     updateMeta('meta[name="twitter:title"]', title)
     updateMeta('meta[name="twitter:description"]', description)
     updateMeta('meta[property="og:url"]', SITE_URL)
@@ -67,15 +72,18 @@ function App() {
   }, [])
 
   return (
-    <div className="relative min-h-screen overflow-x-hidden">
+    <div className="relative min-h-screen overflow-x-clip">
       <Navbar />
 
-      <main className="flex min-h-screen flex-col gap-24 pb-20 sm:gap-28">
-        <Hero downloads={release.downloads} preferredPlatform={preferredPlatform} />
-        <div className="page-shell flex flex-col gap-24 sm:gap-28">
-          <Features />
+      <main className="flex min-h-screen flex-col">
+        <Hero preferredPlatform={preferredPlatform} release={release} />
+        <div className="flex flex-col gap-24 pb-24 pt-8 sm:gap-28 sm:pt-12">
+          <Highlights release={release} />
+          <Features preferredPlatform={preferredPlatform} />
+          <Styles />
           <SupportedGames />
-          <HowItWorks />
+          <HowItWorks preferredPlatform={preferredPlatform} />
+          <Download preferredPlatform={preferredPlatform} release={release} />
         </div>
       </main>
 

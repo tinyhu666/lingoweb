@@ -1,8 +1,8 @@
 {
-  "version": "0.9.7",
-  "published_at": "2026-07-14T11:46:43Z",
-  "notes": "### 更新日志\n\n1. 优化：顶部品牌区只保留一套清晰的图标与名称，减少标题栏和侧栏之间的重复感。\n2. 修复：自动更新签名不兼容时会提供明确的一次性手动安装引导；v0.9.0 或 v0.9.1 用户覆盖安装 v0.9.7 后，后续版本可继续自动更新。",
-  "release_page": "https://buffpp.com/#download",
+  "version": "1.0.0",
+  "published_at": "2026-10-31T00:00:00Z",
+  "notes": "### 更新日志\n\n1. 新增：全新深色界面与品牌标识，主页以实时翻译演示为中心，游戏、翻译语言与快捷键集中在底部一栏，可在侧栏切换浅色主题。\n2. 优化：快捷键改为点击即录制，翻译风格页提供示例输出的实时预览，使用教程页可一键播放完整演示；界面字体随应用内置，不再依赖网络加载。\n3. 修复：主页不再展示尚未开放的对方发言翻译设置。",
+  "release_page": "https://lingo.ink/#download",
   "downloads": {
     "macos": "https://lingo-1259551686.cos.ap-shanghai.myqcloud.com/releases/Lingo_latest_aarch64.dmg",
     "windows": "https://lingo-1259551686.cos.ap-shanghai.myqcloud.com/releases/Lingo_latest_x64-setup.exe",

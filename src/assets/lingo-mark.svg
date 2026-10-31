@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <!-- Lingo mark: game controller with two chat bubbles and translation arrows. Flat, azure gradient. -->
+  <defs>
+    <linearGradient id="lingoGrad" gradientUnits="userSpaceOnUse" x1="207" y1="330" x2="817" y2="720"><stop offset="0" stop-color="#4da3ff"/><stop offset="1" stop-color="#2b6bff"/></linearGradient>
+  </defs>
+    <g transform="translate(512 512) scale(1.32) translate(-512 -512)">
+      <g fill="url(#lingoGrad)">
+      <rect x="207" y="350" width="610" height="255" rx="118"/>
+      <rect x="-76" y="-65" width="152" height="235" rx="66" transform="translate(684 513.5) rotate(-3)"/>
+      <rect x="-76" y="-65" width="152" height="235" rx="66" transform="translate(340 513.5) rotate(3)"/>
+      </g>
+      <g transform="translate(512 466) scale(1.22) translate(-512 -466)">
+        <g fill="#ffffff">
+          <path d="M322 420h74a20 20 0 0 1 20 20v30a20 20 0 0 1-20 20h-32l-28 24 6-24h-20a20 20 0 0 1-20-20v-30a20 20 0 0 1 20-20z"/>
+          <path d="M628 416h74a20 20 0 0 1 20 20v30a20 20 0 0 1-20 20h-20l6 24-28-24h-32a20 20 0 0 1-20-20v-30a20 20 0 0 1 20-20z"/>
+        </g>
+        <g fill="#2b6bff">
+          <circle cx="339" cy="455" r="7"/><circle cx="359" cy="455" r="7"/><circle cx="379" cy="455" r="7"/>
+          <circle cx="645" cy="451" r="7"/><circle cx="665" cy="451" r="7"/><circle cx="685" cy="451" r="7"/>
+        </g>
+        <g fill="none" stroke="#ffffff" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M462 452h100M536 428l26 24-26 24"/>
+          <path d="M562 500H462M488 476l-26 24 26 24"/>
+        </g>
+      </g>
+    </g>
+</svg>

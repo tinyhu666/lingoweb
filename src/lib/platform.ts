@@ -24,3 +24,13 @@ export function detectPreferredPlatform(userAgent?: string): PlatformId {
 
   return 'unknown'
 }
+
+/** Default translation hotkey of the client, rendered as keycap labels. */
+export function getTranslationHotkey(platform: PlatformId): string[] {
+  return platform === 'macos' ? ['⌘', 'T'] : ['Alt', 'T']
+}
+
+/** Modifier the client uses for phrase shortcuts (⌘+1 on macOS, Alt+1 on Windows). */
+export function getPhraseModifier(platform: PlatformId): string {
+  return platform === 'macos' ? '⌘' : 'Alt'
+}
