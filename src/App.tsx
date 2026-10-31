@@ -4,7 +4,6 @@ import Download from '@/components/Download'
 import Features from '@/components/Features'
 import Footer from '@/components/Footer'
 import Hero from '@/components/Hero'
-import Highlights from '@/components/Highlights'
 import HowItWorks from '@/components/HowItWorks'
 import Navbar from '@/components/Navbar'
 import Styles from '@/components/Styles'
@@ -78,7 +77,6 @@ function App() {
       <main className="flex min-h-screen flex-col">
         <Hero preferredPlatform={preferredPlatform} release={release} />
         <div className="flex flex-col gap-24 pb-24 pt-8 sm:gap-28 sm:pt-12">
-          <Highlights release={release} />
           <Features preferredPlatform={preferredPlatform} />
           <Styles />
           <SupportedGames />

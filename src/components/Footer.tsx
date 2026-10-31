@@ -2,7 +2,7 @@ import { useState, type ReactNode } from 'react'
 import { ArrowUpRight, Check, Copy, Mail, MessageSquare } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import BrandLogo from '@/components/ui/BrandLogo'
-import { APP_VERSION, CONTACT_EMAIL, DISCORD_URL, GITHUB_REPO_URL, NAV_SECTIONS, QQ_GROUP_ID } from '@/lib/constants'
+import { CONTACT_EMAIL, DISCORD_URL, NAV_SECTIONS, QQ_GROUP_ID } from '@/lib/constants'
 
 function Footer() {
   const { t } = useTranslation()
@@ -26,7 +26,7 @@ function Footer() {
 
         <div className="relative grid gap-10 lg:grid-cols-[1.2fr_0.7fr_1.1fr]">
           <div>
-            <BrandLogo version={APP_VERSION} />
+            <BrandLogo />
             <p className="mt-5 max-w-sm text-[0.92rem] leading-relaxed text-ink-2">{t('footer.tagline')}</p>
           </div>
 
@@ -77,17 +77,6 @@ function Footer() {
                 icon={<Mail />}
                 title={t('footer.community.email.title')}
               />
-              <ContactRow
-                action={
-                  <a className="btn btn--sm" href={GITHUB_REPO_URL} rel="noreferrer" target="_blank">
-                    {t('footer.community.github.action')}
-                    <ArrowUpRight />
-                  </a>
-                }
-                description={t('footer.community.github.desc')}
-                icon={<GitHubIcon />}
-                title={t('footer.community.github.title')}
-              />
             </div>
           </div>
         </div>
@@ -118,14 +107,6 @@ function DiscordIcon() {
   return (
     <svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
       <path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.2.4a18 18 0 0 1 4.5 2.2 15.6 15.6 0 0 0-5.5-1.7 16 16 0 0 0-4.4 0 15.6 15.6 0 0 0-5.5 1.7A18 18 0 0 1 8.8 3.4L8.6 3a19.7 19.7 0 0 0-4.9 1.4C.6 9 .1 13.3.3 17.6a19.9 19.9 0 0 0 6 3l1.2-1.9a12.9 12.9 0 0 1-2-.9l.5-.4a14.2 14.2 0 0 0 12 0l.5.4-2 .9 1.2 1.9a19.8 19.8 0 0 0 6-3c.3-4.9-.6-9.2-3.4-13.2ZM8.6 15c-1.2 0-2.1-1.1-2.1-2.4s.9-2.4 2.1-2.4c1.2 0 2.2 1.1 2.1 2.4 0 1.3-.9 2.4-2.1 2.4Zm6.8 0c-1.2 0-2.1-1.1-2.1-2.4s.9-2.4 2.1-2.4c1.2 0 2.2 1.1 2.1 2.4 0 1.3-.9 2.4-2.1 2.4Z" />
-    </svg>
-  )
-}
-
-function GitHubIcon() {
-  return (
-    <svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M12 .5A11.5 11.5 0 0 0 .5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6a11.5 11.5 0 0 0 7.9-10.9A11.5 11.5 0 0 0 12 .5Z" />
     </svg>
   )
 }

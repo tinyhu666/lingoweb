@@ -1,8 +1,5 @@
+/** Bundled client version; manifests older than this are ignored when resolving download links. */
 export const APP_VERSION = '1.0.0'
-export const APP_RELEASE_DATE = '2026-10-31'
-export const RELEASE_REPO = 'tinyhu666/Lingo'
-export const GITHUB_REPO_URL = `https://github.com/${RELEASE_REPO}`
-export const GITHUB_RELEASES_URL = `${GITHUB_REPO_URL}/releases`
 export const COS_PUBLIC_BASE_URL = 'https://lingo-1259551686.cos.ap-shanghai.myqcloud.com'
 export const RELEASE_MANIFEST_URL = './releases/latest-web.json'
 
@@ -29,6 +26,3 @@ export type NavSectionKey = (typeof NAV_SECTIONS)[number]['key']
 
 /** Languages the client can translate between, in the client's own order. */
 export const TRANSLATION_LANGUAGES = ['zh', 'en-SEA', 'ko', 'en', 'fr', 'ru', 'es', 'ja', 'de'] as const
-
-/** Maximum number of phrase shortcuts the client allows. */
-export const MAX_PHRASES = 20

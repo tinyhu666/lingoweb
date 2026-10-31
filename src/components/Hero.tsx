@@ -7,7 +7,7 @@ import Chip from '@/components/ui/Chip'
 import Kbd from '@/components/ui/Kbd'
 import heroImage from '@/assets/backdrops/hero-heroes.jpg'
 import heroImageSmall from '@/assets/backdrops/hero-heroes-sm.jpg'
-import { formatReleaseDate, type ReleaseInfo } from '@/lib/release'
+import type { ReleaseInfo } from '@/lib/release'
 import { getTranslationHotkey, type PlatformId } from '@/lib/platform'
 
 type HeroProps = {
@@ -16,13 +16,12 @@ type HeroProps = {
 }
 
 function Hero({ release, preferredPlatform }: HeroProps) {
-  const { i18n, t } = useTranslation()
+  const { t } = useTranslation()
   const reduceMotion = useReducedMotion()
   const hotkey = getTranslationHotkey(preferredPlatform)
   const primary: Exclude<PlatformId, 'unknown'> = preferredPlatform === 'macos' ? 'macos' : 'windows'
   const secondary: Exclude<PlatformId, 'unknown'> = primary === 'macos' ? 'windows' : 'macos'
   const detected = preferredPlatform !== 'unknown'
-  const releaseDate = formatReleaseDate(release.publishedAt, i18n.resolvedLanguage || 'en')
 
   const reveal = (delay: number) =>
     reduceMotion
@@ -45,7 +44,7 @@ function Hero({ release, preferredPlatform }: HeroProps) {
       <div className="page-shell flex flex-col items-center text-center">
         <motion.div {...reveal(0)}>
           <Chip dot hud tone="acc">
-            {t('hero.eyebrow', { version: release.version, date: releaseDate ?? '' })}
+            {t('hero.eyebrow')}
           </Chip>
         </motion.div>
 
@@ -105,7 +104,7 @@ function Hero({ release, preferredPlatform }: HeroProps) {
         <a
           aria-hidden="true"
           className="mt-10 hidden h-10 w-10 items-center justify-center rounded-full border border-white/10 text-ink-3 transition hover:text-ink-0 lg:inline-flex"
-          href="#whats-new"
+          href="#features"
           tabIndex={-1}>
           <ArrowDown className="h-4 w-4" />
         </a>

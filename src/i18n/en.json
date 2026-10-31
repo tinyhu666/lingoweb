@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Lingo - In-Game Chat Translation Client | Type in your language, the whole team reads it",
-    "description": "Lingo is an AI in-game chat translation client for Windows and macOS. Type normally in the chat box, press one hotkey, and the translation replaces your text in place. Built-in glossaries for Dota 2, League of Legends, Overwatch and World of Warcraft, 9 languages, no login and no API setup.",
+    "title": "Lingo - In-Game Chat Translation | Type in your language, the whole team reads it",
+    "description": "Lingo is an AI in-game chat translation client for Windows and macOS. Type normally in the chat box, press one hotkey, and the translation replaces your text in place. Built-in glossaries for Dota 2, League of Legends, Overwatch and World of Warcraft, 9 languages, free with no sign-up.",
     "keywords": "game chat translation, in-game translator, AI game translator, hotkey translation, Dota 2 translator, League of Legends translator, Overwatch translator, World of Warcraft translator, team chat translation, game glossary"
   },
   "brand": {
@@ -19,7 +19,7 @@
   "navbar": {
     "menu": "Open menu",
     "closeMenu": "Close menu",
-    "download": "Download 1.0",
+    "download": "Download",
     "links": {
       "features": "Features",
       "styles": "Styles",
@@ -29,14 +29,14 @@
     }
   },
   "hero": {
-    "eyebrow": "v{{version}} stable · {{date}}",
+    "eyebrow": "AI in-game chat translation",
     "title": "Type in your language.\nThe whole team reads it.",
     "subtitleBefore": "Type normally in the game chat, press ",
     "subtitleAfter": ", and Lingo rewrites it in your teammates’ language right in the box. You just hit Enter.",
     "downloadWindows": "Download for Windows",
     "downloadMac": "Download for macOS",
     "recommended": "Your device",
-    "note": "No login · No API keys · MIT open source",
+    "note": "Free · No sign-up · Works right after install",
     "facts": {
       "hotkey": "Default hotkey",
       "languages": "Languages",
@@ -66,57 +66,34 @@
       { "source": "farm jungle, don't feed", "target": "去打野，别送", "mate": "Collapse", "reply": "好" }
     ]
   },
-  "highlights": {
-    "eyebrow": "1.0 stable",
-    "title": "A new client,\nredesigned around one translation.",
-    "subtitle": "1.0.0 rebuilds the interface, the brand and the flow together: a dark-first Arena HUD design language, a new mark, and a home screen centred on a live demo.",
-    "items": [
-      {
-        "title": "Dark-first interface",
-        "desc": "One azure token set shared with the new logo. Game, language direction and hotkey sit in a single bottom bar, and a light theme is one click away in the sidebar."
-      },
-      {
-        "title": "Click-to-record hotkey",
-        "desc": "No more multi-step setup: click, press the combination, done. The style page now types out a live preview of each output style."
-      },
-      {
-        "title": "A tutorial you can replay",
-        "desc": "One button plays the whole flow: type, hotkey, replace, Enter. UI fonts ship inside the app instead of loading from the network."
-      }
-    ],
-    "screenshotAlt": "Screenshot of the Lingo 1.0.0 client home screen",
-    "versionLabel": "Current version",
-    "dateLabel": "Released",
-    "changelog": "Read the full changelog"
-  },
   "features": {
     "eyebrow": "Features",
     "title": "One hotkey.\nThe shortest path to being understood.",
-    "subtitle": "Lingo is not a general-purpose translator. It is a hotkey-first workflow built for in-game team chat: copy, translate and fill back in one motion.",
+    "subtitle": "Built for in-game team chat: copy, translate and fill back in one motion.",
     "items": {
       "hotkey": {
         "title": "Hotkey translation, replaced in place",
-        "desc": "Press the hotkey and Lingo reads the chat box, sends it to server-side AI, and writes the translation back where it was. It never sends for you; you still review and hit Enter.",
+        "desc": "Press the hotkey and the translation replaces your text in the chat box. It never sends for you; you hit Enter.",
         "in": "let's stack rosh",
         "out": "集合打肉山"
       },
       "glossary": {
         "title": "A glossary that knows the game",
-        "desc": "1,340 official hero, item and ability names plus 100 player aliases. Calls like BKB, smoke or rosh keep their meaning instead of being translated word for word.",
+        "desc": "Official hero, item and ability names plus player slang. BKB, smoke and rosh keep their meaning.",
         "tags": ["BKB · Black King Bar", "Blink · Blink Dagger", "TP · Town Portal", "Aegis · of the Immortal", "Ward · Observer"]
       },
       "styles": {
         "title": "Three output styles",
-        "desc": "Normal, Pro and Toxic. Switch with one click; the next translation uses it immediately."
+        "desc": "Normal, Pro or Toxic. One click, and the next line uses it."
       },
       "phrases": {
         "title": "Phrase hotkeys",
-        "desc": "Up to {{max}} high-frequency calls, each on its own shortcut. Matches fill instantly without a cloud call.",
+        "desc": "Bind your frequent calls to their own shortcuts and fire them instantly.",
         "samples": ["gg wp", "care mid", "rosh now"]
       },
       "languages": {
         "title": "9 languages, any direction",
-        "desc": "When both sides match, Lingo polishes your line in the selected style instead.",
+        "desc": "Chinese, English, Russian, Japanese, Korean and more.",
         "list": {
           "zh": "Chinese",
           "en-SEA": "SEA English",
@@ -130,19 +107,19 @@
         }
       },
       "zeroSetup": {
-        "title": "Works out of the box",
-        "desc": "Models and routing are managed server-side: no account, no API key. In-app updates on both Windows and macOS."
+        "title": "Works right after install",
+        "desc": "No account, nothing to configure, updates itself."
       },
       "safe": {
-        "title": "Never touches the game process",
-        "desc": "Lingo only uses the OS clipboard and keyboard events. It does not inject into the game and never sends messages on its own."
+        "title": "Never touches the game",
+        "desc": "Only the OS clipboard and keyboard events. No injection, no auto-send."
       }
     }
   },
   "styles": {
     "eyebrow": "Translation styles",
     "title": "One line, three ways to say it.",
-    "subtitle": "Choose how the translation should sound. Click a card to switch; the preview below types out the result.",
+    "subtitle": "Click a card to switch; the preview types out the result.",
     "liveChip": "Changes apply live",
     "inputLabel": "Example · input",
     "outputLabel": "Output",
@@ -151,7 +128,7 @@
       "auto": {
         "title": "Normal",
         "tag": "Default",
-        "desc": "Natural, steady and easy to understand, like a normal teammate speaking clearly.",
+        "desc": "Natural and easy to read, like a teammate speaking clearly.",
         "src": "gank top, follow up",
         "out": "gank top, follow up",
         "note": "Keeps game jargon, tone unchanged",
@@ -160,7 +137,7 @@
       "pro": {
         "title": "Pro",
         "tag": "Recommended in match",
-        "desc": "Denser terminology and shorter, harder calls for coordinated team play.",
+        "desc": "Denser terminology and shorter calls for coordinated play.",
         "src": "come gank mid lane",
         "out": "gank mid, jungler",
         "note": "Jargon-first · short calls",
@@ -169,7 +146,7 @@
       "toxic": {
         "title": "Toxic",
         "tag": "Use with care · may get reported",
-        "desc": "Sharper and more confrontational for pressure and tempo, while staying in-game usable.",
+        "desc": "Sharper and more confrontational, while staying in-game usable.",
         "src": "this trash jungler never ganks",
         "out": "this trash jungler never ganks lmao",
         "note": "Disabled in: tournaments / spectating",
@@ -180,20 +157,20 @@
   "howItWorks": {
     "eyebrow": "How it works",
     "title": "Three steps. Never leave the game.",
-    "subtitle": "Type → press the hotkey → the translation replaces your text. The cursor never leaves the chat box.",
+    "subtitle": "The cursor never leaves the chat box.",
     "play": "Play demo",
     "steps": [
       {
         "title": "Type in the game chat",
-        "desc": "Enter the message normally and keep focus in the current input."
+        "desc": "Write the message as usual."
       },
       {
-        "title": "Press the translation hotkey",
-        "desc": "Default ⌘+T on macOS or Alt+T on Windows, re-recordable in one click. Lingo reads the input and creates the target-language text."
+        "title": "Press the hotkey",
+        "desc": "⌘+T on macOS, Alt+T on Windows, or your own combination."
       },
       {
-        "title": "The translation replaces the original",
-        "desc": "The target-language line replaces your text. Review it, then press Enter yourself."
+        "title": "The translation replaces your text",
+        "desc": "Review it, then press Enter yourself."
       }
     ],
     "channel": "[ALL]",
@@ -203,8 +180,8 @@
     "translating": "Translating …",
     "doneSend": "Done · press Enter",
     "safety": {
-      "title": "Does not interfere with anti-cheat",
-      "desc": "Lingo only uses the OS clipboard and keyboard events. It does not inject into the game process or send messages automatically."
+      "title": "Anti-cheat friendly",
+      "desc": "Only the OS clipboard and keyboard events. Nothing is injected into the game."
     },
     "hud": {
       "score": "Radiant 23 : 19 Dire",
@@ -220,80 +197,67 @@
   "games": {
     "eyebrow": "Games",
     "title": "Glossaries for four games.\nWorks in any other.",
-    "subtitle": "Pick your game in the client and translations use that game’s official names and player slang. Choose “Other game” and no game-specific terms are injected, which fits any multiplayer game with text chat.",
+    "subtitle": "Pick your game and translations follow its lingo. Any other game runs in generic mode.",
     "glossaryLabel": "Glossary",
     "items": {
       "dota2": {
         "name": "Dota 2",
-        "desc": "Smoke, BKB, retreat and fight calls come out the way players actually say them.",
-        "terms": "535 official names · 127 heroes · 408 items"
+        "desc": "Smoke, BKB, retreat and fight calls come out the way players say them.",
+        "terms": "Heroes · Items · Tactics"
       },
       "lol": {
         "name": "League of Legends",
-        "desc": "Lane, jungle, objective and focus calls phrased the way teammates expect.",
-        "terms": "738 official names · 173 champions · 543 items · 22 summoner spells"
+        "desc": "Lane, jungle, objective and focus calls, phrased naturally.",
+        "terms": "Champions · Items · Summoner spells"
       },
       "overwatch": {
         "name": "Overwatch",
-        "desc": "Position, focus, regroup and push calls stay short enough for quick chat.",
-        "terms": "54 hero names · common tactical phrases"
+        "desc": "Position, focus, regroup and push calls, kept short.",
+        "terms": "Heroes · Tactics"
       },
       "wow": {
         "name": "World of Warcraft",
-        "desc": "Clean up raid, party and regroup messages before sending them to the group.",
-        "terms": "13 class names · dungeon chat phrases"
+        "desc": "Raid, party and regroup messages, tidied before you send.",
+        "terms": "Classes · Dungeon chat"
       },
       "other": {
         "name": "Other games",
-        "desc": "Generic mode: no game-specific glossary, but negation, numbers, timings and targets are always preserved. Works in any game with text chat.",
-        "terms": "Generic mode"
+        "desc": "Generic mode for any multiplayer game with text chat."
       }
     }
   },
   "download": {
     "eyebrow": "Download",
-    "title": "Get Lingo 1.0\nfor your next match.",
-    "subtitle": "Official installers are served from our Tencent Cloud mirror and download quickly worldwide. After installing, the client checks for and installs updates in-app.",
-    "latestVersion": "Latest version",
-    "releasedOn": "Released",
+    "title": "Get Lingo\nfor your next match.",
+    "subtitle": "Available for Windows and macOS. Updates itself after install.",
     "recommended": "Best match for your device",
     "windows": {
       "title": "Windows",
-      "meta": "Windows 10+ · x64",
-      "button": "Download EXE installer",
+      "meta": "Windows 10 or later · x64",
+      "button": "Download for Windows",
       "portable": "Portable ZIP",
       "requirement": "Requires the WebView2 Runtime (built into Windows 11)."
     },
     "macos": {
       "title": "macOS",
-      "meta": "macOS 10.13+ · Apple Silicon",
-      "button": "Download DMG",
+      "meta": "macOS 10.13 or later · Apple Silicon",
+      "button": "Download for macOS",
       "requirement": "On first launch, grant Accessibility permission in System Settings."
-    },
-    "notesTitle": "What’s new in v{{version}}",
-    "notes": [
-      "New: a dark interface and brand mark. The home screen centres on a live translation demo, with game, languages and hotkey in one bottom bar, and a light theme in the sidebar.",
-      "Improved: click-to-record hotkeys, a live preview on the translation style page, a one-click tutorial playback, and UI fonts bundled with the app instead of loaded from the network.",
-      "Fixed: the home screen no longer shows the unreleased incoming-chat translation settings."
-    ],
-    "github": "GitHub Releases",
-    "githubDesc": "All previous versions and the source code",
-    "mirror": "Tencent Cloud mirror"
+    }
   },
   "footer": {
-    "tagline": "An AI in-game chat translation client for Windows and macOS. One hotkey, and the translation replaces your text.",
+    "tagline": "One hotkey, and the translation replaces your text. In-game chat translation for Windows and macOS.",
     "product": {
       "title": "Product"
     },
     "community": {
       "title": "Community & feedback",
-      "discord": { "title": "Discord", "desc": "Release notes and early discussion", "action": "Join" },
+      "discord": { "title": "Discord", "desc": "Announcements and discussion", "action": "Join" },
       "qq": { "title": "QQ group {{id}}", "desc": "Chinese community and feedback", "action": "Copy number", "copied": "Copied" },
-      "email": { "title": "Email", "desc": "Bug reports and partnerships", "action": "Write" },
-      "github": { "title": "GitHub", "desc": "Open-source repository · MIT", "action": "View source" }
+      "email": { "title": "Email", "desc": "Bug reports and partnerships", "action": "Write" }
     },
     "legal": {
-      "copyright": "© {{year}} Lingo · Open source under the MIT License",
+      "copyright": "© {{year}} Lingo",
       "valve": "Dota 2 and related artwork © Valve Corporation, shown for illustration only. Lingo is not affiliated with Valve."
     }
   }

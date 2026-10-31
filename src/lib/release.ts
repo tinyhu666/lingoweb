@@ -1,4 +1,4 @@
-import { APP_RELEASE_DATE, APP_VERSION, DOWNLOAD_URLS, RELEASE_MANIFEST_URL } from '@/lib/constants'
+import { APP_VERSION, DOWNLOAD_URLS, RELEASE_MANIFEST_URL } from '@/lib/constants'
 
 export type ReleaseDownloads = {
   macos: string
@@ -8,15 +8,11 @@ export type ReleaseDownloads = {
 
 export type ReleaseInfo = {
   version: string
-  publishedAt: string | null
-  notes: string | null
   downloads: ReleaseDownloads
 }
 
 export const FALLBACK_RELEASE_INFO: ReleaseInfo = {
   version: APP_VERSION,
-  publishedAt: `${APP_RELEASE_DATE}T00:00:00Z`,
-  notes: null,
   downloads: DOWNLOAD_URLS,
 }
 
@@ -77,8 +73,6 @@ function mapManifestPayload(payload: unknown): ReleaseInfo | null {
 
   return {
     version,
-    publishedAt: typeof payload.published_at === 'string' ? payload.published_at : null,
-    notes: typeof payload.notes === 'string' ? payload.notes : null,
     downloads: { macos, windows, windowsPortable },
   }
 }
@@ -105,9 +99,9 @@ async function fetchJson(url: string, headers: HeadersInit) {
 }
 
 /**
- * Loads the public release manifest that the client release pipeline publishes.
- * A manifest older than the bundled version is ignored so the page never
- * advertises a release that is already superseded.
+ * Loads the public release manifest that the client release pipeline publishes
+ * so the download links always point at the current installers. A manifest
+ * older than the bundled version is ignored.
  */
 export async function fetchLatestReleaseInfo(): Promise<ReleaseInfo> {
   try {
@@ -123,39 +117,4 @@ export async function fetchLatestReleaseInfo(): Promise<ReleaseInfo> {
   }
 
   return FALLBACK_RELEASE_INFO
-}
-
-/**
- * Turns the client's markdown changelog ("### 更新日志\n\n1. 新增：…") into plain
- * bullet strings. Lines that are not numbered or bulleted are ignored.
- */
-export function parseReleaseNotes(notes: string | null | undefined): string[] {
-  if (!notes) {
-    return []
-  }
-
-  return notes
-    .replace(/\r\n/g, '\n')
-    .split('\n')
-    .map((line) => line.trim())
-    .filter((line) => /^(\d+\.|[-*])\s+/.test(line))
-    .map((line) => line.replace(/^(\d+\.|[-*])\s+/, '').trim())
-    .filter(Boolean)
-}
-
-export function formatReleaseDate(value: string | null, locale: string) {
-  if (!value) {
-    return null
-  }
-
-  const date = new Date(value)
-  if (Number.isNaN(date.getTime())) {
-    return null
-  }
-
-  try {
-    return new Intl.DateTimeFormat(locale, { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' }).format(date)
-  } catch {
-    return date.toISOString().slice(0, 10)
-  }
 }

@@ -1,13 +1,12 @@
 import type { ReactNode } from 'react'
-import { ArrowUpRight, Download as DownloadIcon, FileArchive, Laptop, Monitor } from 'lucide-react'
+import { Download as DownloadIcon, FileArchive, Laptop, Monitor } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import AnimatedSection from '@/components/ui/AnimatedSection'
 import Button from '@/components/ui/Button'
 import Chip from '@/components/ui/Chip'
 import SectionHeading from '@/components/ui/SectionHeading'
 import mapImage from '@/assets/backdrops/download-map.jpg'
-import { COS_PUBLIC_BASE_URL, GITHUB_RELEASES_URL } from '@/lib/constants'
-import { formatReleaseDate, parseReleaseNotes, type ReleaseInfo } from '@/lib/release'
+import type { ReleaseInfo } from '@/lib/release'
 import type { PlatformId } from '@/lib/platform'
 import { cn } from '@/lib/cn'
 
@@ -17,12 +16,7 @@ type DownloadProps = {
 }
 
 function Download({ release, preferredPlatform }: DownloadProps) {
-  const { i18n, t } = useTranslation()
-  const language = i18n.resolvedLanguage || 'en'
-  const releaseDate = formatReleaseDate(release.publishedAt, language)
-  const bundledNotes = t('download.notes', { returnObjects: true }) as unknown as string[]
-  const manifestNotes = parseReleaseNotes(release.notes)
-  const notes = manifestNotes.length > 0 ? manifestNotes : bundledNotes
+  const { t } = useTranslation()
 
   return (
     <AnimatedSection className="relative isolate overflow-hidden" id="download">
@@ -38,15 +32,9 @@ function Download({ release, preferredPlatform }: DownloadProps) {
       </div>
 
       <div className="page-shell py-6 sm:py-10">
-        <SectionHeading
-          align="center"
-          aside={null}
-          eyebrow={t('download.eyebrow')}
-          subtitle={t('download.subtitle')}
-          title={t('download.title')}
-        />
+        <SectionHeading align="center" eyebrow={t('download.eyebrow')} subtitle={t('download.subtitle')} title={t('download.title')} />
 
-        <div className="mt-10 grid gap-4 md:grid-cols-2">
+        <div className="mx-auto mt-10 grid max-w-[56rem] gap-4 md:grid-cols-2">
           <PlatformCard
             button={t('download.windows.button')}
             href={release.downloads.windows}
@@ -54,8 +42,6 @@ function Download({ release, preferredPlatform }: DownloadProps) {
             meta={t('download.windows.meta')}
             preferred={preferredPlatform === 'windows'}
             recommendedLabel={t('download.recommended')}
-            release={release}
-            releaseDate={releaseDate}
             requirement={t('download.windows.requirement')}
             secondary={
               release.downloads.windowsPortable ? (
@@ -74,34 +60,9 @@ function Download({ release, preferredPlatform }: DownloadProps) {
             meta={t('download.macos.meta')}
             preferred={preferredPlatform === 'macos'}
             recommendedLabel={t('download.recommended')}
-            release={release}
-            releaseDate={releaseDate}
             requirement={t('download.macos.requirement')}
             title={t('download.macos.title')}
           />
-        </div>
-
-        <div className="download-card mt-4 lg:grid lg:grid-cols-[minmax(0,1fr)_16rem] lg:gap-10">
-          <div className="flex flex-col gap-4">
-            <h3 className="m-0 text-lg font-extrabold text-ink-0">{t('download.notesTitle', { version: release.version })}</h3>
-            <ul className="note-list">
-              {notes.map((note) => (
-                <li key={note}>
-                  <span>{note}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="flex flex-col gap-2 border-t border-white/8 pt-4 text-sm lg:border-t-0 lg:border-l lg:pl-8 lg:pt-0">
-            <a className="footer-link font-semibold text-ink-0" href={GITHUB_RELEASES_URL} rel="noreferrer" target="_blank">
-              {t('download.github')}
-              <ArrowUpRight className="h-4 w-4" />
-            </a>
-            <span className="text-ink-3">{t('download.githubDesc')}</span>
-            <a className="footer-link mt-2 text-xs" href={`${COS_PUBLIC_BASE_URL}/releases/latest-web.json`} rel="noreferrer" target="_blank">
-              {t('download.mirror')}
-            </a>
-          </div>
         </div>
       </div>
     </AnimatedSection>
@@ -115,8 +76,6 @@ function PlatformCard({
   meta,
   preferred,
   recommendedLabel,
-  release,
-  releaseDate,
   requirement,
   secondary,
   title,
@@ -127,14 +86,10 @@ function PlatformCard({
   meta: string
   preferred: boolean
   recommendedLabel: string
-  release: ReleaseInfo
-  releaseDate: string | null
   requirement: string
   secondary?: ReactNode
   title: string
 }) {
-  const { t } = useTranslation()
-
   return (
     <div className={cn('download-card', preferred && 'download-card--preferred')}>
       <div className="flex items-start justify-between gap-3">
@@ -152,18 +107,7 @@ function PlatformCard({
         ) : null}
       </div>
 
-      <div className="flex flex-wrap items-center gap-2">
-        <Chip hud tone="sig">
-          {t('download.latestVersion')} · v{release.version}
-        </Chip>
-        {releaseDate ? (
-          <Chip hud>
-            {t('download.releasedOn')} · {releaseDate}
-          </Chip>
-        ) : null}
-      </div>
-
-      <div className="mt-auto flex flex-col gap-2">
+      <div className="mt-2 flex flex-col gap-2">
         <Button className="w-full" download href={href} size="lg" variant={preferred ? 'primary' : 'secondary'}>
           <DownloadIcon />
           {button}

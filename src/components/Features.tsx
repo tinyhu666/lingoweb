@@ -9,7 +9,7 @@ import bkbIcon from '@/assets/icons/black_king_bar.png'
 import blinkIcon from '@/assets/icons/blink.png'
 import tpIcon from '@/assets/icons/tpscroll.png'
 import wardIcon from '@/assets/icons/ward_observer.png'
-import { MAX_PHRASES, TRANSLATION_LANGUAGES } from '@/lib/constants'
+import { TRANSLATION_LANGUAGES } from '@/lib/constants'
 import { getPhraseModifier, getTranslationHotkey, type PlatformId } from '@/lib/platform'
 import { cn } from '@/lib/cn'
 
@@ -73,7 +73,7 @@ function Features({ preferredPlatform }: { preferredPlatform: PlatformId }) {
             </div>
           </BentoCard>
 
-          <BentoCard className="md:col-span-3 lg:col-span-4" icon={<Zap />} title={t('features.items.phrases.title')} description={t('features.items.phrases.desc', { max: MAX_PHRASES })}>
+          <BentoCard className="md:col-span-3 lg:col-span-4" icon={<Zap />} title={t('features.items.phrases.title')} description={t('features.items.phrases.desc')}>
             <ul className="mt-auto flex flex-col gap-2">
               {phraseSamples.map((sample, index) => (
                 <li className="flex items-center gap-3 font-mono text-[0.84rem] text-ink-1" key={sample}>

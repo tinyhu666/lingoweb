@@ -60,9 +60,6 @@ function SupportedGames() {
               <h3 className="m-0 text-xl font-extrabold text-ink-0">{t('games.items.other.name')}</h3>
             </div>
             <p className="m-0 text-[0.92rem] leading-relaxed text-ink-2">{t('games.items.other.desc')}</p>
-            <Chip hud className="mt-auto w-fit">
-              {t('games.items.other.terms')}
-            </Chip>
           </article>
         </div>
       </div>

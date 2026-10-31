@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from 'motion/react'
 import { Download, Menu, X } from 'lucide-react'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
 import BrandLogo from '@/components/ui/BrandLogo'
-import { APP_VERSION, NAV_SECTIONS, type NavSectionKey } from '@/lib/constants'
+import { NAV_SECTIONS, type NavSectionKey } from '@/lib/constants'
 import { cn } from '@/lib/cn'
 
 function Navbar() {
@@ -99,7 +99,7 @@ function Navbar() {
           <div className={cn('nav-bar', scrolled && 'nav-bar--scrolled')}>
             <div className="flex items-center justify-between gap-4 px-3.5 py-2.5 sm:px-4">
               <a className="flex items-center" href="#top" onClick={() => setMenuOpen(false)}>
-                <BrandLogo version={APP_VERSION} />
+                <BrandLogo />
               </a>
 
               <nav className="hidden items-center gap-1 lg:flex">

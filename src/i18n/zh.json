@@ -1,8 +1,8 @@
 {
   "meta": {
-    "title": "Lingo - 游戏内聊天翻译客户端 | 用母语打字，全队都能看懂",
-    "description": "Lingo 是面向 Windows 与 macOS 的 AI 游戏内聊天翻译客户端：在聊天框正常输入，按一次快捷键，译文直接替换原文，你只管按回车。内置 Dota 2、英雄联盟、守望先锋、魔兽世界术语库，支持中英俄等 9 种语言，免登录、免配置。",
-    "keywords": "游戏聊天翻译, 游戏内翻译客户端, AI 游戏翻译, 快捷键翻译, Dota 2 翻译, 英雄联盟翻译, 守望先锋翻译, 魔兽世界翻译, 外服聊天翻译, 游戏术语翻译"
+    "title": "Lingo - 游戏内聊天翻译 | 用母语打字，全队都能看懂",
+    "description": "Lingo 是面向 Windows 与 macOS 的 AI 游戏内聊天翻译客户端：在聊天框正常输入，按一次快捷键，译文直接替换原文，你只管按回车。内置 Dota 2、英雄联盟、守望先锋、魔兽世界术语库，支持中英俄等 9 种语言，免费、无需注册。",
+    "keywords": "游戏聊天翻译, 游戏内翻译, AI 游戏翻译, 快捷键翻译, Dota 2 翻译, 英雄联盟翻译, 守望先锋翻译, 魔兽世界翻译, 外服聊天翻译, 游戏术语翻译"
   },
   "brand": {
     "name": "Lingo",
@@ -19,7 +19,7 @@
   "navbar": {
     "menu": "打开菜单",
     "closeMenu": "关闭菜单",
-    "download": "下载 1.0",
+    "download": "下载",
     "links": {
       "features": "核心能力",
       "styles": "翻译风格",
@@ -29,14 +29,14 @@
     }
   },
   "hero": {
-    "eyebrow": "v{{version}} 正式版 · {{date}}",
+    "eyebrow": "AI 游戏内聊天翻译",
     "title": "用母语打字，\n全队都能看懂",
     "subtitleBefore": "在游戏聊天框里正常输入，按下 ",
     "subtitleAfter": "，Lingo 把它翻译成队友的语言并替换原文。你只管按回车。",
     "downloadWindows": "下载 Windows 版",
     "downloadMac": "下载 macOS 版",
     "recommended": "当前设备",
-    "note": "免登录 · 不用配置 API · MIT 开源",
+    "note": "免费 · 无需注册 · 安装即用",
     "facts": {
       "hotkey": "默认快捷键",
       "languages": "翻译语言",
@@ -66,57 +66,34 @@
       { "source": "去打野，别送", "target": "farm jungle, don't feed", "mate": "Collapse", "reply": "ok ok" }
     ]
   },
-  "highlights": {
-    "eyebrow": "1.0 正式版",
-    "title": "全新客户端，\n为一次翻译重新设计。",
-    "subtitle": "1.0.0 把界面、品牌和流程一起重做：深色优先的 Arena HUD 设计语言、全新标识，以及以实时演示为中心的主页。",
-    "items": [
-      {
-        "title": "深色优先的新界面",
-        "desc": "与新标识共用同一套 azure 色板；游戏、翻译语言与快捷键集中在底部一栏，侧栏可随时切换浅色主题。"
-      },
-      {
-        "title": "点击即录制快捷键",
-        "desc": "不再分步设置：点一下，按下组合键，立即保存。翻译风格页同步提供示例输出的实时预览。"
-      },
-      {
-        "title": "随时可播放的教程",
-        "desc": "使用教程页一键播放完整演示：输入、快捷键、译文替换、回车发送。界面字体随应用内置，不再依赖网络加载。"
-      }
-    ],
-    "screenshotAlt": "Lingo 1.0.0 客户端主页截图",
-    "versionLabel": "当前版本",
-    "dateLabel": "发布日期",
-    "changelog": "查看完整更新日志"
-  },
   "features": {
     "eyebrow": "核心能力",
     "title": "一次快捷键，\n把沟通压缩到最短。",
-    "subtitle": "Lingo 不是泛用翻译器，而是围绕游戏内团队沟通打磨的 hotkey-first 工作流：复制、翻译、回填一气呵成。",
+    "subtitle": "专为游戏内团队沟通打磨：复制、翻译、回填一气呵成。",
     "items": {
       "hotkey": {
         "title": "快捷键翻译，译文原地替换",
-        "desc": "按下快捷键，Lingo 自动读取聊天框内容、调用服务端 AI 翻译，再把译文写回原处。不会自动发送，发送前仍由你确认。",
+        "desc": "按下快捷键，译文直接替换聊天框里的原文。不会自动发送，发不发由你决定。",
         "in": "兄弟们集合打肉山",
         "out": "let's stack rosh"
       },
       "glossary": {
         "title": "懂游戏的术语库",
-        "desc": "1,340 条官方英雄、物品与技能名称，外加 100 组玩家俗称与别名。BKB、开雾、肉山这类说法会保留原意，而不是被逐字直译。",
+        "desc": "英雄、物品、技能的官方名称和玩家俗称都认得，BKB、开雾、肉山不会被直译。",
         "tags": ["BKB · 黑皇杖", "Blink · 跳刀", "TP · 回城卷轴", "Aegis · 不朽之守护", "Ward · 眼"]
       },
       "styles": {
         "title": "三种翻译风格",
-        "desc": "普通、职业、喷子三档语气，点一下切换，下一次翻译立即生效。"
+        "desc": "普通、职业、喷子，点一下切换，下一句立即生效。"
       },
       "phrases": {
         "title": "常用语快捷键",
-        "desc": "最多 {{max}} 条高频喊话，各自绑定独立快捷键，命中后直接回填，不经过云端。",
+        "desc": "高频喊话绑定独立快捷键，一键发出。",
         "samples": ["gg wp", "care mid", "rosh now"]
       },
       "languages": {
         "title": "9 种语言互译",
-        "desc": "两端语言相同时，Lingo 会按所选风格直接润色原文。",
+        "desc": "中、英、俄、日、韩等 9 种语言，任意方向互译。",
         "list": {
           "zh": "中文",
           "en-SEA": "东南亚英语",
@@ -130,19 +107,19 @@
         }
       },
       "zeroSetup": {
-        "title": "开箱即用",
-        "desc": "模型与路由由服务端统一维护：不用登录，不用填 API Key。应用内自动更新，Windows 与 macOS 双平台。"
+        "title": "安装即用",
+        "desc": "无需注册，打开就能用，自动更新。"
       },
       "safe": {
         "title": "不碰游戏进程",
-        "desc": "Lingo 只使用系统剪贴板与键盘事件，不注入游戏，也不会替你发送消息。"
+        "desc": "只用系统剪贴板和键盘事件，不注入游戏，不替你发送。"
       }
     }
   },
   "styles": {
     "eyebrow": "翻译风格",
     "title": "同一句话，三种说法。",
-    "subtitle": "选择译文的表达方式，点击卡片即可切换；下方会实时生成示例输出。",
+    "subtitle": "点击卡片切换风格，下方实时生成示例。",
     "liveChip": "切换即时生效",
     "inputLabel": "示例 · 输入",
     "outputLabel": "输出",
@@ -151,7 +128,7 @@
       "auto": {
         "title": "普通",
         "tag": "默认",
-        "desc": "自然、稳妥、好理解，像正常队友在语音里清楚地说话。",
+        "desc": "自然、稳妥、好理解，像正常队友在清楚地说话。",
         "src": "gank top, follow up",
         "out": "gank top, follow up",
         "note": "保留游戏术语，不改语气",
@@ -160,7 +137,7 @@
       "pro": {
         "title": "职业",
         "tag": "推荐对局使用",
-        "desc": "术语更硬，句子更短，更像高分局里的指令和节奏沟通。",
+        "desc": "术语更硬，句子更短，像高分局里的指令。",
         "src": "兄弟们打野去中路抓人",
         "out": "gank mid, jungler",
         "note": "术语优先 · 缩写更短",
@@ -169,7 +146,7 @@
       "toxic": {
         "title": "喷子",
         "tag": "慎用 · 可能被举报",
-        "desc": "语气更冲、压力更足，适合带节奏和心理压制，但仍保持游戏内可用。",
+        "desc": "语气更冲、压力更足，但仍保持游戏内可用。",
         "src": "这SB打野不来抓人",
         "out": "this trash jungler never ganks lmao",
         "note": "禁用区：比赛 / OB",
@@ -180,20 +157,20 @@
   "howItWorks": {
     "eyebrow": "使用流程",
     "title": "三步，不离开游戏。",
-    "subtitle": "输入内容 → 按快捷键 → 译文替换原文。整个过程光标不离开聊天框。",
+    "subtitle": "整个过程光标不离开聊天框。",
     "play": "播放演示",
     "steps": [
       {
-        "title": "在游戏聊天框输入内容",
-        "desc": "正常输入要发送的文字，并让光标留在当前输入框。"
+        "title": "在聊天框输入内容",
+        "desc": "正常输入要发的内容。"
       },
       {
         "title": "按翻译快捷键",
-        "desc": "默认 macOS ⌘+T、Windows Alt+T，随时可在客户端一键改成你习惯的组合。Lingo 读取输入框并生成目标语言。"
+        "desc": "默认 macOS ⌘+T、Windows Alt+T，可自定义。"
       },
       {
         "title": "译文替换原文",
-        "desc": "翻译完成后，目标语言直接替换原文；确认结果后由你按回车发送。"
+        "desc": "确认译文后，由你按回车发送。"
       }
     ],
     "channel": "[ALL]",
@@ -204,7 +181,7 @@
     "doneSend": "完成 · 回车发送",
     "safety": {
       "title": "不影响游戏防作弊",
-      "desc": "Lingo 只使用系统剪贴板和键盘事件，不注入游戏进程，也不会自动发送消息。"
+      "desc": "只用系统剪贴板和键盘事件，不注入游戏进程。"
     },
     "hud": {
       "score": "Radiant 23 : 19 Dire",
@@ -220,80 +197,67 @@
   "games": {
     "eyebrow": "适用游戏",
     "title": "为四款游戏准备了术语，\n其他游戏也能用。",
-    "subtitle": "在客户端选择当前游戏，翻译会自动使用对应的官方名称与玩家俗称。选择「其他游戏」时不注入特定术语，适合任何有文字聊天的多人游戏。",
+    "subtitle": "选择当前游戏，翻译自动贴近它的说法；其他游戏用通用模式。",
     "glossaryLabel": "术语库",
     "items": {
       "dota2": {
         "name": "Dota 2",
-        "desc": "开雾、BKB、撤退、接团这类短指令，翻译后更贴近实战表达。",
-        "terms": "535 条官方名称 · 127 位英雄 · 408 个物品"
+        "desc": "开雾、BKB、撤退、接团，译出来就是队友常说的话。",
+        "terms": "英雄 · 物品 · 战术"
       },
       "lol": {
         "name": "英雄联盟",
-        "desc": "对线、打野、资源团和集火目标，用更自然的表达告诉队友。",
-        "terms": "738 条官方名称 · 173 位英雄 · 543 个物品 · 22 个召唤师技能"
+        "desc": "对线、打野、资源团、集火，表达更自然。",
+        "terms": "英雄 · 装备 · 召唤师技能"
       },
       "overwatch": {
         "name": "守望先锋",
-        "desc": "报点、集火、重组和进攻节奏，用更短的消息完成沟通。",
-        "terms": "54 位英雄名称 · 常见战术表达"
+        "desc": "报点、集火、重组、进攻，消息更短更清楚。",
+        "terms": "英雄 · 战术"
       },
       "wow": {
         "name": "魔兽世界",
-        "desc": "副本、集合、组队沟通和跨语种队伍消息，发送前先整理清楚。",
-        "terms": "13 个职业名称 · 副本沟通表达"
+        "desc": "副本、集合、组队沟通，发送前先理顺。",
+        "terms": "职业 · 副本沟通"
       },
       "other": {
         "name": "其他游戏",
-        "desc": "通用模式：不注入特定游戏术语，只保留否定、数字、等待时间和动作对象，适合任何有文字聊天的游戏。",
-        "terms": "通用模式"
+        "desc": "通用模式，适合任何有文字聊天的多人游戏。"
       }
     }
   },
   "download": {
     "eyebrow": "下载",
-    "title": "下载 Lingo 1.0，\n用在下一局。",
-    "subtitle": "官方安装包通过腾讯云镜像分发，国内外均可快速下载。安装后客户端会在应用内自动检查并安装更新。",
-    "latestVersion": "最新版本",
-    "releasedOn": "发布于",
+    "title": "下载 Lingo，\n用在下一局。",
+    "subtitle": "Windows 与 macOS 均可使用，安装后自动更新。",
     "recommended": "当前设备推荐",
     "windows": {
       "title": "Windows",
-      "meta": "Windows 10+ · x64",
-      "button": "下载 EXE 安装包",
+      "meta": "Windows 10 及以上 · x64",
+      "button": "下载 Windows 版",
       "portable": "便携版 ZIP",
       "requirement": "需要 WebView2 Runtime（Windows 11 已内置）。"
     },
     "macos": {
       "title": "macOS",
-      "meta": "macOS 10.13+ · Apple Silicon",
-      "button": "下载 DMG",
+      "meta": "macOS 10.13 及以上 · Apple Silicon",
+      "button": "下载 macOS 版",
       "requirement": "首次运行请在「系统设置」中授予辅助功能权限。"
-    },
-    "notesTitle": "v{{version}} 更新日志",
-    "notes": [
-      "新增：全新深色界面与品牌标识，主页以实时翻译演示为中心，游戏、翻译语言与快捷键集中在底部一栏，可在侧栏切换浅色主题。",
-      "优化：快捷键改为点击即录制，翻译风格页提供示例输出的实时预览，使用教程页可一键播放完整演示；界面字体随应用内置，不再依赖网络加载。",
-      "修复：主页不再展示尚未开放的对方发言翻译设置。"
-    ],
-    "github": "GitHub Releases",
-    "githubDesc": "全部历史版本与源代码",
-    "mirror": "腾讯云镜像直链"
+    }
   },
   "footer": {
-    "tagline": "面向 Windows 与 macOS 的 AI 游戏内聊天翻译客户端。按一次快捷键，译文替换原文。",
+    "tagline": "按一次快捷键，译文替换原文。面向 Windows 与 macOS 的游戏内聊天翻译。",
     "product": {
       "title": "产品"
     },
     "community": {
       "title": "社区与反馈",
-      "discord": { "title": "Discord", "desc": "更新公告与早期交流", "action": "加入" },
+      "discord": { "title": "Discord", "desc": "更新公告与交流", "action": "加入" },
       "qq": { "title": "QQ 群 {{id}}", "desc": "中文用户交流与反馈", "action": "复制群号", "copied": "已复制" },
-      "email": { "title": "邮箱", "desc": "反馈问题或合作沟通", "action": "发邮件" },
-      "github": { "title": "GitHub", "desc": "开源仓库 · MIT 许可", "action": "查看源码" }
+      "email": { "title": "邮箱", "desc": "反馈问题或合作沟通", "action": "发邮件" }
     },
     "legal": {
-      "copyright": "© {{year}} Lingo · 以 MIT 许可开源",
+      "copyright": "© {{year}} Lingo",
       "valve": "Dota 2 及相关美术素材 © Valve Corporation，仅用于展示。Lingo 与 Valve 无关联。"
     }
   }
