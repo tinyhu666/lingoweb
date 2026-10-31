@@ -222,7 +222,6 @@
     "title": "Glossaries for four games.\nWorks in any other.",
     "subtitle": "Pick your game in the client and translations use that game’s official names and player slang. Choose “Other game” and no game-specific terms are injected, which fits any multiplayer game with text chat.",
     "glossaryLabel": "Glossary",
-    "asOf": "Glossary figures as of October 2026. The server syncs official sources weekly; no client update needed.",
     "items": {
       "dota2": {
         "name": "Dota 2",

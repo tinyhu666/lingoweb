@@ -65,8 +65,6 @@ function SupportedGames() {
             </Chip>
           </article>
         </div>
-
-        <p className="mt-5 text-sm text-ink-3">{t('games.asOf')}</p>
       </div>
     </AnimatedSection>
   )
