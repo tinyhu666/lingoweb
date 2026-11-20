@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { Download as DownloadIcon, FileArchive, Laptop, Monitor } from 'lucide-react'
+import { Download as DownloadIcon, FileArchive, Laptop, Monitor, ShoppingBag } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import AnimatedSection from '@/components/ui/AnimatedSection'
 import Button from '@/components/ui/Button'
@@ -8,6 +8,7 @@ import SectionHeading from '@/components/ui/SectionHeading'
 import mapImage from '@/assets/backdrops/download-map.jpg'
 import type { ReleaseInfo } from '@/lib/release'
 import type { PlatformId } from '@/lib/platform'
+import { MICROSOFT_STORE_URL } from '@/lib/constants'
 import { cn } from '@/lib/cn'
 
 type DownloadProps = {
@@ -44,12 +45,18 @@ function Download({ release, preferredPlatform }: DownloadProps) {
             recommendedLabel={t('download.recommended')}
             requirement={t('download.windows.requirement')}
             secondary={
-              release.downloads.windowsPortable ? (
-                <Button download href={release.downloads.windowsPortable} size="sm" variant="ghost">
-                  <FileArchive />
-                  {t('download.windows.portable')}
+              <>
+                <Button href={MICROSOFT_STORE_URL} variant="secondary">
+                  <ShoppingBag />
+                  {t('download.windows.store')}
                 </Button>
-              ) : null
+                {release.downloads.windowsPortable && (
+                  <Button download href={release.downloads.windowsPortable} size="sm" variant="ghost">
+                    <FileArchive />
+                    {t('download.windows.portable')}
+                  </Button>
+                )}
+              </>
             }
             title={t('download.windows.title')}
           />

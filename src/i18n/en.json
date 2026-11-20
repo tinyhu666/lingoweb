@@ -234,9 +234,10 @@
     "windows": {
       "title": "Windows",
       "meta": "Windows 10 or later · x64",
-      "button": "Download for Windows",
+      "button": "Download installer (.exe)",
+      "store": "Get it from Microsoft Store",
       "portable": "Portable ZIP",
-      "requirement": "Requires the WebView2 Runtime (built into Windows 11)."
+      "requirement": "Requires the WebView2 Runtime (built into Windows 11). The Store version requires Windows 11."
     },
     "macos": {
       "title": "macOS",

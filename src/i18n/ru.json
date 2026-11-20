@@ -234,9 +234,10 @@
     "windows": {
       "title": "Windows",
       "meta": "Windows 10 и новее · x64",
-      "button": "Скачать для Windows",
+      "button": "Скачать установщик (.exe)",
+      "store": "Скачать из Microsoft Store",
       "portable": "Портативная версия ZIP",
-      "requirement": "Нужен WebView2 Runtime (в Windows 11 уже встроен)."
+      "requirement": "Нужен WebView2 Runtime (в Windows 11 уже встроен). Для версии из Microsoft Store нужна Windows 11."
     },
     "macos": {
       "title": "macOS",

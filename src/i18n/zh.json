@@ -234,9 +234,10 @@
     "windows": {
       "title": "Windows",
       "meta": "Windows 10 及以上 · x64",
-      "button": "下载 Windows 版",
+      "button": "下载安装包 (.exe)",
+      "store": "从 Microsoft Store 获取",
       "portable": "便携版 ZIP",
-      "requirement": "需要 WebView2 Runtime（Windows 11 已内置）。"
+      "requirement": "需要 WebView2 Runtime（Windows 11 已内置）。商店版需要 Windows 11。"
     },
     "macos": {
       "title": "macOS",
