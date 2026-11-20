@@ -8,7 +8,7 @@ export const QQ_GROUP_ID = '1095706752'
 export const CONTACT_EMAIL = 'huruiw@outlook.com'
 export const SITE_URL = 'https://lingo.ink/'
 
-export const MICROSOFT_STORE_URL = 'https://apps.microsoft.com/detail/9pc28c2tmmcz'
+export const MICROSOFT_STORE_URL = 'https://apps.microsoft.com/detail/9pc28c2tmmcz?hl=zh-CN&gl=CN'
 
 export const DOWNLOAD_URLS = {
   macos: `${COS_PUBLIC_BASE_URL}/releases/Lingo_latest_aarch64.dmg`,

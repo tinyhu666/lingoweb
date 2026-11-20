@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { motion, useReducedMotion } from 'motion/react'
-import { ArrowDown, ChevronDown, Download, Store } from 'lucide-react'
+import { ArrowDown, ChevronDown, Download } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import DemoStage from '@/components/DemoStage'
 import Button from '@/components/ui/Button'
@@ -8,7 +8,7 @@ import Chip from '@/components/ui/Chip'
 import Kbd from '@/components/ui/Kbd'
 import heroImage from '@/assets/backdrops/hero-heroes.jpg'
 import heroImageSmall from '@/assets/backdrops/hero-heroes-sm.jpg'
-import { MICROSOFT_STORE_URL } from '@/lib/constants'
+import MicrosoftStoreBadge from '@/components/MicrosoftStoreBadge'
 import type { ReleaseInfo } from '@/lib/release'
 import { getTranslationHotkey, type PlatformId } from '@/lib/platform'
 
@@ -162,9 +162,7 @@ function WindowsDownload({ children, href, primary }: {
       <div className="absolute left-1/2 top-full mt-2 grid w-full min-w-max -translate-x-1/2 rounded-xl border border-white/15 bg-[#151924] p-1.5 shadow-xl" onClick={() => {
         if (ref.current) ref.current.open = false
       }}>
-        <a className={option} href={MICROSOFT_STORE_URL} target="_blank" rel="noreferrer">
-          <Store size={17} />{t('download.windows.store')}
-        </a>
+        <div className="flex px-3 py-1.5"><MicrosoftStoreBadge /></div>
         <a className={option} href={href}>
           <Download size={17} />{t('download.windows.button')}
         </a>
